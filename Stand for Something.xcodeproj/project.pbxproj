@@ -37,6 +37,12 @@
 		4E0EF7301799E6E300BA6C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4E0EF7321799E6E300BA6C32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4E0EF7331799E6E300BA6C32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSN_categories.h; sourceTree = "<group>"; };
+		4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSN_categories.m; sourceTree = "<group>"; };
+		4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSNConnection.h; sourceTree = "<group>"; };
+		4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSNConnection.m; sourceTree = "<group>"; };
+		4E0EF73E1799EEA300BA6C32 /* FSNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSNData.h; sourceTree = "<group>"; };
+		4E0EF73F1799EEA300BA6C32 /* FSNData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSNData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,12 @@
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
 				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
+				4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */,
+				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
+				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
+				4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */,
+				4E0EF73E1799EEA300BA6C32 /* FSNData.h */,
+				4E0EF73F1799EEA300BA6C32 /* FSNData.m */,
 				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
 			);
 			path = "Stand for Something";
