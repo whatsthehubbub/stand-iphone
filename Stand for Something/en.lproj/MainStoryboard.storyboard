@@ -177,9 +177,9 @@
         <!--Navigation Controller-->
         <scene sceneID="zCG-gI-kdD">
             <objects>
-                <navigationController navigationBarHidden="YES" id="tmT-PI-qqS" sceneMemberID="viewController">
+                <navigationController id="tmT-PI-qqS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="yRE-jg-Vif">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

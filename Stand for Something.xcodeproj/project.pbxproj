@@ -19,6 +19,7 @@
 		4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */; };
 		4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7331799E6E300BA6C32 /* ViewController.m */; };
 		4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */; };
+		4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7431799F0EE00BA6C32 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4E0EF73F1799EEA300BA6C32 /* FSNData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSNData.m; sourceTree = "<group>"; };
 		4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareListViewController.h; sourceTree = "<group>"; };
 		4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareListViewController.m; sourceTree = "<group>"; };
+		4E0EF7431799F0EE00BA6C32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */,
 				4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */,
 				4E0EF71A1799E6E300BA6C32 /* Foundation.framework in Frameworks */,
 				4E0EF71C1799E6E300BA6C32 /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +85,7 @@
 		4E0EF7161799E6E300BA6C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E0EF7431799F0EE00BA6C32 /* MapKit.framework */,
 				4E0EF7171799E6E300BA6C32 /* UIKit.framework */,
 				4E0EF7191799E6E300BA6C32 /* Foundation.framework */,
 				4E0EF71B1799E6E300BA6C32 /* CoreGraphics.framework */,
