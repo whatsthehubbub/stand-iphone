@@ -18,6 +18,7 @@
 		4E0EF72E1799E6E300BA6C32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72D1799E6E300BA6C32 /* Default-568h@2x.png */; };
 		4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */; };
 		4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7331799E6E300BA6C32 /* ViewController.m */; };
+		4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSNConnection.m; sourceTree = "<group>"; };
 		4E0EF73E1799EEA300BA6C32 /* FSNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSNData.h; sourceTree = "<group>"; };
 		4E0EF73F1799EEA300BA6C32 /* FSNData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSNData.m; sourceTree = "<group>"; };
+		4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareListViewController.h; sourceTree = "<group>"; };
+		4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
 				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
 				4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */,
+				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
+				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E0EF73E1799EEA300BA6C32 /* FSNData.h */,
 				4E0EF73F1799EEA300BA6C32 /* FSNData.m */,
 				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
@@ -188,6 +193,7 @@
 				4E0EF7241799E6E300BA6C32 /* main.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */,
+				4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
