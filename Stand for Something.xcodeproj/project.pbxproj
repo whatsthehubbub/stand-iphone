@@ -20,6 +20,9 @@
 		4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7331799E6E300BA6C32 /* ViewController.m */; };
 		4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */; };
 		4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7431799F0EE00BA6C32 /* MapKit.framework */; };
+		4E0EF7461799F3A800BA6C32 /* FSN_categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */; };
+		4E0EF7481799F3A800BA6C32 /* FSNConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */; };
+		4E0EF74A1799F3A800BA6C32 /* FSNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73F1799EEA300BA6C32 /* FSNData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0EF7461799F3A800BA6C32 /* FSN_categories.m in Sources */,
+				4E0EF7481799F3A800BA6C32 /* FSNConnection.m in Sources */,
+				4E0EF74A1799F3A800BA6C32 /* FSNData.m in Sources */,
 				4E0EF7241799E6E300BA6C32 /* main.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */,

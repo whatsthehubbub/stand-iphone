@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FSNConnection.h"
+
 @interface SquareListViewController : UITableViewController
 
 @end
