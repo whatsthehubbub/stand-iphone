@@ -12,4 +12,6 @@
 
 @interface SquareListViewController : UITableViewController
 
+@property (strong) NSArray *plazas;
+
 @end
