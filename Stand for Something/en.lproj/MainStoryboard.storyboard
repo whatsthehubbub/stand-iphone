@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QdT-eA-Q1C" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="3gP-6w-jNT"/>
-                            <constraint firstAttribute="bottom" secondItem="ufp-rh-JaC" secondAttribute="bottom" constant="50" id="Vld-Ei-y4G"/>
-                            <constraint firstItem="QdT-eA-Q1C" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="83" id="ipP-GK-3Ip"/>
-                            <constraint firstItem="ufp-rh-JaC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="113" id="r5k-4w-BlY"/>
+                            <constraint firstAttribute="bottom" secondItem="ufp-rh-JaC" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JDB-kZ-Td5"/>
+                            <constraint firstItem="ufp-rh-JaC" firstAttribute="centerX" secondItem="QdT-eA-Q1C" secondAttribute="centerX" type="default" id="ZSZ-eT-h96"/>
+                            <constraint firstItem="QdT-eA-Q1C" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="jIF-yq-VID"/>
+                            <constraint firstItem="ufp-rh-JaC" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="shl-h8-Ukf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KxU-5c-D27"/>
