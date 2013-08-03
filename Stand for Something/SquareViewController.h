@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface SquareViewController : UIViewController
 
-@property (strong) NSString *venueName;
-@property (strong) NSString *venueId;
+@property (strong) NSDictionary *plaza;
+
+@property (strong) IBOutlet MKMapView *mapView;
 
 @end

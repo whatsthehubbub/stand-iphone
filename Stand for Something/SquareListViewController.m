@@ -79,6 +79,7 @@
         
         NSLog(@"plazas got %@", self.plazas);
         
+        
         [self.tableView reloadData];
         
     } progressBlock:^(FSNConnection *c) {
@@ -163,12 +164,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *plaza = [self.plazas objectAtIndex:indexPath.row];
-    NSString *name = [plaza objectForKey:@"name"];
-    NSString *fsid = [plaza objectForKey:@"id"];
-    
-    NSLog(@"starting a new screen %@ %@", name, fsid);
     
     SquareViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SquareViewController"];
+    
+    svc.plaza = plaza;
     
     [self.navigationController pushViewController:svc animated:YES];
 }
