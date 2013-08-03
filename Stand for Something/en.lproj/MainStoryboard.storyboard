@@ -85,7 +85,7 @@
                     <navigationItem key="navigationItem" title="Where do you stand?" id="mQI-5H-vke">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="F7K-y7-TUE">
                             <connections>
-                                <segue destination="DzP-8o-TuR" kind="push" id="CB2-U2-XqP"/>
+                                <segue destination="DzP-8o-TuR" kind="push" identifier="ToSquare" id="CB2-U2-XqP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1069" y="51"/>
         </scene>
-        <!--View Controller - Neude-->
+        <!--Square View Controller - Neude-->
         <scene sceneID="qI0-j9-Hqr">
             <objects>
-                <viewController id="DzP-8o-TuR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SquareViewController" id="DzP-8o-TuR" customClass="SquareViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7i-2j-Izd">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -194,17 +194,6 @@
             <point key="canvasLocation" x="117" y="51"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SquareListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

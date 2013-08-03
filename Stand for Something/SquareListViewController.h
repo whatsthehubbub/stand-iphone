@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "FSNConnection.h"
+#import "SquareViewController.h"
 
 @interface SquareListViewController : UITableViewController <CLLocationManagerDelegate>
 

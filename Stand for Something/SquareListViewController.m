@@ -52,6 +52,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"ToSquare"]) {
+//
+//    }
+//}
+
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -156,13 +162,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSDictionary *plaza = [self.plazas objectAtIndex:indexPath.row];
+    NSString *name = [plaza objectForKey:@"name"];
+    NSString *fsid = [plaza objectForKey:@"id"];
+    
+    NSLog(@"starting a new screen %@ %@", name, fsid);
+    
+    SquareViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"SquareViewController"];
+    
+    [self.navigationController pushViewController:svc animated:YES];
 }
 
 @end
