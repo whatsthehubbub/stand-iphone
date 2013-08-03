@@ -35,15 +35,38 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    if (nil == self.locationManager) {
+        self.locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locationManager.distanceFilter = 200;
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
+    CLLocation *location  = [locations lastObject];
+    
     NSURL *url = [NSURL URLWithString:@"https://api.foursquare.com/v2/venues/search"];
     NSDictionary *headers = [NSDictionary dictionary];
-    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"E5OLRBH2Z2KW2BHD43V2YTKDTFMUCIPQHBAIULUJDEPEUW05", @"client_id", @"TXJOYFAXMANGKMJKFSERSJDOX0DPZMM5MOUT23K241DCSEJK", @"client_secret", @"20130719", @"v", @"Berlin", @"near", @"4bf58dd8d48988d164941735", @"categoryId", nil];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"E5OLRBH2Z2KW2BHD43V2YTKDTFMUCIPQHBAIULUJDEPEUW05", @"client_id", @"TXJOYFAXMANGKMJKFSERSJDOX0DPZMM5MOUT23K241DCSEJK", @"client_secret", @"20130719", @"v", [NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude], @"ll", @"4bf58dd8d48988d164941735", @"categoryId", nil];
     
     FSNConnection *conn = [FSNConnection withUrl:url method:FSNRequestMethodGET headers:headers parameters:parameters parseBlock:^id(FSNConnection *c, NSError **error) {
         
         return [c.responseData dictionaryFromJSONWithError:error];
     } completionBlock:^(FSNConnection *c) {
-//        NSLog(@"complete: %@\n  error: %@\n  parseResult: %@\n", c, c.error, c.parseResult);
+        //        NSLog(@"complete: %@\n  error: %@\n  parseResult: %@\n", c, c.error, c.parseResult);
         
         NSDictionary *result = (NSDictionary *)c.parseResult;
         self.plazas = [[result objectForKey:@"response"] objectForKey:@"venues"];
@@ -56,15 +79,9 @@
         NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
     }];
     
-//    NSLog(@"request %@", conn);
+    //    NSLog(@"request %@", conn);
     
     [conn start];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source

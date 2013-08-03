@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "FSNConnection.h"
 
-@interface SquareListViewController : UITableViewController
+@interface SquareListViewController : UITableViewController <CLLocationManagerDelegate>
+
+@property (strong) CLLocationManager *locationManager;
 
 @property (strong) NSArray *plazas;
 
