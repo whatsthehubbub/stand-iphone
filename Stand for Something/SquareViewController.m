@@ -19,6 +19,12 @@
 @synthesize mapView;
 @synthesize motionLabel;
 
+@synthesize motionManager;
+
+@synthesize maxX;
+@synthesize maxY;
+@synthesize maxZ;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -56,6 +62,39 @@
 
 - (IBAction)startStanding:(id)sender {
     NSLog(@"Start standing");
+    
+    if (nil == motionManager) {
+        motionManager = [[CMMotionManager alloc] init];
+    }
+    
+    motionManager.deviceMotionUpdateInterval = 1/15.0;
+    
+    if (motionManager.deviceMotionAvailable) {
+        NSLog(@"Device motion available");
+        
+        [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+            
+            CMAcceleration userAcceleration = motion.userAcceleration;
+            
+            maxX = MAX(ABS(maxX), ABS(userAcceleration.x));
+            maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
+            maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
+            
+            self.motionLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
+            
+//            [self performSelectorOnMainThread:@selector(handleDeviceMotion:) withObject:motionManager waitUntilDone:YES];
+        }];
+    }
 }
+
+- (IBAction)reset:(id)sender {
+    self.maxX = 0.0;
+    self.maxY = 0.0;
+    self.maxZ = 0.0;
+}
+
+//- (void)handleDeviceMotion:(CMDeviceMotion *)motion {
+//    
+//}
 
 @end

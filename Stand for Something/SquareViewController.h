@@ -17,6 +17,13 @@
 @property (strong) IBOutlet MKMapView *mapView;
 @property (strong) IBOutlet UILabel *motionLabel;
 
+@property (strong) CMMotionManager *motionManager;
+
+@property (assign) double maxX;
+@property (assign) double maxY;
+@property (assign) double maxZ;
+
 - (IBAction)startStanding:(id)sender;
+- (IBAction)reset:(id)sender;
 
 @end
