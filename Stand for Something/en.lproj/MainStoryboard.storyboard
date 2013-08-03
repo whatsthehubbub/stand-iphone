@@ -118,16 +118,28 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="startStanding:" destination="DzP-8o-TuR" eventType="touchUpInside" id="6eQ-Ac-Zdf"/>
                                     <segue destination="IFz-l0-0MX" kind="push" id="Gqt-Aw-Ji3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-JG-taF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ssx-i4-bMn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oP8-H4-Oym" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0OA-dh-7aL"/>
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8AM-1a-Zp0"/>
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Kk-3U-IHK"/>
+                            <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9PH-fR-pS1"/>
                             <constraint firstAttribute="trailing" secondItem="33s-pI-pZw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NMi-Fp-m2M"/>
+                            <constraint firstAttribute="bottom" secondItem="tOl-JG-taF" secondAttribute="bottom" constant="85" id="Pxb-Y6-qd5"/>
+                            <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QQX-7A-rOc"/>
                             <constraint firstItem="33s-pI-pZw" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="d5T-jP-u0i"/>
                             <constraint firstItem="33s-pI-pZw" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="230" id="h7G-Qr-KmB"/>
                         </constraints>
@@ -135,6 +147,7 @@
                     <navigationItem key="navigationItem" title="Neude" id="3Au-Fx-YUQ"/>
                     <connections>
                         <outlet property="mapView" destination="oP8-H4-Oym" id="RQC-dr-FCG"/>
+                        <outlet property="motionLabel" destination="tOl-JG-taF" id="Jxx-Kg-sJI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWi-xC-CRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,7 +220,9 @@
         <class className="SquareViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
             <relationships>
+                <relationship kind="action" name="startStanding:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="motionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">

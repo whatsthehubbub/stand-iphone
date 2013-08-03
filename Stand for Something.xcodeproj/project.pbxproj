@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
 		4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */; };
+		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
 		4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7171799E6E300BA6C32 /* UIKit.framework */; };
 		4E0EF71A1799E6E300BA6C32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7191799E6E300BA6C32 /* Foundation.framework */; };
 		4E0EF71C1799E6E300BA6C32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF71B1799E6E300BA6C32 /* CoreGraphics.framework */; };
@@ -31,6 +32,7 @@
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
+		4E0D1FF317AD557C006B9098 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4E0EF7141799E6E300BA6C32 /* Stand for Something.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stand for Something.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0EF7171799E6E300BA6C32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E0EF7191799E6E300BA6C32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */,
 				4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */,
 				4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */,
 				4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */,
@@ -94,6 +97,7 @@
 		4E0EF7161799E6E300BA6C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E0D1FF317AD557C006B9098 /* CoreMotion.framework */,
 				4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */,
 				4E0EF7431799F0EE00BA6C32 /* MapKit.framework */,
 				4E0EF7171799E6E300BA6C32 /* UIKit.framework */,

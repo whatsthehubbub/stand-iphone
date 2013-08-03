@@ -17,6 +17,7 @@
 @synthesize plaza;
 
 @synthesize mapView;
+@synthesize motionLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +52,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startStanding:(id)sender {
+    NSLog(@"Start standing");
 }
 
 @end

@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface SquareViewController : UIViewController
 
 @property (strong) NSDictionary *plaza;
 
 @property (strong) IBOutlet MKMapView *mapView;
+@property (strong) IBOutlet UILabel *motionLabel;
+
+- (IBAction)startStanding:(id)sender;
 
 @end
