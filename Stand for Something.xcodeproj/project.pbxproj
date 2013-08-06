@@ -112,20 +112,20 @@
 			children = (
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
 				4E0EF7271799E6E300BA6C32 /* AppDelegate.m */,
-				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
-				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
-				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
 				4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */,
 				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
 				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
 				4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */,
-				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
-				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E0EF73E1799EEA300BA6C32 /* FSNData.h */,
 				4E0EF73F1799EEA300BA6C32 /* FSNData.m */,
-				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
+				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
+				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
+				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */,
 				4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */,
+				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
+				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
+				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
 			);
 			path = "Stand for Something";
 			sourceTree = "<group>";
