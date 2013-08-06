@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -123,7 +123,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-JG-taF">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="ssx-i4-bMn"/>
+                                    <constraint firstAttribute="height" constant="68" id="1Dq-V9-OdX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -142,6 +142,11 @@
                                     <action selector="reset:" destination="DzP-8o-TuR" eventType="touchUpInside" id="glT-RX-HXl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-mi-LJe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,12 +154,15 @@
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8AM-1a-Zp0"/>
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Kk-3U-IHK"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9PH-fR-pS1"/>
+                            <constraint firstAttribute="bottom" secondItem="tOl-JG-taF" secondAttribute="bottom" constant="116" id="BA0-6f-ZCg"/>
+                            <constraint firstAttribute="bottom" secondItem="XfP-mi-LJe" secondAttribute="bottom" constant="71" id="FVB-32-Vw4"/>
                             <constraint firstAttribute="trailing" secondItem="33s-pI-pZw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NMi-Fp-m2M"/>
-                            <constraint firstAttribute="bottom" secondItem="tOl-JG-taF" secondAttribute="bottom" constant="85" id="Pxb-Y6-qd5"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="QQX-7A-rOc"/>
                             <constraint firstAttribute="bottom" secondItem="TqG-rQ-wTt" secondAttribute="bottom" constant="13" id="SZJ-kv-Jh7"/>
                             <constraint firstItem="33s-pI-pZw" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="d5T-jP-u0i"/>
+                            <constraint firstItem="XfP-mi-LJe" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dzb-YW-Dej"/>
                             <constraint firstItem="TqG-rQ-wTt" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="76" id="fag-lb-rjp"/>
+                            <constraint firstAttribute="trailing" secondItem="XfP-mi-LJe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gdh-6j-gYK"/>
                             <constraint firstItem="33s-pI-pZw" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="230" id="h7G-Qr-KmB"/>
                         </constraints>
                     </view>
@@ -162,6 +170,7 @@
                     <connections>
                         <outlet property="mapView" destination="oP8-H4-Oym" id="RQC-dr-FCG"/>
                         <outlet property="motionLabel" destination="tOl-JG-taF" id="Jxx-Kg-sJI"/>
+                        <outlet property="timeLabel" destination="XfP-mi-LJe" id="lF1-nH-6Il"/>
                         <segue destination="IFz-l0-0MX" kind="push" id="hdl-No-8uT"/>
                     </connections>
                 </viewController>

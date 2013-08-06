@@ -23,6 +23,11 @@
 @property (assign) double maxY;
 @property (assign) double maxZ;
 
+@property (strong) NSDate *startTime;
+@property (strong) NSTimer *secondTimer;
+
+@property (strong) IBOutlet UILabel *timeLabel;
+
 - (IBAction)startStanding:(id)sender;
 - (IBAction)reset:(id)sender;
 

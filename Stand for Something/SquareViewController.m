@@ -25,6 +25,11 @@
 @synthesize maxY;
 @synthesize maxZ;
 
+@synthesize startTime;
+@synthesize secondTimer;
+
+@synthesize timeLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -67,6 +72,9 @@
         motionManager = [[CMMotionManager alloc] init];
     }
     
+    self.startTime = [[NSDate alloc] init];
+//    self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime:) userInfo:nil repeats:YES];
+    
     motionManager.deviceMotionUpdateInterval = 1/15.0;
     
     if (motionManager.deviceMotionAvailable) {
@@ -84,7 +92,17 @@
             
 //            [self performSelectorOnMainThread:@selector(handleDeviceMotion:) withObject:motionManager waitUntilDone:YES];
         }];
+        
+//        [motionManager stopDeviceMotionUpdates]
     }
+}
+
+- (void)incrementTime {
+    NSDate *now = [[NSDate alloc] init];
+    
+    NSTimeInterval interval = [now timeIntervalSinceDate:self.startTime];
+    
+    self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
 }
 
 - (IBAction)reset:(id)sender {
