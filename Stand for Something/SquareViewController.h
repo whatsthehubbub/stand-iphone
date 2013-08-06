@@ -24,6 +24,7 @@
 @property (assign) double maxZ;
 
 @property (strong) NSDate *startTime;
+@property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
 
 @property (strong) IBOutlet UILabel *timeLabel;

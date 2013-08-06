@@ -26,6 +26,7 @@
 @synthesize maxZ;
 
 @synthesize startTime;
+@synthesize endTime;
 @synthesize secondTimer;
 
 @synthesize timeLabel;
@@ -44,7 +45,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSLog(@"loaded view for plaza %@", [plaza objectForKey:@"name"]);
+//    NSLog(@"loaded view for plaza %@", [plaza objectForKey:@"name"]);
     
     [self setTitle:[plaza objectForKey:@"name"]];
     
@@ -53,9 +54,7 @@
     CLLocationCoordinate2D mapCenter = CLLocationCoordinate2DMake([[[plaza objectForKey:@"location"] objectForKey:@"lat"] doubleValue], [[[plaza objectForKey:@"location"] objectForKey:@"lng"] doubleValue]);
     
     NSLog(@"creating location value %f, %f", mapCenter.latitude, mapCenter.longitude);
-    //[self.mapView setCenterCoordinate:mapCenter animated:YES];
-    
-    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(mapCenter, 1000, 1000)];
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(mapCenter, 500, 500)];
     [self.mapView setRegion:adjustedRegion animated:YES];
 }
 
@@ -73,12 +72,12 @@
     }
     
     self.startTime = [[NSDate alloc] init];
-//    self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime:) userInfo:nil repeats:YES];
+    self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
     
     motionManager.deviceMotionUpdateInterval = 1/15.0;
     
     if (motionManager.deviceMotionAvailable) {
-        NSLog(@"Device motion available");
+//        NSLog(@"Device motion available");
         
         [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
             
@@ -90,19 +89,31 @@
             
             self.motionLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
             
+            if (maxX > 0.1 && maxY > 0.1 && maxZ > 0.1) {
+                // Done standing, you did a step
+                
+                [self stopStanding];
+            }
+            
 //            [self performSelectorOnMainThread:@selector(handleDeviceMotion:) withObject:motionManager waitUntilDone:YES];
         }];
-        
-//        [motionManager stopDeviceMotionUpdates]
     }
 }
 
 - (void)incrementTime {
-    NSDate *now = [[NSDate alloc] init];
+    self.endTime = [[NSDate alloc] init];
     
-    NSTimeInterval interval = [now timeIntervalSinceDate:self.startTime];
+    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
     
     self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
+}
+
+- (void)stopStanding {
+    [self.motionManager stopDeviceMotionUpdates];
+    [self.secondTimer invalidate];
+    
+    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
 - (IBAction)reset:(id)sender {

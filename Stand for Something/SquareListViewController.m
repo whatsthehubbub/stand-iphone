@@ -77,13 +77,13 @@
         NSDictionary *result = (NSDictionary *)c.parseResult;
         self.plazas = [[result objectForKey:@"response"] objectForKey:@"venues"];
         
-        NSLog(@"plazas got %@", self.plazas);
+//        NSLog(@"plazas got %@", self.plazas);
         
         
         [self.tableView reloadData];
         
     } progressBlock:^(FSNConnection *c) {
-        NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
+//        NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
     }];
     
     //    NSLog(@"request %@", conn);
