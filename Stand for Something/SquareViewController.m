@@ -55,7 +55,7 @@
     NSLog(@"creating location value %f, %f", mapCenter.latitude, mapCenter.longitude);
     //[self.mapView setCenterCoordinate:mapCenter animated:YES];
     
-    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(mapCenter, 100, 100)];
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(mapCenter, 1000, 1000)];
     [self.mapView setRegion:adjustedRegion animated:YES];
 }
 
