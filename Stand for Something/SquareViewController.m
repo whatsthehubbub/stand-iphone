@@ -106,6 +106,10 @@
                 // Done standing, you did a step
                 
                 [self stopStanding];
+            } else {
+                maxX -= 0.01;
+                maxY -= 0.01;
+                maxZ -= 0.01;
             }
             
 //            [self performSelectorOnMainThread:@selector(handleDeviceMotion:) withObject:motionManager waitUntilDone:YES];
