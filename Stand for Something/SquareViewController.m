@@ -55,11 +55,11 @@
     
     NSLog(@"getting the coord? %@", [plaza objectForKey:@"location"]);
     
-    CLLocationCoordinate2D mapCenter = CLLocationCoordinate2DMake([[[plaza objectForKey:@"location"] objectForKey:@"lat"] doubleValue], [[[plaza objectForKey:@"location"] objectForKey:@"lng"] doubleValue]);
+    CLLocationCoordinate2D plazaCenter = CLLocationCoordinate2DMake([[[plaza objectForKey:@"location"] objectForKey:@"lat"] doubleValue], [[[plaza objectForKey:@"location"] objectForKey:@"lng"] doubleValue]);
     
-    NSLog(@"creating location value %f, %f", mapCenter.latitude, mapCenter.longitude);
+    NSLog(@"creating location value %f, %f", plazaCenter.latitude, plazaCenter.longitude);
     
-    MKCoordinateRegion originalRegion = MKCoordinateRegionMakeWithDistance(mapCenter, 1000, 1000);
+    MKCoordinateRegion originalRegion = MKCoordinateRegionMakeWithDistance(plazaCenter, 1000, 1000);
     
     NSLog(@"Adjusted region %f x %f (%f %f)", originalRegion.center.latitude, originalRegion.center.longitude, originalRegion.span.latitudeDelta, originalRegion.span.longitudeDelta);
     
