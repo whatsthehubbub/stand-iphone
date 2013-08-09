@@ -48,14 +48,27 @@
 //    NSLog(@"loaded view for plaza %@", [plaza objectForKey:@"name"]);
     
     [self setTitle:[plaza objectForKey:@"name"]];
-    
-//    NSLog(@"getting the coord? %@", [plaza objectForKey:@"location"]);
+}
 
+- (void)viewDidAppear:(BOOL)animated {
+    // Fuck, map changes need to be done in viewDidAppear
+    
+    NSLog(@"getting the coord? %@", [plaza objectForKey:@"location"]);
+    
     CLLocationCoordinate2D mapCenter = CLLocationCoordinate2DMake([[[plaza objectForKey:@"location"] objectForKey:@"lat"] doubleValue], [[[plaza objectForKey:@"location"] objectForKey:@"lng"] doubleValue]);
     
     NSLog(@"creating location value %f, %f", mapCenter.latitude, mapCenter.longitude);
-    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(mapCenter, 500, 500)];
-    [self.mapView setRegion:adjustedRegion animated:YES];
+    
+    MKCoordinateRegion originalRegion = MKCoordinateRegionMakeWithDistance(mapCenter, 1000, 1000);
+    
+    NSLog(@"Adjusted region %f x %f (%f %f)", originalRegion.center.latitude, originalRegion.center.longitude, originalRegion.span.latitudeDelta, originalRegion.span.longitudeDelta);
+    
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:originalRegion];
+    
+    NSLog(@"Adjusted region %f x %f (%f %f)", adjustedRegion.center.latitude, adjustedRegion.center.longitude, adjustedRegion.span.latitudeDelta, adjustedRegion.span.longitudeDelta);
+    
+    [self.mapView setRegion:adjustedRegion animated:NO];
+//    [self.mapView setCenterCoordinate:originalRegion.center animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,8 +135,10 @@
     self.maxZ = 0.0;
 }
 
-//- (void)handleDeviceMotion:(CMDeviceMotion *)motion {
-//    
-//}
+# pragma mark - MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    NSLog(@"Region changed");
+}
 
 @end

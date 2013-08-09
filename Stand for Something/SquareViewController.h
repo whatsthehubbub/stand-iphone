@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface SquareViewController : UIViewController
+@interface SquareViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong) NSDictionary *plaza;
 

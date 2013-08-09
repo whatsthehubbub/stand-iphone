@@ -64,6 +64,8 @@
     
     CLLocation *location  = [locations lastObject];
     
+    NSLog(@"Get location %f x %f", location.coordinate.latitude, location.coordinate.longitude);
+    
     NSURL *url = [NSURL URLWithString:@"https://api.foursquare.com/v2/venues/search"];
     NSDictionary *headers = [NSDictionary dictionary];
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"E5OLRBH2Z2KW2BHD43V2YTKDTFMUCIPQHBAIULUJDEPEUW05", @"client_id", @"TXJOYFAXMANGKMJKFSERSJDOX0DPZMM5MOUT23K241DCSEJK", @"client_secret", @"20130719", @"v", [NSString stringWithFormat:@"%f,%f", location.coordinate.latitude, location.coordinate.longitude], @"ll", @"4bf58dd8d48988d164941735", @"categoryId", nil];
