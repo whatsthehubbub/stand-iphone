@@ -53,13 +53,12 @@
 }
 
 - (void)startStanding {
-    NSLog(@"Start standing");
-    
     if (nil == motionManager) {
         motionManager = [[CMMotionManager alloc] init];
     }
     
     self.startTime = [[NSDate alloc] init];
+    self.startedStanding = YES;
     
 //    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
@@ -91,8 +90,6 @@
                 maxY -= 0.01;
                 maxZ -= 0.01;
             }
-            
-            //            [self performSelectorOnMainThread:@selector(handleDeviceMotion:) withObject:motionManager waitUntilDone:YES];
         }];
     }
 }
@@ -104,25 +101,42 @@
 //    CGPoint location = [touch locationInView:self.touchView];
     
     if (touch.view == self.touchView) {
-        NSLog(@"Started touching the screen in the correct view");
-        
-        [self startStanding];
+        if (!self.startedStanding) {
+            [self startStanding];
+        } else if (self.gracePeriod) {
+            self.gracePeriod = NO;
+        }
     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"Keep touching the screen");
     
-    self.timeLabel.text = @"Keep touching the screen to go on.";
+    if (self.startedStanding) {
+        self.gracePeriod = YES;
+        self.graceStarted = [[NSDate alloc] init];
+    }
 }
 
 - (void)incrementTime {
-    NSLog(@"in time increment");
-    self.endTime = [[NSDate alloc] init];
+//    NSLog(@"in time increment");
     
-    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-    
-    self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
+    if (!self.gracePeriod && !self.stoppedStanding) {
+        self.endTime = [[NSDate alloc] init];
+        
+        NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+        self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
+    } else if (self.gracePeriod) {
+        
+        NSDate *now = [[NSDate alloc] init];
+        NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStarted];
+        
+        self.timeLabel.text = [NSString stringWithFormat:@"in second %d of grace", (int)interval];
+        
+        if (interval > 5) {
+            [self stopStanding];
+        }
+    }
 }
 
 - (void)stopStanding {
@@ -133,14 +147,6 @@
     
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
     self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
-}
-
-- (void)startGrace {
-    self.gracePeriod = YES;
-}
-
-- (void)endGrace {
-    self.gracePeriod = NO;
-}
+}   
 
 @end
