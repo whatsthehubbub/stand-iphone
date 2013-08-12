@@ -16,6 +16,8 @@
 
 @property (strong) CLLocationManager *locationManager;
 
+@property (strong) CLLocation *currentLocation;
+
 @property (strong) NSArray *plazas;
 
 @end
