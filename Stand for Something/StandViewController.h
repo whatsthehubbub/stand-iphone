@@ -19,15 +19,19 @@
 @property (assign) double maxY;
 @property (assign) double maxZ;
 
+@property (assign) BOOL startedStanding;
+@property (assign) BOOL gracePeriod;
+@property (strong) NSDate *graceStarted;
+@property (assign) BOOL stoppedStanding;
+
 @property (strong) NSDate *startTime;
 @property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
 
 @property (strong) IBOutlet UILabel *timeLabel;
 
-@property (strong) IBOutlet UIView *touchView;
+@property (strong) IBOutlet UIImageView *touchView;
 
-- (IBAction)startStanding:(id)sender;
-- (IBAction)reset:(id)sender;
+- (void)startStanding;
 
 @end

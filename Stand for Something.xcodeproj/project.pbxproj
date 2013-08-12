@@ -29,6 +29,7 @@
 		4EDAE3D617B4F12E00484E79 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D217B4F12E00484E79 /* libTestFlight.a */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
+		4EE7A60117B93BB500B2CF0A /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7A60017B93BB500B2CF0A /* crosshair.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
+		4EE7A60017B93BB500B2CF0A /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
 				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
 				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
+				4EE7A60017B93BB500B2CF0A /* crosshair.png */,
 			);
 			path = "Stand for Something";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				4E0EF72C1799E6E300BA6C32 /* Default@2x.png in Resources */,
 				4E0EF72E1799E6E300BA6C32 /* Default-568h@2x.png in Resources */,
 				4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */,
+				4EE7A60117B93BB500B2CF0A /* crosshair.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

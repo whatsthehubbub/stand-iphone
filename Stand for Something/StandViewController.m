@@ -52,7 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)startStanding:(id)sender {
+- (void)startStanding {
     NSLog(@"Start standing");
     
     if (nil == motionManager) {
@@ -60,6 +60,11 @@
     }
     
     self.startTime = [[NSDate alloc] init];
+    
+//    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
+//    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
+//    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:UITrackingRunLoopMode];
+    
     self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
     
     motionManager.deviceMotionUpdateInterval = 1/15.0;
@@ -100,16 +105,19 @@
     
     if (touch.view == self.touchView) {
         NSLog(@"Started touching the screen in the correct view");
+        
+        [self startStanding];
     }
-    
-    
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"Keep touching the screen");
+    
+    self.timeLabel.text = @"Keep touching the screen to go on.";
 }
 
 - (void)incrementTime {
+    NSLog(@"in time increment");
     self.endTime = [[NSDate alloc] init];
     
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
@@ -118,6 +126,8 @@
 }
 
 - (void)stopStanding {
+    self.stoppedStanding = YES;
+    
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
     
@@ -125,10 +135,12 @@
     self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
-- (IBAction)reset:(id)sender {
-    self.maxX = 0.0;
-    self.maxY = 0.0;
-    self.maxZ = 0.0;
+- (void)startGrace {
+    self.gracePeriod = YES;
+}
+
+- (void)endGrace {
+    self.gracePeriod = NO;
 }
 
 @end

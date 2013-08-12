@@ -85,7 +85,7 @@
                     <navigationItem key="navigationItem" title="Where do you stand?" id="mQI-5H-vke"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
-                        <segue destination="DzP-8o-TuR" kind="push" id="jv1-N8-dNV"/>
+                        <segue destination="DzP-8o-TuR" kind="push" identifier="Square" id="jv1-N8-dNV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqC-L1-PAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,12 +152,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efn-1s-K3x">
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hold the coloured square and don't move around!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-Ob-F3Q">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hold the target and stand still!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-Ob-F3Q">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="f3Z-I0-1Ph"/>
+                                    <constraint firstAttribute="width" constant="190" id="lXI-HK-hzG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -171,41 +169,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-mi-LJe">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Touch the target to start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-mi-LJe">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-rQ-wTt">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reset:" destination="IFz-l0-0MX" eventType="touchUpInside" id="gjZ-cb-Akb"/>
-                                    <action selector="reset:" destination="DzP-8o-TuR" eventType="touchUpInside" id="glT-RX-HXl"/>
-                                </connections>
-                            </button>
+                            <imageView contentMode="scaleToFill" image="crosshair.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="APw-2p-mWf"/>
+                                    <constraint firstAttribute="height" constant="150" id="knk-Qg-XKG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="centerX" secondItem="Efn-1s-K3x" secondAttribute="centerX" type="default" id="4Gr-Y4-cgG"/>
-                            <constraint firstItem="TqG-rQ-wTt" firstAttribute="centerX" secondItem="XfP-mi-LJe" secondAttribute="centerX" type="default" id="9Vw-sf-4fr"/>
-                            <constraint firstItem="TqG-rQ-wTt" firstAttribute="top" secondItem="XfP-mi-LJe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ET4-43-Lzw"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
-                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="239" id="I8b-Ej-64V"/>
-                            <constraint firstItem="Efn-1s-K3x" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="334" id="S9C-OW-bnr"/>
-                            <constraint firstItem="TqG-rQ-wTt" firstAttribute="centerX" secondItem="YHJ-Ob-F3Q" secondAttribute="centerX" type="default" id="Zpt-wI-8OG"/>
+                            <constraint firstItem="DgT-ht-X9b" firstAttribute="centerX" secondItem="XfP-mi-LJe" secondAttribute="centerX" type="default" id="Gxh-fM-raz"/>
+                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="228" id="SdH-es-qoO"/>
+                            <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstAttribute="trailing" secondItem="XfP-mi-LJe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eOa-ey-UVz"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iPz-FJ-RoK"/>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="inQ-lI-CSJ"/>
-                            <constraint firstAttribute="bottom" secondItem="Efn-1s-K3x" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="pni-oR-8Ln"/>
+                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kgR-4m-bkR"/>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="147" id="rZ5-84-qFV"/>
-                            <constraint firstItem="Efn-1s-K3x" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="85" id="u2G-Xi-7IS"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="z4t-kd-u8V"/>
                         </constraints>
                     </view>
@@ -213,12 +199,12 @@
                     <connections>
                         <outlet property="motionLabel" destination="tOl-JG-taF" id="LYg-LG-NYm"/>
                         <outlet property="timeLabel" destination="XfP-mi-LJe" id="GCt-xg-JxB"/>
-                        <outlet property="touchView" destination="Efn-1s-K3x" id="OJs-Hn-E0U"/>
+                        <outlet property="touchView" destination="DgT-ht-X9b" id="xOd-Yj-8hf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19X-jE-kMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="51"/>
+            <point key="canvasLocation" x="2013" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zCG-gI-kdD">
@@ -240,6 +226,35 @@
             <point key="canvasLocation" x="117" y="51"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="crosshair.png" width="320" height="319"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SquareListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
+        </class>
+        <class className="SquareViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startStanding:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="StandViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="motionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
