@@ -8,28 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import <CoreMotion/CoreMotion.h>
+
 
 @interface SquareViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong) NSDictionary *plaza;
 
 @property (strong) IBOutlet MKMapView *mapView;
-@property (strong) IBOutlet UILabel *motionLabel;
-
-@property (strong) CMMotionManager *motionManager;
-
-@property (assign) double maxX;
-@property (assign) double maxY;
-@property (assign) double maxZ;
-
-@property (strong) NSDate *startTime;
-@property (strong) NSDate *endTime;
-@property (strong) NSTimer *secondTimer;
-
-@property (strong) IBOutlet UILabel *timeLabel;
 
 - (IBAction)startStanding:(id)sender;
-- (IBAction)reset:(id)sender;
 
 @end
