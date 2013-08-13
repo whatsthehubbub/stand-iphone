@@ -16,7 +16,7 @@
 
 @synthesize motionManager;
 
-@synthesize motionLabel;
+@synthesize debugLabel;
 
 @synthesize maxX;
 @synthesize maxY;
@@ -44,6 +44,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+#if DEBUG
+#else
+    self.debugLabel.hidden = YES;
+#endif
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +84,7 @@
             maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
             maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
             
-            self.motionLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
+            self.debugLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
             
             if (maxX > 0.1 && maxY > 0.1 && maxZ > 0.1) {
                 // Done standing, you did a step

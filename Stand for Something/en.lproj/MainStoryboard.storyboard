@@ -152,15 +152,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hold the target and stand still!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-Ob-F3Q">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="f3Z-I0-1Ph"/>
-                                    <constraint firstAttribute="width" constant="190" id="lXI-HK-hzG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-JG-taF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="1Dq-V9-OdX"/>
@@ -169,7 +160,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Touch the target to start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-mi-LJe">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Touch the target and hold to start" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="XfP-mi-LJe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="QCT-iT-enp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -183,21 +177,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XfP-mi-LJe" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Boe-Ft-RTE"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
-                            <constraint firstItem="DgT-ht-X9b" firstAttribute="centerX" secondItem="XfP-mi-LJe" secondAttribute="centerX" type="default" id="Gxh-fM-raz"/>
-                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="228" id="SdH-es-qoO"/>
+                            <constraint firstAttribute="bottom" secondItem="tOl-JG-taF" secondAttribute="bottom" constant="169" id="UN4-cI-CQE"/>
+                            <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="Xjg-Ww-bPO"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstAttribute="trailing" secondItem="XfP-mi-LJe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eOa-ey-UVz"/>
-                            <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="iPz-FJ-RoK"/>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="inQ-lI-CSJ"/>
-                            <constraint firstItem="YHJ-Ob-F3Q" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kgR-4m-bkR"/>
-                            <constraint firstItem="XfP-mi-LJe" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="147" id="rZ5-84-qFV"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="z4t-kd-u8V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stand!" id="RZV-sR-m3B"/>
                     <connections>
-                        <outlet property="motionLabel" destination="tOl-JG-taF" id="LYg-LG-NYm"/>
+                        <outlet property="debugLabel" destination="tOl-JG-taF" id="yzl-s6-nh7"/>
                         <outlet property="timeLabel" destination="XfP-mi-LJe" id="GCt-xg-JxB"/>
                         <outlet property="touchView" destination="DgT-ht-X9b" id="xOd-Yj-8hf"/>
                     </connections>
@@ -229,6 +221,32 @@
     <resources>
         <image name="crosshair.png" width="320" height="319"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SquareListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
+        </class>
+        <class className="SquareViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="startStanding:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="StandViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="debugLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
