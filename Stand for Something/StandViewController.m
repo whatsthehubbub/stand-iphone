@@ -49,6 +49,10 @@
 #else
     self.debugLabel.hidden = YES;
 #endif
+    
+    self.startedStanding = NO;
+    self.gracePeriod = NO;
+    self.stoppedStanding = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +66,7 @@
         motionManager = [[CMMotionManager alloc] init];
     }
     
+    self.stoppedStanding = NO;
     self.startTime = [[NSDate alloc] init];
     self.startedStanding = YES;
     
@@ -152,6 +157,21 @@
     
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
     self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
-}   
+}
+
+- (IBAction)stopNow:(id)sender {
+    [self stopStanding];
+}
+
+- (IBAction)tryAgain:(id)sender {
+    [self stopStanding];
+    
+    self.debugLabel.text = @"";
+    self.timeLabel.text = @"Touch the target to try again";
+    
+    self.startedStanding = NO;
+    self.stoppedStanding = NO;
+    self.gracePeriod = NO;
+}
 
 @end

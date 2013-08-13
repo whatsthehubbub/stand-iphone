@@ -34,4 +34,7 @@
 
 - (void)startStanding;
 
+- (IBAction)stopNow:(id)sender;
+- (IBAction)tryAgain:(id)sender;
+
 @end
