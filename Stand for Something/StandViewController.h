@@ -36,4 +36,6 @@
 
 - (IBAction)stopNow:(id)sender;
 
+- (IBAction)close:(id)sender;
+
 @end

@@ -163,4 +163,8 @@
     [self stopStanding];
 }
 
+- (IBAction)close:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
