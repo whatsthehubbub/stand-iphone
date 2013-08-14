@@ -163,15 +163,4 @@
     [self stopStanding];
 }
 
-- (IBAction)tryAgain:(id)sender {
-    [self stopStanding];
-    
-    self.debugLabel.text = @"";
-    self.timeLabel.text = @"Touch the target to try again";
-    
-    self.startedStanding = NO;
-    self.stoppedStanding = NO;
-    self.gracePeriod = NO;
-}
-
 @end
