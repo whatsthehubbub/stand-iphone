@@ -187,7 +187,7 @@
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP8-H4-Oym">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="308" id="JrH-by-KXD"/>
+                                    <constraint firstAttribute="height" constant="308" type="user" id="JrH-by-KXD"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="DzP-8o-TuR" id="FH2-f7-gAZ"/>
@@ -236,11 +236,7 @@
                                     <constraint firstItem="5TB-5K-f37" firstAttribute="top" secondItem="bsF-8M-MOE" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="zR3-V0-xLk"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Lp-uRG">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Cp0-VE-Pw8"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Lp-uRG"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-2-Dot-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-Hp-dtG"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-pI-pZw">
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,21 +258,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oP8-H4-Oym" firstAttribute="bottom" secondItem="80d-Lp-uRG" secondAttribute="bottom" type="user" id="67z-9H-mB2"/>
                             <constraint firstItem="Wdh-jt-kcf" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" type="default" id="8yj-G2-BEB"/>
                             <constraint firstItem="Wdh-jt-kcf" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" type="default" id="9T6-Lh-pPd"/>
                             <constraint firstItem="80d-Lp-uRG" firstAttribute="top" secondItem="Y6B-Hp-dtG" secondAttribute="bottom" constant="-10" type="user" id="EzV-Ex-9MR"/>
                             <constraint firstItem="Kmi-IS-gfN" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IUA-9j-7P3"/>
                             <constraint firstAttribute="trailing" secondItem="Kmi-IS-gfN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Iwu-BW-P5N"/>
+                            <constraint firstItem="80d-Lp-uRG" firstAttribute="centerX" secondItem="Y6B-Hp-dtG" secondAttribute="centerX" type="default" id="Pue-QV-Cdm"/>
                             <constraint firstItem="jEk-1G-9VQ" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" type="default" id="QOr-cR-TKR"/>
                             <constraint firstItem="Y6B-Hp-dtG" firstAttribute="centerY" secondItem="oP8-H4-Oym" secondAttribute="centerY" type="default" id="T4g-LV-mcV"/>
-                            <constraint firstAttribute="bottom" secondItem="33s-pI-pZw" secondAttribute="bottom" constant="140" id="UB2-bc-zRo"/>
                             <constraint firstItem="Kmi-IS-gfN" firstAttribute="centerX" secondItem="33s-pI-pZw" secondAttribute="centerX" type="default" id="VLe-zN-Viz"/>
-                            <constraint firstItem="80d-Lp-uRG" firstAttribute="centerX" secondItem="Y6B-Hp-dtG" secondAttribute="centerX" type="default" id="WzI-9r-vKt"/>
                             <constraint firstItem="Wdh-jt-kcf" firstAttribute="trailing" secondItem="a7i-2j-Izd" secondAttribute="trailing" type="default" id="YeV-W9-tAO"/>
-                            <constraint firstItem="oP8-H4-Oym" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="60" id="Yup-k0-HzN"/>
-                            <constraint firstItem="80d-Lp-uRG" firstAttribute="centerX" secondItem="33s-pI-pZw" secondAttribute="centerX" type="default" id="bXP-Ty-46v"/>
+                            <constraint firstItem="oP8-H4-Oym" firstAttribute="top" secondItem="a7i-2j-Izd" secondAttribute="top" constant="60" type="user" id="Yup-k0-HzN"/>
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="trailing" secondItem="a7i-2j-Izd" secondAttribute="trailing" type="default" id="hrw-e3-k0A"/>
+                            <constraint firstItem="80d-Lp-uRG" firstAttribute="centerX" secondItem="33s-pI-pZw" secondAttribute="centerX" type="default" id="ikl-fv-9Sg"/>
                             <constraint firstItem="jEk-1G-9VQ" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" type="default" id="kWY-pX-vkn"/>
+                            <constraint firstAttribute="bottom" secondItem="33s-pI-pZw" secondAttribute="bottom" constant="140" id="mFI-Lp-ZKh"/>
+                            <constraint firstAttribute="bottom" secondItem="oP8-H4-Oym" secondAttribute="bottom" constant="180" type="user" id="mWY-vh-Bey"/>
                             <constraint firstAttribute="bottom" secondItem="Kmi-IS-gfN" secondAttribute="bottom" constant="10" type="user" id="tXN-aZ-MgC"/>
                             <constraint firstItem="oP8-H4-Oym" firstAttribute="leading" secondItem="a7i-2j-Izd" secondAttribute="leading" type="default" id="y47-Ne-j7Q"/>
                         </constraints>
