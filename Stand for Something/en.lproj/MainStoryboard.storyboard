@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -46,14 +46,14 @@
             </objects>
             <point key="canvasLocation" x="582" y="51"/>
         </scene>
-        <!--Square List View Controller - Where do you stand?-->
+        <!--Square List View Controller - Squares near you-->
         <scene sceneID="n6p-9V-jva">
             <objects>
                 <tableViewController id="phM-tf-pLA" customClass="SquareListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fhi-Aj-BAZ">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fhi-Aj-BAZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SquareCell" textLabel="JF0-TD-lKm" detailTextLabel="wTK-wn-tEK" style="IBUITableViewCellStyleSubtitle" id="2y8-bX-8ok">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -76,13 +76,56 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="80" id="197-Qm-RWP">
+                                <rect key="frame" x="0.0" y="66" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Square name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-5Q-1Nv">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="HYF-B9-WFG"/>
+                                                <constraint firstAttribute="width" constant="247" id="Mmf-X0-tOc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-nM-Eqf">
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                            <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ehD-pP-c2S"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5no-jI-9oS">
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                            <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5no-jI-9oS" secondAttribute="bottom" constant="14" id="6NA-E8-pBg"/>
+                                    <constraint firstItem="ehD-pP-c2S" firstAttribute="top" secondItem="Wwo-5Q-1Nv" secondAttribute="top" type="default" id="6Ph-l5-SH7"/>
+                                    <constraint firstItem="Wwo-5Q-1Nv" firstAttribute="leading" secondItem="197-Qm-RWP" secondAttribute="leading" constant="10" id="GlI-aX-U06"/>
+                                    <constraint firstItem="5no-jI-9oS" firstAttribute="leading" secondItem="Wwo-5Q-1Nv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Hw7-PL-9Bu"/>
+                                    <constraint firstItem="ehD-pP-c2S" firstAttribute="leading" secondItem="Wwo-5Q-1Nv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="NzG-TR-Bfy"/>
+                                    <constraint firstItem="5no-jI-9oS" firstAttribute="trailing" secondItem="ehD-pP-c2S" secondAttribute="trailing" type="default" id="Ol6-me-BLo"/>
+                                    <constraint firstAttribute="bottom" secondItem="xIL-nM-Eqf" secondAttribute="bottom" constant="9" id="ayc-0O-fP7"/>
+                                    <constraint firstItem="ehD-pP-c2S" firstAttribute="centerY" secondItem="197-Qm-RWP" secondAttribute="centerY" type="default" id="cSE-hq-8MQ"/>
+                                    <constraint firstItem="5no-jI-9oS" firstAttribute="leading" secondItem="xIL-nM-Eqf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="q0Q-ti-1nt"/>
+                                    <constraint firstItem="xIL-nM-Eqf" firstAttribute="leading" secondItem="Wwo-5Q-1Nv" secondAttribute="leading" type="default" id="q2v-fx-UN3"/>
+                                </constraints>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="phM-tf-pLA" id="arz-rB-mlw"/>
                             <outlet property="delegate" destination="phM-tf-pLA" id="eUV-gv-QPS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Where do you stand?" id="mQI-5H-vke"/>
+                    <navigationItem key="navigationItem" title="Squares near you" id="mQI-5H-vke"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <segue destination="DzP-8o-TuR" kind="push" identifier="Square" id="jv1-N8-dNV"/>
@@ -92,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="1069" y="51"/>
         </scene>
-        <!--Square View Controller - Neude-->
+        <!--Square View Controller - Square Name-->
         <scene sceneID="qI0-j9-Hqr">
             <objects>
                 <viewController storyboardIdentifier="SquareViewController" id="DzP-8o-TuR" customClass="SquareViewController" sceneMemberID="viewController">
@@ -132,7 +175,7 @@
                             <constraint firstAttribute="bottom" secondItem="33s-pI-pZw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xLh-BL-H3t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Neude" id="3Au-Fx-YUQ"/>
+                    <navigationItem key="navigationItem" title="Square Name" id="3Au-Fx-YUQ"/>
                     <connections>
                         <outlet property="mapView" destination="oP8-H4-Oym" id="RQC-dr-FCG"/>
                         <outlet property="motionLabel" destination="tOl-JG-taF" id="Jxx-Kg-sJI"/>
@@ -252,6 +295,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
         <image name="crosshair.png" width="320" height="319"/>
     </resources>
     <classes>
