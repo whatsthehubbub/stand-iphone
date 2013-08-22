@@ -13,6 +13,8 @@
 		47341AC517C604BF0076EB24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341AC117C604BF0076EB24 /* Default@2x.png */; };
 		47341AC817C615230076EB24 /* 2-1-Number-of-standers-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341AC617C615230076EB24 /* 2-1-Number-of-standers-icon.png */; };
 		47341AC917C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341AC717C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png */; };
+		47341ACC17C61E180076EB24 /* 2-2-Squares-near-you-title.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ACA17C61E180076EB24 /* 2-2-Squares-near-you-title.png */; };
+		47341ACD17C61E180076EB24 /* 2-2-Squares-near-you-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ACB17C61E180076EB24 /* 2-2-Squares-near-you-title@2x.png */; };
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
 		4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */; };
 		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
@@ -42,6 +44,8 @@
 		47341AC117C604BF0076EB24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		47341AC617C615230076EB24 /* 2-1-Number-of-standers-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-1-Number-of-standers-icon.png"; sourceTree = "<group>"; };
 		47341AC717C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-1-Number-of-standers-icon@2x.png"; sourceTree = "<group>"; };
+		47341ACA17C61E180076EB24 /* 2-2-Squares-near-you-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-2-Squares-near-you-title.png"; sourceTree = "<group>"; };
+		47341ACB17C61E180076EB24 /* 2-2-Squares-near-you-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-2-Squares-near-you-title@2x.png"; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		4E0EF71E1799E6E300BA6C32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47341ACA17C61E180076EB24 /* 2-2-Squares-near-you-title.png */,
+				47341ACB17C61E180076EB24 /* 2-2-Squares-near-you-title@2x.png */,
 				47341AC617C615230076EB24 /* 2-1-Number-of-standers-icon.png */,
 				47341AC717C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png */,
 				47341ABE17C604BF0076EB24 /* Default-568h.png */,
@@ -239,6 +245,8 @@
 				47341AC517C604BF0076EB24 /* Default@2x.png in Resources */,
 				47341AC817C615230076EB24 /* 2-1-Number-of-standers-icon.png in Resources */,
 				47341AC917C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png in Resources */,
+				47341ACC17C61E180076EB24 /* 2-2-Squares-near-you-title.png in Resources */,
+				47341ACD17C61E180076EB24 /* 2-2-Squares-near-you-title@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
