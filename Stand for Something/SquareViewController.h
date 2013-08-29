@@ -16,6 +16,11 @@
 
 @property (strong) IBOutlet UILabel *headerLabel;
 
+@property (strong) IBOutlet UILabel *nowLabel;
+@property (strong) IBOutlet UILabel *sessionsLabel;
+@property (strong) IBOutlet UILabel *hoursLabel;
+@property (strong) IBOutlet UILabel *longestLabel;
+
 @property (strong) IBOutlet MKMapView *mapView;
 
 - (IBAction)startStanding:(id)sender;

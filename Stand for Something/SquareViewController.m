@@ -17,6 +17,12 @@
 @synthesize plaza;
 
 @synthesize headerLabel;
+
+@synthesize nowLabel;
+@synthesize sessionsLabel;
+@synthesize hoursLabel;
+@synthesize longestLabel;
+
 @synthesize mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,6 +42,13 @@
 //    NSLog(@"loaded view for plaza %@", [plaza objectForKey:@"name"]);
     
     self.headerLabel.text = [plaza objectForKey:@"name"];
+    
+    self.nowLabel.text = [NSString stringWithFormat:@"%d people standing here now", arc4random_uniform(8)];
+    
+    int sessionCount = arc4random_uniform(200);
+    self.sessionsLabel.text = [NSString stringWithFormat:@"%d sessions to date", sessionCount];
+    self.hoursLabel.text = [NSString stringWithFormat:@"%d total hours of standing", sessionCount * (arc4random_uniform(5)+1) - (sessionCount/2)];
+    self.longestLabel.text = [NSString stringWithFormat:@"%d hours longest session", arc4random_uniform(7)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
