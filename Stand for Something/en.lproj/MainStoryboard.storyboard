@@ -299,12 +299,13 @@
                                     <action selector="stopNow:" destination="IFz-l0-0MX" eventType="touchUpInside" id="n9S-ua-RlH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="vUm-vx-9UL"/>
+                                    <constraint firstAttribute="width" constant="40" id="M8y-ja-t0c"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yqp-3U-Op6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="x">
+                                <state key="normal" image="4-1-Close-button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -318,10 +319,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="19" id="0MU-JK-cxk"/>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Boe-Ft-RTE"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
-                            <constraint firstItem="WJl-kZ-YU2" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="8" id="RdK-fj-Rzg"/>
-                            <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WV5-FG-aYV"/>
+                            <constraint firstItem="WJl-kZ-YU2" firstAttribute="centerY" secondItem="OFs-Zj-OiE" secondAttribute="centerY" type="default" id="Lmx-PM-Q1N"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="Xjg-Ww-bPO"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="136" id="ctf-HH-brv"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
@@ -371,8 +372,54 @@
         <image name="3-1-Back-arrow.png" width="35" height="60"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
+        <image name="4-1-Close-button.png" width="20" height="20"/>
         <image name="4-1-Stand-button.png" width="160" height="160"/>
     </resources>
+    <classes>
+        <class className="ActionButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionButton.h"/>
+        </class>
+        <class className="HeaderLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeaderLabel.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SquareListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
+        </class>
+        <class className="SquareTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberOfPeople" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SquareViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="startStanding:"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longestLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="nowLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sessionsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StandViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+                <relationship kind="action" name="stopNow:"/>
+                <relationship kind="outlet" name="debugLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
