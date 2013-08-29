@@ -186,7 +186,7 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Lp-uRG"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-2-Dot-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-Hp-dtG"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-pI-pZw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-pI-pZw" customClass="ActionButton">
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="r9l-Wg-ed6"/>
@@ -355,6 +355,9 @@
         <image name="crosshair.png" width="320" height="319"/>
     </resources>
     <classes>
+        <class className="ActionButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionButton.h"/>
+        </class>
         <class className="HeaderLabel" superclassName="UILabel">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HeaderLabel.h"/>
         </class>
