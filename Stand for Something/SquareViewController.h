@@ -17,5 +17,6 @@
 @property (strong) IBOutlet MKMapView *mapView;
 
 - (IBAction)startStanding:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end
