@@ -40,10 +40,11 @@
 		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
 		4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01B17CFCCF100194023 /* ActionButton.m */; };
+		4E80F01F17CFD1DD00194023 /* 4-1-Stand-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01D17CFD1DD00194023 /* 4-1-Stand-button.png */; };
+		4E80F02017CFD1DD00194023 /* 4-1-Stand-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01E17CFD1DD00194023 /* 4-1-Stand-button@2x.png */; };
 		4EDAE3D617B4F12E00484E79 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D217B4F12E00484E79 /* libTestFlight.a */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
-		4EE7A60117B93BB500B2CF0A /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7A60017B93BB500B2CF0A /* crosshair.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,12 +94,13 @@
 		4E80F01817CFCBDB00194023 /* kant.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kant.gpx; sourceTree = "<group>"; };
 		4E80F01A17CFCCF100194023 /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
 		4E80F01B17CFCCF100194023 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
+		4E80F01D17CFD1DD00194023 /* 4-1-Stand-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Stand-button.png"; sourceTree = "<group>"; };
+		4E80F01E17CFD1DD00194023 /* 4-1-Stand-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Stand-button@2x.png"; sourceTree = "<group>"; };
 		4EDAE3D217B4F12E00484E79 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		4EDAE3D517B4F12E00484E79 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
-		4EE7A60017B93BB500B2CF0A /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +181,6 @@
 				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
 				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
 				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
-				4EE7A60017B93BB500B2CF0A /* crosshair.png */,
 			);
 			path = "Stand for Something";
 			sourceTree = "<group>";
@@ -197,6 +198,8 @@
 				47341ACF17C622080076EB24 /* 3-1-Back-arrow@2x.png */,
 				47341AC617C615230076EB24 /* 2-1-Number-of-standers-icon.png */,
 				47341AC717C615230076EB24 /* 2-1-Number-of-standers-icon@2x.png */,
+				4E80F01D17CFD1DD00194023 /* 4-1-Stand-button.png */,
+				4E80F01E17CFD1DD00194023 /* 4-1-Stand-button@2x.png */,
 				47341ABE17C604BF0076EB24 /* Default-568h.png */,
 				47341ABF17C604BF0076EB24 /* Default-568h@2x.png */,
 				47341AC017C604BF0076EB24 /* Default.png */,
@@ -271,7 +274,6 @@
 			files = (
 				4E0EF7221799E6E300BA6C32 /* InfoPlist.strings in Resources */,
 				4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */,
-				4EE7A60117B93BB500B2CF0A /* crosshair.png in Resources */,
 				47341AC217C604BF0076EB24 /* Default-568h.png in Resources */,
 				47341AC317C604BF0076EB24 /* Default-568h@2x.png in Resources */,
 				47341AC417C604BF0076EB24 /* Default.png in Resources */,
@@ -286,6 +288,8 @@
 				47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */,
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
+				4E80F01F17CFD1DD00194023 /* 4-1-Stand-button.png in Resources */,
+				4E80F02017CFD1DD00194023 /* 4-1-Stand-button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

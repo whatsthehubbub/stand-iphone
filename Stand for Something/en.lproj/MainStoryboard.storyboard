@@ -268,7 +268,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" image="crosshair.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-Zj-OiE" customClass="HeaderLabel">
+                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" type="user" id="SYC-1S-YGt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" image="4-1-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="APw-2p-mWf"/>
                                     <constraint firstAttribute="height" constant="150" id="knk-Qg-XKG"/>
@@ -291,8 +300,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="vUm-vx-9UL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Close">
+                                <state key="normal" title="x">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -308,15 +320,18 @@
                         <constraints>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Boe-Ft-RTE"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
-                            <constraint firstItem="WJl-kZ-YU2" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H1U-Vp-s6H"/>
+                            <constraint firstItem="WJl-kZ-YU2" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="8" id="RdK-fj-Rzg"/>
+                            <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WV5-FG-aYV"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="Xjg-Ww-bPO"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="136" id="ctf-HH-brv"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstAttribute="trailing" secondItem="XfP-mi-LJe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eOa-ey-UVz"/>
                             <constraint firstItem="XfP-mi-LJe" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="inQ-lI-CSJ"/>
+                            <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
                             <constraint firstItem="gjp-5s-k3F" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mys-XZ-E2d"/>
-                            <constraint firstAttribute="bottom" secondItem="WJl-kZ-YU2" secondAttribute="bottom" constant="10" id="rsE-yy-Yqf"/>
+                            <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="qDU-h5-NDA"/>
                             <constraint firstItem="gjp-5s-k3F" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="242" id="ss4-gs-Aty"/>
+                            <constraint firstItem="OFs-Zj-OiE" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="xkX-Ur-Jil"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="z4t-kd-u8V"/>
                         </constraints>
                     </view>
@@ -356,7 +371,7 @@
         <image name="3-1-Back-arrow.png" width="35" height="60"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
-        <image name="crosshair.png" width="320" height="319"/>
+        <image name="4-1-Stand-button.png" width="160" height="160"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
