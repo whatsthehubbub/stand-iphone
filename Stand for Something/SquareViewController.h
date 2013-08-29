@@ -14,6 +14,8 @@
 
 @property (strong) NSDictionary *plaza;
 
+@property (strong) IBOutlet UILabel *headerLabel;
+
 @property (strong) IBOutlet MKMapView *mapView;
 
 - (IBAction)startStanding:(id)sender;

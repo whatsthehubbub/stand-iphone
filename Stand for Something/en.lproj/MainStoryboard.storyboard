@@ -229,6 +229,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Square Name" id="3Au-Fx-YUQ"/>
                     <connections>
+                        <outlet property="headerLabel" destination="Wdh-jt-kcf" id="kw1-Tb-Qxu"/>
                         <outlet property="mapView" destination="oP8-H4-Oym" id="RQC-dr-FCG"/>
                         <outlet property="motionLabel" destination="tOl-JG-taF" id="Jxx-Kg-sJI"/>
                         <outlet property="timeLabel" destination="XfP-mi-LJe" id="lF1-nH-6Il"/>
@@ -376,6 +377,7 @@
             <relationships>
                 <relationship kind="action" name="back:"/>
                 <relationship kind="action" name="startStanding:"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

@@ -16,6 +16,7 @@
 
 @synthesize plaza;
 
+@synthesize headerLabel;
 @synthesize mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,7 +35,7 @@
     
 //    NSLog(@"loaded view for plaza %@", [plaza objectForKey:@"name"]);
     
-    [self setTitle:[plaza objectForKey:@"name"]];
+    self.headerLabel.text = [plaza objectForKey:@"name"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
