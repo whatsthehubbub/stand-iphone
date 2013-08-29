@@ -21,50 +21,29 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SquareCell" textLabel="VLk-e9-cTE" detailTextLabel="nU4-Rg-5mL" style="IBUITableViewCellStyleSubtitle" id="2y8-bX-8ok">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="SquareCell" id="0EK-Z6-FUv" customClass="SquareTableViewCell">
                                 <rect key="frame" x="0.0" y="60" width="320" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLk-e9-cTE">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nU4-Rg-5mL">
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="s6Q-fs-mhK">
-                                <rect key="frame" x="0.0" y="140" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Square name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-6Z-aja">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Square name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-3Z-QDd">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="247" id="4AX-Ka-Rqx"/>
-                                                <constraint firstAttribute="height" constant="30" id="mWx-rr-vGv"/>
+                                                <constraint firstAttribute="height" constant="30" id="VnL-WD-uIx"/>
+                                                <constraint firstAttribute="width" constant="247" id="eTw-wa-Sve"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbq-FV-VP9">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA9-XI-KaN">
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                             <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="l25-Gp-e39"/>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-YW-YBg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-rF-bwr"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-dR-U1v">
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                             <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,17 +52,22 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="bbq-FV-VP9" firstAttribute="leading" secondItem="JzA-6Z-aja" secondAttribute="leading" type="default" id="5NV-PK-pWt"/>
-                                    <constraint firstItem="l25-Gp-e39" firstAttribute="centerY" secondItem="s6Q-fs-mhK" secondAttribute="centerY" type="default" id="5il-CV-WnS"/>
-                                    <constraint firstItem="rFb-YW-YBg" firstAttribute="leading" secondItem="bbq-FV-VP9" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7cO-f2-FRc"/>
-                                    <constraint firstAttribute="bottom" secondItem="bbq-FV-VP9" secondAttribute="bottom" constant="14" id="B71-2a-tro"/>
-                                    <constraint firstItem="rFb-YW-YBg" firstAttribute="trailing" secondItem="l25-Gp-e39" secondAttribute="trailing" type="default" id="Fk3-rF-ieR"/>
-                                    <constraint firstItem="bbq-FV-VP9" firstAttribute="baseline" secondItem="rFb-YW-YBg" secondAttribute="baseline" type="default" id="Not-eb-T2S"/>
-                                    <constraint firstItem="JzA-6Z-aja" firstAttribute="leading" secondItem="s6Q-fs-mhK" secondAttribute="leading" constant="10" id="cab-UT-D5a"/>
-                                    <constraint firstItem="l25-Gp-e39" firstAttribute="leading" secondItem="bbq-FV-VP9" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ltf-vz-Srv"/>
-                                    <constraint firstItem="l25-Gp-e39" firstAttribute="top" secondItem="JzA-6Z-aja" secondAttribute="top" type="default" id="mPA-ER-rcj"/>
-                                    <constraint firstItem="l25-Gp-e39" firstAttribute="leading" secondItem="JzA-6Z-aja" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tes-Da-jZG"/>
+                                    <constraint firstItem="yWG-dR-U1v" firstAttribute="trailing" secondItem="Vbo-rF-bwr" secondAttribute="trailing" type="default" id="2q8-VM-zW0"/>
+                                    <constraint firstItem="Vbo-rF-bwr" firstAttribute="leading" secondItem="CA9-XI-KaN" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="5S1-qi-X8Z"/>
+                                    <constraint firstItem="Vbo-rF-bwr" firstAttribute="centerY" secondItem="0EK-Z6-FUv" secondAttribute="centerY" type="default" id="ABN-Of-nMm"/>
+                                    <constraint firstItem="Vbo-rF-bwr" firstAttribute="top" secondItem="vRb-3Z-QDd" secondAttribute="top" type="default" id="CrN-RQ-lXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="CA9-XI-KaN" secondAttribute="bottom" constant="14" id="GEH-bY-aI6"/>
+                                    <constraint firstItem="yWG-dR-U1v" firstAttribute="leading" secondItem="CA9-XI-KaN" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IxO-Ib-MOp"/>
+                                    <constraint firstItem="vRb-3Z-QDd" firstAttribute="leading" secondItem="0EK-Z6-FUv" secondAttribute="leading" constant="10" id="Osb-GN-m0L"/>
+                                    <constraint firstItem="Vbo-rF-bwr" firstAttribute="leading" secondItem="vRb-3Z-QDd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="R4z-fC-JtY"/>
+                                    <constraint firstItem="CA9-XI-KaN" firstAttribute="leading" secondItem="vRb-3Z-QDd" secondAttribute="leading" type="default" id="R6k-z9-qRN"/>
+                                    <constraint firstItem="CA9-XI-KaN" firstAttribute="baseline" secondItem="yWG-dR-U1v" secondAttribute="baseline" type="default" id="WIZ-yN-p7B"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="CA9-XI-KaN" id="T3A-8m-0rc"/>
+                                    <outlet property="nameLabel" destination="vRb-3Z-QDd" id="XTA-J6-PqC"/>
+                                    <outlet property="numberOfPeople" destination="yWG-dR-U1v" id="nc3-KB-9ca"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -366,34 +350,6 @@
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
         <image name="crosshair.png" width="320" height="319"/>
     </resources>
-    <classes>
-        <class className="HeaderLabel" superclassName="UILabel">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeaderLabel.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SquareListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
-        </class>
-        <class className="SquareViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="startStanding:"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="StandViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="close:"/>
-                <relationship kind="action" name="stopNow:"/>
-                <relationship kind="outlet" name="debugLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

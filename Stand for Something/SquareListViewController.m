@@ -114,7 +114,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"SquareCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    SquareTableViewCell *cell = (SquareTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSDictionary *plaza = [self.plazas objectAtIndex:indexPath.row];
     
@@ -122,11 +122,10 @@
     CLLocation *plazaLocation = [[CLLocation alloc] initWithCoordinate:plazaCenter altitude:1 horizontalAccuracy:1 verticalAccuracy:1 timestamp:nil];
     CLLocationDistance meters = [self.currentLocation distanceFromLocation:plazaLocation];
     
-    cell.textLabel.text = [plaza objectForKey:@"name"];
+    cell.nameLabel.text = [plaza objectForKey:@"name"];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%@ (%d meters)", [[plaza objectForKey:@"location"] objectForKey:@"address"], (int)meters];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%d meters)", [[plaza objectForKey:@"location"] objectForKey:@"address"], (int)meters];
-    
-    // Configure the cell...
+    cell.numberOfPeople.text = [NSString stringWithFormat:@"%d", arc4random_uniform(12)];
     
     return cell;
 }

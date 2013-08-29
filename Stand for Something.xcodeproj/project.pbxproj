@@ -37,6 +37,7 @@
 		4E0EF74A1799F3A800BA6C32 /* FSNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73F1799EEA300BA6C32 /* FSNData.m */; };
 		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
 		4E80F01217CF945200194023 /* HeaderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01117CF945200194023 /* HeaderLabel.m */; };
+		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4EDAE3D617B4F12E00484E79 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D217B4F12E00484E79 /* libTestFlight.a */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
@@ -85,6 +86,8 @@
 		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
 		4E80F01017CF945200194023 /* HeaderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderLabel.h; sourceTree = "<group>"; };
 		4E80F01117CF945200194023 /* HeaderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderLabel.m; sourceTree = "<group>"; };
+		4E80F01317CF990600194023 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
+		4E80F01417CF990600194023 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
 		4EDAE3D217B4F12E00484E79 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		4EDAE3D517B4F12E00484E79 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				4EDAE3D117B4F12E00484E79 /* TestFlightSDK1.2.6 */,
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
 				4E0EF7271799E6E300BA6C32 /* AppDelegate.m */,
+				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
+				4E80F01417CF990600194023 /* SquareTableViewCell.m */,
 				4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */,
 				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
 				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
@@ -292,6 +297,7 @@
 				4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */,
 				4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */,
 				4E80F01217CF945200194023 /* HeaderLabel.m in Sources */,
+				4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
