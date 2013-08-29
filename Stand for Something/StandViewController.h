@@ -13,7 +13,7 @@
 
 @property (strong) CMMotionManager *motionManager;
 
-@property (strong) IBOutlet UILabel *debugLabel;
+@property (strong) IBOutlet UILabel *messageLabel;
 
 @property (assign) double maxX;
 @property (assign) double maxY;

@@ -16,7 +16,7 @@
 
 @synthesize motionManager;
 
-@synthesize debugLabel;
+@synthesize messageLabel;
 
 @synthesize maxX;
 @synthesize maxY;
@@ -45,10 +45,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-#if DEBUG
-#else
-    self.debugLabel.hidden = YES;
-#endif
+
+    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";
     
     self.startedStanding = NO;
     self.gracePeriod = NO;
@@ -89,7 +87,7 @@
             maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
             maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
             
-            self.debugLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
+            self.messageLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
             
             if (maxX > 0.1 && maxY > 0.1 && maxZ > 0.1) {
                 // Done standing, you did a step
