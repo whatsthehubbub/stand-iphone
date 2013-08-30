@@ -281,7 +281,7 @@
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRY-tl-7fc" customClass="FontLabel">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="228" id="e4V-1L-MuO"/>
+                                            <constraint firstAttribute="width" constant="283" id="dwr-cw-qvm"/>
                                             <constraint firstAttribute="height" constant="21" id="wnR-aR-Muw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -296,14 +296,26 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Release or move to stop.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBY-P9-THo" customClass="FontLabel">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="u4P-Cw-2AX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="JBY-P9-THo" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="231" scoringType="5" id="8Gd-qa-DyZ"/>
                                     <constraint firstItem="XRY-tl-7fc" firstAttribute="centerX" secondItem="FeG-TT-l9C" secondAttribute="centerX" type="default" id="C12-6m-Bii"/>
+                                    <constraint firstItem="JBY-P9-THo" firstAttribute="leading" secondItem="XRY-tl-7fc" secondAttribute="leading" type="default" id="ChF-hK-jsM"/>
                                     <constraint firstItem="FeG-TT-l9C" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OfQ-k4-wCR"/>
                                     <constraint firstItem="XRY-tl-7fc" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="PA3-YY-5DE"/>
+                                    <constraint firstAttribute="bottom" secondItem="JBY-P9-THo" secondAttribute="bottom" constant="50" id="Q9h-mt-ok2"/>
                                     <constraint firstAttribute="trailing" secondItem="FeG-TT-l9C" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i1m-D8-ql6"/>
                                     <constraint firstItem="FeG-TT-l9C" firstAttribute="leading" secondItem="0jX-7X-os0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j8M-TG-NDo"/>
+                                    <constraint firstItem="JBY-P9-THo" firstAttribute="trailing" secondItem="XRY-tl-7fc" secondAttribute="trailing" type="default" id="z6k-tt-0zO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -311,7 +323,6 @@
                         <constraints>
                             <constraint firstItem="9tQ-yd-T0A" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="2X4-D4-m7P"/>
                             <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="19" id="8qk-xY-Xkp"/>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="DSg-CS-bkU"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="centerY" secondItem="OFs-Zj-OiE" secondAttribute="centerY" type="default" id="Lmx-PM-Q1N"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="MSY-o5-ona"/>
