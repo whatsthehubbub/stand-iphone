@@ -16,8 +16,6 @@
 
 @synthesize motionManager;
 
-@synthesize messageLabel;
-
 @synthesize maxX;
 @synthesize maxY;
 @synthesize maxZ;
@@ -25,6 +23,11 @@
 @synthesize startTime;
 @synthesize endTime;
 @synthesize secondTimer;
+
+@synthesize messageLabel;
+
+@synthesize timeView;
+@synthesize timeLabel;
 
 @synthesize touchView;
 
@@ -70,6 +73,7 @@
     self.touchView.image = [UIImage imageNamed:@"4-2-Stand-button.png"];
     self.messageLabel.hidden = YES;
     
+    self.timeView.hidden = NO;    
     
 //    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
@@ -130,13 +134,13 @@
 }
 
 - (void)incrementTime {
-//    NSLog(@"in time increment");
+    NSLog(@"in time increment");
     
     if (!self.gracePeriod && !self.stoppedStanding) {
         self.endTime = [[NSDate alloc] init];
         
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-//        self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
+        self.timeLabel.text = [NSString stringWithFormat:@"00:%d", (int)interval];
     } else if (self.gracePeriod) {
         
         NSDate *now = [[NSDate alloc] init];

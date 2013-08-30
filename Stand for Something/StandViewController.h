@@ -30,6 +30,9 @@
 
 @property (strong) IBOutlet UILabel *messageLabel;
 
+@property (strong) IBOutlet UIView *timeView;
+@property (strong) IBOutlet UILabel *timeLabel;
+
 @property (strong) IBOutlet UIImageView *touchView;
 
 - (void)startStanding;
