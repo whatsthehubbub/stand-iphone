@@ -307,14 +307,17 @@
                                     <action selector="close:" destination="IFz-l0-0MX" eventType="touchUpInside" id="oaE-qH-0Li"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-yd-T0A"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="19" id="0MU-JK-cxk"/>
+                            <constraint firstItem="9tQ-yd-T0A" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="2X4-D4-m7P"/>
                             <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GHB-L6-dyc"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="83" id="HEC-np-zmX"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="centerY" secondItem="OFs-Zj-OiE" secondAttribute="centerY" type="default" id="Lmx-PM-Q1N"/>
-                            <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="DgT-ht-X9b" secondAttribute="centerX" type="default" id="Xjg-Ww-bPO"/>
+                            <constraint firstItem="9tQ-yd-T0A" firstAttribute="centerX" secondItem="tOl-JG-taF" secondAttribute="centerX" type="default" id="Owm-hg-znh"/>
+                            <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="9tQ-yd-T0A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SM3-bd-VF6"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
                             <constraint firstItem="gjp-5s-k3F" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mys-XZ-E2d"/>
@@ -359,6 +362,7 @@
         <image name="3-1-Back-arrow.png" width="35" height="60"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
+        <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-1-Close-button.png" width="20" height="20"/>
         <image name="4-1-Stand-button.png" width="160" height="160"/>
     </resources>
