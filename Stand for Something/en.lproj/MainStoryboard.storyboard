@@ -260,22 +260,6 @@
                                     <constraint firstAttribute="height" constant="150" id="knk-Qg-XKG"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjp-5s-k3F">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="Sj6-BU-UGf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Stop now">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopNow:" destination="IFz-l0-0MX" eventType="touchUpInside" id="n9S-ua-RlH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="M8y-ja-t0c"/>
@@ -306,9 +290,7 @@
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="9tQ-yd-T0A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SM3-bd-VF6"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
-                            <constraint firstItem="gjp-5s-k3F" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mys-XZ-E2d"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="qDU-h5-NDA"/>
-                            <constraint firstItem="gjp-5s-k3F" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="242" id="ss4-gs-Aty"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="xkX-Ur-Jil"/>
                             <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="z4t-kd-u8V"/>
                         </constraints>
@@ -392,7 +374,6 @@
                 <relationship kind="action" name="close:"/>
                 <relationship kind="action" name="stopNow:"/>
                 <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
             </relationships>
         </class>

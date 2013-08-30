@@ -13,7 +13,7 @@
 
 @property (strong) CMMotionManager *motionManager;
 
-@property (strong) IBOutlet UILabel *messageLabel;
+
 
 @property (assign) double maxX;
 @property (assign) double maxY;
@@ -28,7 +28,7 @@
 @property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
 
-@property (strong) IBOutlet UILabel *timeLabel;
+@property (strong) IBOutlet UILabel *messageLabel;
 
 @property (strong) IBOutlet UIImageView *touchView;
 

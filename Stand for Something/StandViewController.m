@@ -26,8 +26,6 @@
 @synthesize endTime;
 @synthesize secondTimer;
 
-@synthesize timeLabel;
-
 @synthesize touchView;
 
 
@@ -67,6 +65,11 @@
     self.stoppedStanding = NO;
     self.startTime = [[NSDate alloc] init];
     self.startedStanding = YES;
+    
+    self.view.backgroundColor = [UIColor blackColor];
+    self.touchView.image = [UIImage imageNamed:@"4-2-Stand-button.png"];
+    self.messageLabel.hidden = YES;
+    
     
 //    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
@@ -133,13 +136,13 @@
         self.endTime = [[NSDate alloc] init];
         
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-        self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
+//        self.timeLabel.text = [NSString stringWithFormat:@"%d seconds", (int)interval];
     } else if (self.gracePeriod) {
         
         NSDate *now = [[NSDate alloc] init];
         NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStarted];
         
-        self.timeLabel.text = [NSString stringWithFormat:@"in second %d of grace", (int)interval];
+//        self.timeLabel.text = [NSString stringWithFormat:@"in second %d of grace", (int)interval];
         
         if (interval > 5) {
             [self stopStanding];
@@ -154,7 +157,7 @@
     [self.secondTimer invalidate];
     
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
+//    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
 - (IBAction)stopNow:(id)sender {
