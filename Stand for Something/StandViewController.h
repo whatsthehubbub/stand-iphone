@@ -28,16 +28,20 @@
 @property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
 
-@property (strong) IBOutlet UILabel *messageLabel;
+@property (strong) IBOutlet UIView *startView;
 
-@property (strong) IBOutlet UIView *timeView;
-@property (strong) IBOutlet UILabel *timeLabel;
+@property (strong) IBOutlet UIView *standingView;
+@property (strong) IBOutlet UILabel *standingTimeLabel;
+
+@property (strong) IBOutlet UIView *graceView;
+
+@property (strong) IBOutlet UIView *doneView;
+@property (strong) IBOutlet UILabel *doneTimeLabel;
+@property (strong) IBOutlet UILabel *doneLabel;
 
 @property (strong) IBOutlet UIImageView *touchView;
 
 - (void)startStanding;
-
-- (IBAction)stopNow:(id)sender;
 
 - (IBAction)close:(id)sender;
 

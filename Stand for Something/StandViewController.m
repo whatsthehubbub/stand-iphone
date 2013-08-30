@@ -24,10 +24,16 @@
 @synthesize endTime;
 @synthesize secondTimer;
 
-@synthesize messageLabel;
+@synthesize startView;
 
-@synthesize timeView;
-@synthesize timeLabel;
+@synthesize standingView;
+@synthesize standingTimeLabel;
+
+@synthesize graceView;
+
+@synthesize doneView;
+@synthesize doneTimeLabel;
+@synthesize doneLabel;
 
 @synthesize touchView;
 
@@ -47,7 +53,7 @@
 	// Do any additional setup after loading the view.
     
 
-    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";
+//    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";
     
     self.startedStanding = NO;
     self.gracePeriod = NO;
@@ -69,11 +75,7 @@
     self.startTime = [[NSDate alloc] init];
     self.startedStanding = YES;
     
-    self.view.backgroundColor = [UIColor blackColor];
-    self.touchView.image = [UIImage imageNamed:@"4-2-Stand-button.png"];
-    self.messageLabel.hidden = YES;
-    
-    self.timeView.hidden = NO;    
+    [self showStandingView];
     
 //    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
@@ -94,7 +96,7 @@
             maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
             maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
             
-            self.messageLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
+//            self.messageLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
             
             if (maxX > 0.1 && maxY > 0.1 && maxZ > 0.1) {
                 // Done standing, you did a step
@@ -121,6 +123,8 @@
         } else if (self.gracePeriod) {
             self.gracePeriod = NO;
         }
+        
+        [self showStandingView];
     }
 }
 
@@ -130,23 +134,30 @@
     if (self.startedStanding) {
         self.gracePeriod = YES;
         self.graceStarted = [[NSDate alloc] init];
+        
+        [self showGraceView];
     }
 }
 
 - (void)incrementTime {
-    NSLog(@"in time increment");
-    
     if (!self.gracePeriod && !self.stoppedStanding) {
         self.endTime = [[NSDate alloc] init];
         
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-        self.timeLabel.text = [NSString stringWithFormat:@"00:%d", (int)interval];
+        
+        NSString *timeText = [NSString stringWithFormat:@"00:%d", (int)interval];
+        self.standingTimeLabel.text = timeText;
+        self.doneTimeLabel.text = timeText;
+        
+        NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
         
         NSDate *now = [[NSDate alloc] init];
         NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStarted];
         
 //        self.timeLabel.text = [NSString stringWithFormat:@"in second %d of grace", (int)interval];
+        
+        NSLog(@"Time increment grace %d", (int)interval);
         
         if (interval > 5) {
             [self stopStanding];
@@ -157,6 +168,9 @@
 - (void)stopStanding {
     self.stoppedStanding = YES;
     
+    [self showDoneView];
+
+    
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
     
@@ -164,8 +178,37 @@
 //    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
-- (IBAction)stopNow:(id)sender {
-    [self stopStanding];
+- (void)showStartView {
+    
+}
+
+- (void)showStandingView {
+    self.view.backgroundColor = [UIColor blackColor];
+    self.touchView.image = [UIImage imageNamed:@"4-2-Stand-button.png"];
+    
+    self.startView.hidden = YES;
+    self.standingView.hidden = NO;
+}
+
+- (void)showGraceView {
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.standingView.hidden = YES;
+    self.graceView.hidden = NO;
+    
+    self.touchView.image = [UIImage imageNamed:@"4-1-Stand-button.png"];
+}
+
+- (void)showDoneView {
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.standingView.hidden = YES;
+    self.graceView.hidden = YES;
+    self.doneView.hidden = NO;
+    self.touchView.hidden = YES;
+    
+    self.touchView.hidden = YES;
+    self.doneLabel.hidden = NO;
 }
 
 - (IBAction)close:(id)sender {
