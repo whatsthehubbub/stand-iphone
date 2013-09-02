@@ -381,7 +381,6 @@
                         <constraints>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="59" id="0qd-M7-SjK"/>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="4XR-Tc-mWO"/>
-                            <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" constant="19" id="8qk-xY-Xkp"/>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="9SM-Rw-y0e"/>
                             <constraint firstAttribute="bottom" secondItem="0jX-7X-os0" secondAttribute="bottom" constant="179" id="ARs-F5-QME"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" type="default" id="BdT-Fj-Wkj"/>
@@ -397,6 +396,7 @@
                             <constraint firstItem="0jX-7X-os0" firstAttribute="bottom" secondItem="lXG-jF-fYr" secondAttribute="bottom" type="default" id="cb4-Bt-jDv"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsF-KJ-jtR"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
+                            <constraint firstItem="WJl-kZ-YU2" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="m1G-4l-0T0"/>
                             <constraint firstAttribute="bottom" secondItem="R3K-LK-GG3" secondAttribute="bottom" constant="37" id="mWp-ri-HSU"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="bottom" secondItem="BoI-Op-Au2" secondAttribute="bottom" type="default" id="q26-yw-Ga9"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="qDU-h5-NDA"/>
