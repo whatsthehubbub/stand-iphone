@@ -313,68 +313,65 @@ Press and hold the button; no walking, no moving.</string>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMF-eC-MOS" customClass="FontLabel">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="mEf-88-i3v"/>
+                                            <constraint firstAttribute="height" constant="30" id="IXq-gq-N5a"/>
                                             <constraint firstAttribute="width" constant="283" id="tRy-Ei-wkC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2qG-Sq-MIV" customClass="FontLabel">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="121" id="ovh-DL-NG8"/>
+                                            <constraint firstAttribute="height" constant="108" id="hYW-WJ-Zwy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="dMF-eC-MOS" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7HJ-Iy-jBB"/>
-                                    <constraint firstItem="2qG-Sq-MIV" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="AN8-TO-Phl"/>
+                                    <constraint firstItem="dMF-eC-MOS" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8bi-Dn-v4k"/>
                                     <constraint firstItem="2qG-Sq-MIV" firstAttribute="leading" secondItem="lXG-jF-fYr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C22-gH-B2f"/>
                                     <constraint firstItem="dMF-eC-MOS" firstAttribute="centerX" secondItem="2qG-Sq-MIV" secondAttribute="centerX" type="default" id="EXm-yS-DsI"/>
                                     <constraint firstAttribute="trailing" secondItem="2qG-Sq-MIV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ni0-8c-AmX"/>
+                                    <constraint firstItem="2qG-Sq-MIV" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="60" id="qDp-2x-9Oh"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jX-7X-os0">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRY-tl-7fc" customClass="FontLabel">
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1by-fL-a6C"/>
                                             <constraint firstAttribute="width" constant="283" id="dwr-cw-qvm"/>
-                                            <constraint firstAttribute="height" constant="21" id="wnR-aR-Muw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="FeG-TT-l9C" customClass="FontLabel">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="121" id="Ppu-CB-dVU"/>
+                                            <constraint firstAttribute="height" constant="108" id="zDH-kj-uzY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Release or move to stop.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBY-P9-THo" customClass="FontLabel">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="u4P-Cw-2AX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JBY-P9-THo" secondAttribute="bottom" constant="10" id="8ew-OR-oFS"/>
                                     <constraint firstItem="XRY-tl-7fc" firstAttribute="centerX" secondItem="FeG-TT-l9C" secondAttribute="centerX" type="default" id="C12-6m-Bii"/>
                                     <constraint firstItem="JBY-P9-THo" firstAttribute="leading" secondItem="XRY-tl-7fc" secondAttribute="leading" type="default" id="ChF-hK-jsM"/>
-                                    <constraint firstItem="FeG-TT-l9C" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="OfQ-k4-wCR"/>
-                                    <constraint firstItem="XRY-tl-7fc" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="PA3-YY-5DE"/>
-                                    <constraint firstAttribute="bottom" secondItem="JBY-P9-THo" secondAttribute="bottom" constant="50" id="Q9h-mt-ok2"/>
+                                    <constraint firstItem="FeG-TT-l9C" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="60" id="bsg-Rm-6EY"/>
                                     <constraint firstAttribute="trailing" secondItem="FeG-TT-l9C" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i1m-D8-ql6"/>
                                     <constraint firstItem="FeG-TT-l9C" firstAttribute="leading" secondItem="0jX-7X-os0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j8M-TG-NDo"/>
+                                    <constraint firstItem="XRY-tl-7fc" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kQ1-4O-gng"/>
                                     <constraint firstItem="JBY-P9-THo" firstAttribute="trailing" secondItem="XRY-tl-7fc" secondAttribute="trailing" type="default" id="z6k-tt-0zO"/>
                                 </constraints>
                             </view>
