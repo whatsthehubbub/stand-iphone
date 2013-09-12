@@ -266,6 +266,7 @@
                                     <action selector="close:" destination="IFz-l0-0MX" eventType="touchUpInside" id="oaE-qH-0Li"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-4-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="pB2-wo-TJZ"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoI-Op-Au2">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hor-03-4es" customClass="FontLabel">
@@ -380,22 +381,25 @@ Press and hold the button; no walking, no moving.</string>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="4XR-Tc-mWO"/>
-                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="69K-T2-dIx"/>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="9SM-Rw-y0e"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Cfx-1B-D5T"/>
                             <constraint firstItem="BoI-Op-Au2" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="Ffx-wJ-obS"/>
                             <constraint firstItem="lXG-jF-fYr" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="GgE-0m-GkX"/>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" type="default" id="HfI-OP-UOV"/>
+                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" type="default" id="H9z-jf-bN7"/>
                             <constraint firstItem="BoI-Op-Au2" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="I4S-jk-87S"/>
+                            <constraint firstItem="pB2-wo-TJZ" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="L5N-xb-V7U"/>
+                            <constraint firstItem="pB2-wo-TJZ" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="LpY-dR-N4W"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="MSY-o5-ona"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O6k-Zk-hl2"/>
-                            <constraint firstItem="lXG-jF-fYr" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="top" type="default" id="VaW-9N-8ot"/>
+                            <constraint firstItem="pB2-wo-TJZ" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" type="default" id="Wil-UA-kMv"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="ZnV-0M-FtM"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="10" id="ay8-qN-yyp"/>
+                            <constraint firstItem="pB2-wo-TJZ" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" type="default" id="bGp-fP-sre"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="centerX" secondItem="R3K-LK-GG3" secondAttribute="centerX" type="default" id="cYB-OM-WLj"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hRS-lI-xbz"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
                             <constraint firstAttribute="bottom" secondItem="R3K-LK-GG3" secondAttribute="bottom" constant="37" id="mWp-ri-HSU"/>
+                            <constraint firstItem="pB2-wo-TJZ" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="top" type="default" id="nrK-XW-Tyn"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="qDU-h5-NDA"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qKn-hU-QJV"/>
                             <constraint firstItem="lXG-jF-fYr" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="rec-fd-icD"/>
@@ -403,7 +407,6 @@ Press and hold the button; no walking, no moving.</string>
                             <constraint firstItem="R3K-LK-GG3" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uEZ-4I-ipa"/>
                             <constraint firstAttribute="trailing" secondItem="R3K-LK-GG3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uS8-02-igD"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="10" id="wIj-ub-4JO"/>
-                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" type="default" id="wQB-rT-g1W"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="xkX-Ur-Jil"/>
                         </constraints>
                     </view>
@@ -451,6 +454,7 @@ Press and hold the button; no walking, no moving.</string>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
+        <image name="4-4-Stripes-background.png" width="320" height="480"/>
     </resources>
     <classes>
         <class className="ActionButton" superclassName="UIButton">
