@@ -249,7 +249,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" image="4-3-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="NQ4-9b-Lmx"/>
@@ -267,6 +266,26 @@
                                     <action selector="close:" destination="IFz-l0-0MX" eventType="touchUpInside" id="oaE-qH-0Li"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoI-Op-Au2">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hor-03-4es" customClass="FontLabel">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="B9C-NV-wUJ"/>
+                                        </constraints>
+                                        <string key="text">Warning! 
+Hold the button and keep still to resume the session.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hor-03-4es" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0sf-Hw-3WL"/>
+                                    <constraint firstItem="hor-03-4es" firstAttribute="leading" secondItem="BoI-Op-Au2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NrI-AZ-LvR"/>
+                                    <constraint firstItem="hor-03-4es" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gsp-rd-i37"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSY-Mj-b9X">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-JG-taF" customClass="FontLabel">
@@ -286,26 +305,8 @@ Press and hold the button; no walking, no moving.</string>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="9tQ-yd-T0A" secondAttribute="centerX" type="default" id="0Jv-kM-yPf"/>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="jSY-Mj-b9X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B62-f5-Bik"/>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="top" constant="20" symbolic="YES" type="default" id="KSn-5i-8mg"/>
+                                    <constraint firstAttribute="bottom" secondItem="9tQ-yd-T0A" secondAttribute="bottom" constant="10" id="RSq-7U-zzk"/>
                                     <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="adD-vl-ew2"/>
-                                    <constraint firstAttribute="bottom" secondItem="9tQ-yd-T0A" secondAttribute="bottom" constant="9" id="pRW-wc-CHf"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoI-Op-Au2">
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Warning! Hold the button and keep still to resume the session." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hor-03-4es" customClass="FontLabel">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="121" id="nrv-aR-5aq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="hor-03-4es" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0LP-O8-bO3"/>
-                                    <constraint firstItem="hor-03-4es" firstAttribute="leading" secondItem="BoI-Op-Au2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NrI-AZ-LvR"/>
-                                    <constraint firstAttribute="trailing" secondItem="hor-03-4es" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ufu-j6-For"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-jF-fYr">
@@ -377,34 +378,35 @@ Press and hold the button; no walking, no moving.</string>
                                     <constraint firstItem="JBY-P9-THo" firstAttribute="trailing" secondItem="XRY-tl-7fc" secondAttribute="trailing" type="default" id="z6k-tt-0zO"/>
                                 </constraints>
                             </view>
+                            <imageView contentMode="scaleToFill" image="4-3-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b"/>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="59" id="0qd-M7-SjK"/>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="4XR-Tc-mWO"/>
+                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="69K-T2-dIx"/>
                             <constraint firstItem="jSY-Mj-b9X" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="9SM-Rw-y0e"/>
-                            <constraint firstAttribute="bottom" secondItem="0jX-7X-os0" secondAttribute="bottom" constant="179" id="ARs-F5-QME"/>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" type="default" id="BdT-Fj-Wkj"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Cfx-1B-D5T"/>
                             <constraint firstItem="BoI-Op-Au2" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="Ffx-wJ-obS"/>
                             <constraint firstItem="lXG-jF-fYr" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="GgE-0m-GkX"/>
+                            <constraint firstItem="0jX-7X-os0" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" type="default" id="HfI-OP-UOV"/>
                             <constraint firstItem="BoI-Op-Au2" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="I4S-jk-87S"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="MSY-o5-ona"/>
+                            <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O6k-Zk-hl2"/>
+                            <constraint firstItem="lXG-jF-fYr" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="top" type="default" id="VaW-9N-8ot"/>
                             <constraint firstItem="0jX-7X-os0" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="ZnV-0M-FtM"/>
                             <constraint firstAttribute="bottom" secondItem="DgT-ht-X9b" secondAttribute="bottom" constant="10" id="ay8-qN-yyp"/>
-                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="b4v-JF-zcl"/>
-                            <constraint firstItem="BoI-Op-Au2" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" type="default" id="c25-w7-wHs"/>
                             <constraint firstItem="DgT-ht-X9b" firstAttribute="centerX" secondItem="R3K-LK-GG3" secondAttribute="centerX" type="default" id="cYB-OM-WLj"/>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="bottom" secondItem="lXG-jF-fYr" secondAttribute="bottom" type="default" id="cb4-Bt-jDv"/>
+                            <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hRS-lI-xbz"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="kCX-1c-2rz"/>
                             <constraint firstAttribute="bottom" secondItem="R3K-LK-GG3" secondAttribute="bottom" constant="37" id="mWp-ri-HSU"/>
-                            <constraint firstItem="0jX-7X-os0" firstAttribute="bottom" secondItem="BoI-Op-Au2" secondAttribute="bottom" type="default" id="q26-yw-Ga9"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="qDU-h5-NDA"/>
+                            <constraint firstItem="DgT-ht-X9b" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qKn-hU-QJV"/>
                             <constraint firstItem="lXG-jF-fYr" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="rec-fd-icD"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="rww-RX-ZdB"/>
                             <constraint firstItem="R3K-LK-GG3" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uEZ-4I-ipa"/>
                             <constraint firstAttribute="trailing" secondItem="R3K-LK-GG3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uS8-02-igD"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="10" id="wIj-ub-4JO"/>
+                            <constraint firstItem="jSY-Mj-b9X" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" type="default" id="wQB-rT-g1W"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="trailing" secondItem="EGi-W7-MDk" secondAttribute="trailing" type="default" id="xkX-Ur-Jil"/>
                         </constraints>
                     </view>
