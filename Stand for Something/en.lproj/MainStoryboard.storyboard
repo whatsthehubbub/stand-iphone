@@ -280,7 +280,6 @@ Hold the button and keep still to resume the session.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hor-03-4es" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0sf-Hw-3WL"/>
                                     <constraint firstItem="hor-03-4es" firstAttribute="leading" secondItem="BoI-Op-Au2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NrI-AZ-LvR"/>
@@ -301,7 +300,6 @@ Press and hold the button; no walking, no moving.</string>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-yd-T0A"/>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="9tQ-yd-T0A" secondAttribute="centerX" type="default" id="0Jv-kM-yPf"/>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="jSY-Mj-b9X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B62-f5-Bik"/>
@@ -315,7 +313,6 @@ Press and hold the button; no walking, no moving.</string>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMF-eC-MOS" customClass="FontLabel">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IXq-gq-N5a"/>
-                                            <constraint firstAttribute="width" constant="283" id="tRy-Ei-wkC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -330,11 +327,11 @@ Press and hold the button; no walking, no moving.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="dMF-eC-MOS" firstAttribute="leading" secondItem="lXG-jF-fYr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4yw-Eo-FwG"/>
                                     <constraint firstItem="dMF-eC-MOS" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8bi-Dn-v4k"/>
                                     <constraint firstItem="2qG-Sq-MIV" firstAttribute="leading" secondItem="lXG-jF-fYr" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C22-gH-B2f"/>
-                                    <constraint firstItem="dMF-eC-MOS" firstAttribute="centerX" secondItem="2qG-Sq-MIV" secondAttribute="centerX" type="default" id="EXm-yS-DsI"/>
+                                    <constraint firstAttribute="trailing" secondItem="dMF-eC-MOS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Du0-6K-rWH"/>
                                     <constraint firstAttribute="trailing" secondItem="2qG-Sq-MIV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ni0-8c-AmX"/>
                                     <constraint firstItem="2qG-Sq-MIV" firstAttribute="top" secondItem="lXG-jF-fYr" secondAttribute="top" constant="60" id="qDp-2x-9Oh"/>
                                 </constraints>
@@ -344,7 +341,6 @@ Press and hold the button; no walking, no moving.</string>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRY-tl-7fc" customClass="FontLabel">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1by-fL-a6C"/>
-                                            <constraint firstAttribute="width" constant="283" id="dwr-cw-qvm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -364,16 +360,16 @@ Press and hold the button; no walking, no moving.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XRY-tl-7fc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2k8-1z-UUw"/>
                                     <constraint firstAttribute="bottom" secondItem="JBY-P9-THo" secondAttribute="bottom" constant="10" id="8ew-OR-oFS"/>
-                                    <constraint firstItem="XRY-tl-7fc" firstAttribute="centerX" secondItem="FeG-TT-l9C" secondAttribute="centerX" type="default" id="C12-6m-Bii"/>
-                                    <constraint firstItem="JBY-P9-THo" firstAttribute="leading" secondItem="XRY-tl-7fc" secondAttribute="leading" type="default" id="ChF-hK-jsM"/>
+                                    <constraint firstItem="XRY-tl-7fc" firstAttribute="leading" secondItem="0jX-7X-os0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Goi-9E-caZ"/>
+                                    <constraint firstItem="JBY-P9-THo" firstAttribute="leading" secondItem="0jX-7X-os0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="P7W-JR-iXo"/>
                                     <constraint firstItem="FeG-TT-l9C" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="60" id="bsg-Rm-6EY"/>
                                     <constraint firstAttribute="trailing" secondItem="FeG-TT-l9C" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i1m-D8-ql6"/>
                                     <constraint firstItem="FeG-TT-l9C" firstAttribute="leading" secondItem="0jX-7X-os0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j8M-TG-NDo"/>
                                     <constraint firstItem="XRY-tl-7fc" firstAttribute="top" secondItem="0jX-7X-os0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kQ1-4O-gng"/>
-                                    <constraint firstItem="JBY-P9-THo" firstAttribute="trailing" secondItem="XRY-tl-7fc" secondAttribute="trailing" type="default" id="z6k-tt-0zO"/>
+                                    <constraint firstAttribute="trailing" secondItem="JBY-P9-THo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sgf-UW-lqz"/>
                                 </constraints>
                             </view>
                             <imageView contentMode="scaleToFill" image="4-3-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b"/>
