@@ -434,12 +434,213 @@ Press and hold the button; no walking, no moving.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="phM-tf-pLA" kind="relationship" relationship="rootViewController" id="u5b-wx-VBU"/>
+                        <segue destination="Zs6-TM-PGr" kind="relationship" relationship="rootViewController" id="xGp-3V-wSC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbP-wA-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="51"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tch-vJ-4vP">
+            <objects>
+                <viewController id="bBo-zN-9uc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZY-Fh-W0m">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-5-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ff5-ge-nH9"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2De-R4-g7Y" customClass="FontLabel">
+                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" type="user" id="xOD-ev-CdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWy-ML-1TV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="95X-6R-H9p"/>
+                                    <constraint firstAttribute="width" constant="35" id="AL3-vX-dz2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="4-2-Close-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-SA-NvZ" customClass="FontLabel">
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="8p3-rR-43e"/>
+                                </constraints>
+                                <string key="text">Warning! 
+Hold the button and 
+keep still to resume the session.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-6-Stand-button-warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-j2-qOK"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2De-R4-g7Y" firstAttribute="trailing" secondItem="gZY-Fh-W0m" secondAttribute="trailing" type="default" id="8rh-CM-Zsc"/>
+                            <constraint firstItem="hWs-SA-NvZ" firstAttribute="leading" secondItem="gZY-Fh-W0m" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ABV-yR-MXu"/>
+                            <constraint firstItem="dWy-ML-1TV" firstAttribute="trailing" secondItem="gZY-Fh-W0m" secondAttribute="trailing" type="default" id="CSC-TZ-5SK"/>
+                            <constraint firstItem="ff5-ge-nH9" firstAttribute="bottom" secondItem="gZY-Fh-W0m" secondAttribute="bottom" type="default" id="FWA-gI-WV8"/>
+                            <constraint firstItem="GdD-j2-qOK" firstAttribute="centerX" secondItem="hWs-SA-NvZ" secondAttribute="centerX" type="default" id="R9W-Cm-Fdd"/>
+                            <constraint firstItem="2De-R4-g7Y" firstAttribute="top" secondItem="gZY-Fh-W0m" secondAttribute="top" type="default" id="Tx0-UM-1uw"/>
+                            <constraint firstAttribute="bottom" secondItem="GdD-j2-qOK" secondAttribute="bottom" constant="10" id="WG6-oY-A37"/>
+                            <constraint firstAttribute="trailing" secondItem="hWs-SA-NvZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Whd-Bb-Ced"/>
+                            <constraint firstItem="dWy-ML-1TV" firstAttribute="top" secondItem="gZY-Fh-W0m" secondAttribute="top" constant="10" id="amf-P3-Nmb"/>
+                            <constraint firstItem="ff5-ge-nH9" firstAttribute="leading" secondItem="gZY-Fh-W0m" secondAttribute="leading" type="default" id="dma-Ln-sfK"/>
+                            <constraint firstItem="2De-R4-g7Y" firstAttribute="leading" secondItem="gZY-Fh-W0m" secondAttribute="leading" type="default" id="vS1-GR-0hu"/>
+                            <constraint firstItem="hWs-SA-NvZ" firstAttribute="top" secondItem="gZY-Fh-W0m" secondAttribute="top" constant="90" id="z6Z-nP-ygQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BbD-Vf-crC"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tO-69-DND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="747"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ywJ-y9-fBh">
+            <objects>
+                <viewController id="Zs6-TM-PGr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xvx-tM-hac">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-Gl-AWd" customClass="FontLabel">
+                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" type="user" id="2zP-jj-ItO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-DY-Jss">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JIf-Jw-GoD"/>
+                                    <constraint firstAttribute="width" constant="35" id="PAR-D4-fMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="4-2-Close-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wo-rf-S4G" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gC7-MR-chF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="EFp-Ix-h9E" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="hsx-Pi-g7e"/>
+                                    <constraint firstAttribute="width" constant="140" id="zHp-2U-Hxp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="OjG-Tc-YSn" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9rC-9b-txe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-7v-yrn" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="wm8-IZ-bhv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5z-Jh-uaw" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="e1H-Ba-w0B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suF-6s-8MY" customClass="FontLabel">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="DJu-gv-cga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Release or move to stop.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ool-2V-a3f" customClass="FontLabel">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-4-Stand-button-in-progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="XoB-yZ-mU4"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1Wo-rf-S4G" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0fL-Hh-fIe"/>
+                            <constraint firstAttribute="bottom" secondItem="XoB-yZ-mU4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3Ix-b9-yKG"/>
+                            <constraint firstItem="ubh-7v-yrn" firstAttribute="top" secondItem="OjG-Tc-YSn" secondAttribute="top" type="default" id="3Nq-Vb-sW3"/>
+                            <constraint firstItem="OjG-Tc-YSn" firstAttribute="centerX" secondItem="1Wo-rf-S4G" secondAttribute="centerX" type="default" id="48z-rF-ffV"/>
+                            <constraint firstItem="OjG-Tc-YSn" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="114" id="5cB-WJ-Pwm"/>
+                            <constraint firstItem="BmS-Gl-AWd" firstAttribute="trailing" secondItem="Xvx-tM-hac" secondAttribute="trailing" type="default" id="Gk9-9j-dQ4"/>
+                            <constraint firstItem="ool-2V-a3f" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="247" id="IRV-E8-Vuz"/>
+                            <constraint firstItem="ubh-7v-yrn" firstAttribute="baseline" secondItem="OjG-Tc-YSn" secondAttribute="baseline" type="default" id="Ifz-oL-DRN"/>
+                            <constraint firstItem="1Wo-rf-S4G" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="80" id="NiG-KG-mgF"/>
+                            <constraint firstItem="OjG-Tc-YSn" firstAttribute="baseline" secondItem="EFp-Ix-h9E" secondAttribute="baseline" type="default" id="Qg7-Wz-0Fk"/>
+                            <constraint firstItem="0UY-DY-Jss" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="12" id="U4u-t2-PtW"/>
+                            <constraint firstItem="ool-2V-a3f" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ugf-79-xbh"/>
+                            <constraint firstAttribute="trailing" secondItem="ubh-7v-yrn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Vkv-mO-Dlr"/>
+                            <constraint firstItem="X5z-Jh-uaw" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="201" id="Y9e-vX-bkz"/>
+                            <constraint firstItem="OjG-Tc-YSn" firstAttribute="top" secondItem="EFp-Ix-h9E" secondAttribute="top" type="default" id="aXj-3E-dUx"/>
+                            <constraint firstItem="BmS-Gl-AWd" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" type="default" id="al9-sW-ozo"/>
+                            <constraint firstItem="suF-6s-8MY" firstAttribute="baseline" secondItem="X5z-Jh-uaw" secondAttribute="baseline" type="default" id="dhW-cd-A6R"/>
+                            <constraint firstItem="ool-2V-a3f" firstAttribute="centerX" secondItem="XoB-yZ-mU4" secondAttribute="centerX" type="default" id="ifg-ni-ydY"/>
+                            <constraint firstAttribute="trailing" secondItem="ool-2V-a3f" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kE1-i2-bBz"/>
+                            <constraint firstItem="0UY-DY-Jss" firstAttribute="trailing" secondItem="Xvx-tM-hac" secondAttribute="trailing" type="default" id="miI-i4-LXf"/>
+                            <constraint firstItem="X5z-Jh-uaw" firstAttribute="centerX" secondItem="EFp-Ix-h9E" secondAttribute="centerX" type="default" id="rmQ-ob-bd0"/>
+                            <constraint firstItem="BmS-Gl-AWd" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" type="default" id="x1V-ca-9yZ"/>
+                            <constraint firstItem="suF-6s-8MY" firstAttribute="centerX" secondItem="ubh-7v-yrn" secondAttribute="centerX" type="default" id="y2a-M1-Z81"/>
+                            <constraint firstItem="1Wo-rf-S4G" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yGJ-XY-rZn"/>
+                            <constraint firstItem="EFp-Ix-h9E" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yeh-JQ-Cmx"/>
+                        </constraints>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lON-AG-2xl"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJr-OV-lFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="747"/>
         </scene>
     </scenes>
     <resources>
@@ -450,8 +651,59 @@ Press and hold the button; no walking, no moving.</string>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
+        <image name="4-4-Stand-button-in-progress.png" width="160" height="160"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
+        <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
     </resources>
+    <classes>
+        <class className="ActionButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionButton.h"/>
+        </class>
+        <class className="FontLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontLabel.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SquareListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
+        </class>
+        <class className="SquareTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberOfPeople" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SquareViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="startStanding:"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longestLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="nowLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sessionsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StandViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+                <relationship kind="outlet" name="doneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="doneTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="doneView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="graceView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="standingTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="standingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="startView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
