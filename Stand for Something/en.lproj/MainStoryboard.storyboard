@@ -452,55 +452,6 @@ Press and hold the button; no walking, no moving.</string>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
     </resources>
-    <classes>
-        <class className="ActionButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionButton.h"/>
-        </class>
-        <class className="FontLabel" superclassName="UILabel">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontLabel.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SquareListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
-        </class>
-        <class className="SquareTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberOfPeople" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SquareViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="action" name="startStanding:"/>
-                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="nowLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sessionsLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="StandViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="close:"/>
-                <relationship kind="outlet" name="doneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="doneTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="doneView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="graceView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="standingTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="standingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="startView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
