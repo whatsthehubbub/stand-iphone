@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Square List View Controller - Squares near you-->
@@ -25,10 +27,11 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Square name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-3Z-QDd" customClass="FontLabel">
+                                            <rect key="frame" x="10" y="10" width="247" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="VnL-WD-uIx"/>
                                                 <constraint firstAttribute="width" constant="247" id="eTw-wa-Sve"/>
@@ -38,12 +41,16 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CA9-XI-KaN" customClass="FontLabel">
+                                            <rect key="frame" x="10" y="45" width="247" height="21"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                             <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-rF-bwr"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-rF-bwr">
+                                            <rect key="frame" x="265" y="10" width="45" height="60"/>
+                                        </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-dR-U1v" customClass="FontLabel">
+                                            <rect key="frame" x="265" y="45" width="45" height="21"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                             <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,6 +101,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[Square name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdh-jt-kcf" customClass="FontLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" type="user" id="Nl9-qy-Qkg"/>
@@ -103,6 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEk-1G-9VQ">
+                                <rect key="frame" x="0.0" y="10" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="MhR-wg-wli"/>
                                     <constraint firstAttribute="width" constant="35" id="uuS-Ek-6WQ"/>
@@ -120,13 +129,19 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP8-H4-Oym">
+                                <rect key="frame" x="0.0" y="60" width="320" height="310"/>
                                 <connections>
                                     <outlet property="delegate" destination="DzP-8o-TuR" id="FH2-f7-gAZ"/>
                                 </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Lp-uRG"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-2-Dot-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-Hp-dtG"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="80d-Lp-uRG">
+                                <rect key="frame" x="155" y="215" width="10" height="155"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-2-Dot-on-map.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-Hp-dtG">
+                                <rect key="frame" x="140" y="195" width="40" height="40"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-pI-pZw" customClass="ActionButton">
+                                <rect key="frame" x="10" y="360" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YM1-7j-GM9"/>
@@ -144,6 +159,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 people standing here now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caf-A0-5HS" customClass="FontLabel">
+                                <rect key="frame" x="20" y="420" width="280" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="yJR-na-yu6"/>
                                 </constraints>
@@ -152,6 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 sessions to date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsF-8M-MOE" customClass="FontLabel">
+                                <rect key="frame" x="20" y="447" width="280" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="zk6-D8-HxI"/>
                                 </constraints>
@@ -160,6 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 hours of standing in total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TB-5K-f37" customClass="FontLabel">
+                                <rect key="frame" x="20" y="474" width="280" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="BBo-Xs-GRP"/>
                                 </constraints>
@@ -168,6 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 hours longest session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyN-zG-dcl" customClass="FontLabel">
+                                <rect key="frame" x="20" y="501" width="280" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="PYt-l0-pwd"/>
                                 </constraints>
@@ -232,8 +251,11 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-5-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="pB2-wo-TJZ"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-5-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="pB2-wo-TJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-Zj-OiE" customClass="FontLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" type="user" id="SYC-1S-YGt"/>
@@ -243,6 +265,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Done! (You let go of the button or moved too much.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-LK-GG3" customClass="FontLabel">
+                                <rect key="frame" x="20" y="390" width="280" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="63r-ar-W9F"/>
                                 </constraints>
@@ -251,6 +274,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-kZ-YU2">
+                                <rect key="frame" x="285" y="10" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="NQ4-9b-Lmx"/>
                                     <constraint firstAttribute="height" constant="35" id="s3Y-4O-Jxu"/>
@@ -268,8 +292,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoI-Op-Au2">
+                                <rect key="frame" x="0.0" y="60" width="320" height="310"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hor-03-4es" customClass="FontLabel">
+                                        <rect key="frame" x="20" y="20" width="280" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="B9C-NV-wUJ"/>
                                         </constraints>
@@ -281,14 +307,15 @@ Hold the button and keep still to resume the session.</string>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hor-03-4es" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0sf-Hw-3WL"/>
                                     <constraint firstItem="hor-03-4es" firstAttribute="leading" secondItem="BoI-Op-Au2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NrI-AZ-LvR"/>
                                     <constraint firstItem="hor-03-4es" firstAttribute="top" secondItem="BoI-Op-Au2" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gsp-rd-i37"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSY-Mj-b9X">
+                                <rect key="frame" x="0.0" y="60" width="320" height="310"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-JG-taF" customClass="FontLabel">
+                                        <rect key="frame" x="20" y="20" width="280" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="Rmf-BL-cL9"/>
                                         </constraints>
@@ -298,19 +325,22 @@ Press and hold the button; no walking, no moving.</string>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-yd-T0A"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9tQ-yd-T0A">
+                                        <rect key="frame" x="138" y="238" width="44" height="62"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="centerX" secondItem="9tQ-yd-T0A" secondAttribute="centerX" type="default" id="0Jv-kM-yPf"/>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="leading" secondItem="jSY-Mj-b9X" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B62-f5-Bik"/>
                                     <constraint firstItem="tOl-JG-taF" firstAttribute="top" secondItem="jSY-Mj-b9X" secondAttribute="top" constant="20" symbolic="YES" type="default" id="KSn-5i-8mg"/>
                                     <constraint firstAttribute="bottom" secondItem="9tQ-yd-T0A" secondAttribute="bottom" constant="10" id="RSq-7U-zzk"/>
-                                    <constraint firstAttribute="trailing" secondItem="tOl-JG-taF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="adD-vl-ew2"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXG-jF-fYr">
+                                <rect key="frame" x="0.0" y="60" width="320" height="310"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMF-eC-MOS" customClass="FontLabel">
+                                        <rect key="frame" x="20" y="20" width="280" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IXq-gq-N5a"/>
                                         </constraints>
@@ -319,9 +349,7 @@ Press and hold the button; no walking, no moving.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2qG-Sq-MIV" customClass="FontLabel">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="hYW-WJ-Zwy"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="60" width="280" height="108"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -337,8 +365,10 @@ Press and hold the button; no walking, no moving.</string>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jX-7X-os0">
+                                <rect key="frame" x="0.0" y="60" width="320" height="310"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRY-tl-7fc" customClass="FontLabel">
+                                        <rect key="frame" x="20" y="20" width="280" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1by-fL-a6C"/>
                                         </constraints>
@@ -347,14 +377,13 @@ Press and hold the button; no walking, no moving.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="FeG-TT-l9C" customClass="FontLabel">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="zDH-kj-uzY"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="60" width="280" height="108"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Release or move to stop.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBY-P9-THo" customClass="FontLabel">
+                                        <rect key="frame" x="20" y="278" width="280" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -372,7 +401,9 @@ Press and hold the button; no walking, no moving.</string>
                                     <constraint firstAttribute="trailing" secondItem="JBY-P9-THo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sgf-UW-lqz"/>
                                 </constraints>
                             </view>
-                            <imageView contentMode="scaleToFill" image="4-3-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b"/>
+                            <imageView contentMode="scaleToFill" image="4-3-Stand-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-ht-X9b">
+                                <rect key="frame" x="80" y="378" width="160" height="160"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -428,7 +459,7 @@ Press and hold the button; no walking, no moving.</string>
                 <navigationController navigationBarHidden="YES" id="tmT-PI-qqS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="yRE-jg-Vif">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="yRE-jg-Vif">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -449,8 +480,11 @@ Press and hold the button; no walking, no moving.</string>
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-5-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ff5-ge-nH9"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-5-Stripes-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ff5-ge-nH9">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="568"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2De-R4-g7Y" customClass="FontLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" type="user" id="xOD-ev-CdO"/>
@@ -460,6 +494,7 @@ Press and hold the button; no walking, no moving.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWy-ML-1TV">
+                                <rect key="frame" x="285" y="10" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="95X-6R-H9p"/>
                                     <constraint firstAttribute="width" constant="35" id="AL3-vX-dz2"/>
@@ -474,6 +509,7 @@ Press and hold the button; no walking, no moving.</string>
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-SA-NvZ" customClass="FontLabel">
+                                <rect key="frame" x="20" y="90" width="280" height="140"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="8p3-rR-43e"/>
@@ -485,7 +521,9 @@ keep still to resume the session.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-6-Stand-button-warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-j2-qOK"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-6-Stand-button-warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-j2-qOK">
+                                <rect key="frame" x="70" y="358" width="180" height="180"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -523,6 +561,7 @@ keep still to resume the session.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-Gl-AWd" customClass="FontLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" type="user" id="2zP-jj-ItO"/>
@@ -532,6 +571,7 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-DY-Jss">
+                                <rect key="frame" x="285" y="12" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="JIf-Jw-GoD"/>
                                     <constraint firstAttribute="width" constant="35" id="PAR-D4-fMl"/>
@@ -546,6 +586,7 @@ keep still to resume the session.</string>
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wo-rf-S4G" customClass="FontLabel">
+                                <rect key="frame" x="20" y="80" width="280" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gC7-MR-chF"/>
                                 </constraints>
@@ -554,8 +595,8 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="EFp-Ix-h9E" customClass="FontLabel">
+                                <rect key="frame" x="20" y="114" width="140" height="108"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="hsx-Pi-g7e"/>
                                     <constraint firstAttribute="width" constant="140" id="zHp-2U-Hxp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="90"/>
@@ -563,6 +604,7 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="OjG-Tc-YSn" customClass="FontLabel">
+                                <rect key="frame" x="110" y="114" width="100" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="9rC-9b-txe"/>
                                 </constraints>
@@ -571,6 +613,7 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-7v-yrn" customClass="FontLabel">
+                                <rect key="frame" x="160" y="114" width="140" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="wm8-IZ-bhv"/>
                                 </constraints>
@@ -579,6 +622,7 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5z-Jh-uaw" customClass="FontLabel">
+                                <rect key="frame" x="10" y="201" width="160" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="e1H-Ba-w0B"/>
                                 </constraints>
@@ -587,6 +631,7 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suF-6s-8MY" customClass="FontLabel">
+                                <rect key="frame" x="150" y="201" width="160" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="DJu-gv-cga"/>
                                 </constraints>
@@ -595,17 +640,19 @@ keep still to resume the session.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Release or move to stop.)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ool-2V-a3f" customClass="FontLabel">
+                                <rect key="frame" x="20" y="247" width="280" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-4-Stand-button-in-progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="XoB-yZ-mU4"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-4-Stand-button-in-progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="XoB-yZ-mU4">
+                                <rect key="frame" x="80" y="368" width="160" height="160"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Wo-rf-S4G" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0fL-Hh-fIe"/>
                             <constraint firstAttribute="bottom" secondItem="XoB-yZ-mU4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="3Ix-b9-yKG"/>
-                            <constraint firstItem="ubh-7v-yrn" firstAttribute="top" secondItem="OjG-Tc-YSn" secondAttribute="top" type="default" id="3Nq-Vb-sW3"/>
                             <constraint firstItem="OjG-Tc-YSn" firstAttribute="centerX" secondItem="1Wo-rf-S4G" secondAttribute="centerX" type="default" id="48z-rF-ffV"/>
                             <constraint firstItem="OjG-Tc-YSn" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="114" id="5cB-WJ-Pwm"/>
                             <constraint firstItem="BmS-Gl-AWd" firstAttribute="trailing" secondItem="Xvx-tM-hac" secondAttribute="trailing" type="default" id="Gk9-9j-dQ4"/>
@@ -617,7 +664,6 @@ keep still to resume the session.</string>
                             <constraint firstItem="ool-2V-a3f" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ugf-79-xbh"/>
                             <constraint firstAttribute="trailing" secondItem="ubh-7v-yrn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Vkv-mO-Dlr"/>
                             <constraint firstItem="X5z-Jh-uaw" firstAttribute="top" secondItem="Xvx-tM-hac" secondAttribute="top" constant="201" id="Y9e-vX-bkz"/>
-                            <constraint firstItem="OjG-Tc-YSn" firstAttribute="top" secondItem="EFp-Ix-h9E" secondAttribute="top" type="default" id="aXj-3E-dUx"/>
                             <constraint firstItem="BmS-Gl-AWd" firstAttribute="leading" secondItem="Xvx-tM-hac" secondAttribute="leading" type="default" id="al9-sW-ozo"/>
                             <constraint firstItem="suF-6s-8MY" firstAttribute="baseline" secondItem="X5z-Jh-uaw" secondAttribute="baseline" type="default" id="dhW-cd-A6R"/>
                             <constraint firstItem="ool-2V-a3f" firstAttribute="centerX" secondItem="XoB-yZ-mU4" secondAttribute="centerX" type="default" id="ifg-ni-ydY"/>
@@ -650,60 +696,14 @@ keep still to resume the session.</string>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
         <image name="4-4-Stand-button-in-progress.png" width="160" height="160"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
+        <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
     </resources>
-    <classes>
-        <class className="ActionButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionButton.h"/>
-        </class>
-        <class className="FontLabel" superclassName="UILabel">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FontLabel.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SquareListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareListViewController.h"/>
-        </class>
-        <class className="SquareTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberOfPeople" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SquareViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="action" name="startStanding:"/>
-                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hoursLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="longestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="nowLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sessionsLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="StandViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="close:"/>
-                <relationship kind="outlet" name="doneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="doneTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="doneView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="graceView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="standingTimeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="standingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="startView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="touchView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
