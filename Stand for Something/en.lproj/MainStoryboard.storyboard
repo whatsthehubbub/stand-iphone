@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="e48-Z5-fmY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -465,12 +465,12 @@ Press and hold the button; no walking, no moving.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zs6-TM-PGr" kind="relationship" relationship="rootViewController" id="xGp-3V-wSC"/>
+                        <segue destination="phM-tf-pLA" kind="relationship" relationship="rootViewController" id="oRH-7C-D30"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbP-wA-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-127"/>
+            <point key="canvasLocation" x="1043" y="51"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Tch-vJ-4vP">
@@ -688,24 +688,6 @@ keep still to resume the session.</string>
             </objects>
             <point key="canvasLocation" x="176" y="747"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Z8Z-fk-9UJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e48-Z5-fmY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gLo-RK-zCn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="phM-tf-pLA" kind="relationship" relationship="rootViewController" id="wYX-kc-1zD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9vf-y3-VE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1069" y="51"/>
-        </scene>
     </scenes>
     <resources>
         <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
@@ -714,8 +696,11 @@ keep still to resume the session.</string>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
         <image name="4-4-Stand-button-in-progress.png" width="160" height="160"/>
+        <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
     </resources>
