@@ -696,8 +696,11 @@ keep still to resume the session.</string>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
+        <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
         <image name="4-4-Stand-button-in-progress.png" width="160" height="160"/>
+        <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
     </resources>
