@@ -550,7 +550,7 @@ keep still to resume the session.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tO-69-DND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="747"/>
+            <point key="canvasLocation" x="3317" y="647"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ywJ-y9-fBh">
@@ -686,7 +686,7 @@ keep still to resume the session.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJr-OV-lFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="747"/>
+            <point key="canvasLocation" x="2938" y="647"/>
         </scene>
     </scenes>
     <resources>
