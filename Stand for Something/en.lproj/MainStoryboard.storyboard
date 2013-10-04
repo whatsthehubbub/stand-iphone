@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="phM-tf-pLA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="e48-Z5-fmY">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -90,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqC-L1-PAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069" y="51"/>
+            <point key="canvasLocation" x="1595" y="51"/>
         </scene>
         <!--Square View Controller - Square Name-->
         <scene sceneID="qI0-j9-Hqr">
@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWi-xC-CRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="51"/>
+            <point key="canvasLocation" x="2063" y="51"/>
         </scene>
         <!--Stand View Controller - Stand!-->
         <scene sceneID="4Mf-gZ-6io">
@@ -451,7 +451,7 @@ Press and hold the button; no walking, no moving.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19X-jE-kMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="51"/>
+            <point key="canvasLocation" x="2535" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zCG-gI-kdD">
@@ -470,7 +470,7 @@ Press and hold the button; no walking, no moving.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbP-wA-LFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="51"/>
+            <point key="canvasLocation" x="255" y="-127"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Tch-vJ-4vP">
@@ -688,6 +688,24 @@ keep still to resume the session.</string>
             </objects>
             <point key="canvasLocation" x="176" y="747"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z8Z-fk-9UJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e48-Z5-fmY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gLo-RK-zCn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="phM-tf-pLA" kind="relationship" relationship="rootViewController" id="wYX-kc-1zD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vf-y3-VE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="51"/>
+        </scene>
     </scenes>
     <resources>
         <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
@@ -696,11 +714,8 @@ keep still to resume the session.</string>
         <image name="3-3-Line-on-map.png" width="10" height="90"/>
         <image name="4-1-Arrow-down.png" width="44" height="62"/>
         <image name="4-2-Close-button.png" width="20" height="20"/>
-        <image name="4-2-Close-button.png" width="20" height="20"/>
-        <image name="4-2-Close-button.png" width="20" height="20"/>
         <image name="4-3-Stand-button.png" width="160" height="160"/>
         <image name="4-4-Stand-button-in-progress.png" width="160" height="160"/>
-        <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-5-Stripes-background.png" width="320" height="568"/>
         <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
     </resources>
