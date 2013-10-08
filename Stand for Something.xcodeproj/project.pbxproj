@@ -32,6 +32,10 @@
 		47BA161C17E31867008CD03C /* 4-6-Stand-button-warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA161A17E31867008CD03C /* 4-6-Stand-button-warning@2x.png */; };
 		47BA161F17E31A29008CD03C /* 4-4-Stand-button-in-progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA161D17E31A28008CD03C /* 4-4-Stand-button-in-progress.png */; };
 		47BA162017E31A29008CD03C /* 4-4-Stand-button-in-progress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA161E17E31A28008CD03C /* 4-4-Stand-button-in-progress@2x.png */; };
+		47E435DE180437900081389D /* 114 - App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DA180437900081389D /* 114 - App Icon.png */; };
+		47E435DF180437900081389D /* 114 - App Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DB180437900081389D /* 114 - App Icon@2x.png */; };
+		47E435E0180437900081389D /* 58 - Settings & Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DC180437900081389D /* 58 - Settings & Spotlight.png */; };
+		47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DD180437900081389D /* 58 - Settings & Spotlight@2x.png */; };
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
 		4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */; };
 		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
@@ -84,6 +88,10 @@
 		47BA161A17E31867008CD03C /* 4-6-Stand-button-warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-6-Stand-button-warning@2x.png"; sourceTree = "<group>"; };
 		47BA161D17E31A28008CD03C /* 4-4-Stand-button-in-progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-4-Stand-button-in-progress.png"; sourceTree = "<group>"; };
 		47BA161E17E31A28008CD03C /* 4-4-Stand-button-in-progress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-4-Stand-button-in-progress@2x.png"; sourceTree = "<group>"; };
+		47E435DA180437900081389D /* 114 - App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "114 - App Icon.png"; sourceTree = "<group>"; };
+		47E435DB180437900081389D /* 114 - App Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "114 - App Icon@2x.png"; sourceTree = "<group>"; };
+		47E435DC180437900081389D /* 58 - Settings & Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "58 - Settings & Spotlight.png"; sourceTree = "<group>"; };
+		47E435DD180437900081389D /* 58 - Settings & Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "58 - Settings & Spotlight@2x.png"; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
@@ -147,6 +155,10 @@
 		472A77E317D204E7000EBDC0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				47E435DA180437900081389D /* 114 - App Icon.png */,
+				47E435DB180437900081389D /* 114 - App Icon@2x.png */,
+				47E435DC180437900081389D /* 58 - Settings & Spotlight.png */,
+				47E435DD180437900081389D /* 58 - Settings & Spotlight@2x.png */,
 				47BA161D17E31A28008CD03C /* 4-4-Stand-button-in-progress.png */,
 				47BA161E17E31A28008CD03C /* 4-4-Stand-button-in-progress@2x.png */,
 				47341AC617C615230076EB24 /* 2-1-Number-of-standers-icon.png */,
@@ -323,6 +335,7 @@
 				47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */,
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
+				47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */,
 				472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */,
 				472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */,
 				472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */,
@@ -335,13 +348,16 @@
 				47BA160717E1B4B6008CD03C /* 4-3-Stand-button.png in Resources */,
 				47BA160817E1B4B6008CD03C /* 4-3-Stand-button@2x.png in Resources */,
 				47BA160B17E1B6B1008CD03C /* 3-1-Back-arrow.png in Resources */,
+				47E435DF180437900081389D /* 114 - App Icon@2x.png in Resources */,
 				47BA160C17E1B6B1008CD03C /* 3-1-Back-arrow@2x.png in Resources */,
 				47BA161717E31268008CD03C /* 4-5-Stripes-background.png in Resources */,
+				47E435DE180437900081389D /* 114 - App Icon.png in Resources */,
 				47BA161817E31268008CD03C /* 4-5-Stripes-background@2x.png in Resources */,
 				47BA161B17E31867008CD03C /* 4-6-Stand-button-warning.png in Resources */,
 				47BA161C17E31867008CD03C /* 4-6-Stand-button-warning@2x.png in Resources */,
 				47BA161F17E31A29008CD03C /* 4-4-Stand-button-in-progress.png in Resources */,
 				47BA162017E31A29008CD03C /* 4-4-Stand-button-in-progress@2x.png in Resources */,
+				47E435E0180437900081389D /* 58 - Settings & Spotlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
