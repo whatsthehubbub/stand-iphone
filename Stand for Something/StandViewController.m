@@ -24,6 +24,8 @@
 @synthesize endTime;
 @synthesize secondTimer;
 
+@synthesize containerView;
+
 @synthesize startView;
 
 @synthesize standingView;
@@ -51,6 +53,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"GraceView" owner:nil options:nil];
+    
+    NSLog(@"Array %@", xibArray);
+    
+    for (id xibObject in xibArray) {
+        if ([xibObject isKindOfClass:[UIView class]]) {
+            [self.containerView addSubview:xibObject];
+        }
+    }
     
 
 //    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";

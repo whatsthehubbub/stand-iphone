@@ -11,7 +11,7 @@
 @implementation SquareTableViewCell
 
 @synthesize nameLabel;
-@synthesize distanceLabel;
+@synthesize addressLabel;
 
 @synthesize numberOfPeople;
 

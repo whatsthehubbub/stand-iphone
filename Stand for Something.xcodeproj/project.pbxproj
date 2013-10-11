@@ -52,6 +52,10 @@
 		4E0EF7461799F3A800BA6C32 /* FSN_categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */; };
 		4E0EF7481799F3A800BA6C32 /* FSNConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */; };
 		4E0EF74A1799F3A800BA6C32 /* FSNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF73F1799EEA300BA6C32 /* FSNData.m */; };
+		4E30214E1808636C0076FACB /* StandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214D1808636C0076FACB /* StandingView.xib */; };
+		4E302150180863950076FACB /* GraceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214F180863950076FACB /* GraceView.xib */; };
+		4E302152180864640076FACB /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302151180864640076FACB /* StartView.xib */; };
+		4E302154180864880076FACB /* DoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302153180864880076FACB /* DoneView.xib */; };
 		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
 		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
@@ -118,6 +122,10 @@
 		4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareListViewController.h; sourceTree = "<group>"; };
 		4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareListViewController.m; sourceTree = "<group>"; };
 		4E0EF7431799F0EE00BA6C32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4E30214D1808636C0076FACB /* StandingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandingView.xib; sourceTree = "<group>"; };
+		4E30214F180863950076FACB /* GraceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraceView.xib; sourceTree = "<group>"; };
+		4E302151180864640076FACB /* StartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
+		4E302153180864880076FACB /* DoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneView.xib; sourceTree = "<group>"; };
 		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
 		4E80F01317CF990600194023 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
 		4E80F01417CF990600194023 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
@@ -221,6 +229,7 @@
 		4E0EF71D1799E6E300BA6C32 /* Stand for Something */ = {
 			isa = PBXGroup;
 			children = (
+				4E30214C180863540076FACB /* CustomViews */,
 				4EDAE3D117B4F12E00484E79 /* TestFlightSDK1.2.6 */,
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
 				4E0EF7271799E6E300BA6C32 /* AppDelegate.m */,
@@ -263,6 +272,17 @@
 				4E0EF7251799E6E300BA6C32 /* Stand for Something-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E30214C180863540076FACB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4E30214D1808636C0076FACB /* StandingView.xib */,
+				4E302153180864880076FACB /* DoneView.xib */,
+				4E30214F180863950076FACB /* GraceView.xib */,
+				4E302151180864640076FACB /* StartView.xib */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		4EDAE3D117B4F12E00484E79 /* TestFlightSDK1.2.6 */ = {
@@ -337,9 +357,11 @@
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
 				47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */,
 				472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */,
+				4E302154180864880076FACB /* DoneView.xib in Resources */,
 				472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */,
 				472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */,
 				472A77EC17D20EBF000EBDC0 /* Default.png in Resources */,
+				4E302150180863950076FACB /* GraceView.xib in Resources */,
 				472A77ED17D20EBF000EBDC0 /* Default@2x.png in Resources */,
 				47BA160317E1B4B6008CD03C /* 4-1-Arrow-down.png in Resources */,
 				47BA160417E1B4B6008CD03C /* 4-1-Arrow-down@2x.png in Resources */,
@@ -347,6 +369,7 @@
 				47BA160617E1B4B6008CD03C /* 4-2-Close-button@2x.png in Resources */,
 				47BA160717E1B4B6008CD03C /* 4-3-Stand-button.png in Resources */,
 				47BA160817E1B4B6008CD03C /* 4-3-Stand-button@2x.png in Resources */,
+				4E302152180864640076FACB /* StartView.xib in Resources */,
 				47BA160B17E1B6B1008CD03C /* 3-1-Back-arrow.png in Resources */,
 				47E435DF180437900081389D /* 114 - App Icon@2x.png in Resources */,
 				47BA160C17E1B6B1008CD03C /* 3-1-Back-arrow@2x.png in Resources */,
@@ -357,6 +380,7 @@
 				47BA161C17E31867008CD03C /* 4-6-Stand-button-warning@2x.png in Resources */,
 				47BA161F17E31A29008CD03C /* 4-4-Stand-button-in-progress.png in Resources */,
 				47BA162017E31A29008CD03C /* 4-4-Stand-button-in-progress@2x.png in Resources */,
+				4E30214E1808636C0076FACB /* StandingView.xib in Resources */,
 				47E435E0180437900081389D /* 58 - Settings & Spotlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

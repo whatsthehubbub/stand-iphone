@@ -123,7 +123,7 @@
     CLLocationDistance meters = [self.currentLocation distanceFromLocation:plazaLocation];
     
     cell.nameLabel.text = [plaza objectForKey:@"name"];
-    cell.distanceLabel.text = [NSString stringWithFormat:@"%@ (%d meters)", [[plaza objectForKey:@"location"] objectForKey:@"address"], (int)meters];
+    cell.addressLabel.text = [NSString stringWithFormat:@"%@ (%d meters)", [[plaza objectForKey:@"location"] objectForKey:@"address"], (int)meters];
     
     cell.numberOfPeople.text = [NSString stringWithFormat:@"%d", arc4random_uniform(12)];
     
