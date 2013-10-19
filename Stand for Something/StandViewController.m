@@ -25,16 +25,19 @@
 @synthesize secondTimer;
 
 @synthesize containerView;
-@synthesize subView;
-
 @synthesize startView;
-
 @synthesize standingView;
+@synthesize graceView;
+@synthesize doneView;
+
+//@synthesize startView;
+
+//@synthesize standingView;
 @synthesize standingTimeLabel;
 
-@synthesize graceView;
+//@synthesize graceView;
 
-@synthesize doneView;
+//@synthesize doneView;
 @synthesize doneTimeLabel;
 @synthesize doneLabel;
 
@@ -55,16 +58,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"StartView" owner:nil options:nil];
+    // Load all the subviews
+    self.startView = [self loadSubViewFromNib:@"StartView"];
+    self.standingView = [self loadSubViewFromNib:@"StandingView"];
+    self.graceView = [self loadSubViewFromNib:@"GraceView"];
+    self.doneView = [self loadSubViewFromNib:@"DoneView"];
     
-    NSLog(@"Array %@", xibArray);
-    
-    for (id xibObject in xibArray) {
-        if ([xibObject isKindOfClass:[UIView class]]) {
-            self.subView = xibObject;
-            [self.containerView addSubview:self.subView];
-        }
-    }
+    self.startView.hidden = NO;
     
 
 //    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";
@@ -194,46 +194,50 @@
 }
 
 - (void)showStartView {
-    
+    self.startView.hidden = NO;
+    self.standingView.hidden = YES;
+    self.graceView.hidden = YES;
+    self.doneView.hidden = YES;
 }
 
 - (void)showStandingView {
-    [self.subView removeFromSuperview];
-    
-    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"StandingView" owner:nil options:nil];
-    
-    for (id xibObject in xibArray) {
-        if ([xibObject isKindOfClass:[UIView class]]) {
-            self.subView = xibObject;
-            [self.containerView addSubview:self.subView];
-        }
-    }
+    self.startView.hidden = YES;
+    self.standingView.hidden = NO;
+    self.graceView.hidden = YES;
+    self.doneView.hidden = YES;
 }
 
 - (void)showGraceView {
-    [self.subView removeFromSuperview];
-    
-    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"GraceView" owner:nil options:nil];
-    
-    for (id xibObject in xibArray) {
-        if ([xibObject isKindOfClass:[UIView class]]) {
-            self.subView = xibObject;
-            [self.containerView addSubview:self.subView];
-        }
-    }
+    self.startView.hidden = YES;
+    self.standingView.hidden = YES;
+    self.graceView.hidden = NO;
+    self.doneView.hidden = YES;
 }
 
 - (void)showDoneView {
-    [self.subView removeFromSuperview];
+    self.startView.hidden = YES;
+    self.standingView.hidden = YES;
+    self.graceView.hidden = YES;
+    self.doneView.hidden = NO;
+}
+
+- (UIView *)loadSubViewFromNib:(NSString *)nibName {
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil];
     
-    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"DoneView" owner:nil options:nil];
+    UIView *view;
     
     for (id xibObject in xibArray) {
         if ([xibObject isKindOfClass:[UIView class]]) {
-            self.subView = xibObject;
-            [self.containerView addSubview:self.subView];
+            view = xibObject;
+            
+            view.frame = CGRectMake(0, 0, self.containerView.frame.size.width, self.containerView.frame.size.height);
+            
+            [self.containerView addSubview:view];
+            view.hidden = YES;
         }
     }
+    
+    return view;
 }
 
 - (IBAction)close:(id)sender {

@@ -41,9 +41,10 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-rF-bwr">
-                                            <rect key="frame" x="269" y="10" width="42" height="60"/>
+                                            <rect key="frame" x="269" y="9" width="42" height="62"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="3BZ-h6-znA"/>
+                                                <constraint firstAttribute="height" constant="62" id="FV4-4D-k6x"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWG-dR-U1v" customClass="FontLabel">
@@ -258,7 +259,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pc6-eb-8vo">
                                 <rect key="frame" x="0.0" y="60" width="320" height="488"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-Zj-OiE" customClass="FontLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
@@ -293,11 +294,11 @@
                         <constraints>
                             <constraint firstItem="Pc6-eb-8vo" firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" type="default" id="6eA-IX-fkr"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="Pc6-eb-8vo" secondAttribute="leading" type="default" id="7Hz-N5-if2"/>
-                            <constraint firstAttribute="bottom" secondItem="Pc6-eb-8vo" secondAttribute="bottom" type="default" id="JnT-1o-SzT"/>
+                            <constraint firstItem="Pc6-eb-8vo" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="GH7-Mv-kWr"/>
+                            <constraint firstAttribute="bottom" secondItem="Pc6-eb-8vo" secondAttribute="bottom" type="default" id="P9U-qA-NN5"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" type="default" id="Tb6-Qn-dTb"/>
                             <constraint firstItem="Pc6-eb-8vo" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="60" id="bOV-yq-XpU"/>
                             <constraint firstItem="OFs-Zj-OiE" firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" type="default" id="hbL-AF-blK"/>
-                            <constraint firstItem="OFs-Zj-OiE" firstAttribute="leading" secondItem="EGi-W7-MDk" secondAttribute="leading" type="default" id="n20-Ro-qCV"/>
                             <constraint firstItem="WJl-kZ-YU2" firstAttribute="top" secondItem="EGi-W7-MDk" secondAttribute="top" constant="10" id="wIj-ub-4JO"/>
                             <constraint firstAttribute="trailing" secondItem="WJl-kZ-YU2" secondAttribute="trailing" type="default" id="y1v-0G-wBN"/>
                         </constraints>

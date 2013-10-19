@@ -28,16 +28,19 @@
 @property (strong) NSTimer *secondTimer;
 
 @property (strong) IBOutlet UIView *containerView;
-@property (strong) UIView *subView;
+@property (strong) UIView *startView;
+@property (strong) UIView *standingView;
+@property (strong) UIView *graceView;
+@property (strong) UIView *doneView;
 
-@property (strong) IBOutlet UIView *startView;
+//@property (strong) IBOutlet UIView *startView;
 
-@property (strong) IBOutlet UIView *standingView;
+//@property (strong) IBOutlet UIView *standingView;
 @property (strong) IBOutlet UILabel *standingTimeLabel;
 
-@property (strong) IBOutlet UIView *graceView;
+//@property (strong) IBOutlet UIView *graceView;
 
-@property (strong) IBOutlet UIView *doneView;
+//@property (strong) IBOutlet UIView *doneView;
 @property (strong) IBOutlet UILabel *doneTimeLabel;
 @property (strong) IBOutlet UILabel *doneLabel;
 
