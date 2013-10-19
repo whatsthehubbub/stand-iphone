@@ -25,6 +25,7 @@
 @synthesize secondTimer;
 
 @synthesize containerView;
+@synthesize subView;
 
 @synthesize startView;
 
@@ -54,13 +55,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"GraceView" owner:nil options:nil];
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"StartView" owner:nil options:nil];
     
     NSLog(@"Array %@", xibArray);
     
     for (id xibObject in xibArray) {
         if ([xibObject isKindOfClass:[UIView class]]) {
-            [self.containerView addSubview:xibObject];
+            self.subView = xibObject;
+            [self.containerView addSubview:self.subView];
         }
     }
     
@@ -129,7 +131,8 @@
     UITouch *touch = [touches anyObject];
 //    CGPoint location = [touch locationInView:self.touchView];
     
-    if (touch.view == self.touchView) {
+    // TODO these checks don't work anymore?
+    if (YES || touch.view == self.touchView) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -195,32 +198,42 @@
 }
 
 - (void)showStandingView {
-    self.view.backgroundColor = [UIColor blackColor];
-    self.touchView.image = [UIImage imageNamed:@"4-2-Stand-button.png"];
+    [self.subView removeFromSuperview];
     
-    self.startView.hidden = YES;
-    self.standingView.hidden = NO;
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"StandingView" owner:nil options:nil];
+    
+    for (id xibObject in xibArray) {
+        if ([xibObject isKindOfClass:[UIView class]]) {
+            self.subView = xibObject;
+            [self.containerView addSubview:self.subView];
+        }
+    }
 }
 
 - (void)showGraceView {
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.subView removeFromSuperview];
     
-    self.standingView.hidden = YES;
-    self.graceView.hidden = NO;
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"GraceView" owner:nil options:nil];
     
-    self.touchView.image = [UIImage imageNamed:@"4-1-Stand-button.png"];
+    for (id xibObject in xibArray) {
+        if ([xibObject isKindOfClass:[UIView class]]) {
+            self.subView = xibObject;
+            [self.containerView addSubview:self.subView];
+        }
+    }
 }
 
 - (void)showDoneView {
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.subView removeFromSuperview];
     
-    self.standingView.hidden = YES;
-    self.graceView.hidden = YES;
-    self.doneView.hidden = NO;
-    self.touchView.hidden = YES;
+    NSArray *xibArray = [[NSBundle mainBundle] loadNibNamed:@"DoneView" owner:nil options:nil];
     
-    self.touchView.hidden = YES;
-    self.doneLabel.hidden = NO;
+    for (id xibObject in xibArray) {
+        if ([xibObject isKindOfClass:[UIView class]]) {
+            self.subView = xibObject;
+            [self.containerView addSubview:self.subView];
+        }
+    }
 }
 
 - (IBAction)close:(id)sender {

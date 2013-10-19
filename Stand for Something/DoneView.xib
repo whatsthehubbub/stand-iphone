@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -10,29 +10,68 @@
         <view contentMode="scaleToFill" id="OZH-5D-3lz">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er9-rM-MdD" customClass="FontLabel">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Session duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNt-CO-6lv" customClass="FontLabel">
                     <rect key="frame" x="20" y="20" width="280" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="PCm-Ws-rA4"/>
+                        <constraint firstAttribute="height" constant="30" id="9m5-Mu-BX3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-HI-CfD" customClass="FontLabel">
-                    <rect key="frame" x="20" y="60" width="280" height="108"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="vbH-Fw-Ijh" customClass="FontLabel">
+                    <rect key="frame" x="20" y="56" width="140" height="108"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="5t2-Te-2cH"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-NZ-2Qb" customClass="FontLabel">
+                    <rect key="frame" x="110" y="56" width="100" height="108"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="b9P-gu-mQB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="140" translatesAutoresizingMaskIntoConstraints="NO" id="JXE-ZM-6Fe" customClass="FontLabel">
+                    <rect key="frame" x="160" y="56" width="140" height="108"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="DlD-dk-GcM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4K-Fk-B4S" customClass="FontLabel">
+                    <rect key="frame" x="10" y="142" width="160" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="ghR-sU-0DZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da1-k5-5ob" customClass="FontLabel">
+                    <rect key="frame" x="150" y="142" width="160" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="aI0-oR-252"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
-                <constraint firstItem="er9-rM-MdD" firstAttribute="leading" secondItem="OZH-5D-3lz" secondAttribute="leading" constant="20" symbolic="YES" id="4nd-iF-RXx"/>
-                <constraint firstAttribute="trailing" secondItem="er9-rM-MdD" secondAttribute="trailing" constant="20" symbolic="YES" id="IPu-bm-ZGl"/>
-                <constraint firstItem="er9-rM-MdD" firstAttribute="top" secondItem="OZH-5D-3lz" secondAttribute="top" constant="20" symbolic="YES" id="L1y-sG-gbi"/>
-                <constraint firstItem="er9-rM-MdD" firstAttribute="leading" secondItem="eOo-HI-CfD" secondAttribute="leading" id="RTj-tz-6wl"/>
-                <constraint firstItem="eOo-HI-CfD" firstAttribute="top" secondItem="OZH-5D-3lz" secondAttribute="top" constant="60" id="dBr-wZ-8fg"/>
-                <constraint firstItem="eOo-HI-CfD" firstAttribute="trailing" secondItem="er9-rM-MdD" secondAttribute="trailing" id="iwp-Rs-vIY"/>
+                <constraint firstItem="mNt-CO-6lv" firstAttribute="leading" secondItem="vbH-Fw-Ijh" secondAttribute="leading" id="95c-Ec-O4G"/>
+                <constraint firstItem="hxl-NZ-2Qb" firstAttribute="baseline" secondItem="vbH-Fw-Ijh" secondAttribute="baseline" id="IIy-a9-TfC"/>
+                <constraint firstItem="mNt-CO-6lv" firstAttribute="trailing" secondItem="JXE-ZM-6Fe" secondAttribute="trailing" id="Sg5-Dd-XSj"/>
+                <constraint firstItem="hxl-NZ-2Qb" firstAttribute="centerX" secondItem="mNt-CO-6lv" secondAttribute="centerX" id="TxX-nf-TTa"/>
+                <constraint firstItem="JXE-ZM-6Fe" firstAttribute="baseline" secondItem="hxl-NZ-2Qb" secondAttribute="baseline" id="inc-OO-sZX"/>
+                <constraint firstItem="da1-k5-5ob" firstAttribute="baseline" secondItem="M4K-Fk-B4S" secondAttribute="baseline" id="jZA-Hr-ALa"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

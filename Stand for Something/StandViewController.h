@@ -28,6 +28,7 @@
 @property (strong) NSTimer *secondTimer;
 
 @property (strong) IBOutlet UIView *containerView;
+@property (strong) UIView *subView;
 
 @property (strong) IBOutlet UIView *startView;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmT-PI-qqS">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -41,7 +41,7 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-rF-bwr">
-                                            <rect key="frame" x="269" y="13" width="42" height="60"/>
+                                            <rect key="frame" x="269" y="10" width="42" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="42" id="3BZ-h6-znA"/>
                                             </constraints>
@@ -66,13 +66,13 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="UXF-Wz-REf" firstAttribute="trailing" secondItem="CA9-XI-KaN" secondAttribute="trailing" type="default" id="0N0-O6-f5h"/>
-                                    <constraint firstItem="yWG-dR-U1v" firstAttribute="top" secondItem="0EK-Z6-FUv" secondAttribute="top" constant="45" id="Ac4-vX-GiW"/>
-                                    <constraint firstItem="UXF-Wz-REf" firstAttribute="top" secondItem="0EK-Z6-FUv" secondAttribute="top" constant="13" id="HFS-VD-7iW"/>
+                                    <constraint firstItem="UXF-Wz-REf" firstAttribute="top" secondItem="0EK-Z6-FUv" secondAttribute="top" constant="13" id="J3G-oY-KDJ"/>
                                     <constraint firstItem="UXF-Wz-REf" firstAttribute="leading" secondItem="CA9-XI-KaN" secondAttribute="leading" type="default" id="WHT-mU-2rt"/>
-                                    <constraint firstItem="UXF-Wz-REf" firstAttribute="top" secondItem="Vbo-rF-bwr" secondAttribute="top" type="default" id="WJk-3t-ed3"/>
                                     <constraint firstItem="Vbo-rF-bwr" firstAttribute="centerX" secondItem="yWG-dR-U1v" secondAttribute="centerX" type="default" id="b6u-3U-dCG"/>
                                     <constraint firstItem="UXF-Wz-REf" firstAttribute="leading" secondItem="0EK-Z6-FUv" secondAttribute="leading" constant="20" type="default" id="lP7-9b-7bm"/>
                                     <constraint firstItem="yWG-dR-U1v" firstAttribute="baseline" secondItem="CA9-XI-KaN" secondAttribute="baseline" type="default" id="lWH-pn-EIu"/>
+                                    <constraint firstItem="Vbo-rF-bwr" firstAttribute="centerY" secondItem="0EK-Z6-FUv" secondAttribute="centerY" type="default" id="p9D-Y8-EkO"/>
+                                    <constraint firstAttribute="bottom" secondItem="CA9-XI-KaN" secondAttribute="bottom" constant="14" id="s4B-Cf-NZk"/>
                                     <constraint firstItem="yWG-dR-U1v" firstAttribute="leading" secondItem="0EK-Z6-FUv" secondAttribute="leading" constant="130" id="yeT-tZ-a35"/>
                                 </constraints>
                                 <connections>
