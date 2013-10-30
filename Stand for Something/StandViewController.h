@@ -33,18 +33,9 @@
 @property (strong) UIView *graceView;
 @property (strong) UIView *doneView;
 
-//@property (strong) IBOutlet UIView *startView;
+@property (strong) IBOutlet UILabel *standingMinutes;
+@property (strong) IBOutlet UILabel *standingSeconds;
 
-//@property (strong) IBOutlet UIView *standingView;
-@property (strong) IBOutlet UILabel *standingTimeLabel;
-
-//@property (strong) IBOutlet UIView *graceView;
-
-//@property (strong) IBOutlet UIView *doneView;
-@property (strong) IBOutlet UILabel *doneTimeLabel;
-@property (strong) IBOutlet UILabel *doneLabel;
-
-@property (strong) IBOutlet UIImageView *touchView;
 
 - (void)startStanding;
 

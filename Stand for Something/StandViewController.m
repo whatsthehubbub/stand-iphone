@@ -30,18 +30,8 @@
 @synthesize graceView;
 @synthesize doneView;
 
-//@synthesize startView;
-
-//@synthesize standingView;
-@synthesize standingTimeLabel;
-
-//@synthesize graceView;
-
-//@synthesize doneView;
-@synthesize doneTimeLabel;
-@synthesize doneLabel;
-
-@synthesize touchView;
+@synthesize standingMinutes;
+@synthesize standingSeconds;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -61,6 +51,10 @@
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
+    
+    self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
+    self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
+    
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     
@@ -132,7 +126,7 @@
 //    CGPoint location = [touch locationInView:self.touchView];
     
     // TODO these checks don't work anymore?
-    if (YES || touch.view == self.touchView) {
+    if (YES /*|| touch.view == self.touchView */) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -161,8 +155,11 @@
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
         
         NSString *timeText = [NSString stringWithFormat:@"00:%d", (int)interval];
-        self.standingTimeLabel.text = timeText;
-        self.doneTimeLabel.text = timeText;
+//        self.standingTimeLabel.text = timeText;
+//        self.doneTimeLabel.text = timeText;
+        
+        self.standingMinutes.text = [NSString stringWithFormat:@"%d", ((int)interval)/60];
+        self.standingSeconds.text = [NSString stringWithFormat:@"%d", ((int)interval) % 60];
         
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
