@@ -33,7 +33,7 @@
 @property (strong) UIView *graceView;
 @property (strong) UIView *doneView;
 
-@property (strong) IBOutlet UIIMageView *startButton;
+@property (strong) IBOutlet UIImageView *startButton;
 
 @property (strong) IBOutlet UILabel *standingMinutes;
 @property (strong) IBOutlet UILabel *standingSeconds;

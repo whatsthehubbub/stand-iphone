@@ -137,10 +137,18 @@
     NSLog(@"started touching the screen");
     
     UITouch *touch = [touches anyObject];
-//    CGPoint location = [touch locationInView:self.startView];
+    CGPoint location = [touch locationInView:self.startView];
     
-    // TODO these checks don't work anymore?
-    if (touch.view == self.startButton) {
+    NSLog(@"Touch location is %f x %f", location.x, location.y);
+    
+    for (UITouch *touchIt in touches) {
+        NSLog(@"Touch registered on %@", touch.view);
+    }
+    
+    
+    
+    // TODO these checks don't work anymore. fix them.
+    if (YES || touch.view == self.startButton) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
