@@ -51,10 +51,14 @@
     // Dump container view size
     NSLog(@"Container view size %f x %f", self.containerView.frame.size.width, self.containerView.frame.size.height);
     
+    NSLog(@"Container view origin %f x %f", self.containerView.frame.origin.x, self.containerView.frame.origin.y);
+    
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
     
     NSLog(@"Start view size %f x %f", self.startView.frame.size.width, self.startView.frame.size.height);
+    
+    NSLog(@"Start view origin %f x %f", self.startView.frame.origin.x, self.startView.frame.origin.y);  
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     
