@@ -48,8 +48,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // Dump container view size
+    NSLog(@"Container view size %f x %f", self.containerView.frame.size.width, self.containerView.frame.size.height);
+    
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
+    
+    NSLog(@"Start view size %f x %f", self.startView.frame.size.width, self.startView.frame.size.height);
+    
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     
     self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
