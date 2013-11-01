@@ -30,6 +30,8 @@
 @synthesize graceView;
 @synthesize doneView;
 
+@synthesize startButton;
+
 @synthesize standingMinutes;
 @synthesize standingSeconds;
 
@@ -58,7 +60,9 @@
     
     NSLog(@"Start view size %f x %f", self.startView.frame.size.width, self.startView.frame.size.height);
     
-    NSLog(@"Start view origin %f x %f", self.startView.frame.origin.x, self.startView.frame.origin.y);  
+    NSLog(@"Start view origin %f x %f", self.startView.frame.origin.x, self.startView.frame.origin.y);
+    
+    self.startButton = (UIImageView *)[self.startView viewWithTag:11];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     
@@ -133,10 +137,10 @@
     NSLog(@"started touching the screen");
     
     UITouch *touch = [touches anyObject];
-//    CGPoint location = [touch locationInView:self.touchView];
+//    CGPoint location = [touch locationInView:self.startView];
     
     // TODO these checks don't work anymore?
-    if (YES /*|| touch.view == self.touchView */) {
+    if (touch.view == self.startButton) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {

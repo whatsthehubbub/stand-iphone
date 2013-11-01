@@ -21,7 +21,7 @@ Press and hold the button; no walking, no moving.</string>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" image="4-1-Arrow-down.png" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-CL-wSc">
                     <rect key="frame" x="138" y="133" width="44" height="62"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" image="4-6-Stand-button-warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="ReV-XZ-NlF">
+                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" image="4-6-Stand-button-warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="ReV-XZ-NlF">
                     <rect key="frame" x="70" y="208.5" width="180" height="180"/>
                 </imageView>
             </subviews>
