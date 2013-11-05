@@ -74,6 +74,9 @@
     self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
     
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
+    
+    self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
+    
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     
     self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
@@ -161,7 +164,7 @@
 //    NSLog(@"Hit test %@", descendant);
     
     // TODO these checks don't work anymore. fix them.
-    if (touch.view == self.startButton) {
+    if (touch.view == self.startButton || touch.view == self.graceButton) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -195,6 +198,9 @@
         
         self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
         self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+        
+        self.doneMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
+        self.doneSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
         
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
