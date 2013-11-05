@@ -76,6 +76,9 @@
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     
+    self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
+    self.doneSeconds = (UILabel *)[self.doneView viewWithTag:13];
+    
     self.startView.hidden = NO;
     
 
@@ -190,8 +193,8 @@
 //        self.standingTimeLabel.text = timeText;
 //        self.doneTimeLabel.text = timeText;
         
-        self.standingMinutes.text = [NSString stringWithFormat:@"%d", ((int)interval)/60];
-        self.standingSeconds.text = [NSString stringWithFormat:@"%d", ((int)interval) % 60];
+        self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
+        self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
         
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
