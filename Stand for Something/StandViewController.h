@@ -38,6 +38,10 @@
 @property (strong) IBOutlet UILabel *standingMinutes;
 @property (strong) IBOutlet UILabel *standingSeconds;
 
+@property (strong) IBOutlet UIImageView *graceButton;
+
+@property (strong) IBOutlet UILabel *doneMinutes;
+@property (strong) IBOutlet UILabel *doneSeconds;
 
 - (void)startStanding;
 

@@ -35,6 +35,10 @@
 @synthesize standingMinutes;
 @synthesize standingSeconds;
 
+@synthesize graceButton;
+
+@synthesize doneMinutes;
+@synthesize doneSeconds;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -137,7 +141,7 @@
 //    NSLog(@"started touching the screen");
     
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self.startView];
+//    CGPoint location = [touch locationInView:self.startView];
     
 //    NSLog(@"Touch location is %f x %f", location.x, location.y);
     
@@ -145,9 +149,9 @@
 //        NSLog(@"Touch registered on %@", touch.view);
 //    }
     
-    NSLog(@"Touch View %@", touch.view);
-    NSLog(@"Touch view class %@", [touch.view class]);
-    NSLog(@"Start button %@", self.startButton);
+//    NSLog(@"Touch View %@", touch.view);
+//    NSLog(@"Touch view class %@", [touch.view class]);
+//    NSLog(@"Start button %@", self.startButton);
     
 //    UIView *descendant = [touch.view hitTest:location withEvent:event];
 //    
