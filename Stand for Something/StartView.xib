@@ -21,8 +21,9 @@ Press and hold the button; no walking, no moving.</string>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" id="ndg-CL-wSc">
                     <rect key="frame" x="138" y="133" width="44" height="62"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" image="4-6-Stand-button-warning.png" id="ReV-XZ-NlF">
-                    <rect key="frame" x="70" y="208" width="180" height="180"/>
+                <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4-6-Stand-button-warning.png" id="wsc-w6-0Qe">
+                    <rect key="frame" x="70" y="203" width="180" height="180"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.61568627450000002" green="0.34509803919999998" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>

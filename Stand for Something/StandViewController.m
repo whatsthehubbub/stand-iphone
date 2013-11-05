@@ -134,21 +134,27 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"started touching the screen");
+//    NSLog(@"started touching the screen");
     
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:self.startView];
     
-    NSLog(@"Touch location is %f x %f", location.x, location.y);
+//    NSLog(@"Touch location is %f x %f", location.x, location.y);
     
-    for (UITouch *touchIt in touches) {
-        NSLog(@"Touch registered on %@", touch.view);
-    }
+//    for (UITouch *touchIt in touches) {
+//        NSLog(@"Touch registered on %@", touch.view);
+//    }
     
+    NSLog(@"Touch View %@", touch.view);
+    NSLog(@"Touch view class %@", [touch.view class]);
+    NSLog(@"Start button %@", self.startButton);
     
+//    UIView *descendant = [touch.view hitTest:location withEvent:event];
+//    
+//    NSLog(@"Hit test %@", descendant);
     
     // TODO these checks don't work anymore. fix them.
-    if (YES || touch.view == self.startButton) {
+    if (touch.view == self.startButton) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -160,7 +166,7 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Keep touching the screen");
+    NSLog(@"Touches ended");
     
     if (self.startedStanding) {
         self.gracePeriod = YES;
