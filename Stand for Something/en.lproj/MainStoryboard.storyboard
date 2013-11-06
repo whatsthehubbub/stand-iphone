@@ -56,6 +56,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="addressLabel" destination="CA9-XI-KaN" id="Yag-ZM-Xbe"/>
+                                    <outlet property="nameLabel" destination="UXF-Wz-REf" id="H0g-US-nQ7"/>
                                     <outlet property="numberOfPeople" destination="yWG-dR-U1v" id="nc3-KB-9ca"/>
                                 </connections>
                             </tableViewCell>
