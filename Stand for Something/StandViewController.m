@@ -164,7 +164,7 @@
 //    NSLog(@"Hit test %@", descendant);
     
     // TODO these checks don't work anymore. fix them.
-    if (touch.view == self.startButton || touch.view == self.graceButton) {
+    if (!self.stoppedStanding && touch.view == self.startButton || touch.view == self.graceButton) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -178,7 +178,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"Touches ended");
     
-    if (self.startedStanding) {
+    if (self.startedStanding && !self.stoppedStanding) {
         self.gracePeriod = YES;
         self.graceStarted = [[NSDate alloc] init];
         
