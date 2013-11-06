@@ -69,7 +69,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="DzP-8o-TuR" kind="push" identifier="Square" id="jv1-N8-dNV"/>
-                        <segue destination="IFz-l0-0MX" kind="modal" identifier="Stand" id="xIT-kd-aY2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqC-L1-PAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19X-jE-kMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550" y="-176"/>
+            <point key="canvasLocation" x="2618" y="51"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zCG-gI-kdD">
@@ -258,7 +257,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="xIT-kd-aY2"/>
-    </inferredMetricsTieBreakers>
 </document>

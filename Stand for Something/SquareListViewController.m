@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    [self performSegueWithIdentifier:@"Stand" sender:self];
+//    [self performSegueWithIdentifier:@"Stand" sender:self];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
