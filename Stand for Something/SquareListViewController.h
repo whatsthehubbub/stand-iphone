@@ -12,6 +12,7 @@
 #import "FSNConnection.h"
 #import "SquareTableViewCell.h"
 #import "SquareViewController.h"
+#import "StandManager.h"
 
 @interface SquareListViewController : UITableViewController <CLLocationManagerDelegate>
 

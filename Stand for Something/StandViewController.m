@@ -93,6 +93,24 @@
 }
 
 - (void)startStanding {
+    
+    // Get location from StandManager
+    StandManager *standManager = [StandManager sharedManager];
+    NSLog(@"Got location back from store %f", standManager.location.latitude);
+    // Post it to our webservice
+    
+    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:standManager.location.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:standManager.location.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString]};
+
+    [afManager POST:@"http://standforsomething.herokuapp.com/catch" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Server response %@", responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"POST to server failed %@", error);
+    }];
+    
+    
+    
     if (nil == motionManager) {
         motionManager = [[CMMotionManager alloc] init];
     }

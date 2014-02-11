@@ -10,6 +10,9 @@
 #import <CoreMotion/CoreMotion.h>
 #import <Social/Social.h>
 
+#import "StandManager.h"
+#import "AFNetworking.h"
+
 @interface StandViewController : UIViewController
 
 @property (strong) CMMotionManager *motionManager;
