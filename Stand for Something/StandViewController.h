@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
+#import <Social/Social.h>
 
 @interface StandViewController : UIViewController
 

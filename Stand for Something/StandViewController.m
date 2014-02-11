@@ -74,7 +74,7 @@
     self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
     self.doneSeconds = (UILabel *)[self.doneView viewWithTag:13];
     self.tweetButton = (UIButton *)[self.doneView viewWithTag:14];
-    [self.tweetButton addTarget:self action:@selector(tweetResult:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tweetButton addTarget:self action:@selector(tweetResult) forControlEvents:UIControlEventTouchUpInside];
     
     self.startView.hidden = NO;
     
@@ -227,6 +227,30 @@
 
 - (void)tweetResult {
     NSLog(@"Tweeting the result");
+    
+    // TODO do this check on viewDidLoad and modify UI according to service availability
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [slvc setInitialText:@"I stood for something."];
+        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
+            switch (result) {
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"posted tweet");
+                    
+                    break;
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Cancelled tweet");
+                    
+                    break;
+                default:
+                    break;
+            }
+            
+        }];
+        
+        [self presentViewController:slvc animated:YES completion:nil];
+    }
 }
 
 - (void)showStartView {

@@ -61,6 +61,7 @@
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
 		4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01B17CFCCF100194023 /* ActionButton.m */; };
 		4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F02617CFDA3E00194023 /* FontLabel.m */; };
+		4E92042318AA64D00012A839 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E92042218AA64D00012A839 /* Social.framework */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
 /* End PBXBuildFile section */
@@ -133,6 +134,7 @@
 		4E80F01B17CFCCF100194023 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
 		4E80F02517CFDA3E00194023 /* FontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabel.h; sourceTree = "<group>"; };
 		4E80F02617CFDA3E00194023 /* FontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontLabel.m; sourceTree = "<group>"; };
+		4E92042218AA64D00012A839 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E92042318AA64D00012A839 /* Social.framework in Frameworks */,
 				4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */,
 				4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */,
 				4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */,
@@ -211,6 +214,7 @@
 		4E0EF7161799E6E300BA6C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E92042218AA64D00012A839 /* Social.framework */,
 				4EDAE3D917B4F17000484E79 /* libz.dylib */,
 				4E0D1FF317AD557C006B9098 /* CoreMotion.framework */,
 				4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */,
