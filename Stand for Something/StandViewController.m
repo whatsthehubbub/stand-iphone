@@ -61,26 +61,20 @@
     
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
-    
-    NSLog(@"Start view size %f x %f", self.startView.frame.size.width, self.startView.frame.size.height);
-    
-    NSLog(@"Start view origin %f x %f", self.startView.frame.origin.x, self.startView.frame.origin.y);
-    
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
-    
     self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
     self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
     
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
-    
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
-    
     self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
     self.doneSeconds = (UILabel *)[self.doneView viewWithTag:13];
+    self.tweetButton = (UIButton *)[self.doneView viewWithTag:14];
+    [self.tweetButton addTarget:self action:@selector(tweetResult:) forControlEvents:UIControlEventTouchUpInside];
     
     self.startView.hidden = NO;
     
@@ -229,6 +223,10 @@
     
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
 //    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
+}
+
+- (void)tweetResult {
+    NSLog(@"Tweeting the result");
 }
 
 - (void)showStartView {

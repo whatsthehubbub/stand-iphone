@@ -42,6 +42,7 @@
 
 @property (strong) IBOutlet UILabel *doneMinutes;
 @property (strong) IBOutlet UILabel *doneSeconds;
+@property (strong) IBOutlet UIButton *tweetButton;
 
 - (void)startStanding;
 
