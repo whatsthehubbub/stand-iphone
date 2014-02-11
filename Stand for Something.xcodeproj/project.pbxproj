@@ -61,7 +61,6 @@
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
 		4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01B17CFCCF100194023 /* ActionButton.m */; };
 		4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F02617CFDA3E00194023 /* FontLabel.m */; };
-		4EDAE3D617B4F12E00484E79 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D217B4F12E00484E79 /* libTestFlight.a */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
 /* End PBXBuildFile section */
@@ -134,8 +133,6 @@
 		4E80F01B17CFCCF100194023 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
 		4E80F02517CFDA3E00194023 /* FontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontLabel.h; sourceTree = "<group>"; };
 		4E80F02617CFDA3E00194023 /* FontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontLabel.m; sourceTree = "<group>"; };
-		4EDAE3D217B4F12E00484E79 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		4EDAE3D517B4F12E00484E79 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
@@ -153,7 +150,6 @@
 				4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */,
 				4E0EF71A1799E6E300BA6C32 /* Foundation.framework in Frameworks */,
 				4E0EF71C1799E6E300BA6C32 /* CoreGraphics.framework in Frameworks */,
-				4EDAE3D617B4F12E00484E79 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				4E30214C180863540076FACB /* CustomViews */,
-				4EDAE3D117B4F12E00484E79 /* TestFlightSDK1.2.6 */,
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
 				4E0EF7271799E6E300BA6C32 /* AppDelegate.m */,
 				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
@@ -283,15 +278,6 @@
 				4E302151180864640076FACB /* StartView.xib */,
 			);
 			name = CustomViews;
-			sourceTree = "<group>";
-		};
-		4EDAE3D117B4F12E00484E79 /* TestFlightSDK1.2.6 */ = {
-			isa = PBXGroup;
-			children = (
-				4EDAE3D217B4F12E00484E79 /* libTestFlight.a */,
-				4EDAE3D517B4F12E00484E79 /* TestFlight.h */,
-			);
-			path = TestFlightSDK1.2.6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
