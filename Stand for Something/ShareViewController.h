@@ -12,9 +12,12 @@
 #import "AFNetworking.h"
 #import "StandManager.h"
 
-@interface ShareViewController : UIViewController
+@interface ShareViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong) IBOutlet UITextField *textField;
+@property (strong) IBOutlet UILabel *timeLabel;
+
+@property (strong) StandManager *standManager;
 
 - (IBAction)closeButton:(id)sender;
 

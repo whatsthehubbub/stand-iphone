@@ -292,6 +292,7 @@
                     </view>
                     <connections>
                         <outlet property="textField" destination="bSy-Fd-5Fd" id="tYl-Yo-ecl"/>
+                        <outlet property="timeLabel" destination="Ybh-qD-YTS" id="VXo-sy-jBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTG-Bt-XT5" userLabel="First Responder" sceneMemberID="firstResponder"/>

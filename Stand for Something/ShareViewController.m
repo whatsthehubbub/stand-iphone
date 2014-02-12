@@ -15,6 +15,9 @@
 @implementation ShareViewController
 
 @synthesize textField;
+@synthesize timeLabel;
+
+@synthesize standManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,10 @@
     
     CGFloat fontSize = self.textField.font.pointSize;
     [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
+    
+    standManager = [StandManager sharedManager];
+    
+    self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/60, standManager.duration%60];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,8 +80,6 @@
 - (IBAction)doneWithText:(id)sender {
     [self.textField resignFirstResponder];
     
-    StandManager *standManager = [StandManager sharedManager];
-    
     // Update website with the time
     AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
@@ -88,6 +93,20 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"POST to server failed %@", error);
     }];
+}
+
+# pragma mark - UITextFieldDelegate methods
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSUInteger oldLength = [textField.text length];
+    NSUInteger replacementLength = [string length];
+    NSUInteger rangeLength = range.length;
+    
+    NSUInteger newLength = oldLength - rangeLength + replacementLength;
+    
+    BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
+    
+    return newLength <= 66 || returnKey;
 }
 
 @end
