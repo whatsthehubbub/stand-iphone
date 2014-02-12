@@ -240,6 +240,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tweetResult:" destination="eaH-1H-ic8" eventType="touchUpInside" id="ytE-LW-qjS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="something" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSy-Fd-5Fd">
                                 <rect key="frame" x="28" y="70" width="214" height="30"/>
@@ -247,6 +250,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="doneWithText:" destination="eaH-1H-ic8" eventType="editingDidEndOnExit" id="S8x-Np-xLc"/>
                                     <outlet property="delegate" destination="eaH-1H-ic8" id="f0P-Va-vfO"/>
                                 </connections>
                             </textField>
@@ -286,6 +290,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="bSy-Fd-5Fd" id="tYl-Yo-ecl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTG-Bt-XT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

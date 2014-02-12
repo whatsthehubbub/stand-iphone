@@ -40,9 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tweetResult {
-    NSLog(@"Tweeting the result");
-    
+- (IBAction)tweetResult:(id)sender {
     // TODO do this check on viewDidLoad and modify UI according to service availability
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -72,12 +70,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-# pragma mark - UITextFieldDelegate methods
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (IBAction)doneWithText:(id)sender {
     [self.textField resignFirstResponder];
     
-    return NO;
+    StandManager *standManager = [StandManager sharedManager];
+    
+    // Update website with the time
+    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
+    
+    NSLog(@"Sending parameters %@", parameters);
+    
+    [afManager POST:@"http://standforsomething.herokuapp.com/done" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"Server response %@", responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"POST to server failed %@", error);
+    }];
 }
 
 @end

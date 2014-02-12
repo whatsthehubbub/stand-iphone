@@ -269,6 +269,9 @@
 }
 
 - (void)stopStanding {
+    // Stop standing does not make sense if we don't get a response from the server
+    // TODO how does it behave then? or when somebody deos not have internet?
+    
     self.stoppedStanding = YES;
     
     [self showDoneView];

@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 
-@interface ShareViewController : UIViewController <UITextFieldDelegate>
+#import "AFNetworking.h"
+#import "StandManager.h"
 
-@property (strong) UITextField *textField;
+@interface ShareViewController : UIViewController
+
+@property (strong) IBOutlet UITextField *textField;
 
 - (IBAction)closeButton:(id)sender;
 
