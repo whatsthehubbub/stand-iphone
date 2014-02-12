@@ -14,6 +14,8 @@
 
 @implementation ShareViewController
 
+@synthesize textField;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    CGFloat fontSize = self.textField.font.pointSize;
+    [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
 }
 
 - (void)didReceiveMemoryWarning

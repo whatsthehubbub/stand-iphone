@@ -11,4 +11,6 @@
 
 @interface ShareViewController : UIViewController
 
+@property (strong) UITextField *textField;
+
 @end
