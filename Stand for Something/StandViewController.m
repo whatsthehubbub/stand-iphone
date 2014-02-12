@@ -59,6 +59,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.standManager = [StandManager sharedManager];
+    
     // Setup the location stuff
     if (nil == self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
@@ -132,6 +134,10 @@
         
         standManager.secret = [json objectForKey:@"secret"];
         standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
+        
+        // Reset these to reasonable defaults
+        standManager.duration = 0;
+        standManager.sessionid = -1;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"POST to server failed %@", error);
@@ -267,6 +273,18 @@
     self.stoppedStanding = YES;
     
     [self showDoneView];
+    
+    // Update website with the time
+    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
+    
+    [afManager POST:@"http://standforsomething.herokuapp.com/done" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"Server response %@", responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"POST to server failed %@", error);
+    }];
 
     
     [self.motionManager stopDeviceMotionUpdates];
