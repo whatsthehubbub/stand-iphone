@@ -38,7 +38,7 @@
     
     standManager = [StandManager sharedManager];
     
-    self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/60, standManager.duration%60];
+    self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/3600, standManager.duration/60];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +52,11 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        [slvc setInitialText:@"I stood for something."];
+        [slvc setInitialText:[NSString stringWithFormat:@"I stood for %@ for %d hours and %d minutes.", textField.text, standManager.duration/3600, standManager.duration/60]];
+        
+        // TODO test adding the URL
+        [slvc addURL:[NSURL URLWithString:@""]];
+        
         [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
             switch (result) {
                 case SLComposeViewControllerResultDone:
