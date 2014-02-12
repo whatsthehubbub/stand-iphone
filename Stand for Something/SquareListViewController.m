@@ -73,7 +73,7 @@
     NSLog(@"Get location %f x %f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude);
     
     // Store the current location in our model
-    StandManager *standManager = [StandManager sharedManager];
+//    StandManager *standManager = [StandManager sharedManager];
 //    standManager.location = self.currentLocation.coordinate;
     
     

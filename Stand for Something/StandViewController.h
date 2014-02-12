@@ -44,16 +44,22 @@
 @property (strong) UIView *graceView;
 @property (strong) UIView *doneView;
 
+// Start view controls
 @property (strong) IBOutlet UIImageView *startButton;
 
+// Standing view controls
 @property (strong) IBOutlet UILabel *standingMinutes;
 @property (strong) IBOutlet UILabel *standingSeconds;
 
+// Grace view controls
 @property (strong) IBOutlet UIImageView *graceButton;
 
+// Done view controls
 @property (strong) IBOutlet UILabel *doneMinutes;
 @property (strong) IBOutlet UILabel *doneSeconds;
-@property (strong) IBOutlet UIButton *tweetButton;
+
+@property (strong) IBOutlet UIButton *shareButton;
+@property (strong) IBOutlet UIButton *againButton;
 
 - (void)startStanding;
 

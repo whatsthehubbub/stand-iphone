@@ -22,7 +22,7 @@
 @synthesize motionManager;
 
 @synthesize maxX;
-@synthesize maxYn
+@synthesize maxY;
 @synthesize maxZ;
 
 @synthesize startTime;
@@ -90,23 +90,28 @@
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
     self.doneSeconds = (UILabel *)[self.doneView viewWithTag:13];
-    self.tweetButton = (UIButton *)[self.doneView viewWithTag:14];
-    [self.tweetButton addTarget:self action:@selector(tweetResult) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.startView.hidden = NO;
-    
+    self.shareButton = (UIButton *)[self.doneView viewWithTag:14];
+    [self.shareButton addTarget:self action:@selector(shareResult) forControlEvents:UIControlEventTouchUpInside];
+    self.againButton = (UIButton *)[self.doneView viewWithTag:15];
+    [self.againButton addTarget:self action:@selector(prepareStanding) forControlEvents:UIControlEventTouchUpInside];
 
-//    self.messageLabel.text = @"Start standing!\nPress and hold the button; no walking, no moving.";
-    
-    self.startedStanding = NO;
-    self.gracePeriod = NO;
-    self.stoppedStanding = NO;
+    [self prepareStanding];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareStanding {
+    [self showStartView];
+    
+    [self setTimeOnViews:0];
+    
+    self.startedStanding = NO;
+    self.gracePeriod = NO;
+    self.stoppedStanding = NO;
 }
 
 - (void)startStanding {
@@ -232,11 +237,7 @@
 //        self.standingTimeLabel.text = timeText;
 //        self.doneTimeLabel.text = timeText;
         
-        self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
-        self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
-        
-        self.doneMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
-        self.doneSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+        [self setTimeOnViews:interval];
         
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
@@ -254,6 +255,14 @@
     }
 }
 
+- (void)setTimeOnViews:(NSTimeInterval)interval {
+    self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
+    self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+    
+    self.doneMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
+    self.doneSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+}
+
 - (void)stopStanding {
     self.stoppedStanding = YES;
     
@@ -267,7 +276,7 @@
 //    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
-- (void)tweetResult {
+- (void)shareResult {
     NSLog(@"Tweeting the result");
     
     // TODO do this check on viewDidLoad and modify UI according to service availability
