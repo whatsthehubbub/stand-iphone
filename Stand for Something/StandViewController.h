@@ -9,14 +9,21 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import <Social/Social.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "StandManager.h"
 #import "AFNetworking.h"
 
-@interface StandViewController : UIViewController
+@interface StandViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (strong) CLLocationManager *locationManager;
+// TODO remove currentLocation?
+@property (strong) CLLocation *currentLocation;
+
+@property (strong) StandManager *standManager;
+
 
 @property (strong) CMMotionManager *motionManager;
-
 
 @property (assign) double maxX;
 @property (assign) double maxY;
@@ -49,7 +56,5 @@
 @property (strong) IBOutlet UIButton *tweetButton;
 
 - (void)startStanding;
-
-- (IBAction)close:(id)sender;
 
 @end

@@ -238,23 +238,18 @@
 		4E0EF71D1799E6E300BA6C32 /* Stand for Something */ = {
 			isa = PBXGroup;
 			children = (
+				4E9BA4B418ABB6F500C9A2DC /* Foursquare */,
 				4E30214C180863540076FACB /* CustomViews */,
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
 				4E0EF7271799E6E300BA6C32 /* AppDelegate.m */,
 				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
 				4E80F01417CF990600194023 /* SquareTableViewCell.m */,
-				4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */,
-				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
-				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
 				4E80F02517CFDA3E00194023 /* FontLabel.h */,
 				4E92042418AA87A90012A839 /* StandManager.h */,
 				4E92042518AA87A90012A839 /* StandManager.m */,
 				4E80F02617CFDA3E00194023 /* FontLabel.m */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
-				4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */,
-				4E0EF73E1799EEA300BA6C32 /* FSNData.h */,
-				4E0EF73F1799EEA300BA6C32 /* FSNData.m */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */,
 				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
@@ -293,6 +288,19 @@
 				4E302151180864640076FACB /* StartView.xib */,
 			);
 			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		4E9BA4B418ABB6F500C9A2DC /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				4E0EF73A1799EEA300BA6C32 /* FSN_categories.h */,
+				4E0EF73B1799EEA300BA6C32 /* FSN_categories.m */,
+				4E0EF73C1799EEA300BA6C32 /* FSNConnection.h */,
+				4E0EF73D1799EEA300BA6C32 /* FSNConnection.m */,
+				4E0EF73E1799EEA300BA6C32 /* FSNData.h */,
+				4E0EF73F1799EEA300BA6C32 /* FSNData.m */,
+			);
+			name = Foursquare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

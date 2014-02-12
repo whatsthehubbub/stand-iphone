@@ -11,7 +11,11 @@
 
 @interface StandManager : NSObject
 
-@property (readwrite) CLLocationCoordinate2D location;
+@property (readwrite) CLLocationCoordinate2D coordinate;
+@property (readwrite) int duration;
+
+@property (readwrite) int sessionid;
+@property (strong) NSString *secret;
 
 +(id)sharedManager;
 

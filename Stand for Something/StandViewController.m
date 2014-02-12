@@ -14,10 +14,15 @@
 
 @implementation StandViewController
 
+@synthesize locationManager;
+@synthesize currentLocation;
+
+@synthesize standManager;
+
 @synthesize motionManager;
 
 @synthesize maxX;
-@synthesize maxY;
+@synthesize maxYn
 @synthesize maxZ;
 
 @synthesize startTime;
@@ -53,6 +58,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Setup the location stuff
+    if (nil == self.locationManager) {
+        self.locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    self.locationManager.distanceFilter = 200;
+    
+    [self.locationManager startUpdatingLocation];
+    
     
     // Dump container view size
     NSLog(@"Container view size %f x %f", self.containerView.frame.size.width, self.containerView.frame.size.height);
@@ -95,20 +112,25 @@
 - (void)startStanding {
     
     // Get location from StandManager
-    StandManager *standManager = [StandManager sharedManager];
-    NSLog(@"Got location back from store %f", standManager.location.latitude);
+    NSLog(@"Got location back from store %f", standManager.coordinate.latitude);
     // Post it to our webservice
     
     AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:standManager.location.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:standManager.location.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString]};
+    NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:standManager.coordinate.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:standManager.coordinate.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString]};
 
     [afManager POST:@"http://standforsomething.herokuapp.com/catch" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
         NSLog(@"Server response %@", responseObject);
+
+        
+        NSDictionary *json = (NSDictionary *)responseObject;
+        
+        standManager.secret = [json objectForKey:@"secret"];
+        standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"POST to server failed %@", error);
     }];
-    
     
     
     if (nil == motionManager) {
@@ -176,7 +198,7 @@
 //    NSLog(@"Hit test %@", descendant);
     
     // TODO these checks don't work anymore. fix them.
-    if (!self.stoppedStanding && touch.view == self.startButton || touch.view == self.graceButton) {
+    if (!self.stoppedStanding && (touch.view == self.startButton || touch.view == self.graceButton)) {
         if (!self.startedStanding) {
             [self startStanding];
         } else if (self.gracePeriod) {
@@ -204,7 +226,9 @@
         
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
         
-        NSString *timeText = [NSString stringWithFormat:@"00:%d", (int)interval];
+        standManager.duration = (int)interval;
+        
+//        NSString *timeText = [NSString stringWithFormat:@"00:%d", (int)interval];
 //        self.standingTimeLabel.text = timeText;
 //        self.doneTimeLabel.text = timeText;
         
@@ -239,7 +263,7 @@
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
     
-    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+//    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
 //    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
@@ -316,6 +340,44 @@
     }
     
     return view;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.currentLocation = [locations lastObject];
+    
+    NSLog(@"Get location %f x %f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude);
+    
+    // Store the current location in our model
+    standManager.coordinate = self.currentLocation.coordinate;
+    
+    
+//    NSURL *url = [NSURL URLWithString:@"https://api.foursquare.com/v2/venues/search"];
+//    NSDictionary *headers = [NSDictionary dictionary];
+//    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"E5OLRBH2Z2KW2BHD43V2YTKDTFMUCIPQHBAIULUJDEPEUW05", @"client_id", @"TXJOYFAXMANGKMJKFSERSJDOX0DPZMM5MOUT23K241DCSEJK", @"client_secret", @"20130719", @"v", [NSString stringWithFormat:@"%f,%f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude], @"ll", @"4bf58dd8d48988d164941735,4bf58dd8d48988d163941735", @"categoryId", @"1000", @"radius", nil];
+//    
+//    FSNConnection *conn = [FSNConnection withUrl:url method:FSNRequestMethodGET headers:headers parameters:parameters parseBlock:^id(FSNConnection *c, NSError **error) {
+//        
+//        return [c.responseData dictionaryFromJSONWithError:error];
+//    } completionBlock:^(FSNConnection *c) {
+//        //        NSLog(@"complete: %@\n  error: %@\n  parseResult: %@\n", c, c.error, c.parseResult);
+//        
+//        NSDictionary *result = (NSDictionary *)c.parseResult;
+//        self.plazas = [[result objectForKey:@"response"] objectForKey:@"venues"];
+//        
+//        //        NSLog(@"plazas got %@", self.plazas);
+//        
+//        
+//        [self.tableView reloadData];
+//        
+//    } progressBlock:^(FSNConnection *c) {
+//        //        NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
+//    }];
+//    
+//    //    NSLog(@"request %@", conn);
+//    
+//    [conn start];
 }
 
 @end

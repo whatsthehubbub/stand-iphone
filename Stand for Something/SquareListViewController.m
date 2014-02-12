@@ -74,7 +74,7 @@
     
     // Store the current location in our model
     StandManager *standManager = [StandManager sharedManager];
-    standManager.location = self.currentLocation.coordinate;
+//    standManager.location = self.currentLocation.coordinate;
     
     
     

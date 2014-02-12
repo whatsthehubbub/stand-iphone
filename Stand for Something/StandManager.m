@@ -10,7 +10,11 @@
 
 @implementation StandManager
 
-@synthesize location;
+@synthesize coordinate;
+@synthesize duration;
+
+@synthesize sessionid;
+@synthesize secret;
 
 +(id)sharedManager {
     static StandManager *sharedStandManager = nil;
