@@ -242,10 +242,13 @@
                                 </state>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="something" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSy-Fd-5Fd">
-                                <rect key="frame" x="28" y="70" width="97" height="30"/>
+                                <rect key="frame" x="28" y="70" width="214" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eaH-1H-ic8" id="f0P-Va-vfO"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="You stood for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHq-tV-j59" customClass="FontLabel">
                                 <rect key="frame" x="28" y="35" width="280" height="27"/>
@@ -276,6 +279,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButton:" destination="eaH-1H-ic8" eventType="touchUpInside" id="bru-xE-v8Y"/>
                                     <action selector="startStanding:" destination="DzP-8o-TuR" eventType="touchUpInside" id="gTy-6W-jBB"/>
                                 </connections>
                             </button>

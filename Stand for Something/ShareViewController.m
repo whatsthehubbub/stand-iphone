@@ -68,4 +68,16 @@
     }
 }
 
+- (IBAction)closeButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+# pragma mark - UITextFieldDelegate methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.textField resignFirstResponder];
+    
+    return NO;
+}
+
 @end

@@ -137,7 +137,6 @@
         
         // Reset these to reasonable defaults
         standManager.duration = 0;
-        standManager.sessionid = -1;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"POST to server failed %@", error);
@@ -278,6 +277,8 @@
     AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
     
+    NSLog(@"Sending parameters %@", parameters);
+    
     [afManager POST:@"http://standforsomething.herokuapp.com/done" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"Server response %@", responseObject);
@@ -354,33 +355,6 @@
     
     // Store the current location in our model
     standManager.coordinate = self.currentLocation.coordinate;
-    
-    
-//    NSURL *url = [NSURL URLWithString:@"https://api.foursquare.com/v2/venues/search"];
-//    NSDictionary *headers = [NSDictionary dictionary];
-//    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:@"E5OLRBH2Z2KW2BHD43V2YTKDTFMUCIPQHBAIULUJDEPEUW05", @"client_id", @"TXJOYFAXMANGKMJKFSERSJDOX0DPZMM5MOUT23K241DCSEJK", @"client_secret", @"20130719", @"v", [NSString stringWithFormat:@"%f,%f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude], @"ll", @"4bf58dd8d48988d164941735,4bf58dd8d48988d163941735", @"categoryId", @"1000", @"radius", nil];
-//    
-//    FSNConnection *conn = [FSNConnection withUrl:url method:FSNRequestMethodGET headers:headers parameters:parameters parseBlock:^id(FSNConnection *c, NSError **error) {
-//        
-//        return [c.responseData dictionaryFromJSONWithError:error];
-//    } completionBlock:^(FSNConnection *c) {
-//        //        NSLog(@"complete: %@\n  error: %@\n  parseResult: %@\n", c, c.error, c.parseResult);
-//        
-//        NSDictionary *result = (NSDictionary *)c.parseResult;
-//        self.plazas = [[result objectForKey:@"response"] objectForKey:@"venues"];
-//        
-//        //        NSLog(@"plazas got %@", self.plazas);
-//        
-//        
-//        [self.tableView reloadData];
-//        
-//    } progressBlock:^(FSNConnection *c) {
-//        //        NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
-//    }];
-//    
-//    //    NSLog(@"request %@", conn);
-//    
-//    [conn start];
 }
 
 @end
