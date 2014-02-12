@@ -277,31 +277,7 @@
 }
 
 - (void)shareResult {
-    NSLog(@"Tweeting the result");
-    
-    // TODO do this check on viewDidLoad and modify UI according to service availability
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        
-        [slvc setInitialText:@"I stood for something."];
-        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
-            switch (result) {
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"posted tweet");
-                    
-                    break;
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Cancelled tweet");
-                    
-                    break;
-                default:
-                    break;
-            }
-            
-        }];
-        
-        [self presentViewController:slvc animated:YES completion:nil];
-    }
+    [self performSegueWithIdentifier:@"ShareModal" sender:self];
 }
 
 - (void)showStartView {
