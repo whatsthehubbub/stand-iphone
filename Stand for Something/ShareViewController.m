@@ -59,6 +59,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
+        // TODO remove 0 hours if there are no hours
         [slvc setInitialText:[NSString stringWithFormat:@"I stood for %@ for %d hours and %d minutes.", textField.text, standManager.duration/3600, standManager.duration/60]];
         
         // TODO test adding the URL
