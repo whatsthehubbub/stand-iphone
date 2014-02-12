@@ -137,6 +137,7 @@
         
         // Reset these to reasonable defaults
         standManager.duration = 0;
+        standManager.message = @"something";
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"POST to server failed %@", error);

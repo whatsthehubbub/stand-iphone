@@ -17,6 +17,8 @@
 @property (readwrite) int sessionid;
 @property (strong) NSString *secret;
 
+@property (strong) NSString *message;
+
 +(id)sharedManager;
 
 @end

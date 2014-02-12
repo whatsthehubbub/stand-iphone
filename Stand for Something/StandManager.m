@@ -16,6 +16,8 @@
 @synthesize sessionid;
 @synthesize secret;
 
+@synthesize message;
+
 +(id)sharedManager {
     static StandManager *sharedStandManager = nil;
     

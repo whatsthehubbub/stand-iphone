@@ -32,11 +32,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    standManager = [StandManager sharedManager];
     
     CGFloat fontSize = self.textField.font.pointSize;
     [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
     
-    standManager = [StandManager sharedManager];
+    self.textField.text = standManager.message;
     
     self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/3600, standManager.duration/60];
 }
@@ -83,6 +84,8 @@
 
 - (IBAction)doneWithText:(id)sender {
     [self.textField resignFirstResponder];
+    
+    standManager.message = self.textField.text;
     
     // Update website with the time
     AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
