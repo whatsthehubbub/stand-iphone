@@ -11,12 +11,13 @@
 
 #import "AFNetworking.h"
 #import "StandManager.h"
+#import "TTTAttributedLabel.h"
 
-@interface ShareViewController : UIViewController <UITextFieldDelegate>
+@interface ShareViewController : UIViewController <UITextFieldDelegate, TTTAttributedLabelDelegate>
 
 @property (strong) IBOutlet UITextField *textField;
 @property (strong) IBOutlet UILabel *timeLabel;
-@property (strong) IBOutlet UILabel *URLLabel;
+@property (strong) IBOutlet TTTAttributedLabel *URLLabel;
 
 @property (strong) StandManager *standManager;
 

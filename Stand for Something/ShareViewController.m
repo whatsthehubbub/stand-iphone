@@ -42,13 +42,16 @@
     
     self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/3600, standManager.duration/60];
     
+    self.URLLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
+    self.URLLabel.delegate = self;
     self.URLLabel.text = [NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(doneWithText:)];
-    tap.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tap];
+    // TODO think about dismissing keyboard
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+//                                   initWithTarget:self
+//                                   action:@selector(doneWithText:)];
+//    tap.cancelsTouchesInView = NO;
+//    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,6 +127,12 @@
     BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
     
     return newLength <= 66 || returnKey;
+}
+
+#pragma mark - TTTAttributedLabelDelegate methods
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end
