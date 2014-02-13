@@ -16,6 +16,7 @@
 
 @synthesize textField;
 @synthesize timeLabel;
+@synthesize URLLabel;
 
 @synthesize standManager;
 
@@ -41,6 +42,8 @@
     
     self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/3600, standManager.duration/60];
     
+    self.URLLabel.text = [NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(doneWithText:)];
@@ -63,7 +66,7 @@
         [slvc setInitialText:[NSString stringWithFormat:@"I stood for %@ for %d hours and %d minutes.", textField.text, standManager.duration/3600, standManager.duration/60]];
         
         // TODO test adding the URL
-        [slvc addURL:[NSURL URLWithString:@""]];
+        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid]]];
         
         [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
             switch (result) {

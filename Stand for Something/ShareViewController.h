@@ -16,6 +16,7 @@
 
 @property (strong) IBOutlet UITextField *textField;
 @property (strong) IBOutlet UILabel *timeLabel;
+@property (strong) IBOutlet UILabel *URLLabel;
 
 @property (strong) StandManager *standManager;
 
