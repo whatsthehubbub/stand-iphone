@@ -110,13 +110,17 @@
 }
 
 - (void)prepareStanding {
-    [self showStartView];
-    
     [self setTimeOnViews:0];
     
     self.startedStanding = NO;
     self.gracePeriod = NO;
     self.stoppedStanding = NO;
+    
+    self.maxX = 0.0;
+    self.maxY = 0.0;
+    self.maxZ = 0.0;
+    
+    [self showStartView];
 }
 
 - (void)startStanding {
