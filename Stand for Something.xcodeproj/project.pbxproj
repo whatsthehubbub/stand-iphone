@@ -57,6 +57,7 @@
 		4E302150180863950076FACB /* GraceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214F180863950076FACB /* GraceView.xib */; };
 		4E302152180864640076FACB /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302151180864640076FACB /* StartView.xib */; };
 		4E302154180864880076FACB /* DoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302153180864880076FACB /* DoneView.xib */; };
+		4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */; };
 		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
 		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
@@ -129,6 +130,8 @@
 		4E30214F180863950076FACB /* GraceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraceView.xib; sourceTree = "<group>"; };
 		4E302151180864640076FACB /* StartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
 		4E302153180864880076FACB /* DoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneView.xib; sourceTree = "<group>"; };
+		4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+URLEncoding.h"; sourceTree = "<group>"; };
+		4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+URLEncoding.m"; sourceTree = "<group>"; };
 		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
 		4E80F01317CF990600194023 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
 		4E80F01417CF990600194023 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				4E92042418AA87A90012A839 /* StandManager.h */,
 				4E92042518AA87A90012A839 /* StandManager.m */,
 				4E80F02617CFDA3E00194023 /* FontLabel.m */,
+				4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */,
+				4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
@@ -455,6 +460,7 @@
 				4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */,
 				4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */,
 				4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */,
+				4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

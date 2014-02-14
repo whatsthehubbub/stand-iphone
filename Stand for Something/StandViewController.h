@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "StandManager.h"
-#import "AFNetworking.h"
+#import "NSDictionary+URLEncoding.h"
 
 @interface StandViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -21,6 +21,8 @@
 
 @property (strong) StandManager *standManager;
 
+@property (strong) NSURLSession *urlSession;
+@property (strong) NSBlockOperation *requestOperation;
 
 @property (strong) CMMotionManager *motionManager;
 

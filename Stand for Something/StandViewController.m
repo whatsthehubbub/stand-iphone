@@ -19,6 +19,9 @@
 
 @synthesize standManager;
 
+@synthesize urlSession;
+@synthesize requestOperation;
+
 @synthesize motionManager;
 
 @synthesize maxX;
@@ -120,28 +123,59 @@
     
     // Get location from StandManager
     NSLog(@"Got location back from store %f", standManager.coordinate.latitude);
-    // Post it to our webservice
     
-    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
+    // Post it to our webservice
     NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:standManager.coordinate.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:standManager.coordinate.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString]};
-
-    [afManager POST:@"http://standforsomething.herokuapp.com/catch" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSOperationQueue *delegateQueue = [[NSOperationQueue alloc] init];
+    self.urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:delegateQueue];
+    
+    self.requestOperation = [NSBlockOperation blockOperationWithBlock:^{}];
+    
+    // Going to touch this reference on self inside the block so need a weak reference
+    __weak NSBlockOperation *weakBlockOp = self.requestOperation;
+    
+    NSOperation *firstOperation = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"Start first block");
         
-        NSLog(@"Server response %@", responseObject);
-
+        NSURL *url = [NSURL URLWithString:@"http://standforsomething.herokuapp.com/catch"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         
-        NSDictionary *json = (NSDictionary *)responseObject;
+        [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
         
-        standManager.secret = [json objectForKey:@"secret"];
-        standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
+        NSURLSessionDataTask *postDataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            
+            // We absolutely need the stuff from this completion handler to work with later which is why
+            // we add it to a NSBlockoperation we defined earlier so we can depend on it
+            [weakBlockOp addExecutionBlock:^{
+                NSError *jsonError = nil;
+                NSDictionary *json = nil;
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                
+                NSLog(@"Got data %@", json);
+                
+                standManager.secret = [json objectForKey:@"secret"];
+                standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
+                
+                // Reset these to reasonable defaults
+                standManager.duration = 0;
+                standManager.message = @"something";
+                
+                NSLog(@"Finishing first request");
+            }];
+            
+            [self.urlSession.delegateQueue addOperation:self.requestOperation];
+        }];
         
-        // Reset these to reasonable defaults
-        standManager.duration = 0;
-        standManager.message = @"something";
+        [postDataTask resume];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"POST to server failed %@", error);
+        NSLog(@"Finish first block");
     }];
+    
+    [self.urlSession.delegateQueue addOperation:firstOperation];
     
     
     if (nil == motionManager) {
@@ -277,20 +311,39 @@
     
     [self showDoneView];
     
+    
+    
     // Update website with the time
-    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
     
-    NSLog(@"Sending parameters %@", parameters);
-    
-    [afManager POST:@"http://standforsomething.herokuapp.com/done" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"Starting second block");
         
-        NSLog(@"Server response %@", responseObject);
+        NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"POST to server failed %@", error);
+        NSURL *url = [NSURL URLWithString:@"http://standforsomething.herokuapp.com/done"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        
+        [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        NSURLSessionDataTask *postDataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            
+            NSError *jsonError = nil;
+            NSDictionary *json = nil;
+            json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+            
+            NSLog(@"Got data %@", json);
+        }];
+        
+        [postDataTask resume];
     }];
+    
 
+    // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
+    [operation addDependency:self.requestOperation];
+    [self.urlSession.delegateQueue addOperation:operation];
+    
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
