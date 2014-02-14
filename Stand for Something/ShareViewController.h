@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 
-#import "AFNetworking.h"
 #import "StandManager.h"
 #import "TTTAttributedLabel.h"
+#import "NSDictionary+URLEncoding.h"
 
 @interface ShareViewController : UIViewController <UITextFieldDelegate, TTTAttributedLabelDelegate>
 

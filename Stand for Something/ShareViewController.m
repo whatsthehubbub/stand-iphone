@@ -101,18 +101,27 @@
     standManager.message = self.textField.text;
     
     // Update website with the time
-    AFHTTPRequestOperationManager *afManager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
     
-    NSLog(@"Sending parameters %@", parameters);
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
+    NSURL *url = [NSURL URLWithString:@"http://standforsomething.herokuapp.com/done"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [afManager POST:@"http://standforsomething.herokuapp.com/done" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask *postDataTask = [urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        NSLog(@"Server response %@", responseObject);
+        NSError *jsonError = nil;
+        NSDictionary *json = nil;
+        json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"POST to server failed %@", error);
+        NSLog(@"Server response %@", json);
     }];
+    
+    [postDataTask resume];
 }
 
 # pragma mark - UITextFieldDelegate methods

@@ -314,7 +314,6 @@
     
     
     // Update website with the time
-    
     NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"Starting second block");
         
