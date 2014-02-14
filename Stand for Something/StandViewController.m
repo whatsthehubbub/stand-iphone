@@ -275,21 +275,41 @@
         
         NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
         
+        // Update duration in our shared object
         standManager.duration = (int)interval;
         
-//        NSString *timeText = [NSString stringWithFormat:@"00:%d", (int)interval];
-//        self.standingTimeLabel.text = timeText;
-//        self.doneTimeLabel.text = timeText;
-        
         [self setTimeOnViews:interval];
+
+        
+        if ((int)interval % 20/*240*/ == 0) {
+            // Send a keep alive to the server every four minutes with data about the time
+            NSLog(@"Sending keep alive");
+            
+            NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid]};
+            
+            NSURL *url = [NSURL URLWithString:@"http://standforsomething.herokuapp.com/live"];
+            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+            
+            [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            [request setHTTPMethod:@"POST"];
+            [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            NSURLSessionDataTask *postDataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                
+                NSError *jsonError = nil;
+                NSDictionary *json = nil;
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                
+                NSLog(@"Got data %@", json);
+            }];
+            
+            [postDataTask resume];
+        }
         
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
-        
         NSDate *now = [[NSDate alloc] init];
         NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStarted];
-        
-//        self.timeLabel.text = [NSString stringWithFormat:@"in second %d of grace", (int)interval];
         
         NSLog(@"Time increment grace %d", (int)interval);
         
@@ -315,9 +335,6 @@
     
     [self showDoneView];
     
-    
-    
-    // Update website with the time
     NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"Starting second block");
         
@@ -342,7 +359,7 @@
         [postDataTask resume];
     }];
     
-
+    
     // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
     [operation addDependency:self.requestOperation];
     [self.urlSession.delegateQueue addOperation:operation];
