@@ -322,8 +322,6 @@
 }
 
 - (void)setTimeOnViews:(NSTimeInterval)interval {
-    interval = (int)interval + 3600;
-    
     int hours = (int)interval / (60 * 60);
     int minutes = ((int)interval - (hours * 60 * 60)) / 60;
     int seconds = (int)interval - (hours * 60 * 60) - (minutes * 60);
