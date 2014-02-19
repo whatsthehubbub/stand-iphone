@@ -49,6 +49,7 @@
 @property (strong) IBOutlet UIImageView *startButton;
 
 // Standing view controls
+@property (strong) IBOutlet UILabel *standingHours;
 @property (strong) IBOutlet UILabel *standingMinutes;
 @property (strong) IBOutlet UILabel *standingSeconds;
 

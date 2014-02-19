@@ -40,6 +40,7 @@
 
 @synthesize startButton;
 
+@synthesize standingHours;
 @synthesize standingMinutes;
 @synthesize standingSeconds;
 
@@ -86,6 +87,7 @@
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
+    self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
     self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
     self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
     
@@ -320,6 +322,7 @@
 }
 
 - (void)setTimeOnViews:(NSTimeInterval)interval {
+    self.standingHours.text = [NSString stringWithFormat:@"%02d", ((int)interval / (60 * 60git))];
     self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
     self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
     
