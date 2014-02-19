@@ -18,6 +18,7 @@
 		47341ADD17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADB17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png */; };
 		47341AE017C675230076EB24 /* 3-3-Line-on-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADE17C675230076EB24 /* 3-3-Line-on-map.png */; };
 		47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADF17C675230076EB24 /* 3-3-Line-on-map@2x.png */; };
+		4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4765BB3818B4E22A001AA068 /* Images.xcassets */; };
 		47BA160317E1B4B6008CD03C /* 4-1-Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FD17E1B4B6008CD03C /* 4-1-Arrow-down.png */; };
 		47BA160417E1B4B6008CD03C /* 4-1-Arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FE17E1B4B6008CD03C /* 4-1-Arrow-down@2x.png */; };
 		47BA160517E1B4B6008CD03C /* 4-2-Close-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FF17E1B4B6008CD03C /* 4-2-Close-button.png */; };
@@ -80,6 +81,7 @@
 		47341ADB17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-2-Dot-on-map@2x.png"; sourceTree = "<group>"; };
 		47341ADE17C675230076EB24 /* 3-3-Line-on-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-3-Line-on-map.png"; sourceTree = "<group>"; };
 		47341ADF17C675230076EB24 /* 3-3-Line-on-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-3-Line-on-map@2x.png"; sourceTree = "<group>"; };
+		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47BA15FD17E1B4B6008CD03C /* 4-1-Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Arrow-down.png"; sourceTree = "<group>"; };
 		47BA15FE17E1B4B6008CD03C /* 4-1-Arrow-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Arrow-down@2x.png"; sourceTree = "<group>"; };
 		47BA15FF17E1B4B6008CD03C /* 4-2-Close-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-2-Close-button.png"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				4E0EF7201799E6E300BA6C32 /* InfoPlist.strings */,
 				4E0EF7231799E6E300BA6C32 /* main.m */,
 				4E0EF7251799E6E300BA6C32 /* Stand for Something-Prefix.pch */,
+				4765BB3818B4E22A001AA068 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				47341ADC17C6738E0076EB24 /* 3-2-Dot-on-map.png in Resources */,
 				47341ADD17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png in Resources */,
 				47341AE017C675230076EB24 /* 3-3-Line-on-map.png in Resources */,
+				4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */,
 				47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */,
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
