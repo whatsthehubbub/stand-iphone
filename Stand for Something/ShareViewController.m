@@ -40,7 +40,7 @@
     
     self.textField.text = standManager.message;
     
-    self.timeLabel.text = [NSString stringWithFormat:@"for %d hours and %d minutes", standManager.duration/3600, standManager.duration/60];
+    self.timeLabel.text = [standManager getDurationString];
     
     self.URLLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
     self.URLLabel.delegate = self;
