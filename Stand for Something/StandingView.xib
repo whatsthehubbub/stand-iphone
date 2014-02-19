@@ -11,33 +11,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02-clock" id="HkU-Ox-YbQ">
+                    <rect key="frame" x="25" y="151" width="270" height="74"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r0m-GD-KyH" customClass="FontLabel">
-                    <rect key="frame" x="25" y="117" width="140" height="108"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                    <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=":" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WSZ-0Q-2aw" customClass="FontLabel">
-                    <rect key="frame" x="105" y="117" width="100" height="108"/>
+                    <rect key="frame" x="120" y="151" width="79" height="66"/>
                     <fontDescription key="fontDescription" type="system" pointSize="65"/>
                     <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="13" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9c3-uc-Kn1" customClass="FontLabel">
-                    <rect key="frame" x="198" y="117" width="140" height="108"/>
+                    <rect key="frame" x="216" y="151" width="79" height="66"/>
                     <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                    <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H0H-bs-K9t" customClass="FontLabel">
-                    <rect key="frame" x="10" y="176" width="160" height="22"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pg4-ac-z5e" customClass="FontLabel">
-                    <rect key="frame" x="150" y="176" width="160" height="22"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.29019609093666077" green="0.29019609093666077" blue="0.29019609093666077" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,6 +35,12 @@
                     <rect key="frame" x="25" y="20" width="270" height="105"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LEf-rb-IKc" customClass="FontLabel">
+                    <rect key="frame" x="25" y="151" width="79" height="66"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                    <color key="textColor" red="0.29019609089999998" green="0.29019609089999998" blue="0.29019609089999998" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -56,6 +48,7 @@
     </objects>
     <resources>
         <image name="02-button-stand-pressed" width="270" height="270"/>
+        <image name="02-clock" width="270" height="74"/>
         <image name="02-now-standing" width="270" height="105"/>
     </resources>
 </document>
