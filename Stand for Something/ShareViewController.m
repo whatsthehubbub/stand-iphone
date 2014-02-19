@@ -65,7 +65,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
 
-        [slvc setInitialText:[standManager getDurationString]];
+        [slvc setInitialText:[NSString stringWithFormat:@"I stood for %@ for %@.", textField.text, [standManager getDurationString]]];
         
         // TODO test adding the URL
         [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid]]];
