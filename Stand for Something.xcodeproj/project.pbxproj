@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12CB6BF2AD854A26A910C8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1116FFBCD472C835517F8 /* libPods.a */; };
-		472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */; };
 		472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E617D20EBE000EBDC0 /* Default-568h.png */; };
 		472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */; };
 		472A77EC17D20EBF000EBDC0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E817D20EBE000EBDC0 /* Default.png */; };
@@ -19,6 +18,7 @@
 		47341ADD17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADB17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png */; };
 		47341AE017C675230076EB24 /* 3-3-Line-on-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADE17C675230076EB24 /* 3-3-Line-on-map.png */; };
 		47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47341ADF17C675230076EB24 /* 3-3-Line-on-map@2x.png */; };
+		4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4765BB3818B4E22A001AA068 /* Images.xcassets */; };
 		47BA160317E1B4B6008CD03C /* 4-1-Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FD17E1B4B6008CD03C /* 4-1-Arrow-down.png */; };
 		47BA160417E1B4B6008CD03C /* 4-1-Arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FE17E1B4B6008CD03C /* 4-1-Arrow-down@2x.png */; };
 		47BA160517E1B4B6008CD03C /* 4-2-Close-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BA15FF17E1B4B6008CD03C /* 4-2-Close-button.png */; };
@@ -71,7 +71,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Kars Sketch Pad.xib"; sourceTree = "<group>"; };
 		472A77E617D20EBE000EBDC0 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		472A77E817D20EBE000EBDC0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		47341ADB17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-2-Dot-on-map@2x.png"; sourceTree = "<group>"; };
 		47341ADE17C675230076EB24 /* 3-3-Line-on-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-3-Line-on-map.png"; sourceTree = "<group>"; };
 		47341ADF17C675230076EB24 /* 3-3-Line-on-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-3-Line-on-map@2x.png"; sourceTree = "<group>"; };
+		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47BA15FD17E1B4B6008CD03C /* 4-1-Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Arrow-down.png"; sourceTree = "<group>"; };
 		47BA15FE17E1B4B6008CD03C /* 4-1-Arrow-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-1-Arrow-down@2x.png"; sourceTree = "<group>"; };
 		47BA15FF17E1B4B6008CD03C /* 4-2-Close-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4-2-Close-button.png"; sourceTree = "<group>"; };
@@ -258,6 +258,9 @@
 				4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */,
 				4E9BA4B518ABC01500C9A2DC /* ShareViewController.h */,
 				4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */,
+				4E80F01A17CFCCF100194023 /* ActionButton.h */,
+				4E80F01B17CFCCF100194023 /* ActionButton.m */,
+				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
 				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
@@ -285,6 +288,7 @@
 				4E0EF7201799E6E300BA6C32 /* InfoPlist.strings */,
 				4E0EF7231799E6E300BA6C32 /* main.m */,
 				4E0EF7251799E6E300BA6C32 /* Stand for Something-Prefix.pch */,
+				4765BB3818B4E22A001AA068 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,6 +347,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Alper Cugun";
+				TargetAttributes = {
+					4E0EF7131799E6E300BA6C32 = {
+						DevelopmentTeam = 7MZ2LL3346;
+					};
+				};
 			};
 			buildConfigurationList = 4E0EF70F1799E6E300BA6C32 /* Build configuration list for PBXProject "Stand for Something" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -373,11 +382,11 @@
 				47341ADC17C6738E0076EB24 /* 3-2-Dot-on-map.png in Resources */,
 				47341ADD17C6738E0076EB24 /* 3-2-Dot-on-map@2x.png in Resources */,
 				47341AE017C675230076EB24 /* 3-3-Line-on-map.png in Resources */,
+				4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */,
 				47341AE117C675230076EB24 /* 3-3-Line-on-map@2x.png in Resources */,
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
 				47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */,
-				472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */,
 				4E302154180864880076FACB /* DoneView.xib in Resources */,
 				472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */,
 				472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */,
@@ -546,11 +555,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -559,11 +571,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -597,13 +612,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Alper Cugun (5WBE98GG8T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0675CE46-5E46-4ADC-B00B-DC5BD38EA74F";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";

@@ -8,22 +8,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="CRQ-j4-unr">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Za2-uw-QCs" customClass="FontLabel">
-                    <rect key="frame" x="20" y="12" width="280" height="120"/>
-                    <string key="text">Start standing!
-Press and hold the button; no walking, no moving.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="4-1-Arrow-down.png" id="ndg-CL-wSc">
-                    <rect key="frame" x="138" y="133" width="44" height="62"/>
+                <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-button-stand-start" id="wsc-w6-0Qe">
+                    <rect key="frame" x="25" y="253" width="270" height="270"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
-                <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4-6-Stand-button-warning.png" id="wsc-w6-0Qe">
-                    <rect key="frame" x="70" y="203" width="180" height="180"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-start-standing" id="QEm-qL-Cdr">
+                    <rect key="frame" x="42" y="25" width="235" height="205"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,7 +25,7 @@ Press and hold the button; no walking, no moving.</string>
         </view>
     </objects>
     <resources>
-        <image name="4-1-Arrow-down.png" width="44" height="62"/>
-        <image name="4-6-Stand-button-warning.png" width="180" height="180"/>
+        <image name="01-button-stand-start" width="270" height="270"/>
+        <image name="01-start-standing" width="235" height="205"/>
     </resources>
 </document>
