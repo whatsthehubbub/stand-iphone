@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12CB6BF2AD854A26A910C8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1116FFBCD472C835517F8 /* libPods.a */; };
-		472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */; };
 		472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E617D20EBE000EBDC0 /* Default-568h.png */; };
 		472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */; };
 		472A77EC17D20EBF000EBDC0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E817D20EBE000EBDC0 /* Default.png */; };
@@ -71,7 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Kars Sketch Pad.xib"; sourceTree = "<group>"; };
 		472A77E617D20EBE000EBDC0 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		472A77E817D20EBE000EBDC0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
-				472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */,
 				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
 				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */,
@@ -382,7 +379,6 @@
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
 				47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */,
-				472A77E517D207BD000EBDC0 /* Kars Sketch Pad.xib in Resources */,
 				4E302154180864880076FACB /* DoneView.xib in Resources */,
 				472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */,
 				472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */,
