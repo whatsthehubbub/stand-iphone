@@ -322,9 +322,15 @@
 }
 
 - (void)setTimeOnViews:(NSTimeInterval)interval {
-    self.standingHours.text = [NSString stringWithFormat:@"%02d", ((int)interval / (60 * 60git))];
-    self.standingMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
-    self.standingSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+    interval = (int)interval + 3600;
+    
+    int hours = (int)interval / (60 * 60);
+    int minutes = ((int)interval - (hours * 60 * 60)) / 60;
+    int seconds = (int)interval - (hours * 60 * 60) - (minutes * 60);
+    
+    self.standingHours.text = [NSString stringWithFormat:@"%02d", hours];
+    self.standingMinutes.text = [NSString stringWithFormat:@"%02d", minutes];
+    self.standingSeconds.text = [NSString stringWithFormat:@"%02d", seconds];
     
     self.doneMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
     self.doneSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
