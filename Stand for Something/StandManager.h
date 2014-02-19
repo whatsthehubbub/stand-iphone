@@ -21,4 +21,6 @@
 
 +(id)sharedManager;
 
+- (NSString *)getDurationString;
+
 @end
