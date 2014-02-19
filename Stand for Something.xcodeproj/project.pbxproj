@@ -343,6 +343,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Alper Cugun";
+				TargetAttributes = {
+					4E0EF7131799E6E300BA6C32 = {
+						DevelopmentTeam = 7MZ2LL3346;
+					};
+				};
 			};
 			buildConfigurationList = 4E0EF70F1799E6E300BA6C32 /* Build configuration list for PBXProject "Stand for Something" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -546,11 +551,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -559,11 +567,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -597,13 +608,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9133A8A5D683447690C17793 /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Alper Cugun (5WBE98GG8T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0675CE46-5E46-4ADC-B00B-DC5BD38EA74F";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";
