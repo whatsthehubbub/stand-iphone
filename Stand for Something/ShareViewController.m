@@ -40,7 +40,7 @@
     
     self.textField.text = standManager.message;
     
-    self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood %@.", [standManager getDurationString]];
+    self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood %@ for", [standManager getDurationString]];
     
     self.URLLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
     self.URLLabel.delegate = self;
