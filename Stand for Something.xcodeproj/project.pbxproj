@@ -260,7 +260,6 @@
 				4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
-				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
 				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
 				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
