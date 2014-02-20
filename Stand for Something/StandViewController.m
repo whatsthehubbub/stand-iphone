@@ -270,17 +270,16 @@
 }
 
 - (void)incrementTime {
+    self.endTime = [[NSDate alloc] init];
+    
+    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+    
+    // Update duration in our shared object
+    standManager.duration = (int)interval;
+    
+    [self setTimeOnViews:interval];
+    
     if (!self.gracePeriod && !self.stoppedStanding) {
-        self.endTime = [[NSDate alloc] init];
-        
-        NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-        
-        // Update duration in our shared object
-        standManager.duration = (int)interval;
-        
-        [self setTimeOnViews:interval];
-
-        
         if ((int)interval % 20/*240*/ == 0) {
             // Send a keep alive to the server every four minutes with data about the time
             NSLog(@"Sending keep alive");
@@ -309,13 +308,13 @@
         NSLog(@"Time increment normal");
     } else if (self.gracePeriod) {
         NSDate *now = [[NSDate alloc] init];
-        NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStarted];
+        NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
         
-        NSLog(@"Time increment grace %d", (int)interval);
+        NSLog(@"Time increment grace %d", (int)graceInterval);
         
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         
-        if (interval > 5) {
+        if (graceInterval > 5) {
             [self stopStanding];
         }
     }
