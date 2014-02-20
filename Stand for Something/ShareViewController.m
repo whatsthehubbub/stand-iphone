@@ -40,7 +40,7 @@
     
     self.textField.text = standManager.message;
     
-    self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood for %@.", [standManager getDurationString]];
+    self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood %@.", [standManager getDurationString]];
     
     self.URLLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
     self.URLLabel.delegate = self;
@@ -65,7 +65,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
 
-        [slvc setInitialText:[NSString stringWithFormat:@"I stood for %@ for %@.", textField.text, [standManager getDurationString]]];
+        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@.", [standManager getDurationString], textField.text]];
         
         // TODO test adding the URL
         [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid]]];
