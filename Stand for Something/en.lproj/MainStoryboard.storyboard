@@ -272,6 +272,7 @@ you stood
                     <connections>
                         <outlet property="URLLabel" destination="A6c-8r-fug" id="ahn-fT-TAa"/>
                         <outlet property="textField" destination="bSy-Fd-5Fd" id="tYl-Yo-ecl"/>
+                        <outlet property="timeLabel" destination="IHq-tV-j59" id="YjE-sd-3cC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTG-Bt-XT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
