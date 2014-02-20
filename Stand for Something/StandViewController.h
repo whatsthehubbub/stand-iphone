@@ -58,8 +58,7 @@
 @property (strong) IBOutlet UIImageView *graceButton;
 
 // Done view controls
-@property (strong) IBOutlet UILabel *doneMinutes;
-@property (strong) IBOutlet UILabel *doneSeconds;
+@property (strong) IBOutlet UILabel *doneText;
 
 @property (strong) IBOutlet UIButton *shareButton;
 @property (strong) IBOutlet UIButton *againButton;
