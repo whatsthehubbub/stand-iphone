@@ -235,10 +235,14 @@
                                     <outlet property="delegate" destination="eaH-1H-ic8" id="f0P-Va-vfO"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You stood for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHq-tV-j59" customClass="FontLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHq-tV-j59" customClass="FontLabel">
                                 <rect key="frame" x="28" y="42" width="280" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">Share that 
+you stood 
+00 minutes and 
+00 seconds for</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="for x hours and y minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ybh-qD-YTS" customClass="FontLabel">
@@ -254,10 +258,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mr2-2c-KBb" customClass="ActionButton">
-                                <rect key="frame" x="263" y="29" width="37" height="50"/>
+                                <rect key="frame" x="247" y="39" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="X">
+                                <state key="normal" image="05-button-close">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="highlighted">
@@ -269,7 +273,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="URLLabel" destination="A6c-8r-fug" id="ahn-fT-TAa"/>
@@ -302,6 +306,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="05-button-close" width="30" height="30"/>
         <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
         <image name="3-1-Back-arrow.png" width="15" height="20"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
