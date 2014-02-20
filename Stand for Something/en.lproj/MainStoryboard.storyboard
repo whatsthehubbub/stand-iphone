@@ -212,6 +212,7 @@
                                 <rect key="frame" x="25" y="374" width="270" height="60"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="TWEET">
                                     <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -226,7 +227,7 @@
                                 <rect key="frame" x="25" y="183" width="270" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" clearButtonMode="always" id="bSy-Fd-5Fd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" clearButtonMode="whileEditing" id="bSy-Fd-5Fd">
                                 <rect key="frame" x="35" y="193" width="250" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,6 +268,10 @@ you stood
                                     <action selector="startStanding:" destination="DzP-8o-TuR" eventType="touchUpInside" id="gTy-6W-jBB"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-or" id="U7L-Jj-S51">
+                                <rect key="frame" x="20" y="431" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -302,6 +307,7 @@ you stood
     <resources>
         <image name="05-button-close" width="30" height="30"/>
         <image name="05-field-background" width="270" height="60"/>
+        <image name="05-or" width="280" height="52"/>
         <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
         <image name="3-1-Back-arrow.png" width="15" height="20"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
