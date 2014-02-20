@@ -16,7 +16,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-start-standing" id="QEm-qL-Cdr">
-                    <rect key="frame" x="42" y="25" width="235" height="205"/>
+                    <rect key="frame" x="42" y="45" width="235" height="205"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
