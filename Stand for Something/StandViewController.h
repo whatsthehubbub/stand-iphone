@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 #import "StandManager.h"
 #import "NSDictionary+URLEncoding.h"

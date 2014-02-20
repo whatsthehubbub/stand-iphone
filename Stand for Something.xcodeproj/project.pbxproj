@@ -58,6 +58,7 @@
 		4E302152180864640076FACB /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302151180864640076FACB /* StartView.xib */; };
 		4E302154180864880076FACB /* DoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302153180864880076FACB /* DoneView.xib */; };
 		4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */; };
+		4E6BB4DF18B64B65008B2F64 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */; };
 		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
 		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
@@ -132,6 +133,7 @@
 		4E302153180864880076FACB /* DoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneView.xib; sourceTree = "<group>"; };
 		4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+URLEncoding.h"; sourceTree = "<group>"; };
 		4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+URLEncoding.m"; sourceTree = "<group>"; };
+		4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
 		4E80F01317CF990600194023 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
 		4E80F01417CF990600194023 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6BB4DF18B64B65008B2F64 /* AudioToolbox.framework in Frameworks */,
 				4E92042318AA64D00012A839 /* Social.framework in Frameworks */,
 				4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */,
 				4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */,
@@ -228,6 +231,7 @@
 		4E0EF7161799E6E300BA6C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */,
 				4E92042218AA64D00012A839 /* Social.framework */,
 				4EDAE3D917B4F17000484E79 /* libz.dylib */,
 				4E0D1FF317AD557C006B9098 /* CoreMotion.framework */,
@@ -252,7 +256,6 @@
 				4E80F02517CFDA3E00194023 /* FontLabel.h */,
 				4E80F02617CFDA3E00194023 /* FontLabel.m */,
 				4E9BA4B418ABB6F500C9A2DC /* Foursquare */,
-				472A77E417D207BD000EBDC0 /* Kars Sketch Pad.xib */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */,
 				4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */,

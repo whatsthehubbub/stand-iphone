@@ -315,6 +315,8 @@
         
         NSLog(@"Time increment grace %d", (int)interval);
         
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
         if (interval > 5) {
             [self stopStanding];
         }
