@@ -46,8 +46,7 @@
 
 @synthesize graceButton;
 
-@synthesize doneMinutes;
-@synthesize doneSeconds;
+@synthesize doneText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -95,8 +94,7 @@
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
-    self.doneMinutes = (UILabel *)[self.doneView viewWithTag:12];
-    self.doneSeconds = (UILabel *)[self.doneView viewWithTag:13];
+    self.doneText = (UILabel *)[self.doneView viewWithTag:12];
     self.shareButton = (UIButton *)[self.doneView viewWithTag:14];
     [self.shareButton addTarget:self action:@selector(shareResult) forControlEvents:UIControlEventTouchUpInside];
     self.againButton = (UIButton *)[self.doneView viewWithTag:15];
@@ -332,8 +330,7 @@
     self.standingMinutes.text = [NSString stringWithFormat:@"%02d", minutes];
     self.standingSeconds.text = [NSString stringWithFormat:@"%02d", seconds];
     
-    self.doneMinutes.text = [NSString stringWithFormat:@"%02d", ((int)interval)/60];
-    self.doneSeconds.text = [NSString stringWithFormat:@"%02d", ((int)interval) % 60];
+    self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood for %@.", [standManager getDurationString]];
 }
 
 - (void)stopStanding {
