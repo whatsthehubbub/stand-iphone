@@ -257,10 +257,6 @@ you stood
                                     <action selector="tweetResult:" destination="eaH-1H-ic8" eventType="touchUpInside" id="ytE-LW-qjS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-or" id="U7L-Jj-S51">
-                                <rect key="frame" x="20" y="431" width="280" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </imageView>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LmZ-8u-0jj" customClass="ActionButton">
                                 <rect key="frame" x="25" y="483" width="270" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -277,6 +273,13 @@ you stood
                                     <action selector="tweetResult:" destination="eaH-1H-ic8" eventType="touchUpInside" id="ayI-a1-Mjl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0wj-lr-6YN" customClass="FontLabel">
+                                <rect key="frame" x="20" y="431" width="280" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -313,7 +316,6 @@ you stood
     <resources>
         <image name="05-button-close" width="30" height="30"/>
         <image name="05-field-background" width="270" height="60"/>
-        <image name="05-or" width="280" height="52"/>
         <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
         <image name="3-1-Back-arrow.png" width="15" height="20"/>
         <image name="3-2-Dot-on-map.png" width="40" height="40"/>
