@@ -124,6 +124,7 @@
 }
 
 - (void)startStanding {
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     // Get location from StandManager
     NSLog(@"Got location back from store %f", standManager.coordinate.latitude);
@@ -335,6 +336,8 @@
 - (void)stopStanding {
     // Stop standing does not make sense if we don't get a response from the server
     // TODO how does it behave then? or when somebody deos not have internet?
+    
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
     
     self.stoppedStanding = YES;
     
