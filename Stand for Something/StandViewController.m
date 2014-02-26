@@ -213,14 +213,14 @@
         [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
             
             CMAcceleration userAcceleration = motion.userAcceleration;
-            
+
             maxX = MAX(ABS(maxX), ABS(userAcceleration.x));
             maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
             maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
             
-//            self.messageLabel.text = [NSString stringWithFormat:@"Current: %f,%f,%f\nMax: %f,%f,%f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ];
+//            NSLog(@"Motion: %.2f, %.2f, %.2f Max: %.2f, %.2f, %.2f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ);
             
-            if (maxX > 0.1 && maxY > 0.1 && maxZ > 0.1) {
+            if (maxX+maxY+maxZ > 0.3) {
                 // Done standing, you did a step
                 
                 [self stopStanding];
