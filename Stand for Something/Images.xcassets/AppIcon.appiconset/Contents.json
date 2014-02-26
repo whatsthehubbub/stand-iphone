@@ -15,7 +15,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "00-app-icon-40.png",
+      "filename" : "00-app-icon-40@2x.png",
       "scale" : "2x"
     },
     {
@@ -33,7 +33,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "00-app-icon-60.png",
+      "filename" : "00-app-icon-60@2x.png",
       "scale" : "2x"
     }
   ],
