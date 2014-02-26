@@ -92,9 +92,9 @@
     
     // Set custom fonts on text
     CGFloat timeSize = self.standingHours.font.pointSize;
-    self.standingHours.font = [UIFont fontWithName:@"CourierPrime" size:timeSize];
-    self.standingMinutes.font = [UIFont fontWithName:@"CourierPrime" size:timeSize];
-    self.standingSeconds.font = [UIFont fontWithName:@"CourierPrime" size:timeSize];
+    self.standingHours.font = [UIFont fontWithName:@"CourierPrime-Bold" size:timeSize];
+    self.standingMinutes.font = [UIFont fontWithName:@"CourierPrime-Bold" size:timeSize];
+    self.standingSeconds.font = [UIFont fontWithName:@"CourierPrime-Bold" size:timeSize];
     
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
