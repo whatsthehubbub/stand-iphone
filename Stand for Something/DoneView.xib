@@ -19,17 +19,17 @@ You stood
 00 minutes and 00 seconds 
 for something.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.2901960784" green="0.28934762773722628" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tS8-3M-K9F" customClass="ActionButton">
                     <rect key="frame" x="25" y="483" width="270" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="STAND AGAIN">
-                        <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,11 +38,11 @@ for something.</string>
                 <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U3r-t0-byB" customClass="ActionButton">
                     <rect key="frame" x="25" y="371" width="270" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="SHARE">
-                        <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,7 +52,7 @@ for something.</string>
                     <rect key="frame" x="20" y="431" width="280" height="52"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
