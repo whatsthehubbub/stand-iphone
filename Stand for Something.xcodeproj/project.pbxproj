@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12CB6BF2AD854A26A910C8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1116FFBCD472C835517F8 /* libPods.a */; };
+		4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */; };
 		472A77EA17D20EBF000EBDC0 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E617D20EBE000EBDC0 /* Default-568h.png */; };
 		472A77EB17D20EBF000EBDC0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */; };
 		472A77EC17D20EBF000EBDC0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 472A77E817D20EBE000EBDC0 /* Default.png */; };
@@ -73,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier Prime Bold.ttf"; sourceTree = "<group>"; };
 		472A77E617D20EBE000EBDC0 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		472A77E717D20EBE000EBDC0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		472A77E817D20EBE000EBDC0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				4E80F01817CFCBDB00194023 /* kant.gpx */,
 				4E80F00E17CF938F00194023 /* Chunk.otf */,
+				4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */,
 				4E6D52B418BE21E100220BEA /* Courier Prime.ttf */,
 				472A77E317D204E7000EBDC0 /* Images */,
 				4E0EF71F1799E6E300BA6C32 /* Stand for Something-Info.plist */,
@@ -414,6 +417,7 @@
 				47BA161817E31268008CD03C /* 4-5-Stripes-background@2x.png in Resources */,
 				47BA161B17E31867008CD03C /* 4-6-Stand-button-warning.png in Resources */,
 				47BA161C17E31867008CD03C /* 4-6-Stand-button-warning@2x.png in Resources */,
+				4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */,
 				47BA161F17E31A29008CD03C /* 4-4-Stand-button-in-progress.png in Resources */,
 				47BA162017E31A29008CD03C /* 4-4-Stand-button-in-progress@2x.png in Resources */,
 				4E30214E1808636C0076FACB /* StandingView.xib in Resources */,
