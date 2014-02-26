@@ -27,14 +27,20 @@
 
 @property (strong) CMMotionManager *motionManager;
 
-@property (assign) double maxX;
-@property (assign) double maxY;
-@property (assign) double maxZ;
+@property (assign) double smoothX;
+@property (assign) double smoothY;
+@property (assign) double smoothZ;
 
-@property (assign) BOOL startedStanding;
-@property (assign) BOOL gracePeriod;
+typedef NS_ENUM(NSInteger, StandingState) {
+    StandingBefore,
+    StandingDuring,
+    StandingGraceMovement,
+    StandingGraceTouch,
+    StandingDone
+};
+
+@property (assign) StandingState standingState;
 @property (strong) NSDate *graceStarted;
-@property (assign) BOOL stoppedStanding;
 
 @property (strong) NSDate *startTime;
 @property (strong) NSDate *endTime;
@@ -63,6 +69,6 @@
 @property (strong) IBOutlet UIButton *shareButton;
 @property (strong) IBOutlet UIButton *againButton;
 
-- (void)startStanding;
+- (void)enterStandingDuringState;
 
 @end

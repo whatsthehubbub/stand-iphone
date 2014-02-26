@@ -24,9 +24,12 @@
 
 @synthesize motionManager;
 
-@synthesize maxX;
-@synthesize maxY;
-@synthesize maxZ;
+@synthesize smoothX;
+@synthesize smoothY;
+@synthesize smoothZ;
+
+@synthesize standingState;
+@synthesize graceStarted;
 
 @synthesize startTime;
 @synthesize endTime;
@@ -104,9 +107,9 @@
     self.shareButton = (UIButton *)[self.doneView viewWithTag:14];
     [self.shareButton addTarget:self action:@selector(shareResult) forControlEvents:UIControlEventTouchUpInside];
     self.againButton = (UIButton *)[self.doneView viewWithTag:15];
-    [self.againButton addTarget:self action:@selector(prepareStanding) forControlEvents:UIControlEventTouchUpInside];
+    [self.againButton addTarget:self action:@selector(enterStandingBeforeState) forControlEvents:UIControlEventTouchUpInside];
 
-    [self prepareStanding];
+    [self enterStandingBeforeState];
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,21 +118,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareStanding {
+- (void)enterStandingBeforeState {
     [self setTimeOnViews:0];
     
-    self.startedStanding = NO;
-    self.gracePeriod = NO;
-    self.stoppedStanding = NO;
+    self.standingState = StandingBefore;
     
-    self.maxX = 0.0;
-    self.maxY = 0.0;
-    self.maxZ = 0.0;
+    self.smoothX = 0.0;
+    self.smoothY = 0.0;
+    self.smoothZ = 0.0;
     
     [self showStartView];
 }
 
-- (void)startStanding {
+- (void)enterStandingDuringState {
+    self.standingState = StandingDuring;
+    
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     // Get location from StandManager
@@ -193,9 +196,7 @@
         motionManager = [[CMMotionManager alloc] init];
     }
     
-    self.stoppedStanding = NO;
     self.startTime = [[NSDate alloc] init];
-    self.startedStanding = YES;
     
     [self showStandingView];
     
@@ -207,27 +208,41 @@
     
     motionManager.deviceMotionUpdateInterval = 1/15.0;
     
+    
+    
     if (motionManager.deviceMotionAvailable) {
         //        NSLog(@"Device motion available");
         
         [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
             
             CMAcceleration userAcceleration = motion.userAcceleration;
+            
+            double RC = 0.4;
+            double alpha = 1/15.0 / (RC + 1/15.0);
+            
+            smoothX = (alpha * ABS(userAcceleration.x)) + (1.0 - alpha) * smoothX;
+            smoothY = (alpha * ABS(userAcceleration.y)) + (1.0 - alpha) * smoothY;
+            smoothZ = (alpha * ABS(userAcceleration.z)) + (1.0 - alpha) * smoothZ;
 
-            maxX = MAX(ABS(maxX), ABS(userAcceleration.x));
-            maxY = MAX(ABS(maxY), ABS(userAcceleration.y));
-            maxZ = MAX(ABS(maxZ), ABS(userAcceleration.z));
+//            NSLog(@"Smooth motion: %.2f, %.2f, %.2f", smoothX, smoothY, smoothZ);
             
-//            NSLog(@"Motion: %.2f, %.2f, %.2f Max: %.2f, %.2f, %.2f", userAcceleration.x, userAcceleration.y, userAcceleration.z, maxX, maxY, maxZ);
+            double smoothSum = smoothX + smoothY + smoothZ;
             
-            if (maxX+maxY+maxZ > 0.3) {
+            if (smoothSum > 0.2) {
                 // Done standing, you did a step
                 
-                [self stopStanding];
-            } else {
-                maxX -= 0.01;
-                maxY -= 0.01;
-                maxZ -= 0.01;
+                [self enterStandingDoneState];
+            } else if (smoothSum > 0.1) {
+                NSLog(@"Quit moving so much");
+                
+                if (self.standingState == StandingDuring) {
+                    self.standingState = StandingGraceMovement;
+                    
+                    [self showGraceView];
+                }
+            } else if (self.standingState == StandingGraceMovement && smoothSum <= 0.1) {
+                self.standingState = StandingDuring;
+                [self showStandingView];
             }
         }];
     }
@@ -254,24 +269,22 @@
 //    NSLog(@"Hit test %@", descendant);
     
     // TODO these checks don't work anymore. fix them.
-    if (!self.stoppedStanding && (touch.view == self.startButton || touch.view == self.graceButton)) {
-        if (!self.startedStanding) {
-            [self startStanding];
-        } else if (self.gracePeriod) {
-            self.gracePeriod = NO;
+    if (touch.view == self.startButton || touch.view == self.graceButton) {
+        if (self.standingState==StandingBefore) {
+            [self enterStandingDuringState];
+        } else if (self.standingState == StandingGraceTouch) {
+            self.standingState = StandingDuring;
+            [self showStandingView];
         }
-        
-        [self showStandingView];
     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"Touches ended");
     
-    if (self.startedStanding && !self.stoppedStanding) {
-        self.gracePeriod = YES;
+    if (self.standingState == StandingDuring) {
+        self.standingState = StandingGraceTouch;
         self.graceStarted = [[NSDate alloc] init];
-        
         [self showGraceView];
     }
 }
@@ -286,7 +299,7 @@
     
     [self setTimeOnViews:interval];
     
-    if (!self.gracePeriod && !self.stoppedStanding) {
+    if (self.standingState == StandingDuring) {
         if ((int)interval % 20/*240*/ == 0) {
             // Send a keep alive to the server every four minutes with data about the time
             NSLog(@"Sending keep alive");
@@ -313,7 +326,7 @@
         }
         
         NSLog(@"Time increment normal");
-    } else if (self.gracePeriod) {
+    } else if (self.standingState == StandingGraceTouch) {
         NSDate *now = [[NSDate alloc] init];
         NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
         
@@ -322,7 +335,7 @@
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
         
         if (graceInterval > 5) {
-            [self stopStanding];
+            [self enterStandingDoneState];
         }
     }
 }
@@ -339,13 +352,10 @@
     self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood %@.", [standManager getDurationString]];
 }
 
-- (void)stopStanding {
-    // Stop standing does not make sense if we don't get a response from the server
-    // TODO how does it behave then? or when somebody deos not have internet?
+- (void)enterStandingDoneState {
+    self.standingState = StandingDone;
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
-    
-    self.stoppedStanding = YES;
     
     [self showDoneView];
     
@@ -377,7 +387,6 @@
     // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
     [operation addDependency:self.requestOperation];
     [self.urlSession.delegateQueue addOperation:operation];
-    
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
