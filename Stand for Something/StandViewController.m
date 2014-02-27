@@ -42,6 +42,7 @@
 @synthesize doneView;
 
 @synthesize startButton;
+@synthesize aboutButton;
 
 @synthesize standingHours;
 @synthesize standingMinutes;
@@ -87,6 +88,8 @@
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
+    self.aboutButton = (UIButton *)[self.startView viewWithTag:12];
+    [self.aboutButton addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
@@ -397,6 +400,10 @@
 
 - (void)shareResult {
     [self performSegueWithIdentifier:@"ShareModal" sender:self];
+}
+
+- (void)showAbout {
+    [self performSegueWithIdentifier:@"ShowAbout" sender:self];
 }
 
 - (void)showStartView {

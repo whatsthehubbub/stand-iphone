@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 
 // Start view controls
 @property (strong) IBOutlet UIImageView *startButton;
+@property (strong) IBOutlet UIButton *aboutButton;
 
 // Standing view controls
 @property (strong) IBOutlet UILabel *standingHours;
