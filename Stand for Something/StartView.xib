@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-start-standing" id="QEm-qL-Cdr">
-                    <rect key="frame" x="42" y="45" width="235" height="205"/>
+                    <rect key="frame" x="25" y="40" width="270" height="210"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-button-stand-start" id="wsc-w6-0Qe">
@@ -26,6 +26,6 @@
     </objects>
     <resources>
         <image name="01-button-stand-start" width="270" height="270"/>
-        <image name="01-start-standing" width="235" height="205"/>
+        <image name="01-start-standing" width="270" height="210"/>
     </resources>
 </document>
