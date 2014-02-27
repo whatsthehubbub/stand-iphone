@@ -40,9 +40,9 @@
     
     self.textField.text = standManager.message;
     
-    UIButton *clearButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 26.0f, 30.0f)];
-    [clearButton setImage:[UIImage imageNamed:@"05-button-close"] forState:UIControlStateNormal];
-    [clearButton setImage:[UIImage imageNamed:@"05-button-close"] forState:UIControlStateHighlighted];
+    UIButton *clearButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 30.0f, 40.0f)];
+    [clearButton setImage:[UIImage imageNamed:@"05-button-clear"] forState:UIControlStateNormal];
+    [clearButton setImage:[UIImage imageNamed:@"05-button-clear"] forState:UIControlStateHighlighted];
     [clearButton addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
     self.textField.rightView = clearButton;
     self.textField.rightViewMode = UITextFieldViewModeWhileEditing;
