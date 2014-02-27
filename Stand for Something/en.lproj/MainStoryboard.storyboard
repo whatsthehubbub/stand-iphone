@@ -305,7 +305,7 @@ you stood
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="yhz-FS-0Tg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hub-br-rTZ" customClass="FontLabel">
@@ -316,7 +316,7 @@ you stood
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="99" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45r-VX-Qah">
-                                            <rect key="frame" x="25" y="87" width="270" height="399"/>
+                                            <rect key="frame" x="25" y="87" width="270" height="401"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <mutableString key="text">Get Standing is an app for ludic resistance. Go outside, find a public place, pick a cause and start standing. The app creates a public record of your session showing how long and where you stood. You can specify the cause you stood for, and share the link to the session’s web page.
 
