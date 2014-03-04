@@ -159,6 +159,8 @@
         NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/catch"];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         
+        NSLog(@"Sending data to server %@", [parameters urlEncodedString]);
+        
         [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];

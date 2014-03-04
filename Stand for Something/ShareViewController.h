@@ -13,11 +13,10 @@
 #import "TTTAttributedLabel.h"
 #import "NSDictionary+URLEncoding.h"
 
-@interface ShareViewController : UIViewController <UITextFieldDelegate, TTTAttributedLabelDelegate>
+@interface ShareViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong) IBOutlet UITextField *textField;
 @property (strong) IBOutlet UILabel *timeLabel;
-@property (strong) IBOutlet TTTAttributedLabel *URLLabel;
 
 @property (strong) StandManager *standManager;
 

@@ -16,7 +16,6 @@
 
 @synthesize textField;
 @synthesize timeLabel;
-@synthesize URLLabel;
 
 @synthesize standManager;
 
@@ -49,10 +48,6 @@
     
     self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood %@ for", [standManager getDurationString]];
     
-    self.URLLabel.enabledTextCheckingTypes = NSTextCheckingTypeLink;
-    self.URLLabel.delegate = self;
-    self.URLLabel.text = [NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid];
-    
     // TODO think about dismissing keyboard
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
 //                                   initWithTarget:self
@@ -67,6 +62,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openLink {
+    NSString *urlString = [NSString stringWithFormat:@"http://www.getstanding.com/s/%d", standManager.sessionid];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+}
+
 - (IBAction)tweetResult:(id)sender {
     // TODO do this check on viewDidLoad and modify UI according to service availability
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
@@ -75,7 +76,7 @@
         [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@.", [standManager getDurationString], textField.text]];
         
         // TODO test adding the URL
-        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://standforsomething.herokuapp.com/stand/%d", standManager.sessionid]]];
+        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.getstanding.com/s/%d", standManager.sessionid]]];
         
         [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
             switch (result) {
@@ -146,12 +147,6 @@
     BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
     
     return newLength <= 66 || returnKey;
-}
-
-#pragma mark - TTTAttributedLabelDelegate methods
-
-- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
-    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end
