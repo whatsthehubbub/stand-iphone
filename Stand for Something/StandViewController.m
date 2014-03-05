@@ -241,6 +241,8 @@
                 NSLog(@"Quit moving so much");
                 
                 if (self.standingState == StandingDuring) {
+                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+                    
                     self.standingState = StandingGraceMovement;
                     
                     [self showGraceView];
