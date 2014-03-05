@@ -237,19 +237,29 @@
                 // Done standing, you did a step
                 
                 [self enterStandingDoneState];
-            } else if (smoothSum > 0.1) {
+            } else if (self.standingState == StandingDuring && smoothSum > 0.1) {
+                // Show the grace view for too much movement
+                
                 NSLog(@"Quit moving so much");
                 
                 if (self.standingState == StandingDuring) {
                     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                     
+                    self.graceStarted = [[NSDate alloc] init];
                     self.standingState = StandingGraceMovement;
                     
                     [self showGraceView];
                 }
             } else if (self.standingState == StandingGraceMovement && smoothSum <= 0.1) {
-                self.standingState = StandingDuring;
-                [self showStandingView];
+                // Stop showing the grace view because movement is within parameters again
+                
+                NSDate *now = [[NSDate alloc] init];
+                NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
+                
+                if ((int) graceInterval > 1.0) {
+                    self.standingState = StandingDuring;
+                    [self showStandingView];
+                }
             }
         }];
     }
