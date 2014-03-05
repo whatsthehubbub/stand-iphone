@@ -288,6 +288,8 @@
     NSLog(@"Touches ended");
     
     if (self.standingState == StandingDuring) {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        
         self.standingState = StandingGraceTouch;
         self.graceStarted = [[NSDate alloc] init];
         [self showGraceView];
@@ -305,8 +307,8 @@
     [self setTimeOnViews:interval];
     
     if (self.standingState == StandingDuring) {
-        if ((int)interval % 20/*240*/ == 0) {
-            // Send a keep alive to the server every four minutes with data about the time
+        if ((int)interval % 60 /*240*/ == 0) {
+            // Send a keep alive to the server every minute with data about the time
             NSLog(@"Sending keep alive");
             
             NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid]};
@@ -337,7 +339,9 @@
         
         NSLog(@"Time increment grace %d", (int)graceInterval);
         
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        if (graceInterval > 0) {
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        }
         
         if (graceInterval > 5) {
             [self enterStandingDoneState];
