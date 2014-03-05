@@ -289,7 +289,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"Touches ended");
     
-    if (self.standingState == StandingDuring) {
+    if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
         
         self.standingState = StandingGraceTouch;
