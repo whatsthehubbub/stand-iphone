@@ -10,7 +10,6 @@
 #import <Social/Social.h>
 
 #import "StandManager.h"
-#import "TTTAttributedLabel.h"
 #import "NSDictionary+URLEncoding.h"
 
 @interface ShareViewController : UIViewController <UITextFieldDelegate>
