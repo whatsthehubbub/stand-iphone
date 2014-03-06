@@ -46,7 +46,7 @@
     self.textField.rightView = clearButton;
     self.textField.rightViewMode = UITextFieldViewModeWhileEditing;
     
-    self.timeLabel.text = [NSString stringWithFormat:@"Share that you stood %@ for", [standManager getDurationString]];
+    self.timeLabel.text = [NSString stringWithFormat:@"Share that\nyou stood\n%@ for", [standManager getDurationString]];
     
     // TODO think about dismissing keyboard
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
