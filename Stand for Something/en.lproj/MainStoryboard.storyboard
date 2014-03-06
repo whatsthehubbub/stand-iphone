@@ -5,171 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Square List View Controller - Squares near you-->
-        <scene sceneID="n6p-9V-jva">
-            <objects>
-                <tableViewController id="phM-tf-pLA" customClass="SquareListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="0.0" sectionFooterHeight="0.0" id="fhi-Aj-BAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Squares near you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LxF-gI-BMe" customClass="FontLabel">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                            <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SquareCell" id="0EK-Z6-FUv" customClass="SquareTableViewCell">
-                                <rect key="frame" x="0.0" y="60" width="320" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0EK-Z6-FUv" id="M0Y-iD-M92">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Square name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXF-Wz-REf" customClass="FontLabel">
-                                            <rect key="frame" x="20" y="13" width="247" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-1-Number-of-standers-icon.png" id="Vbo-rF-bwr">
-                                            <rect key="frame" x="269" y="9" width="42" height="62"/>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yWG-dR-U1v" customClass="FontLabel">
-                                            <rect key="frame" x="130" y="45" width="320" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                            <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CA9-XI-KaN" customClass="FontLabel">
-                                            <rect key="frame" x="20" y="45" width="247" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                            <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="addressLabel" destination="CA9-XI-KaN" id="Yag-ZM-Xbe"/>
-                                    <outlet property="nameLabel" destination="UXF-Wz-REf" id="H0g-US-nQ7"/>
-                                    <outlet property="numberOfPeople" destination="yWG-dR-U1v" id="nc3-KB-9ca"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="phM-tf-pLA" id="arz-rB-mlw"/>
-                            <outlet property="delegate" destination="phM-tf-pLA" id="eUV-gv-QPS"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Squares near you" id="mQI-5H-vke"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <segue destination="DzP-8o-TuR" kind="push" identifier="Square" id="jv1-N8-dNV"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wqC-L1-PAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1519" y="179"/>
-        </scene>
-        <!--Square View Controller - Square Name-->
-        <scene sceneID="qI0-j9-Hqr">
-            <objects>
-                <viewController storyboardIdentifier="SquareViewController" id="DzP-8o-TuR" customClass="SquareViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a7i-2j-Izd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="[Square name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wdh-jt-kcf" customClass="FontLabel">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
-                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jEk-1G-9VQ">
-                                <rect key="frame" x="0.0" y="14" width="35" height="35"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="3-1-Back-arrow.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="DzP-8o-TuR" eventType="touchUpInside" id="gbD-q1-tac"/>
-                                </connections>
-                            </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" id="oP8-H4-Oym">
-                                <rect key="frame" x="0.0" y="87" width="320" height="222"/>
-                                <connections>
-                                    <outlet property="delegate" destination="DzP-8o-TuR" id="FH2-f7-gAZ"/>
-                                </connections>
-                            </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-3-Line-on-map.png" id="80d-Lp-uRG">
-                                <rect key="frame" x="155" y="224" width="10" height="111"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-2-Dot-on-map.png" id="Y6B-Hp-dtG">
-                                <rect key="frame" x="140" y="190" width="40" height="40"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="33s-pI-pZw" customClass="ActionButton">
-                                <rect key="frame" x="10" y="341" width="300" height="50"/>
-                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Start standing">
-                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startStanding:" destination="DzP-8o-TuR" eventType="touchUpInside" id="6eQ-Ac-Zdf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 people standing here now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="caf-A0-5HS" customClass="FontLabel">
-                                <rect key="frame" x="20" y="414" width="280" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 sessions to date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bsF-8M-MOE" customClass="FontLabel">
-                                <rect key="frame" x="20" y="449" width="280" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 hours of standing in total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5TB-5K-f37" customClass="FontLabel">
-                                <rect key="frame" x="20" y="482" width="280" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 hours longest session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JyN-zG-dcl" customClass="FontLabel">
-                                <rect key="frame" x="20" y="516" width="280" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Square Name" id="3Au-Fx-YUQ"/>
-                    <connections>
-                        <outlet property="headerLabel" destination="Wdh-jt-kcf" id="kw1-Tb-Qxu"/>
-                        <outlet property="hoursLabel" destination="5TB-5K-f37" id="rJf-AB-m3X"/>
-                        <outlet property="longestLabel" destination="JyN-zG-dcl" id="cuk-1n-8Gz"/>
-                        <outlet property="mapView" destination="oP8-H4-Oym" id="RQC-dr-FCG"/>
-                        <outlet property="nowLabel" destination="caf-A0-5HS" id="9WY-XT-9VS"/>
-                        <outlet property="sessionsLabel" destination="bsF-8M-MOE" id="5MP-Rn-G7B"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DWi-xC-CRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2059" y="147"/>
-        </scene>
         <!--Stand View Controller - Stand!-->
         <scene sceneID="4Mf-gZ-6io">
             <objects>
@@ -213,7 +48,6 @@
                                 </state>
                                 <connections>
                                     <action selector="closeButton:" destination="eaH-1H-ic8" eventType="touchUpInside" id="bru-xE-v8Y"/>
-                                    <action selector="startStanding:" destination="DzP-8o-TuR" eventType="touchUpInside" id="gTy-6W-jBB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHq-tV-j59" customClass="FontLabel">
@@ -378,10 +212,6 @@ The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unq
         <image name="05-button-close" width="30" height="30"/>
         <image name="05-field-background" width="270" height="60"/>
         <image name="06-button-close" width="50" height="50"/>
-        <image name="2-1-Number-of-standers-icon.png" width="45" height="60"/>
-        <image name="3-1-Back-arrow.png" width="15" height="20"/>
-        <image name="3-2-Dot-on-map.png" width="40" height="40"/>
-        <image name="3-3-Line-on-map.png" width="10" height="90"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
