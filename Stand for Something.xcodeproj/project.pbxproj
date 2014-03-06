@@ -39,7 +39,6 @@
 		47E435E0180437900081389D /* 58 - Settings & Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DC180437900081389D /* 58 - Settings & Spotlight.png */; };
 		47E435E1180437900081389D /* 58 - Settings & Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E435DD180437900081389D /* 58 - Settings & Spotlight@2x.png */; };
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
-		4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */; };
 		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
 		4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7171799E6E300BA6C32 /* UIKit.framework */; };
 		4E0EF71A1799E6E300BA6C32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7191799E6E300BA6C32 /* Foundation.framework */; };
@@ -49,7 +48,6 @@
 		4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7271799E6E300BA6C32 /* AppDelegate.m */; };
 		4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */; };
 		4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7331799E6E300BA6C32 /* ViewController.m */; };
-		4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */; };
 		4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7431799F0EE00BA6C32 /* MapKit.framework */; };
 		4E30214E1808636C0076FACB /* StandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214D1808636C0076FACB /* StandingView.xib */; };
 		4E302150180863950076FACB /* GraceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214F180863950076FACB /* GraceView.xib */; };
@@ -59,7 +57,6 @@
 		4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */; };
 		4E6BB4DF18B64B65008B2F64 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */; };
 		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
-		4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01417CF990600194023 /* SquareTableViewCell.m */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
 		4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01B17CFCCF100194023 /* ActionButton.m */; };
 		4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F02617CFDA3E00194023 /* FontLabel.m */; };
@@ -102,8 +99,6 @@
 		47E435DC180437900081389D /* 58 - Settings & Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "58 - Settings & Spotlight.png"; sourceTree = "<group>"; };
 		47E435DD180437900081389D /* 58 - Settings & Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "58 - Settings & Spotlight@2x.png"; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
-		4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
 		4E0D1FF317AD557C006B9098 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4E0EF7141799E6E300BA6C32 /* Stand for Something.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stand for Something.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0EF7171799E6E300BA6C32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -118,8 +113,6 @@
 		4E0EF7301799E6E300BA6C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4E0EF7321799E6E300BA6C32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4E0EF7331799E6E300BA6C32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareListViewController.h; sourceTree = "<group>"; };
-		4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareListViewController.m; sourceTree = "<group>"; };
 		4E0EF7431799F0EE00BA6C32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4E30214D1808636C0076FACB /* StandingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandingView.xib; sourceTree = "<group>"; };
 		4E30214F180863950076FACB /* GraceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraceView.xib; sourceTree = "<group>"; };
@@ -131,8 +124,6 @@
 		4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
-		4E80F01317CF990600194023 /* SquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareTableViewCell.h; sourceTree = "<group>"; };
-		4E80F01417CF990600194023 /* SquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareTableViewCell.m; sourceTree = "<group>"; };
 		4E80F01817CFCBDB00194023 /* kant.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kant.gpx; sourceTree = "<group>"; };
 		4E80F01A17CFCCF100194023 /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
 		4E80F01B17CFCCF100194023 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
@@ -260,12 +251,6 @@
 				4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
-				4E0EF7401799EF2C00BA6C32 /* SquareListViewController.h */,
-				4E0EF7411799EF2C00BA6C32 /* SquareListViewController.m */,
-				4E80F01317CF990600194023 /* SquareTableViewCell.h */,
-				4E80F01417CF990600194023 /* SquareTableViewCell.m */,
-				4E0D1FF017AD3DF4006B9098 /* SquareViewController.h */,
-				4E0D1FF117AD3DF4006B9098 /* SquareViewController.m */,
 				4E92042418AA87A90012A839 /* StandManager.h */,
 				4E92042518AA87A90012A839 /* StandManager.m */,
 				4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */,
@@ -447,12 +432,9 @@
 				4E9BA4B718ABC01500C9A2DC /* ShareViewController.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */,
-				4E0EF7421799EF2C00BA6C32 /* SquareListViewController.m in Sources */,
-				4E0D1FF217AD3DF4006B9098 /* SquareViewController.m in Sources */,
 				4E92042618AA87A90012A839 /* StandManager.m in Sources */,
 				4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */,
 				4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */,
-				4E80F01517CF990600194023 /* SquareTableViewCell.m in Sources */,
 				4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */,
 				4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */,
 				4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */,
