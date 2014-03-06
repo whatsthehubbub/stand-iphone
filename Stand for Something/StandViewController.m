@@ -253,6 +253,7 @@
             } else if (self.standingState == StandingGraceMovement && smoothSum <= 0.1) {
                 // Stop showing the grace view because movement is within parameters again
                 
+                // But wait for at least one second
                 NSDate *now = [[NSDate alloc] init];
                 NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
                 
