@@ -370,7 +370,7 @@
     self.standingMinutes.text = [NSString stringWithFormat:@"%02d", minutes];
     self.standingSeconds.text = [NSString stringWithFormat:@"%02d", seconds];
     
-    self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood %@.", [standManager getDurationString]];
+    self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood\n%@.", [standManager getDurationString]];
 }
 
 - (void)enterStandingDoneState {
