@@ -29,11 +29,13 @@
 @synthesize smoothZ;
 
 @synthesize standingState;
-@synthesize graceStarted;
 
 @synthesize startTime;
 @synthesize endTime;
 @synthesize secondTimer;
+
+@synthesize graceTimer;
+@synthesize graceStart;
 
 @synthesize containerView;
 @synthesize startView;
@@ -245,7 +247,7 @@
                 if (self.standingState == StandingDuring) {
                     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                     
-                    self.graceStarted = [[NSDate alloc] init];
+                    self.graceStart = [[NSDate alloc] init];
                     self.standingState = StandingGraceMovement;
                     
                     [self showGraceView];
@@ -255,7 +257,7 @@
                 
                 // But wait for at least one second
                 NSDate *now = [[NSDate alloc] init];
-                NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
+                NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStart];
                 
                 if ((int) graceInterval > 1.0) {
                     self.standingState = StandingDuring;
@@ -293,6 +295,8 @@
         } else if (self.standingState == StandingGraceTouch) {
             self.standingState = StandingDuring;
             [self showStandingView];
+            
+            [self.graceTimer invalidate];
         }
     }
 }
@@ -301,11 +305,7 @@
     NSLog(@"Touches ended");
     
     if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-        
-        self.standingState = StandingGraceTouch;
-        self.graceStarted = [[NSDate alloc] init];
-        [self showGraceView];
+        [self enterStandingGraceTouchState];
     }
 }
 
@@ -345,20 +345,22 @@
             [postDataTask resume];
         }
         
-        NSLog(@"Time increment normal");
-    } else if (self.standingState == StandingGraceTouch) {
-        NSDate *now = [[NSDate alloc] init];
-        NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStarted];
-        
-        NSLog(@"Time increment grace %d", (int)graceInterval);
-        
-        if (graceInterval > 0) {
-            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-        }
-        
-        if (graceInterval > 5) {
-            [self enterStandingDoneState];
-        }
+        NSLog(@"Time increment normal %d", (int)interval);
+    }
+}
+
+- (void)incrementGraceTime {
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    
+    NSDate *now = [[NSDate alloc] init];
+    
+    NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStart];
+    
+    NSLog(@"Increment grace time %d", (int)interval);
+    
+    if ((int)interval > 4) {
+        [self enterStandingDoneState];
+        [self.graceTimer invalidate];
     }
 }
 
@@ -415,6 +417,18 @@
     
 //    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
 //    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
+}
+
+- (void)enterStandingGraceTouchState {
+    self.standingState = StandingGraceTouch;
+    
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    
+    self.graceStart = [[NSDate alloc] init];
+    
+    self.graceTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementGraceTime) userInfo:nil repeats:YES];
+    
+    [self showGraceView];
 }
 
 - (void)shareResult {

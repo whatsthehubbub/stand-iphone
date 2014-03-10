@@ -40,11 +40,13 @@ typedef NS_ENUM(NSInteger, StandingState) {
 };
 
 @property (assign) StandingState standingState;
-@property (strong) NSDate *graceStarted;
 
 @property (strong) NSDate *startTime;
 @property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
+
+@property (strong) NSTimer *graceTimer;
+@property (strong) NSDate *graceStart;
 
 @property (strong) IBOutlet UIView *containerView;
 @property (strong) UIView *startView;
