@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E0EF7131799E6E300BA6C32 /* Stand for Something */ = {
+		4E0EF7131799E6E300BA6C32 /* Standing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E0EF7371799E6E300BA6C32 /* Build configuration list for PBXNativeTarget "Stand for Something" */;
+			buildConfigurationList = 4E0EF7371799E6E300BA6C32 /* Build configuration list for PBXNativeTarget "Standing" */;
 			buildPhases = (
 				5017CEA41986442980371F1A /* Check Pods Manifest.lock */,
 				4E0EF7101799E6E300BA6C32 /* Sources */,
@@ -214,7 +214,7 @@
 			);
 			dependencies = (
 			);
-			name = "Stand for Something";
+			name = Standing;
 			productName = "Stand for Something";
 			productReference = 4E0EF7141799E6E300BA6C32 /* Stand for Something.app */;
 			productType = "com.apple.product-type.application";
@@ -245,7 +245,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E0EF7131799E6E300BA6C32 /* Stand for Something */,
+				4E0EF7131799E6E300BA6C32 /* Standing */,
 			);
 		};
 /* End PBXProject section */
@@ -527,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E0EF7371799E6E300BA6C32 /* Build configuration list for PBXNativeTarget "Stand for Something" */ = {
+		4E0EF7371799E6E300BA6C32 /* Build configuration list for PBXNativeTarget "Standing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E0EF7381799E6E300BA6C32 /* Debug */,
