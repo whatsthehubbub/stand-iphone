@@ -44,7 +44,7 @@
 		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF317AD557C006B9098 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		4E0EF7141799E6E300BA6C32 /* Stand for Something.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stand for Something.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0EF7141799E6E300BA6C32 /* Standing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0EF7171799E6E300BA6C32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E0EF7191799E6E300BA6C32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E0EF71B1799E6E300BA6C32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,7 +119,7 @@
 		4E0EF7151799E6E300BA6C32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E0EF7141799E6E300BA6C32 /* Stand for Something.app */,
+				4E0EF7141799E6E300BA6C32 /* Standing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			);
 			name = Standing;
 			productName = "Stand for Something";
-			productReference = 4E0EF7141799E6E300BA6C32 /* Stand for Something.app */;
+			productReference = 4E0EF7141799E6E300BA6C32 /* Standing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -409,7 +409,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/alper/Documents/projects/stand/Stand\\ for\\ Something",
+					"/Users/alper/Documents/projects/stand/stand-iphone",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
@@ -439,7 +439,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/alper/Documents/projects/stand/Stand\\ for\\ Something",
+					"/Users/alper/Documents/projects/stand/stand-iphone",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
@@ -494,7 +494,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/alper/Documents/projects/stand/Stand\\ for\\ Something",
+					"/Users/alper/Documents/projects/stand/stand-iphone",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
