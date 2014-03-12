@@ -124,6 +124,8 @@
 }
 
 - (void)enterStandingBeforeState {
+    NSLog(@"Enter standing before state");
+    
     [self setTimeOnViews:0];
     
     self.standingState = StandingBefore;
@@ -136,6 +138,8 @@
 }
 
 - (void)enterStandingDuringState {
+    NSLog(@"Enter standing during state");
+    
     self.standingState = StandingDuring;
     
     [UIApplication sharedApplication].idleTimerDisabled = YES;
@@ -379,6 +383,8 @@
 }
 
 - (void)enterStandingDoneState {
+    NSLog(@"Enter standing done state");
+    
     self.standingState = StandingDone;
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
@@ -416,7 +422,7 @@
         [operation addDependency:self.requestOperation];
         [self.urlSession.delegateQueue addOperation:operation];
     } else {
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Connection failure" message:@"Because of a failure with your internet connection we have not been able to save your session. Our apologies (you can still tweet it though!)." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Connection failure" message:@"Because of a failure with your internet connection we have not been able to save your session. Our apologies." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [message show];
     }
@@ -436,6 +442,7 @@
     
     self.graceStart = [[NSDate alloc] init];
     
+    [self.graceTimer invalidate];
     self.graceTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementGraceTime) userInfo:nil repeats:YES];
     
     [self showGraceView];
@@ -443,12 +450,15 @@
 
 // TODO mostly the same method as the above
 - (void)enterStandingGraceMovementState {
+    NSLog(@"Enter standing grace movement state");
+    
     self.standingState = StandingGraceMovement;
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
     self.graceStart = [[NSDate alloc] init];
     
+    [self.graceTimer invalidate];
     self.graceTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementGraceTime) userInfo:nil repeats:YES];
     
     [self showGraceView];
