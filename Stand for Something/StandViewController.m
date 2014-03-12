@@ -415,6 +415,10 @@
         // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
         [operation addDependency:self.requestOperation];
         [self.urlSession.delegateQueue addOperation:operation];
+    } else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Connection failure" message:@"Because of a failure with your internet connection we have not been able to save your session. Our apologies (you can still tweet it though!)." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [message show];
     }
     
     
