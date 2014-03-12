@@ -31,7 +31,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        
+        secret = nil;
     }
     
 //    // Test seconds

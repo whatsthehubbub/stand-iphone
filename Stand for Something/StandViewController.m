@@ -385,34 +385,38 @@
     
     [self showDoneView];
     
-    NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"Starting second block");
+    if (standManager.secret) {
+        // If we don't have this the first request failed and we should not be doing this
         
-        NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
-        
-        NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/done"];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        
-        [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [request setHTTPMethod:@"POST"];
-        [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        NSURLSessionDataTask *postDataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+            NSLog(@"Starting second block");
             
-            NSError *jsonError = nil;
-            NSDictionary *json = nil;
-            json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+            NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
             
-            NSLog(@"Got data %@", json);
+            NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/done"];
+            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+            
+            [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            [request setHTTPMethod:@"POST"];
+            [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            NSURLSessionDataTask *postDataTask = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                
+                NSError *jsonError = nil;
+                NSDictionary *json = nil;
+                json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                
+                NSLog(@"Got data %@", json);
+            }];
+            
+            [postDataTask resume];
         }];
         
-        [postDataTask resume];
-    }];
+        // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
+        [operation addDependency:self.requestOperation];
+        [self.urlSession.delegateQueue addOperation:operation];
+    }
     
-    
-    // This is where we depend on the content of the completion handler for this block, otherwise it can't find sessionids and crashes
-    [operation addDependency:self.requestOperation];
-    [self.urlSession.delegateQueue addOperation:operation];
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
