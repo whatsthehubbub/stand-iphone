@@ -120,9 +120,9 @@
     } else {
         // Seconds
         if (duration == 1) {
-            returnString = @"1 second";
+            returnString = [NSMutableString stringWithString:@"1 second"];
         } else {
-            returnString = [NSString stringWithFormat:@"%d seconds", duration];
+            returnString = [NSMutableString stringWithFormat:@"%d seconds", duration];
         }
     }
     
