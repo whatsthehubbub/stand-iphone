@@ -247,16 +247,18 @@
             } else if (self.standingState == StandingDuring && smoothSum > 0.1) {
                 // Show the grace view for too much movement
                 
+                [self enterStandingGraceMovementState];
+                
                 NSLog(@"Quit moving so much");
                 
-                if (self.standingState == StandingDuring) {
-                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-                    
-                    self.graceStart = [[NSDate alloc] init];
-                    self.standingState = StandingGraceMovement;
-                    
-                    [self showGraceView];
-                }
+//                if (self.standingState == StandingDuring) {
+//                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+//                    
+//                    self.graceStart = [[NSDate alloc] init];
+//                    self.standingState = StandingGraceMovement;
+//                    
+//                    [self showGraceView];
+//                }
             } else if (self.standingState == StandingGraceMovement && smoothSum <= 0.1) {
                 // Stop showing the grace view because movement is within parameters again
                 
@@ -266,6 +268,9 @@
                 
                 if ((int) graceInterval > 1.0) {
                     self.standingState = StandingDuring;
+                    
+                    [self.graceTimer invalidate];
+                    
                     [self showStandingView];
                 }
             }
@@ -426,6 +431,19 @@
 
 - (void)enterStandingGraceTouchState {
     self.standingState = StandingGraceTouch;
+    
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    
+    self.graceStart = [[NSDate alloc] init];
+    
+    self.graceTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementGraceTime) userInfo:nil repeats:YES];
+    
+    [self showGraceView];
+}
+
+// TODO mostly the same method as the above
+- (void)enterStandingGraceMovementState {
+    self.standingState = StandingGraceMovement;
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
