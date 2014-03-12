@@ -251,14 +251,6 @@
                 
                 NSLog(@"Quit moving so much");
                 
-//                if (self.standingState == StandingDuring) {
-//                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-//                    
-//                    self.graceStart = [[NSDate alloc] init];
-//                    self.standingState = StandingGraceMovement;
-//                    
-//                    [self showGraceView];
-//                }
             } else if (self.standingState == StandingGraceMovement && smoothSum <= 0.1) {
                 // Stop showing the grace view because movement is within parameters again
                 
