@@ -19,7 +19,6 @@
 		4E0EF7241799E6E300BA6C32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7231799E6E300BA6C32 /* main.m */; };
 		4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7271799E6E300BA6C32 /* AppDelegate.m */; };
 		4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */; };
-		4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7331799E6E300BA6C32 /* ViewController.m */; };
 		4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7431799F0EE00BA6C32 /* MapKit.framework */; };
 		4E30214E1808636C0076FACB /* StandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214D1808636C0076FACB /* StandingView.xib */; };
 		4E302150180863950076FACB /* GraceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214F180863950076FACB /* GraceView.xib */; };
@@ -55,8 +54,6 @@
 		4E0EF7261799E6E300BA6C32 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E0EF7271799E6E300BA6C32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E0EF7301799E6E300BA6C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		4E0EF7321799E6E300BA6C32 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4E0EF7331799E6E300BA6C32 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4E0EF7431799F0EE00BA6C32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4E30214D1808636C0076FACB /* StandingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandingView.xib; sourceTree = "<group>"; };
 		4E30214F180863950076FACB /* GraceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraceView.xib; sourceTree = "<group>"; };
@@ -165,8 +162,6 @@
 				4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */,
 				4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */,
 				4E0EF71E1799E6E300BA6C32 /* Supporting Files */,
-				4E0EF7321799E6E300BA6C32 /* ViewController.h */,
-				4E0EF7331799E6E300BA6C32 /* ViewController.m */,
 			);
 			path = "Stand for Something";
 			sourceTree = "<group>";
@@ -311,7 +306,6 @@
 				4E0EF7241799E6E300BA6C32 /* main.m in Sources */,
 				4E9BA4B718ABC01500C9A2DC /* ShareViewController.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
-				4E0EF7341799E6E300BA6C32 /* ViewController.m in Sources */,
 				4E92042618AA87A90012A839 /* StandManager.m in Sources */,
 				4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */,
 				4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */,
