@@ -149,4 +149,16 @@
     return newLength <= 66 || returnKey;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.text = @"";
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    if ([textField.text isEqualToString:@""]) {
+        textField.text = @"something";
+    }
+    
+    return YES;
+}
+
 @end
