@@ -162,7 +162,7 @@
     NSOperation *firstOperation = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"Start first block");
         
-        NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/catch"];
+        NSURL *url = [NSURL URLWithString:@"http://getstanding.com/catch"];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         
         NSLog(@"Sending data to server %@", [parameters urlEncodedString]);
@@ -332,7 +332,7 @@
             
             NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid]};
             
-            NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/live"];
+            NSURL *url = [NSURL URLWithString:@"http://getstanding.com/live"];
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
             
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -399,7 +399,7 @@
             
             NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
             
-            NSURL *url = [NSURL URLWithString:@"http://www.getstanding.com/done"];
+            NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
             
             [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];

@@ -63,7 +63,7 @@
 }
 
 - (IBAction)openLink {
-    NSString *urlString = [NSString stringWithFormat:@"http://www.getstanding.com/s/%d", standManager.sessionid];
+    NSString *urlString = [NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
@@ -76,7 +76,7 @@
         [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@.", [standManager getDurationString], textField.text]];
         
         // TODO test adding the URL
-        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.getstanding.com/s/%d", standManager.sessionid]]];
+        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]]];
         
         [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
             switch (result) {
@@ -116,7 +116,7 @@
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
-    NSURL *url = [NSURL URLWithString:@"http://standforsomething.herokuapp.com/done"];
+    NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
