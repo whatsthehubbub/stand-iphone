@@ -90,6 +90,7 @@
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
+    self.startButton.multipleTouchEnabled = YES;
     self.aboutButton = (UIButton *)[self.startView viewWithTag:12];
     [self.aboutButton addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
     
@@ -106,6 +107,7 @@
     
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
+    self.graceButton.multipleTouchEnabled = YES;
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     self.doneText = (UILabel *)[self.doneView viewWithTag:12];
@@ -275,27 +277,24 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    NSLog(@"started touching the screen");
+    [super touchesBegan:touches withEvent:event];
     
-    UITouch *touch = [touches anyObject];
-//    CGPoint location = [touch locationInView:self.startView];
+    NSLog(@"Touches began");
     
-//    NSLog(@"Touch location is %f x %f", location.x, location.y);
+    BOOL touchInView = NO;
     
-//    for (UITouch *touchIt in touches) {
-//        NSLog(@"Touch registered on %@", touch.view);
-//    }
+    for (UITouch *touch in [event allTouches]) {
+        CGPoint location = [touch locationInView:self.startButton];
+        
+        if (location.x < 0.0 || location.y < 0.0) {
+            NSLog(@"A new touch not in the correct view");
+        } else {
+            NSLog(@"A new touch in the correct view");
+            touchInView = YES;
+        }
+    }
     
-//    NSLog(@"Touch View %@", touch.view);
-//    NSLog(@"Touch view class %@", [touch.view class]);
-//    NSLog(@"Start button %@", self.startButton);
-    
-//    UIView *descendant = [touch.view hitTest:location withEvent:event];
-//    
-//    NSLog(@"Hit test %@", descendant);
-    
-    // TODO these checks don't work anymore. fix them.
-    if (touch.view == self.startButton || touch.view == self.graceButton) {
+    if (touchInView) {
         if (self.standingState==StandingBefore) {
             [self enterStandingDuringState];
         } else if (self.standingState == StandingGraceTouch) {
@@ -307,11 +306,41 @@
     }
 }
 
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesCancelled:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesMoved:touches withEvent:event];
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Touches ended");
+    [super touchesEnded:touches withEvent:event];
     
-    if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
-        [self enterStandingGraceTouchState];
+    BOOL touchInView = NO;
+    
+    NSMutableSet *allTouches = [[event allTouches] mutableCopy];
+    // Remove the just ended touches from all the touches
+    [allTouches minusSet:touches];
+    
+    for (UITouch *touch in allTouches) {
+        CGPoint location = [touch locationInView:self.startButton];
+        
+        if (location.x < 0.0 || location.y < 0.0) {
+            // The location is not within the bounds of startButton
+        } else {
+            touchInView = YES;
+        }
+    }
+    
+    if (touchInView) {
+        NSLog(@"A touch ended but there is still a touch in the view");
+    } else {
+        NSLog(@"There is no more touch in the correct view");
+        
+        if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
+            [self enterStandingGraceTouchState];
+        }
     }
 }
 
