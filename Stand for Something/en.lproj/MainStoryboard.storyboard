@@ -70,7 +70,7 @@ you stood
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.96433052009999998" green="0.96481523719999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                 <connections>
                                     <action selector="doneWithText:" destination="eaH-1H-ic8" eventType="editingDidEndOnExit" id="S8x-Np-xLc"/>
                                     <outlet property="delegate" destination="eaH-1H-ic8" id="f0P-Va-vfO"/>
