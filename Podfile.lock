@@ -1,12 +1,10 @@
 PODS:
-  - SDWebImage (3.5.4):
-    - SDWebImage/Core
-  - SDWebImage/Core (3.5.4)
+  - HockeySDK (3.5.4)
 
 DEPENDENCIES:
-  - SDWebImage
+  - HockeySDK (~> 3.5.4)
 
 SPEC CHECKSUMS:
-  SDWebImage: 1a62010700adbba823b621fc217906739dbf6aa5
+  HockeySDK: aa28abb106de7804d31acf515f2c9aa4e6481fd0
 
 COCOAPODS: 0.29.0
