@@ -217,7 +217,7 @@ The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unq
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uN6-hn-Pce">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uN6-hn-Pce">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
