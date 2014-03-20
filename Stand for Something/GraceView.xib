@@ -15,9 +15,9 @@
                     <rect key="frame" x="25" y="45" width="270" height="140"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView tag="11" contentMode="scaleToFill" image="03-button-stand-warning" id="PTf-9c-o4N">
+                <imageView tag="11" contentMode="scaleAspectFit" image="03-button-stand-warning" id="PTf-9c-o4N">
                     <rect key="frame" x="25" y="273" width="270" height="270"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
