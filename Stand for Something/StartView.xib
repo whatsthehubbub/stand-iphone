@@ -29,7 +29,7 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.96433052007299269" green="0.96470588239999699" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
