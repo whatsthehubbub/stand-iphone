@@ -118,6 +118,7 @@ you stood
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="textField" destination="bSy-Fd-5Fd" id="tYl-Yo-ecl"/>
                         <outlet property="timeLabel" destination="IHq-tV-j59" id="YjE-sd-3cC"/>
