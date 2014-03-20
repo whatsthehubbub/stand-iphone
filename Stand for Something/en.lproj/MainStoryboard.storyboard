@@ -140,8 +140,8 @@ you stood
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="yhz-FS-0Tg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="470"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hub-br-rTZ" customClass="FontLabel">
                                             <rect key="frame" x="25" y="45" width="270" height="32"/>
@@ -151,13 +151,13 @@ you stood
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="99" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45r-VX-Qah">
-                                            <rect key="frame" x="25" y="87" width="270" height="401"/>
+                                            <rect key="frame" x="25" y="87" width="270" height="363"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <string key="text">Get Standing is an app for ludic resistance. Go outside, find a public place, pick a cause and start standing. The app creates a public record of your session showing how long and where you stood. You can specify the cause you stood for, and share the link to the session’s web page.
+                                            <string key="text">"Standing" is an app for playful acts of resistance. Go outside, find a public place and get standing for a cause. 
 
-Send feedback to info@hubbub.eu or @whatsthehubbub on Twitter.
+After standing, you can specify the cause you stood for, and share a link to the session’s public web page. This shows how long, when and where you stood for your cause. 
 
-Get Standing was made by Hubbub who for this project consisted of Alper Çugun, Kars Alfrink and Simon Scheiber. Copyright 2013-2014.
+Get Standing was made by Hubbub, who for this project consisted of Alper Çugun, Kars Alfrink and Simon Scheiber. Copyright 2013-2014.
 
 The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unquote.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
