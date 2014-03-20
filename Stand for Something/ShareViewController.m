@@ -73,7 +73,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
 
-        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@.", [standManager getDurationString], textField.text]];
+        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@ with @getstanding.", [standManager getDurationString], textField.text]];
         
         // TODO test adding the URL
         [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]]];
