@@ -125,6 +125,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    if (self.standingState==StandingGraceMovement || self.standingState==StandingGraceTouch) {
+        return UIStatusBarStyleLightContent;
+    } else {
+        return UIStatusBarStyleDefault;
+    }
+}
+
 - (void)enterStandingBeforeState {
     NSLog(@"Enter standing before state");
     
@@ -143,6 +151,7 @@
     NSLog(@"Enter standing during state");
     
     self.standingState = StandingDuring;
+    [self setNeedsStatusBarAppearanceUpdate];
     
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
@@ -266,6 +275,7 @@
                 
                 if ((int) graceInterval > 1.0) {
                     self.standingState = StandingDuring;
+                    [self setNeedsStatusBarAppearanceUpdate];
                     
                     [self.graceTimer invalidate];
                     
@@ -299,6 +309,8 @@
             [self enterStandingDuringState];
         } else if (self.standingState == StandingGraceTouch) {
             self.standingState = StandingDuring;
+            [self setNeedsStatusBarAppearanceUpdate];
+            
             [self showStandingView];
             
             [self.graceTimer invalidate];
@@ -415,6 +427,7 @@
     NSLog(@"Enter standing done state");
     
     self.standingState = StandingDone;
+    [self setNeedsStatusBarAppearanceUpdate];
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
     
@@ -466,6 +479,7 @@
 
 - (void)enterStandingGraceTouchState {
     self.standingState = StandingGraceTouch;
+    [self setNeedsStatusBarAppearanceUpdate];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
@@ -482,6 +496,7 @@
     NSLog(@"Enter standing grace movement state");
     
     self.standingState = StandingGraceMovement;
+    [self setNeedsStatusBarAppearanceUpdate];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
