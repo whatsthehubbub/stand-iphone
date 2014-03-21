@@ -254,11 +254,11 @@
                 // Done standing, you did a step
                 
                 // This can also happen during StandingGraceTouch so invalidate the timer
-                if (graceTimer) {
-                    [graceTimer invalidate];
-                }
-                
-                [self enterStandingDoneState];
+//                if (graceTimer) {
+//                    [graceTimer invalidate];
+//                }
+//                
+//                [self enterStandingDoneState];
             } else if (self.standingState == StandingDuring && smoothSum > 0.1) {
                 // Show the grace view for too much movement
                 
