@@ -62,6 +62,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ * Override status bar style in a couple of places.
+ */
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)openLink {
     NSString *urlString = [NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid];
     
