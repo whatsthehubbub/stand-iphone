@@ -39,4 +39,34 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)tweetButton:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [slvc setInitialText:[NSString stringWithFormat:@"@getstanding "]];
+        
+        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
+            switch (result) {
+                case SLComposeViewControllerResultDone:
+                    break;
+                case SLComposeViewControllerResultCancelled:
+                    break;
+                default:
+                    break;
+            }
+            
+        }];
+        
+        [self presentViewController:slvc animated:YES completion:nil];
+    }
+
+}
+
+- (IBAction)mailButton:(id)sender {
+    NSString *emailURLString = @"mailto:standing@hubbub.eu?subject=&body=";
+    
+    NSString *url = [emailURLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication]  openURL:[NSURL URLWithString: url]];
+}
+
 @end
