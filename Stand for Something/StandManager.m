@@ -83,11 +83,11 @@
         returnString = [NSMutableString stringWithFormat:@"%d %@", days, (days == 1 ? @"day": @"days")];
         
         if (hours > 0) {
-            [returnString appendString:[NSString stringWithFormat:@" and %d %@", hours, (hours == 1 ? @"hour" : @"hours")]];
+            [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", hours, (hours == 1 ? @"hour" : @"hours")]];
         } else if (minutes > 0) {
-            [returnString appendString:[NSString stringWithFormat:@" and %d %@", minutes, (minutes == 1 ? @"minute" : @"minutes")]];
+            [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", minutes, (minutes == 1 ? @"minute" : @"minutes")]];
         } else if (seconds > 0) {
-            [returnString appendString:[NSString stringWithFormat:@" and %d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
+            [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
         }
     } else if (duration >= 60*60) {
         // 1 hour or more
@@ -98,12 +98,12 @@
         returnString = [NSMutableString stringWithFormat:@"%d %@", hours, (hours == 1 ? @"hour": @"hours")];
         
         if (minutes > 0) {
-            [returnString appendString:[NSString stringWithFormat:@" and %d %@", minutes, (minutes == 1 ? @"minute" : @"minutes")]];
+            [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", minutes, (minutes == 1 ? @"minute" : @"minutes")]];
         } else {
             // Minutes is zero
             if (seconds > 0) {
                 // There are seconds
-                [returnString appendString:[NSString stringWithFormat:@" and %d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
+                [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
             }
         }
         
@@ -115,7 +115,7 @@
         returnString = [NSMutableString stringWithFormat:@"%d %@", minutes, (minutes == 1 ? @"minute": @"minutes")];
         
         if (seconds > 0) {
-            [returnString appendString:[NSString stringWithFormat:@" and %d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
+            [returnString appendString:[NSString stringWithFormat:@" and \r%d %@", seconds, (seconds == 1 ? @"second" : @"seconds")]];
         }
     } else {
         // Seconds
