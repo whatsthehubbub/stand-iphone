@@ -37,15 +37,10 @@
     CGFloat fontSize = self.textField.font.pointSize;
     [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
     
-    self.textField.text = standManager.message;
-    
-    UIButton *clearButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 30.0f, 40.0f)];
-    [clearButton setImage:[UIImage imageNamed:@"05-button-clear"] forState:UIControlStateNormal];
-    [clearButton setImage:[UIImage imageNamed:@"05-button-clear"] forState:UIControlStateHighlighted];
-    [clearButton addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
-    self.textField.rightView = clearButton;
-    self.textField.rightViewMode = UITextFieldViewModeWhileEditing;
-    
+    if (![standManager.message isEqualToString:@""]) {
+        self.textField.text = standManager.message;
+    }
+        
     self.timeLabel.text = [NSString stringWithFormat:@"Share that\nyou stood\n%@ for", [standManager getDurationString]];
     
     // TODO think about dismissing keyboard
