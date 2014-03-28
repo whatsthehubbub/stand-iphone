@@ -212,6 +212,9 @@ The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unq
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="4dK-aK-A3I"/>
+                    <connections>
+                        <outlet property="scrollView" destination="UTf-MG-kjf" id="h3e-Nx-uev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHb-FZ-K3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

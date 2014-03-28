@@ -11,4 +11,6 @@
 
 @interface AboutViewController : UIViewController
 
+@property (strong) IBOutlet UIScrollView *scrollView;
+
 @end
