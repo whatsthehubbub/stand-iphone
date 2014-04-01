@@ -72,6 +72,7 @@
     
     self.standManager = [StandManager sharedManager];
     
+    // TODO don't perform a segue in view did load
     [self performSegueWithIdentifier:@"ShowIntro" sender:self];
     
     // Setup the location stuff
