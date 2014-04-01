@@ -28,6 +28,8 @@
 @synthesize smoothY;
 @synthesize smoothZ;
 
+@synthesize currentTouches;
+
 @synthesize standingState;
 
 @synthesize startTime;
@@ -86,6 +88,8 @@
     NSLog(@"Container view size %f x %f", self.containerView.frame.size.width, self.containerView.frame.size.height);
     
     NSLog(@"Container view origin %f x %f", self.containerView.frame.origin.x, self.containerView.frame.origin.y);
+    
+    self.currentTouches = [[NSMutableSet alloc] init];
     
     // Load all the subviews
     self.startView = [self loadSubViewFromNib:@"StartView"];
@@ -287,24 +291,18 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    
-    NSLog(@"Touches began");
-    
-    BOOL touchInView = NO;
-    
-    for (UITouch *touch in [event allTouches]) {
+    for (UITouch *touch in touches) {
         CGPoint location = [touch locationInView:self.startButton];
         
-        if (location.x < 0.0 || location.y < 0.0) {
-            NSLog(@"A new touch not in the correct view");
-        } else {
-            NSLog(@"A new touch in the correct view");
-            touchInView = YES;
+        NSLog(@"Touch at %f %f", location.x, location.y);
+        
+        if (location.x > 0.0 && location.x < self.startButton.frame.size.width && location.y > 0.0 && location.y < self.startButton.frame.size.height) {
+            NSLog(@"Qualifies");
+            [currentTouches addObject:touch];
         }
     }
     
-    if (touchInView) {
+    if ([currentTouches count] > 0) {
         if (self.standingState==StandingBefore) {
             [self enterStandingDuringState];
         } else if (self.standingState == StandingGraceTouch) {
@@ -319,37 +317,17 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesCancelled:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesMoved:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesEnded:touches withEvent:event];
-    
-    BOOL touchInView = NO;
-    
-    NSMutableSet *allTouches = [[event allTouches] mutableCopy];
-    // Remove the just ended touches from all the touches
-    [allTouches minusSet:touches];
-    
-    for (UITouch *touch in allTouches) {
-        CGPoint location = [touch locationInView:self.startButton];
-        
-        if (location.x < 0.0 || location.y < 0.0) {
-            // The location is not within the bounds of startButton
-        } else {
-            touchInView = YES;
-        }
+    for (UITouch *touch in touches) {
+        [currentTouches removeObject:touch];
     }
     
-    if (touchInView) {
-        NSLog(@"A touch ended but there is still a touch in the view");
-    } else {
-        NSLog(@"There is no more touch in the correct view");
-        
+    if ([currentTouches count] == 0) {
         if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
             [self enterStandingGraceTouchState];
         }
@@ -392,7 +370,7 @@
             [postDataTask resume];
         }
         
-        NSLog(@"Time increment normal %d", (int)interval);
+//        NSLog(@"Time increment normal %d", (int)interval);
     }
 }
 
@@ -482,7 +460,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-    
+
     self.graceStart = [[NSDate alloc] init];
     
     [self.graceTimer invalidate];

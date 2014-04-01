@@ -39,6 +39,9 @@ typedef NS_ENUM(NSInteger, StandingState) {
     StandingDone
 };
 
+// Object where we store all touches on the correct view over their lifetime
+@property (strong) NSMutableSet *currentTouches;
+
 @property (assign) StandingState standingState;
 
 @property (strong) NSDate *startTime;
