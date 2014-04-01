@@ -151,11 +151,8 @@
     [self showStartView];
 }
 
-- (void)enterStandingDuringState {
+- (void)startStanding {
     NSLog(@"Enter standing during state");
-    
-    self.standingState = StandingDuring;
-    [self setNeedsStatusBarAppearanceUpdate];
     
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
@@ -224,21 +221,11 @@
     
     self.startTime = [[NSDate alloc] init];
     
-    [self showStandingView];
-    
-//    self.secondTimer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
-//    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:NSRunLoopCommonModes];
-//    [[NSRunLoop mainRunLoop] addTimer:self.secondTimer forMode:UITrackingRunLoopMode];
-    
     self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
     
     motionManager.deviceMotionUpdateInterval = 1/15.0;
     
-    
-    
     if (motionManager.deviceMotionAvailable) {
-        //        NSLog(@"Device motion available");
-        
         [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
             
             CMAcceleration userAcceleration = motion.userAcceleration;
@@ -263,7 +250,7 @@
 //                }
 //                
 //                [self enterStandingDoneState];
-            } else if (self.standingState == StandingDuring && smoothSum > 0.1) {
+            } else if (self.standingState == StandingDuring && smoothSum > 0.14) {
                 // Show the grace view for too much movement
                 
                 [self enterStandingGraceMovementState];
@@ -278,16 +265,13 @@
                 NSTimeInterval graceInterval = [now timeIntervalSinceDate:self.graceStart];
                 
                 if ((int) graceInterval > 1.0) {
-                    self.standingState = StandingDuring;
-                    [self setNeedsStatusBarAppearanceUpdate];
-                    
-                    [self.graceTimer invalidate];
-                    
-                    [self showStandingView];
+                    [self enterStandingDuringState];
                 }
             }
         }];
     }
+    
+    [self enterStandingDuringState];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -304,14 +288,9 @@
     
     if ([currentTouches count] > 0) {
         if (self.standingState==StandingBefore) {
-            [self enterStandingDuringState];
+            [self startStanding];
         } else if (self.standingState == StandingGraceTouch) {
-            self.standingState = StandingDuring;
-            [self setNeedsStatusBarAppearanceUpdate];
-            
-            [self showStandingView];
-            
-            [self.graceTimer invalidate];
+            [self enterStandingDuringState];
         }
     }
 }
@@ -401,6 +380,19 @@
     self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood\n%@.", [standManager getDurationString]];
 }
 
+- (void)enterStandingDuringState {
+    NSLog(@"Enter standing during state");
+    
+    self.standingState = StandingDuring;
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    if (self.graceTimer) {
+        [self.graceTimer invalidate];
+    }
+    
+    [self showStandingView];
+}
+
 - (void)enterStandingDoneState {
     NSLog(@"Enter standing done state");
     
@@ -456,6 +448,8 @@
 }
 
 - (void)enterStandingGraceTouchState {
+    NSLog(@"Enter standing grace touch state");
+    
     self.standingState = StandingGraceTouch;
     [self setNeedsStatusBarAppearanceUpdate];
     

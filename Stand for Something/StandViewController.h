@@ -75,6 +75,6 @@ typedef NS_ENUM(NSInteger, StandingState) {
 @property (strong) IBOutlet UIButton *shareButton;
 @property (strong) IBOutlet UIButton *againButton;
 
-- (void)enterStandingDuringState;
+- (void)startStanding;
 
 @end
