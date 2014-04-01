@@ -72,6 +72,8 @@
     
     self.standManager = [StandManager sharedManager];
     
+    [self performSegueWithIdentifier:@"ShowIntro" sender:self];
+    
     // Setup the location stuff
     if (nil == self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];

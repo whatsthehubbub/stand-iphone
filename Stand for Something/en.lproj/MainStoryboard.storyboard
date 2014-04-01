@@ -24,6 +24,7 @@
                         <outlet property="containerView" destination="Pc6-eb-8vo" id="h5M-by-7tE"/>
                         <segue destination="eaH-1H-ic8" kind="modal" identifier="ShareModal" id="KVN-3U-lJm"/>
                         <segue destination="Z5m-x7-CgR" kind="modal" identifier="ShowAbout" id="i3F-r1-rwC"/>
+                        <segue destination="EO5-OK-quw" kind="modal" identifier="ShowIntro" id="QKl-7C-370"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19X-jE-kMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,10 +129,10 @@ you stood
             </objects>
             <point key="canvasLocation" x="2038" y="-572"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro View Controller-->
         <scene sceneID="Iwx-VG-vNu">
             <objects>
-                <viewController id="EO5-OK-quw" sceneMemberID="viewController">
+                <viewController id="EO5-OK-quw" customClass="IntroViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0U-k0-l5l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,6 +209,7 @@ standing!</string>
                                         </state>
                                         <connections>
                                             <action selector="closeAbout" destination="Z5m-x7-CgR" eventType="touchUpInside" id="QDW-MY-4Cx"/>
+                                            <action selector="next:" destination="EO5-OK-quw" eventType="touchUpInside" id="dhp-Mr-FLW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -222,7 +224,7 @@ standing!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu7-jF-Utc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595" y="-1323"/>
+            <point key="canvasLocation" x="2038" y="-2067"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="eEV-0o-UuG">
