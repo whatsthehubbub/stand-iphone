@@ -37,6 +37,7 @@
 @synthesize startTime;
 @synthesize endTime;
 @synthesize secondTimer;
+@synthesize pauseSeconds;
 
 @synthesize graceTimer;
 @synthesize graceStart;
@@ -158,6 +159,8 @@
     NSLog(@"Enter standing before state");
     
     [self setTimeOnViews:0];
+    
+    self.pauseSeconds = 0.0;
     
     self.standingState = StandingBefore;
     
@@ -336,9 +339,9 @@
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
     
     // Update duration in our shared object
-    standManager.duration = (int)interval;
+    standManager.duration = (int)(interval - pauseSeconds);
     
-    [self setTimeOnViews:interval];
+    [self setTimeOnViews:interval-pauseSeconds];
     
     if (self.standingState == StandingDuring) {
         if ((int)interval % 60 /*240*/ == 0) {
@@ -376,6 +379,8 @@
     NSDate *now = [[NSDate alloc] init];
     
     NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStart];
+    
+    pauseSeconds += 1.0;
     
     NSLog(@"Increment grace time %d", (int)interval);
     
@@ -459,9 +464,6 @@
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
-    
-//    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
-//    self.timeLabel.text = [NSString stringWithFormat:@"Done standing! Time: %d seconds", (int)interval];
 }
 
 - (void)enterStandingGraceTouchState {

@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, StandingState) {
 @property (strong) NSDate *startTime;
 @property (strong) NSDate *endTime;
 @property (strong) NSTimer *secondTimer;
+// Seconds the app has been in grace and which are deducted from the time actually standing
+@property (assign) double pauseSeconds;
 
 @property (strong) NSTimer *graceTimer;
 @property (strong) NSDate *graceStart;
