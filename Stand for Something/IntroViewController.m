@@ -32,6 +32,8 @@
 //    recognizer.delegate = self;
     recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:recognizer];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
 }
 
 - (void)didReceiveMemoryWarning

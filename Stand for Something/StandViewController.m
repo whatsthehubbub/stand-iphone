@@ -72,9 +72,6 @@
     
     self.standManager = [StandManager sharedManager];
     
-    // TODO don't perform a segue in view did load
-    [self performSegueWithIdentifier:@"ShowIntro" sender:self];
-    
     // Setup the location stuff
     if (nil == self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
@@ -124,6 +121,12 @@
     [self.againButton addTarget:self action:@selector(enterStandingBeforeState) forControlEvents:UIControlEventTouchUpInside];
 
     [self enterStandingBeforeState];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
+        [self performSegueWithIdentifier:@"ShowIntro" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
