@@ -143,7 +143,7 @@ you stood
                                 <subviews>
                                     <view contentMode="scaleToFill" id="IKr-gD-2TH">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-01" id="SpH-3S-dwv">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
@@ -165,7 +165,7 @@ care about...</string>
                                     </view>
                                     <view contentMode="scaleToFill" id="mHj-gp-pbL">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-02" id="Tej-Ph-LtL">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
@@ -187,7 +187,7 @@ to one of them.</string>
                                     </view>
                                     <view contentMode="scaleToFill" id="Ujx-P4-WGh">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-03" id="w6H-ur-LfB">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
