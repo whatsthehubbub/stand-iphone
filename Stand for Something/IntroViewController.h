@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IntroViewController : UIViewController
+@interface IntroViewController : UIViewController <UIScrollViewDelegate>
+
+@property (strong) IBOutlet UIScrollView *scrollView;
+@property (strong) IBOutlet UIImageView *progressImage;
+
+@property (strong) IBOutlet UIView *view1;
+@property (strong) IBOutlet UIView *view2;
+@property (strong) IBOutlet UIView *view3;
 
 @end

@@ -14,6 +14,15 @@
 
 @implementation IntroViewController
 
+@synthesize scrollView;
+
+@synthesize progressImage;
+
+@synthesize view1;
+@synthesize view2;
+@synthesize view3;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,10 +37,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swiped:)];
-//    recognizer.delegate = self;
-    recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:recognizer];
+    self.view1.frame = CGRectMake(0, 0, 320, 568);
+    self.view2.frame = CGRectMake(320, 0, 320, 568);
+    self.view3.frame = CGRectMake(640, 0, 320, 568);
+    
+    scrollView.contentSize = CGSizeMake(320 * 3, 568);
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
 }
@@ -42,12 +52,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)next:(id)sender {
+- (IBAction)close:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)swiped:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swiped");
 }
 
 /*
@@ -60,5 +66,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int page = ((int)scrollView.contentOffset.x / 320) + 1;
+    
+    NSString *imageString = [NSString stringWithFormat:@"07-dots-0%d", page];
+    
+    NSLog(imageString);
+    
+    self.progressImage.image = [UIImage imageNamed:imageString];
+}
 
 @end
