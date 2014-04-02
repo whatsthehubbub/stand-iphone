@@ -37,9 +37,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view1.frame = CGRectMake(0, 0, 320, 568);
-    self.view2.frame = CGRectMake(320, 0, 320, 568);
-    self.view3.frame = CGRectMake(640, 0, 320, 568);
+    self.view1.frame = CGRectMake(0, 0, 320, self.scrollView.frame.size.height);
+    self.view2.frame = CGRectMake(320, 0, 320, self.scrollView.frame.size.height);
+    self.view3.frame = CGRectMake(640, 0, 320, self.scrollView.frame.size.height);
     
     scrollView.contentSize = CGSizeMake(320 * 3, 568);
     
