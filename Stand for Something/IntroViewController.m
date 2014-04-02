@@ -43,7 +43,7 @@
     
     scrollView.contentSize = CGSizeMake(320 * 3, 568);
     
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
 }
 
 - (void)didReceiveMemoryWarning

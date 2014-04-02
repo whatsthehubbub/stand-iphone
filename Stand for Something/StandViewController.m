@@ -14,6 +14,8 @@
 
 @implementation StandViewController
 
+@synthesize showIntro;
+
 @synthesize locationManager;
 @synthesize currentLocation;
 
@@ -69,6 +71,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    showIntro = YES;
     
     self.standManager = [StandManager sharedManager];
     
@@ -126,7 +130,12 @@
 - (void)viewDidAppear:(BOOL)animated {
 //    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"ShowedIntro"];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
+//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
+//        [self performSegueWithIdentifier:@"ShowIntro" sender:self];
+//    }
+    
+    if (showIntro) {
+        showIntro = NO;
         [self performSegueWithIdentifier:@"ShowIntro" sender:self];
     }
 }

@@ -16,6 +16,8 @@
 
 @interface StandViewController : UIViewController <CLLocationManagerDelegate>
 
+@property (assign) BOOL showIntro;
+
 @property (strong) CLLocationManager *locationManager;
 // TODO remove currentLocation?
 @property (strong) CLLocation *currentLocation;
