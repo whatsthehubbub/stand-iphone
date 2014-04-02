@@ -20,6 +20,7 @@
 		4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0EF7271799E6E300BA6C32 /* AppDelegate.m */; };
 		4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */; };
 		4E0EF7441799F0EE00BA6C32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7431799F0EE00BA6C32 /* MapKit.framework */; };
+		4E1052E318EC1240008F1F96 /* IntroPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1052E218EC1240008F1F96 /* IntroPageViewController.m */; };
 		4E30214E1808636C0076FACB /* StandingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214D1808636C0076FACB /* StandingView.xib */; };
 		4E302150180863950076FACB /* GraceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E30214F180863950076FACB /* GraceView.xib */; };
 		4E302152180864640076FACB /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E302151180864640076FACB /* StartView.xib */; };
@@ -56,6 +57,8 @@
 		4E0EF7271799E6E300BA6C32 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E0EF7301799E6E300BA6C32 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4E0EF7431799F0EE00BA6C32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4E1052E118EC1240008F1F96 /* IntroPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroPageViewController.h; sourceTree = "<group>"; };
+		4E1052E218EC1240008F1F96 /* IntroPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroPageViewController.m; sourceTree = "<group>"; };
 		4E30214D1808636C0076FACB /* StandingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandingView.xib; sourceTree = "<group>"; };
 		4E30214F180863950076FACB /* GraceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraceView.xib; sourceTree = "<group>"; };
 		4E302151180864640076FACB /* StartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */,
 				4EBB222218EB6F58009154EB /* IntroViewController.h */,
 				4EBB222318EB6F58009154EB /* IntroViewController.m */,
+				4E1052E118EC1240008F1F96 /* IntroPageViewController.h */,
+				4E1052E218EC1240008F1F96 /* IntroPageViewController.m */,
 				4E48B7AE18BF6B1100969BC9 /* AboutViewController.h */,
 				4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
@@ -331,6 +336,7 @@
 				4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */,
 				4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */,
 				4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */,
+				4E1052E318EC1240008F1F96 /* IntroPageViewController.m in Sources */,
 				4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */,
 				4EBB222418EB6F59009154EB /* IntroViewController.m in Sources */,
 			);

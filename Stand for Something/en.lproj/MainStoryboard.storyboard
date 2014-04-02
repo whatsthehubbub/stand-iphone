@@ -226,6 +226,14 @@ standing!</string>
             </objects>
             <point key="canvasLocation" x="2038" y="-2067"/>
         </scene>
+        <!--Intro Page View Controller-->
+        <scene sceneID="kzO-dc-PSa">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="xkW-Mr-Z2E" customClass="IntroPageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgV-qg-Jhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="-2067"/>
+        </scene>
         <!--About View Controller-->
         <scene sceneID="eEV-0o-UuG">
             <objects>

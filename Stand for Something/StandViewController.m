@@ -124,6 +124,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"ShowedIntro"];
+    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
         [self performSegueWithIdentifier:@"ShowIntro" sender:self];
     }
