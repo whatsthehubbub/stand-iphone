@@ -153,9 +153,9 @@ you stood
                                                 <rect key="frame" x="25" y="368" width="270" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <string key="text">There are 
-many things 
-in the world we 
-care about...</string>
+many things in 
+the world we 
+care about.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -174,10 +174,10 @@ care about...</string>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vU6-v1-t70" customClass="FontLabel">
                                                 <rect key="frame" x="25" y="368" width="270" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <string key="text">We invite 
-you to give 
-some attention 
-to one of them.</string>
+                                                <string key="text">We invite you 
+to spring into 
+action for one of 
+them. It's easy...</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -196,10 +196,10 @@ to one of them.</string>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLh-U9-8Br" customClass="FontLabel">
                                                 <rect key="frame" x="25" y="368" width="270" height="130"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <string key="text">So find a 
-place, take it in 
-mind, and start 
-standing!</string>
+                                                <string key="text">Keep your cause 
+in mind, find 
+a spot, and start 
+standing for it!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
