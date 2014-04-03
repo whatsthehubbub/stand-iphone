@@ -30,7 +30,7 @@
 }
 
 - (void)setFontStyle {
-    [self.titleLabel setFont:[UIFont fontWithName:@"ChunkFive" size:24.0]]; // TODO: Make this respect font size set in storyboard editor.
+    [self.titleLabel setFont:[UIFont fontWithName:@"ChunkFive" size:32.0]]; // TODO: Make this respect font size set in storyboard editor.
 }
 
 /*
