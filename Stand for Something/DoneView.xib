@@ -28,7 +28,7 @@ for something.</string>
                     <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="SHARE">
+                    <state key="normal" title="share">
                         <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted">
@@ -48,7 +48,7 @@ for something.</string>
                     <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="STAND AGAIN">
+                    <state key="normal" title="stand again">
                         <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted">

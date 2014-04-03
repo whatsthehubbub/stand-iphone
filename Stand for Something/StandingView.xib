@@ -16,7 +16,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" id="gXR-BZ-Qi2">
-                    <rect key="frame" x="0.0" y="161" width="320" height="94"/>
+                    <rect key="frame" x="0.0" y="155" width="320" height="94"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02-clock" id="HkU-Ox-YbQ">
