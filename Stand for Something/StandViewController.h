@@ -14,7 +14,7 @@
 #import "StandManager.h"
 #import "NSDictionary+URLEncoding.h"
 
-@interface StandViewController : UIViewController <CLLocationManagerDelegate>
+@interface StandViewController : UIViewController <CLLocationManagerDelegate, UITextFieldDelegate>
 
 @property (assign) BOOL showIntro;
 
@@ -64,6 +64,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 // Start view controls
 @property (strong) IBOutlet UIImageView *startButton;
 @property (strong) IBOutlet UIButton *aboutButton;
+@property (strong) IBOutlet UITextField *textField;
 
 // Standing view controls
 @property (strong) IBOutlet UILabel *standingHours;

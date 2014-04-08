@@ -33,13 +33,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     standManager = [StandManager sharedManager];
-    
-    CGFloat fontSize = self.textField.font.pointSize;
-    [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
-    
-    if (![standManager.message isEqualToString:@""]) {
-        self.textField.text = standManager.message;
-    }
         
     self.timeLabel.text = [NSString stringWithFormat:@"Share that\nyou stood\n%@ for", [standManager getDurationString]];
     
@@ -100,67 +93,8 @@
     }
 }
 
-- (void)clearText {
-    self.textField.text = @"";
-}
-
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)doneWithText:(id)sender {
-    [self.textField resignFirstResponder];
-    
-    standManager.message = self.textField.text;
-    
-    // Update website with the time
-    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
-    
-    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
-    NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
-    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSURLSessionDataTask *postDataTask = [urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
-        NSError *jsonError = nil;
-        NSDictionary *json = nil;
-        json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
-        
-        NSLog(@"Server response %@", json);
-    }];
-    
-    [postDataTask resume];
-}
-
-# pragma mark - UITextFieldDelegate methods
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSUInteger oldLength = [textField.text length];
-    NSUInteger replacementLength = [string length];
-    NSUInteger rangeLength = range.length;
-    
-    NSUInteger newLength = oldLength - rangeLength + replacementLength;
-    
-    BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
-    
-    return newLength <= 66 || returnKey;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    textField.text = @"";
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    if ([textField.text isEqualToString:@""]) {
-        textField.text = @"something";
-    }
-    
-    return YES;
 }
 
 @end

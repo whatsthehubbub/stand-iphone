@@ -50,6 +50,7 @@
 
 @synthesize startButton;
 @synthesize aboutButton;
+@synthesize textField;
 
 @synthesize standingHours;
 @synthesize standingMinutes;
@@ -102,6 +103,8 @@
     self.startButton.multipleTouchEnabled = YES;
     self.aboutButton = (UIButton *)[self.startView viewWithTag:12];
     [self.aboutButton addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
+    self.textField = (UITextField *)[self.startView viewWithTag:13];
+    self.textField.delegate = self;
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
@@ -125,6 +128,14 @@
     self.againButton = (UIButton *)[self.doneView viewWithTag:15];
     [self.againButton addTarget:self action:@selector(enterStandingBeforeState) forControlEvents:UIControlEventTouchUpInside];
 
+    // Setup the textfield size and value
+    CGFloat fontSize = self.textField.font.pointSize;
+    [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
+    
+    if (![standManager.message isEqualToString:@""]) {
+        self.textField.text = standManager.message;
+    }
+    
     [self enterStandingBeforeState];
 }
 
@@ -563,6 +574,63 @@
     
     // Store the current location in our model
     standManager.coordinate = self.currentLocation.coordinate;
+}
+
+# pragma mark - UITextFieldDelegate methods
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSUInteger oldLength = [textField.text length];
+    NSUInteger replacementLength = [string length];
+    NSUInteger rangeLength = range.length;
+    
+    NSUInteger newLength = oldLength - rangeLength + replacementLength;
+    
+    BOOL returnKey = [string rangeOfString: @"\n"].location != NSNotFound;
+    
+    return newLength <= 66 || returnKey;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.text = @"";
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    if ([textField.text isEqualToString:@""]) {
+        textField.text = standManager.message;
+    }
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.textField resignFirstResponder];
+    
+    standManager.message = self.textField.text;
+    
+    // Update website with the time
+//    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
+//    
+////    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+////    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
+//    NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    
+//    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setHTTPMethod:@"POST"];
+//    [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
+//    
+//    NSURLSessionDataTask *postDataTask = [urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        
+//        NSError *jsonError = nil;
+//        NSDictionary *json = nil;
+//        json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+//        
+//        NSLog(@"Server response %@", json);
+//    }];
+//    
+//    [postDataTask resume];
+    
+    return YES;
 }
 
 @end
