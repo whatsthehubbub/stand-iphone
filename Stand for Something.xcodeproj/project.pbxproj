@@ -189,10 +189,10 @@
 		4E30214C180863540076FACB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				4E30214D1808636C0076FACB /* StandingView.xib */,
-				4E302153180864880076FACB /* DoneView.xib */,
-				4E30214F180863950076FACB /* GraceView.xib */,
 				4E302151180864640076FACB /* StartView.xib */,
+				4E30214D1808636C0076FACB /* StandingView.xib */,
+				4E30214F180863950076FACB /* GraceView.xib */,
+				4E302153180864880076FACB /* DoneView.xib */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
