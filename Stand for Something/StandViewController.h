@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <Social/Social.h>
 
 #import "StandManager.h"
 #import "NSDictionary+URLEncoding.h"
@@ -76,8 +77,8 @@ typedef NS_ENUM(NSInteger, StandingState) {
 
 // Done view controls
 @property (strong) IBOutlet UILabel *doneText;
-
-@property (strong) IBOutlet UIButton *shareButton;
+@property (strong) IBOutlet UIButton *tweetButton;
+@property (strong) IBOutlet UIButton *webButton;
 @property (strong) IBOutlet UIButton *againButton;
 
 - (void)startStanding;

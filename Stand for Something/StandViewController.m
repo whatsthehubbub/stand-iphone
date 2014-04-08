@@ -59,6 +59,9 @@
 @synthesize graceButton;
 
 @synthesize doneText;
+@synthesize tweetButton;
+@synthesize webButton;
+@synthesize againButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -123,8 +126,10 @@
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     self.doneText = (UILabel *)[self.doneView viewWithTag:12];
-    self.shareButton = (UIButton *)[self.doneView viewWithTag:14];
-    [self.shareButton addTarget:self action:@selector(shareResult) forControlEvents:UIControlEventTouchUpInside];
+    self.tweetButton = (UIButton *)[self.doneView viewWithTag:13];
+    [self.tweetButton addTarget:self action:@selector(tweetResult) forControlEvents:UIControlEventTouchUpInside];
+    self.webButton = (UIButton *)[self.doneView viewWithTag:14];
+    [self.webButton addTarget:self action:@selector(openLink) forControlEvents:UIControlEventTouchUpInside];
     self.againButton = (UIButton *)[self.doneView viewWithTag:15];
     [self.againButton addTarget:self action:@selector(enterStandingBeforeState) forControlEvents:UIControlEventTouchUpInside];
 
@@ -516,6 +521,42 @@
 
 - (void)showAbout {
     [self performSegueWithIdentifier:@"ShowAbout" sender:self];
+}
+
+- (void)openLink {
+    NSString *urlString = [NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+}
+
+- (void)tweetResult {
+    // TODO do this check on viewDidLoad and modify UI according to service availability
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [standManager getDurationString], textField.text]];
+        
+        // TODO test adding the URL
+        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]]];
+        
+        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
+            switch (result) {
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"posted tweet");
+                    
+                    break;
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Cancelled tweet");
+                    
+                    break;
+                default:
+                    break;
+            }
+            
+        }];
+        
+        [self presentViewController:slvc animated:YES completion:nil];
+    }
 }
 
 - (void)showStartView {

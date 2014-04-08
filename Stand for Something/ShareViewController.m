@@ -57,41 +57,7 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (IBAction)openLink {
-    NSString *urlString = [NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid];
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-}
 
-- (IBAction)tweetResult:(id)sender {
-    // TODO do this check on viewDidLoad and modify UI according to service availability
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-
-        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [standManager getDurationString], textField.text]];
-        
-        // TODO test adding the URL
-        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]]];
-        
-        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
-            switch (result) {
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"posted tweet");
-                    
-                    break;
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Cancelled tweet");
-                    
-                    break;
-                default:
-                    break;
-            }
-            
-        }];
-        
-        [self presentViewController:slvc animated:YES completion:nil];
-    }
-}
 
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
