@@ -22,7 +22,6 @@
                     <navigationItem key="navigationItem" title="Stand!" id="RZV-sR-m3B"/>
                     <connections>
                         <outlet property="containerView" destination="Pc6-eb-8vo" id="h5M-by-7tE"/>
-                        <segue destination="eaH-1H-ic8" kind="modal" identifier="ShareModal" id="KVN-3U-lJm"/>
                         <segue destination="Z5m-x7-CgR" kind="modal" identifier="ShowAbout" id="i3F-r1-rwC"/>
                         <segue destination="EO5-OK-quw" kind="modal" identifier="ShowIntro" id="QKl-7C-370"/>
                     </connections>
@@ -30,104 +29,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19X-jE-kMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1595" y="-567"/>
-        </scene>
-        <!--Share View Controller-->
-        <scene sceneID="iyb-Cd-1lx">
-            <objects>
-                <viewController id="eaH-1H-ic8" customClass="ShareViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tmq-iG-I8t">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mr2-2c-KBb" customClass="ActionButton">
-                                <rect key="frame" x="270" y="25" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" image="05-button-close"/>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButton:" destination="eaH-1H-ic8" eventType="touchUpInside" id="bru-xE-v8Y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHq-tV-j59" customClass="FontLabel">
-                                <rect key="frame" x="25" y="45" width="270" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Share that 
-you stood 
-00 minutes and 
-00 seconds for</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.96433052009999998" green="0.96481523719999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-field-background" id="vxf-xW-hfI">
-                                <rect key="frame" x="25" y="183" width="270" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" id="bSy-Fd-5Fd">
-                                <rect key="frame" x="35" y="196" width="250" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.96433052009999998" green="0.96481523719999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="doneWithText:" destination="eaH-1H-ic8" eventType="editingDidEndOnExit" id="S8x-Np-xLc"/>
-                                    <outlet property="delegate" destination="eaH-1H-ic8" id="f0P-Va-vfO"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qv2-ua-Xxl" customClass="ActionButton">
-                                <rect key="frame" x="25" y="374" width="270" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="tweet">
-                                    <color key="titleColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tweetResult:" destination="eaH-1H-ic8" eventType="touchUpInside" id="ytE-LW-qjS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0wj-lr-6YN" customClass="FontLabel">
-                                <rect key="frame" x="20" y="434" width="280" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.96433052009999998" green="0.96481523719999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LmZ-8u-0jj" customClass="ActionButton">
-                                <rect key="frame" x="25" y="483" width="270" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="view on web">
-                                    <color key="titleColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openLink" destination="eaH-1H-ic8" eventType="touchUpInside" id="9Ln-RN-JKy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="textField" destination="bSy-Fd-5Fd" id="tYl-Yo-ecl"/>
-                        <outlet property="timeLabel" destination="IHq-tV-j59" id="YjE-sd-3cC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pTG-Bt-XT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2038" y="-572"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="Iwx-VG-vNu">
@@ -240,7 +141,7 @@ standing for it!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu7-jF-Utc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="-2067"/>
+            <point key="canvasLocation" x="2184" y="-1259"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="eEV-0o-UuG">
@@ -332,7 +233,7 @@ The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unq
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHb-FZ-K3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="-1323"/>
+            <point key="canvasLocation" x="2184" y="-567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gUR-Rg-TQq">
@@ -356,8 +257,6 @@ The typefaces are Chunk by League of Movable Type and Courier Prime by Quote-Unq
         </scene>
     </scenes>
     <resources>
-        <image name="05-button-close" width="30" height="30"/>
-        <image name="05-field-background" width="270" height="60"/>
         <image name="06-button-close" width="50" height="50"/>
         <image name="07-dots-01" width="70" height="20"/>
         <image name="07-intro-guy-01" width="320" height="348"/>

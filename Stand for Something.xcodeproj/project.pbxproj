@@ -33,7 +33,6 @@
 		4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F02617CFDA3E00194023 /* FontLabel.m */; };
 		4E92042318AA64D00012A839 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E92042218AA64D00012A839 /* Social.framework */; };
 		4E92042618AA87A90012A839 /* StandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E92042518AA87A90012A839 /* StandManager.m */; };
-		4E9BA4B718ABC01500C9A2DC /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */; };
 		4EBB222418EB6F59009154EB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB222318EB6F58009154EB /* IntroViewController.m */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
@@ -74,8 +73,6 @@
 		4E92042218AA64D00012A839 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4E92042418AA87A90012A839 /* StandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandManager.h; sourceTree = "<group>"; };
 		4E92042518AA87A90012A839 /* StandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandManager.m; sourceTree = "<group>"; };
-		4E9BA4B518ABC01500C9A2DC /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		4EBB222218EB6F58009154EB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		4EBB222318EB6F58009154EB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -154,8 +151,6 @@
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */,
 				4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */,
-				4E9BA4B518ABC01500C9A2DC /* ShareViewController.h */,
-				4E9BA4B618ABC01500C9A2DC /* ShareViewController.m */,
 				4EBB222218EB6F58009154EB /* IntroViewController.h */,
 				4EBB222318EB6F58009154EB /* IntroViewController.m */,
 				4E48B7AE18BF6B1100969BC9 /* AboutViewController.h */,
@@ -324,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0EF7241799E6E300BA6C32 /* main.m in Sources */,
-				4E9BA4B718ABC01500C9A2DC /* ShareViewController.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E92042618AA87A90012A839 /* StandManager.m in Sources */,
 				4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */,
