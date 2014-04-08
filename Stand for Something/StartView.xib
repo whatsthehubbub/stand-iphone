@@ -11,10 +11,27 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-start-standing" id="QEm-qL-Cdr">
-                    <rect key="frame" x="25" y="40" width="270" height="210"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27N-N3-WHK" customClass="FontLabel">
+                    <rect key="frame" x="25" y="45" width="270" height="98"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">What is it 
+you are 
+standing for?</string>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-field-background" id="atm-un-UX8">
+                    <rect key="frame" x="25" y="153" width="270" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" id="G3D-ZI-sKV">
+                    <rect key="frame" x="35" y="163" width="250" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                </textField>
                 <imageView tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-button-stand-start" id="wsc-w6-0Qe">
                     <rect key="frame" x="25" y="273" width="270" height="270"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
@@ -68,7 +85,7 @@
     <resources>
         <image name="01-button-about" width="50" height="50"/>
         <image name="01-button-stand-start" width="270" height="270"/>
-        <image name="01-start-standing" width="270" height="210"/>
+        <image name="01-field-background" width="270" height="60"/>
         <image name="05-button-close" width="30" height="30"/>
     </resources>
 </document>
