@@ -242,20 +242,6 @@ standing for it!</string>
             </objects>
             <point key="canvasLocation" x="2038" y="-2067"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="9Fo-zf-iRQ">
-            <objects>
-                <viewController id="9j9-Hu-Wd0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tya-l6-TKC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GBO-ME-ZP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2402" y="-2067"/>
-        </scene>
         <!--About View Controller-->
         <scene sceneID="eEV-0o-UuG">
             <objects>
