@@ -311,22 +311,25 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInView:self.startButton];
-        
-        NSLog(@"Touch at %f %f", location.x, location.y);
-        
-        if (location.x > 0.0 && location.x < self.startButton.frame.size.width && location.y > 0.0 && location.y < self.startButton.frame.size.height) {
-            NSLog(@"Qualifies");
-            [currentTouches addObject:touch];
+    // We only respond to touches if the user is not typing any text at the moment
+    if (self.standingState != TypingText) {
+        for (UITouch *touch in touches) {
+            CGPoint location = [touch locationInView:self.startButton];
+            
+            NSLog(@"Touch at %f %f", location.x, location.y);
+            
+            if (location.x > 0.0 && location.x < self.startButton.frame.size.width && location.y > 0.0 && location.y < self.startButton.frame.size.height) {
+                NSLog(@"Qualifies");
+                [currentTouches addObject:touch];
+            }
         }
-    }
-    
-    if ([currentTouches count] > 0) {
-        if (self.standingState==StandingBefore) {
-            [self startStanding];
-        } else if (self.standingState == StandingGraceTouch) {
-            [self enterStandingDuringState];
+        
+        if ([currentTouches count] > 0) {
+            if (self.standingState==StandingBefore) {
+                [self startStanding];
+            } else if (self.standingState == StandingGraceTouch) {
+                [self enterStandingDuringState];
+            }
         }
     }
 }
@@ -632,6 +635,8 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.standingState = TypingText;
+    
     textField.text = @"";
 }
 
@@ -646,30 +651,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.textField resignFirstResponder];
     
-    standManager.message = self.textField.text;
+    self.standingState = StandingBefore;
     
-    // Update website with the time
-//    NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"message": self.textField.text};
-//    
-////    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-////    NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
-//    NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-//    
-//    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//    [request setHTTPMethod:@"POST"];
-//    [request setHTTPBody:[[parameters urlEncodedString] dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    NSURLSessionDataTask *postDataTask = [urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//        
-//        NSError *jsonError = nil;
-//        NSDictionary *json = nil;
-//        json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
-//        
-//        NSLog(@"Server response %@", json);
-//    }];
-//    
-//    [postDataTask resume];
+    standManager.message = self.textField.text;
     
     return YES;
 }
