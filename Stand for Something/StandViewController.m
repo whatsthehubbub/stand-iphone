@@ -174,6 +174,9 @@
 - (void)enterStandingBeforeState {
     NSLog(@"Enter standing before state");
     
+    // The help should be hidden for when we stand again
+    [self hideHelp];
+    
     [self setTimeOnViews:0];
     
     self.pauseSeconds = 0.0;
@@ -523,6 +526,11 @@
 
 - (void)showHelp {
     self.helpView.hidden = NO;
+    self.helpView.alpha = 0.0;
+    
+    [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.helpView.alpha = 1.0;
+    } completion:nil];
 }
 
 - (void)showAbout {
@@ -536,7 +544,11 @@
 }
 
 - (void)hideHelp {
-    self.helpView.hidden = YES;
+    [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.helpView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        self.helpView.hidden = YES;
+    }];
 }
 
 - (void)openLink {
