@@ -528,7 +528,7 @@
     self.helpView.hidden = NO;
     self.helpView.alpha = 0.0;
     
-    [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.helpView.alpha = 1.0;
     } completion:nil];
 }
@@ -544,7 +544,7 @@
 }
 
 - (void)hideHelp {
-    [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.helpView.alpha = 0.0;
     } completion:^(BOOL finished) {
         self.helpView.hidden = YES;
