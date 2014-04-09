@@ -50,7 +50,7 @@
     
     scrollView.contentSize = contentRect.size;
     
-//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowedIntro"];
 }
 
 - (void)didReceiveMemoryWarning

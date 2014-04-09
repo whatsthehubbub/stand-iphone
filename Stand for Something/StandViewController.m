@@ -14,8 +14,6 @@
 
 @implementation StandViewController
 
-@synthesize showIntro;
-
 @synthesize locationManager;
 @synthesize currentLocation;
 
@@ -49,8 +47,12 @@
 @synthesize doneView;
 
 @synthesize startButton;
-@synthesize aboutButton;
+@synthesize helpButton;
 @synthesize textField;
+@synthesize helpView;
+@synthesize howToButton;
+@synthesize aboutButton;
+@synthesize closeHelpButton;
 
 @synthesize standingHours;
 @synthesize standingMinutes;
@@ -77,8 +79,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    showIntro = YES;
-    
     self.standManager = [StandManager sharedManager];
     
     // Setup the location stuff
@@ -104,10 +104,17 @@
     self.startView = [self loadSubViewFromNib:@"StartView"];
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
     self.startButton.multipleTouchEnabled = YES;
-    self.aboutButton = (UIButton *)[self.startView viewWithTag:12];
-    [self.aboutButton addTarget:self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
+    self.helpButton = (UIButton *)[self.startView viewWithTag:12];
+    [self.helpButton addTarget:self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
     self.textField = (UITextField *)[self.startView viewWithTag:13];
     self.textField.delegate = self;
+    self.helpView = (UIView *)[self.startView viewWithTag:14];
+    self.howToButton = (UIButton *)[self.startView viewWithTag:15];
+    [self.howToButton addTarget:self action:@selector(showIntro) forControlEvents:UIControlEventTouchUpInside];
+    self.aboutButton = (UIButton *)[self.startView viewWithTag:16];
+    [self.aboutButton addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
+    self.closeHelpButton = (UIButton *)[self.startView viewWithTag:17];
+    [self.closeHelpButton addTarget:self action:@selector(hideHelp) forControlEvents:UIControlEventTouchUpInside];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
@@ -145,14 +152,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-//    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"ShowedIntro"];
-    
-//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
-//        [self performSegueWithIdentifier:@"ShowIntro" sender:self];
-//    }
-    
-    if (showIntro) {
-        showIntro = NO;
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowedIntro"]) {
         [self performSegueWithIdentifier:@"ShowIntro" sender:self];
     }
 }
@@ -522,7 +522,21 @@
 }
 
 - (void)showHelp {
+    self.helpView.hidden = NO;
+}
+
+- (void)showAbout {
     [self performSegueWithIdentifier:@"ShowAbout" sender:self];
+    [self hideHelp];
+}
+
+- (void)showIntro {
+    [self performSegueWithIdentifier:@"ShowIntro" sender:self];
+    [self hideHelp];
+}
+
+- (void)hideHelp {
+    self.helpView.hidden = YES;
 }
 
 - (void)openLink {

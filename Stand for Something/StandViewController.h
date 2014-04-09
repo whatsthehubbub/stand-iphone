@@ -17,8 +17,6 @@
 
 @interface StandViewController : UIViewController <CLLocationManagerDelegate, UITextFieldDelegate>
 
-@property (assign) BOOL showIntro;
-
 @property (strong) CLLocationManager *locationManager;
 // TODO remove currentLocation?
 @property (strong) CLLocation *currentLocation;
@@ -65,8 +63,12 @@ typedef NS_ENUM(NSInteger, StandingState) {
 
 // Start view controls
 @property (strong) IBOutlet UIImageView *startButton;
-@property (strong) IBOutlet UIButton *aboutButton;
+@property (strong) IBOutlet UIButton *helpButton;
 @property (strong) IBOutlet UITextField *textField;
+@property (strong) IBOutlet UIView *helpView;
+@property (strong) IBOutlet UIButton *howToButton;
+@property (strong) IBOutlet UIButton *aboutButton;
+@property (strong) IBOutlet UIButton *closeHelpButton;
 
 // Standing view controls
 @property (strong) IBOutlet UILabel *standingHours;
