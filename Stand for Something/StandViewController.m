@@ -235,7 +235,6 @@
                 
                 // Reset these to reasonable defaults
                 standManager.duration = 0;
-                standManager.message = @"something";
                 
                 NSLog(@"Finishing first request");
             }];
@@ -418,7 +417,7 @@
     self.standingMinutes.text = [NSString stringWithFormat:@"%02d", minutes];
     self.standingSeconds.text = [NSString stringWithFormat:@"%02d", seconds];
     
-    self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood\n%@.", [standManager getDurationString]];
+    self.doneText.text = [NSString stringWithFormat:@"Done.\nYou stood\n%@ for %@.", [standManager getDurationString], standManager.message];
 }
 
 - (void)enterStandingDuringState {
@@ -623,6 +622,7 @@
 # pragma mark - UITextFieldDelegate methods
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // This limits the text in the topic field
     NSUInteger oldLength = [textField.text length];
     NSUInteger replacementLength = [string length];
     NSUInteger rangeLength = range.length;
