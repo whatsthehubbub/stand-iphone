@@ -105,7 +105,7 @@
     self.startButton = (UIImageView *)[self.startView viewWithTag:11];
     self.startButton.multipleTouchEnabled = YES;
     self.aboutButton = (UIButton *)[self.startView viewWithTag:12];
-    [self.aboutButton addTarget:self action:@selector(showAbout) forControlEvents:UIControlEventTouchUpInside];
+    [self.aboutButton addTarget:self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
     self.textField = (UITextField *)[self.startView viewWithTag:13];
     self.textField.delegate = self;
     
@@ -521,7 +521,7 @@
     [self performSegueWithIdentifier:@"ShareModal" sender:self];
 }
 
-- (void)showAbout {
+- (void)showHelp {
     [self performSegueWithIdentifier:@"ShowAbout" sender:self];
 }
 
