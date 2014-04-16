@@ -54,6 +54,7 @@
 @synthesize aboutButton;
 @synthesize closeHelpButton;
 
+@synthesize standingText;
 @synthesize standingHours;
 @synthesize standingMinutes;
 @synthesize standingSeconds;
@@ -117,6 +118,7 @@
     [self.closeHelpButton addTarget:self action:@selector(hideHelp) forControlEvents:UIControlEventTouchUpInside];
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
+    self.standingText = (UILabel *)[self.standingView viewWithTag:11];
     self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
     self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
     self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
@@ -428,6 +430,8 @@
     
     self.standingState = StandingDuring;
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    self.standingText.text = [NSString stringWithFormat:@"Now standing for %@!", standManager.message];
     
     if (self.graceTimer) {
         [self.graceTimer invalidate];

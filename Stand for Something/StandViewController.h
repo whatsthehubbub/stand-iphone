@@ -71,6 +71,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 @property (strong) IBOutlet UIButton *closeHelpButton;
 
 // Standing view controls
+@property (strong) IBOutlet UILabel *standingText;
 @property (strong) IBOutlet UILabel *standingHours;
 @property (strong) IBOutlet UILabel *standingMinutes;
 @property (strong) IBOutlet UILabel *standingSeconds;
