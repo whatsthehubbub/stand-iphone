@@ -316,7 +316,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // We only respond to touches if the user is not typing any text at the moment
-    if (self.standingState != TypingText) {
+    if (self.standingState != DontAllowStart) {
         for (UITouch *touch in touches) {
             CGPoint location = [touch locationInView:self.startButton];
             
@@ -665,7 +665,7 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    self.standingState = TypingText;
+    self.standingState = DontAllowStart;
     
     textField.text = @"";
 }

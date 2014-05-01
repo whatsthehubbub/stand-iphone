@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
     StandingGraceMovement,
     StandingGraceTouch,
     StandingDone,
-    TypingText
+    DontAllowStart
 };
 
 // Object where we store all touches on the correct view over their lifetime
