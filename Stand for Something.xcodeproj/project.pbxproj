@@ -424,7 +424,7 @@
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -447,7 +447,7 @@
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -495,7 +495,7 @@
 				GCC_PREFIX_HEADER = "Stand for Something/Stand for Something-Prefix.pch";
 				INFOPLIST_FILE = "Stand for Something/Stand for Something-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
