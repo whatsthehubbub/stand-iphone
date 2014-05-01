@@ -49,7 +49,7 @@ standing for?</string>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
                         <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bvb-N4-qm7" customClass="ActionButton">
-                            <rect key="frame" x="20" y="20" width="240" height="32"/>
+                            <rect key="frame" x="20" y="20" width="290" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <state key="normal" title="How-to">
@@ -58,7 +58,7 @@ standing for?</string>
                             </state>
                         </button>
                         <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hG4-HG-Vkb" customClass="ActionButton">
-                            <rect key="frame" x="22" y="72" width="240" height="32"/>
+                            <rect key="frame" x="22" y="72" width="250" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <state key="normal" title="About">
