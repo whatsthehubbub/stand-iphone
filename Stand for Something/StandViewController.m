@@ -61,6 +61,7 @@
 
 @synthesize graceButton;
 
+@synthesize mapView;
 @synthesize doneText;
 @synthesize tweetButton;
 @synthesize webButton;
@@ -134,6 +135,7 @@
     self.graceButton.multipleTouchEnabled = YES;
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
+    self.mapView = (MKMapView *)[self.doneView viewWithTag:16];
     self.doneText = (UILabel *)[self.doneView viewWithTag:12];
     self.tweetButton = (UIButton *)[self.doneView viewWithTag:13];
     [self.tweetButton addTarget:self action:@selector(tweetResult) forControlEvents:UIControlEventTouchUpInside];
@@ -647,6 +649,9 @@
     
     // Store the current location in our model
     standManager.coordinate = self.currentLocation.coordinate;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(standManager.coordinate, 1000, 1000);
+    [self.mapView setRegion:region];
 }
 
 # pragma mark - UITextFieldDelegate methods

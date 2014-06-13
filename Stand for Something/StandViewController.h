@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <Social/Social.h>
+#import <MapKit/MapKit.h>
 
 #import "StandManager.h"
 #import "NSDictionary+URLEncoding.h"
@@ -80,6 +81,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 @property (strong) IBOutlet UIImageView *graceButton;
 
 // Done view controls
+@property (strong) IBOutlet MKMapView *mapView;
 @property (strong) IBOutlet UILabel *doneText;
 @property (strong) IBOutlet UIButton *tweetButton;
 @property (strong) IBOutlet UIButton *webButton;
