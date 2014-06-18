@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "02-button-stand-pressed.png"
+      "filename" : "standing-button.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "02-button-stand-pressed@2x.png"
+      "filename" : "standing-button@2x.png"
     }
   ],
   "info" : {
