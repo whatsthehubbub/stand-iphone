@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "01-button-stand-start.png"
+      "filename" : "start-standing-button.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "01-button-stand-start@2x.png"
+      "filename" : "start-standing-button@2x.png"
     }
   ],
   "info" : {
