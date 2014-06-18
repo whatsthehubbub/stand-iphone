@@ -12,15 +12,15 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27N-N3-WHK" customClass="FontLabel">
-                    <rect key="frame" x="25" y="45" width="270" height="98"/>
+                    <rect key="frame" x="25" y="58" width="270" height="98"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <string key="text">What is it you are 
 standing for?</string>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" red="1" green="0.29019607843137252" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" id="G3D-ZI-sKV">
+                <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="32" clearButtonMode="unlessEditing" id="G3D-ZI-sKV">
                     <rect key="frame" x="0.0" y="163" width="320" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,12 +28,8 @@ standing for?</string>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button edit" id="Clj-Qy-iCT">
-                    <rect key="frame" x="275" y="178" width="30" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-button-stand-start" id="wsc-w6-0Qe">
-                    <rect key="frame" x="25" y="273" width="270" height="270"/>
+                    <rect key="frame" x="40" y="265" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WA2-KF-A78">
@@ -84,8 +80,7 @@ standing for?</string>
     </objects>
     <resources>
         <image name="01-button-about" width="50" height="50"/>
-        <image name="01-button-stand-start" width="281" height="281"/>
+        <image name="01-button-stand-start" width="480" height="480"/>
         <image name="05-button-close" width="30" height="30"/>
-        <image name="Button edit" width="60" height="60"/>
     </resources>
 </document>
