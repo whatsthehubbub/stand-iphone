@@ -82,6 +82,6 @@ standing for?</string>
     </objects>
     <resources>
         <image name="01-button-about" width="30" height="30"/>
-        <image name="01-button-stand-start" width="480" height="480"/>
+        <image name="01-button-stand-start" width="240" height="240"/>
     </resources>
 </document>
