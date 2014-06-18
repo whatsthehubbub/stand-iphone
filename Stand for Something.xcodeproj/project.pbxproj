@@ -40,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier Prime Bold.ttf"; sourceTree = "<group>"; };
+		471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Bold.otf"; sourceTree = "<group>"; };
+		471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Thin.otf"; sourceTree = "<group>"; };
 		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF317AD557C006B9098 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -172,6 +174,8 @@
 				4E80F01817CFCBDB00194023 /* kant.gpx */,
 				4E80F00E17CF938F00194023 /* Chunk.otf */,
 				4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */,
+				471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */,
+				471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */,
 				4E0EF71F1799E6E300BA6C32 /* Stand for Something-Info.plist */,
 				4E0EF7201799E6E300BA6C32 /* InfoPlist.strings */,
 				4E0EF7231799E6E300BA6C32 /* main.m */,
