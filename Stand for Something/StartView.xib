@@ -42,7 +42,7 @@ standing for?</string>
                 </button>
                 <view hidden="YES" tag="14" contentMode="scaleToFill" id="pqn-Kd-Kk5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bvb-N4-qm7" customClass="ActionButton">
                             <rect key="frame" x="0.0" y="448" width="320" height="60"/>
