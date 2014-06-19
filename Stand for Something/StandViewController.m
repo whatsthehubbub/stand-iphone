@@ -559,6 +559,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]];
     
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[text, url] applicationActivities:nil];
+    avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList];
     
     [[self navigationController] presentViewController:avc animated:YES completion:nil];
 }
