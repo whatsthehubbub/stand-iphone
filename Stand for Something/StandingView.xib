@@ -11,11 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="16" id="ibk-xE-Rrg" customClass="FontLabel">
-                    <rect key="frame" x="25" y="58" width="270" height="98"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" id="ibk-xE-Rrg" customClass="FontLabel">
+                    <rect key="frame" x="25" y="58" width="270" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Now standing 
-for (a rather long cause)!</string>
+                    <string key="text">You are standing
+for (a rather long cause)</string>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <color key="textColor" red="0.99607843137254903" green="0.63529411764705879" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
