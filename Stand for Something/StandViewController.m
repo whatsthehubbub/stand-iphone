@@ -433,7 +433,7 @@
     self.standingState = StandingDuring;
     [self setNeedsStatusBarAppearanceUpdate];
     
-    self.standingText.text = [NSString stringWithFormat:@"Now standing for %@!", standManager.message];
+    self.standingText.text = [NSString stringWithFormat:@"You are standing \nfor %@", standManager.message];
     
     if (self.graceTimer) {
         [self.graceTimer invalidate];
