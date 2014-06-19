@@ -60,6 +60,7 @@
 @synthesize standingSeconds;
 
 @synthesize graceButton;
+@synthesize doneButton;
 
 @synthesize mapView;
 @synthesize doneText;
@@ -133,6 +134,8 @@
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
     self.graceButton.multipleTouchEnabled = YES;
+    self.doneButton = (UIButton *)[self.graceView viewWithTag:12];
+    [self.doneButton addTarget:self action:@selector(enterStandingDoneState) forControlEvents:UIControlEventTouchUpInside];
     
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     self.mapView = (MKMapView *)[self.doneView viewWithTag:16];
