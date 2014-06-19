@@ -79,6 +79,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 
 // Grace view controls
 @property (strong) IBOutlet UIImageView *graceButton;
+@property (strong) IBOutlet UILabel *countdownLabel;
 @property (strong) IBOutlet UIButton *doneButton;
 
 // Done view controls

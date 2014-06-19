@@ -60,6 +60,7 @@
 @synthesize standingSeconds;
 
 @synthesize graceButton;
+@synthesize countdownLabel;
 @synthesize doneButton;
 
 @synthesize mapView;
@@ -134,6 +135,7 @@
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
     self.graceButton.multipleTouchEnabled = YES;
+    self.countdownLabel = (UILabel *)[self.graceView viewWithTag:13];
     self.doneButton = (UIButton *)[self.graceView viewWithTag:12];
     [self.doneButton addTarget:self action:@selector(enterStandingDoneState) forControlEvents:UIControlEventTouchUpInside];
     
@@ -405,6 +407,8 @@
     NSDate *now = [[NSDate alloc] init];
     
     NSTimeInterval interval = [now timeIntervalSinceDate:self.graceStart];
+    
+    self.countdownLabel.text = [NSString stringWithFormat:@"%d", 5-(int)interval];
     
     pauseSeconds += 1.0;
     
