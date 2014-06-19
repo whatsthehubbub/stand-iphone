@@ -15,36 +15,35 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="16" id="mNt-CO-6lv" customClass="FontLabel">
-                    <rect key="frame" x="25" y="45" width="270" height="160"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aae-sh-the">
+                    <rect key="frame" x="15" y="232" width="290" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.99607843139999996" green="0.87450980389999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="16" id="mNt-CO-6lv" customClass="FontLabel">
+                    <rect key="frame" x="15" y="283" width="290" height="99"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">Done.
-You stood 
-00 minutes and 
+                    <string key="text">00 minutes and 
 00 seconds for 
-[something].</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <color key="textColor" red="0.2901960784" green="0.28934762773722628" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+[something]</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in [location]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q0l-bm-Cbq">
+                    <rect key="frame" x="15" y="390" width="290" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tS8-3M-K9F" customClass="ActionButton">
-                    <rect key="frame" x="25" y="371" width="270" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                    <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="view on web">
-                        <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U3r-t0-byB" customClass="ActionButton">
                     <rect key="frame" x="0.0" y="508" width="160" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.33333333329999998" green="0.68627450980000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                     <state key="normal" title="share">
                         <color key="titleColor" red="0.96433052007299269" green="0.96481523722627738" blue="0.96470588239999699" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -65,7 +64,7 @@ You stood
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.96433052009999998" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.99607843139999996" green="0.87450980389999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
