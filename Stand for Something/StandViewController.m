@@ -65,7 +65,7 @@
 @synthesize mapView;
 @synthesize doneText;
 @synthesize tweetButton;
-@synthesize webButton;
+@synthesize shareButton;
 @synthesize againButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -140,10 +140,8 @@
     self.doneView = [self loadSubViewFromNib:@"DoneView"];
     self.mapView = (MKMapView *)[self.doneView viewWithTag:16];
     self.doneText = (UILabel *)[self.doneView viewWithTag:12];
-    self.tweetButton = (UIButton *)[self.doneView viewWithTag:13];
-    [self.tweetButton addTarget:self action:@selector(tweetResult) forControlEvents:UIControlEventTouchUpInside];
-    self.webButton = (UIButton *)[self.doneView viewWithTag:14];
-    [self.webButton addTarget:self action:@selector(openLink) forControlEvents:UIControlEventTouchUpInside];
+    self.shareButton = (UIButton *)[self.doneView viewWithTag:14];
+    [self.shareButton addTarget:self action:@selector(openActivityViewController) forControlEvents:UIControlEventTouchUpInside];
     self.againButton = (UIButton *)[self.doneView viewWithTag:15];
     [self.againButton addTarget:self action:@selector(enterStandingBeforeState) forControlEvents:UIControlEventTouchUpInside];
 
@@ -529,10 +527,6 @@
     [self showGraceView];
 }
 
-- (void)shareResult {
-    [self performSegueWithIdentifier:@"ShareModal" sender:self];
-}
-
 - (void)showHelp {
     self.helpView.hidden = NO;
     self.helpView.alpha = 0.0;
@@ -560,40 +554,13 @@
     }];
 }
 
-- (void)openLink {
-    NSString *urlString = [NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid];
+- (void)openActivityViewController {
+    NSString *text = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [standManager getDurationString], textField.text];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]];
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-}
-
-- (void)tweetResult {
-    // TODO do this check on viewDidLoad and modify UI according to service availability
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-        SLComposeViewController *slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        
-        [slvc setInitialText:[NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [standManager getDurationString], textField.text]];
-        
-        // TODO test adding the URL
-        [slvc addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]]];
-        
-        [slvc setCompletionHandler:^(SLComposeViewControllerResult result) {
-            switch (result) {
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"posted tweet");
-                    
-                    break;
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Cancelled tweet");
-                    
-                    break;
-                default:
-                    break;
-            }
-            
-        }];
-        
-        [self presentViewController:slvc animated:YES completion:nil];
-    }
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[text, url] applicationActivities:nil];
+    
+    [[self navigationController] presentViewController:avc animated:YES completion:nil];
 }
 
 - (void)showStartView {

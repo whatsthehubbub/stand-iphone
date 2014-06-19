@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, StandingState) {
 @property (strong) IBOutlet MKMapView *mapView;
 @property (strong) IBOutlet UILabel *doneText;
 @property (strong) IBOutlet UIButton *tweetButton;
-@property (strong) IBOutlet UIButton *webButton;
+@property (strong) IBOutlet UIButton *shareButton;
 @property (strong) IBOutlet UIButton *againButton;
 
 - (void)startStanding;
