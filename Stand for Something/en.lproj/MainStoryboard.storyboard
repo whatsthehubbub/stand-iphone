@@ -57,12 +57,11 @@
 many things in 
 the world we 
 care about.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                                <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="mHj-gp-pbL">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -79,12 +78,11 @@ care about.</string>
 to spring into 
 action for one of 
 them. It's easy...</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                                <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="Ujx-P4-WGh">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -101,15 +99,17 @@ them. It's easy...</string>
 in mind, find 
 a spot, and start 
 standing for it!</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <color key="textColor" red="0.2901960784" green="0.2893476277" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                                <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NLl-rb-l7c">
-                                                <rect key="frame" x="270" y="20" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" image="06-button-close">
+                                                <rect key="frame" x="75" y="345" width="170" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="START STANDING">
+                                                    <color key="titleColor" red="0.99607843139999996" green="0.87450980389999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -118,7 +118,6 @@ standing for it!</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <connections>
@@ -130,6 +129,7 @@ standing for it!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.87450980389999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="progressImage" destination="FgG-IF-W6K" id="kg7-x6-JVM"/>
