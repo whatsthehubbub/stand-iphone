@@ -32,7 +32,7 @@
 - (void)setFontStyle {
     CGFloat fontSize = self.titleLabel.font.pointSize;
     
-    [self.titleLabel setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
+    [self.titleLabel setFont:[UIFont fontWithName:@"JeanLuc-Bold" size:fontSize]];
 }
 
 /*

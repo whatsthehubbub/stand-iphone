@@ -146,7 +146,7 @@
 
     // Setup the textfield size and value
     CGFloat fontSize = self.textField.font.pointSize;
-    [self.textField setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
+    [self.textField setFont:[UIFont fontWithName:@"JeanLuc-Bold" size:fontSize]];
     
     if (![standManager.message isEqualToString:@""]) {
         self.textField.text = standManager.message;

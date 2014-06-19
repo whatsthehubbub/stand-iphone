@@ -10,6 +10,8 @@
 		12CB6BF2AD854A26A910C8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1116FFBCD472C835517F8 /* libPods.a */; };
 		4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */; };
 		4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4765BB3818B4E22A001AA068 /* Images.xcassets */; };
+		4E058B0919530EF20047CF76 /* JeanLuc-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */; };
+		4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */; };
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
 		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
 		4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7171799E6E300BA6C32 /* UIKit.framework */; };
@@ -258,11 +260,13 @@
 				4E0EF7221799E6E300BA6C32 /* InfoPlist.strings in Resources */,
 				4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */,
 				4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */,
+				4E058B0919530EF20047CF76 /* JeanLuc-Bold.otf in Resources */,
 				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
 				4E302154180864880076FACB /* DoneView.xib in Resources */,
 				4E302150180863950076FACB /* GraceView.xib in Resources */,
 				4E302152180864640076FACB /* StartView.xib in Resources */,
+				4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */,
 				4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */,
 				4E30214E1808636C0076FACB /* StandingView.xib in Resources */,
 			);

@@ -31,6 +31,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Chunk.otf</string>
+		<string>JeanLuc-Bold.otf</string>
+		<string>JeanLuc-Thin.otf</string>
 		<string>Courier Prime Bold.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>

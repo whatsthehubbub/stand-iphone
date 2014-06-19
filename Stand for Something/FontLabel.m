@@ -32,7 +32,7 @@
 - (void)setFontStyle {
     CGFloat fontSize = self.font.pointSize;
     
-    [self setFont:[UIFont fontWithName:@"ChunkFive" size:fontSize]];
+    [self setFont:[UIFont fontWithName:@"JeanLuc-Bold" size:fontSize]];
 }
 
 /*
