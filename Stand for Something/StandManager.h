@@ -22,5 +22,7 @@
 +(id)sharedManager;
 
 - (NSString *)getDurationString;
+- (NSString *)getDurationStringWithBreaks;
+- (NSString *)getDurationStringWithOrWithoutBreaks:(BOOL)breaks;
 
 @end
