@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "03-button-stand-warning.png"
+      "filename" : "standing-warning-button.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "03-button-stand-warning@2x.png"
+      "filename" : "standing-warning-button@2x.png"
     }
   ],
   "info" : {
