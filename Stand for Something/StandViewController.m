@@ -412,7 +412,6 @@
     
     if ((int)interval > 4) {
         [self enterStandingDoneState];
-        [self.graceTimer invalidate];
     }
 }
 
@@ -450,6 +449,9 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
+    
+    // If there was a grace timer running, invalidate it
+    [self.graceTimer invalidate];
     
     [self showDoneView];
     
