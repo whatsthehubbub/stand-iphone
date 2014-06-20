@@ -578,7 +578,7 @@
 }
 
 - (void)clearButtonPressed {
-    self.textField.userInteractionEnabled = YES;
+//    self.textField.userInteractionEnabled = YES;
     [self.textField becomeFirstResponder];
 }
 
