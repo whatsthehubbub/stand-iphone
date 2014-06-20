@@ -12,6 +12,7 @@
 		4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4765BB3818B4E22A001AA068 /* Images.xcassets */; };
 		4E058B0919530EF20047CF76 /* JeanLuc-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */; };
 		4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */; };
+		4E058B0D195440B50047CF76 /* LightFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E058B0C195440B50047CF76 /* LightFontLabel.m */; };
 		4E0D1FEF17AD3B97006B9098 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */; };
 		4E0D1FF417AD557C006B9098 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0D1FF317AD557C006B9098 /* CoreMotion.framework */; };
 		4E0EF7181799E6E300BA6C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0EF7171799E6E300BA6C32 /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 		471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Bold.otf"; sourceTree = "<group>"; };
 		471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Thin.otf"; sourceTree = "<group>"; };
 		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4E058B0B195440B50047CF76 /* LightFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightFontLabel.h; sourceTree = "<group>"; };
+		4E058B0C195440B50047CF76 /* LightFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightFontLabel.m; sourceTree = "<group>"; };
 		4E0D1FEE17AD3B97006B9098 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E0D1FF317AD557C006B9098 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4E0EF7141799E6E300BA6C32 /* Standing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +155,8 @@
 				4E30214C180863540076FACB /* CustomViews */,
 				4E80F02517CFDA3E00194023 /* FontLabel.h */,
 				4E80F02617CFDA3E00194023 /* FontLabel.m */,
+				4E058B0B195440B50047CF76 /* LightFontLabel.h */,
+				4E058B0C195440B50047CF76 /* LightFontLabel.m */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
 				4E398F8418AE678000F105A4 /* NSDictionary+URLEncoding.h */,
 				4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */,
@@ -326,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E058B0D195440B50047CF76 /* LightFontLabel.m in Sources */,
 				4E0EF7241799E6E300BA6C32 /* main.m in Sources */,
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E92042618AA87A90012A839 /* StandManager.m in Sources */,
