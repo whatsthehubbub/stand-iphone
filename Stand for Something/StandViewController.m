@@ -188,7 +188,7 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    if (self.standingState==StandingGraceMovement || self.standingState==StandingGraceTouch) {
+    if (self.standingState==StandingGraceMovement || self.standingState==StandingGraceTouch || self.standingState==StandingDone) {
         return UIStatusBarStyleLightContent;
     } else {
         return UIStatusBarStyleDefault;
