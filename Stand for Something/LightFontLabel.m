@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Hubbub. All rights reserved.
 //
 
-#import "FontLabel.h"
+#import "LightFontLabel.h"
 
-@implementation FontLabel
+@implementation LightFontLabel
 
 - (id)initWithFrame:(CGRect)frame
 {

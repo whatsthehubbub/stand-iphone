@@ -30,7 +30,6 @@
 		4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E398F8518AE678000F105A4 /* NSDictionary+URLEncoding.m */; };
 		4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */; };
 		4E6BB4DF18B64B65008B2F64 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */; };
-		4E80F00F17CF938F00194023 /* Chunk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F00E17CF938F00194023 /* Chunk.otf */; };
 		4E80F01917CFCBDB00194023 /* kant.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4E80F01817CFCBDB00194023 /* kant.gpx */; };
 		4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F01B17CFCCF100194023 /* ActionButton.m */; };
 		4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E80F02617CFDA3E00194023 /* FontLabel.m */; };
@@ -71,7 +70,6 @@
 		4E48B7AE18BF6B1100969BC9 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		4E48B7AF18BF6B1100969BC9 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		4E6BB4DE18B64B65008B2F64 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		4E80F00E17CF938F00194023 /* Chunk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunk.otf; sourceTree = "<group>"; };
 		4E80F01817CFCBDB00194023 /* kant.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kant.gpx; sourceTree = "<group>"; };
 		4E80F01A17CFCCF100194023 /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
 		4E80F01B17CFCCF100194023 /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				4E80F01817CFCBDB00194023 /* kant.gpx */,
-				4E80F00E17CF938F00194023 /* Chunk.otf */,
 				4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */,
 				471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */,
 				471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */,
@@ -266,7 +263,6 @@
 				4E0EF7311799E6E300BA6C32 /* MainStoryboard.storyboard in Resources */,
 				4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */,
 				4E058B0919530EF20047CF76 /* JeanLuc-Bold.otf in Resources */,
-				4E80F00F17CF938F00194023 /* Chunk.otf in Resources */,
 				4E80F01917CFCBDB00194023 /* kant.gpx in Resources */,
 				4E302154180864880076FACB /* DoneView.xib in Resources */,
 				4E302150180863950076FACB /* GraceView.xib in Resources */,
