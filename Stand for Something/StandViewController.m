@@ -125,6 +125,11 @@
     [clearButton addTarget:self action:@selector(clearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     self.textField.rightViewMode = UITextFieldViewModeUnlessEditing;
     [self.textField setRightView:clearButton];
+    // We need a button of the same size left otherwise the text isn't centered (stupid apple)
+    UIButton *spacerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [spacerButton setFrame:clearButton.frame];
+    self.textField.leftViewMode = UITextFieldViewModeUnlessEditing;
+    self.textField.leftView = spacerButton;
     
     self.helpView = (UIView *)[self.startView viewWithTag:14];
     self.howToButton = (UIButton *)[self.startView viewWithTag:15];
