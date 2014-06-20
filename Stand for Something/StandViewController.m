@@ -672,6 +672,8 @@
     self.standingState = DontAllowStart;
     
     textField.text = @"";
+    
+    textField.rightView.hidden = YES;
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
@@ -680,6 +682,10 @@
     }
     
     return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    textField.rightView.hidden = NO;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
