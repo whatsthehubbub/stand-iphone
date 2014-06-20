@@ -73,9 +73,12 @@ typedef NS_ENUM(NSInteger, StandingState) {
 
 // Standing view controls
 @property (strong) IBOutlet UILabel *standingText;
-@property (strong) IBOutlet UILabel *standingHours;
-@property (strong) IBOutlet UILabel *standingMinutes;
-@property (strong) IBOutlet UILabel *standingSeconds;
+@property (strong) IBOutlet UILabel *standingHoursL;
+@property (strong) IBOutlet UILabel *standingHoursR;
+@property (strong) IBOutlet UILabel *standingMinutesL;
+@property (strong) IBOutlet UILabel *standingMinutesR;
+@property (strong) IBOutlet UILabel *standingSecondsL;
+@property (strong) IBOutlet UILabel *standingSecondsR;
 
 // Grace view controls
 @property (strong) IBOutlet UIImageView *graceButton;

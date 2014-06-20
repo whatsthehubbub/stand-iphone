@@ -55,9 +55,12 @@
 @synthesize closeHelpButton;
 
 @synthesize standingText;
-@synthesize standingHours;
-@synthesize standingMinutes;
-@synthesize standingSeconds;
+@synthesize standingHoursL;
+@synthesize standingHoursR;
+@synthesize standingMinutesL;
+@synthesize standingMinutesR;
+@synthesize standingSecondsL;
+@synthesize standingSecondsR;
 
 @synthesize graceButton;
 @synthesize countdownLabel;
@@ -133,9 +136,13 @@
     
     self.standingView = [self loadSubViewFromNib:@"StandingView"];
     self.standingText = (UILabel *)[self.standingView viewWithTag:11];
-    self.standingHours = (UILabel *)[self.standingView viewWithTag:14];
-    self.standingMinutes = (UILabel *)[self.standingView viewWithTag:12];
-    self.standingSeconds = (UILabel *)[self.standingView viewWithTag:13];
+    
+    self.standingHoursL = (UILabel *)[self.standingView viewWithTag:12];
+    self.standingHoursR = (UILabel *)[self.standingView viewWithTag:13];
+    self.standingMinutesL = (UILabel *)[self.standingView viewWithTag:14];
+    self.standingMinutesR = (UILabel *)[self.standingView viewWithTag:15];
+    self.standingSecondsL = (UILabel *)[self.standingView viewWithTag:16];
+    self.standingSecondsR = (UILabel *)[self.standingView viewWithTag:17];
     
     self.graceView = [self loadSubViewFromNib:@"GraceView"];
     self.graceButton = (UIImageView *)[self.graceView viewWithTag:11];
@@ -429,9 +436,14 @@
     int minutes = ((int)interval - (hours * 60 * 60)) / 60;
     int seconds = (int)interval - (hours * 60 * 60) - (minutes * 60);
     
-    self.standingHours.text = [NSString stringWithFormat:@"%02d", hours];
-    self.standingMinutes.text = [NSString stringWithFormat:@"%02d", minutes];
-    self.standingSeconds.text = [NSString stringWithFormat:@"%02d", seconds];
+    self.standingHoursL.text = [NSString stringWithFormat:@"%d", hours / 10];
+    self.standingHoursR.text = [NSString stringWithFormat:@"%d", hours % 10];
+    
+    self.standingMinutesL.text = [NSString stringWithFormat:@"%d", minutes / 10];
+    self.standingMinutesR.text = [NSString stringWithFormat:@"%d", minutes % 10];
+    
+    self.standingSecondsL.text = [NSString stringWithFormat:@"%d", seconds / 10];
+    self.standingSecondsR.text = [NSString stringWithFormat:@"%d", seconds % 10];
     
     self.doneText.text = [NSString stringWithFormat:@"%@ for\n%@.", [standManager getDurationStringWithBreaks], standManager.message];
 }
