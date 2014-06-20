@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12CB6BF2AD854A26A910C8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF1116FFBCD472C835517F8 /* libPods.a */; };
-		4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */; };
 		4765BB3918B4E22A001AA068 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4765BB3818B4E22A001AA068 /* Images.xcassets */; };
 		4E058B0919530EF20047CF76 /* JeanLuc-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */; };
 		4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */; };
@@ -41,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier Prime Bold.ttf"; sourceTree = "<group>"; };
 		471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Bold.otf"; sourceTree = "<group>"; };
 		471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JeanLuc-Thin.otf"; sourceTree = "<group>"; };
 		4765BB3818B4E22A001AA068 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				4E80F01817CFCBDB00194023 /* kant.gpx */,
-				4702DFA418BE29E8004B084F /* Courier Prime Bold.ttf */,
 				471F3A891951BDCC001D3634 /* JeanLuc-Bold.otf */,
 				471F3A8A1951BDCC001D3634 /* JeanLuc-Thin.otf */,
 				4E0EF71F1799E6E300BA6C32 /* Stand for Something-Info.plist */,
@@ -268,7 +265,6 @@
 				4E302150180863950076FACB /* GraceView.xib in Resources */,
 				4E302152180864640076FACB /* StartView.xib in Resources */,
 				4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */,
-				4702DFA518BE29E8004B084F /* Courier Prime Bold.ttf in Resources */,
 				4E30214E1808636C0076FACB /* StandingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

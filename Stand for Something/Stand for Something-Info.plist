@@ -32,7 +32,6 @@
 	<array>
 		<string>JeanLuc-Bold.otf</string>
 		<string>JeanLuc-Thin.otf</string>
-		<string>Courier Prime Bold.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
