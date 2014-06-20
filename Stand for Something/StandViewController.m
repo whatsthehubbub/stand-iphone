@@ -112,6 +112,17 @@
     [self.helpButton addTarget:self action:@selector(showHelp) forControlEvents:UIControlEventTouchUpInside];
     self.textField = (UITextField *)[self.startView viewWithTag:13];
     self.textField.delegate = self;
+    
+    UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *clearImage = [UIImage imageNamed:@"edit-icon"];
+    [clearButton setImage:clearImage forState:UIControlStateNormal];
+    // TODO create a subclass of UITextField to increase right padding
+    [clearButton setImageEdgeInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
+    [clearButton setFrame:CGRectMake(0.0, 0.0, clearImage.size.width, clearImage.size.height)];
+    [clearButton addTarget:self action:@selector(clearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    self.textField.rightViewMode = UITextFieldViewModeUnlessEditing;
+    [self.textField setRightView:clearButton];
+    
     self.helpView = (UIView *)[self.startView viewWithTag:14];
     self.howToButton = (UIButton *)[self.startView viewWithTag:15];
     [self.howToButton addTarget:self action:@selector(showIntro) forControlEvents:UIControlEventTouchUpInside];
@@ -558,6 +569,11 @@
     } completion:^(BOOL finished) {
         self.helpView.hidden = YES;
     }];
+}
+
+- (void)clearButtonPressed {
+    self.textField.userInteractionEnabled = YES;
+    [self.textField becomeFirstResponder];
 }
 
 - (void)openActivityViewController {
