@@ -153,7 +153,7 @@ and start standing!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="yhz-FS-0Tg">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="596"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="624"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hub-br-rTZ" customClass="FontLabel">
@@ -164,11 +164,13 @@ and start standing!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="99" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45r-VX-Qah">
-                                                <rect key="frame" x="25" y="55" width="270" height="391"/>
+                                                <rect key="frame" x="25" y="55" width="270" height="425"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <string key="text">"Standing" is an app for playful activism. Go outside, find a public place and get standing for a cause. 
 
-After standing, you can specify the cause you stood for, and share a link to the session’s public web page. This shows how long, when and where you stood for your cause. 
+While standing your location, cause and the duration of your session are shown live but anonymously on the Standing website.
+
+After standing, you can share a link to the session’s public web page. 
 
 Standing was made by Hubbub, who for this project consisted of Alper Çugun, Kars Alfrink and Simon Scheiber. Copyright 2013-2014.
 
@@ -178,7 +180,7 @@ The typefaces are Jean-Luc by Carvalho Bernau and Courier New.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Qe-tu-JxF" customClass="ActionButton">
-                                                <rect key="frame" x="75" y="472" width="170" height="42"/>
+                                                <rect key="frame" x="75" y="490" width="170" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -191,7 +193,7 @@ The typefaces are Jean-Luc by Carvalho Bernau and Courier New.</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WXr-mH-KK4" customClass="ActionButton">
-                                                <rect key="frame" x="75" y="534" width="170" height="42"/>
+                                                <rect key="frame" x="75" y="552" width="170" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
