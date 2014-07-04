@@ -13,7 +13,7 @@
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" id="ibk-xE-Rrg" customClass="FontLabel">
                     <rect key="frame" x="25" y="58" width="270" height="70"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <string key="text">You are standing
 for (a rather long cause)</string>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -22,7 +22,7 @@ for (a rather long cause)</string>
                 </label>
                 <view contentMode="scaleToFill" id="gXR-BZ-Qi2">
                     <rect key="frame" x="0.0" y="156" width="320" height="72"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LEf-rb-IKc" customClass="FontLabel">
                             <rect key="frame" x="26" y="0.0" width="40" height="55"/>
@@ -105,7 +105,7 @@ for (a rather long cause)</string>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="02-button-stand-pressed" id="7qW-02-Wxi">
                     <rect key="frame" x="40" y="265" width="240" height="240"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.99607843139999996" green="0.87450980389999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
