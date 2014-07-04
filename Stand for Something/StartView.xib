@@ -45,19 +45,19 @@ standing for?</string>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bvb-N4-qm7" customClass="ActionButton">
-                            <rect key="frame" x="0.0" y="448" width="320" height="60"/>
+                            <rect key="frame" x="0.0" y="508" width="320" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" red="0.33333333333333331" green="0.68627450980392157" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                            <state key="normal" title="How-to">
+                            <state key="normal" title="Help">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hG4-HG-Vkb" customClass="ActionButton">
-                            <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                            <rect key="frame" x="0.0" y="448" width="320" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.33333333329999998" green="0.68627450980000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <state key="normal" title="About">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
