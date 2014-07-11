@@ -13,4 +13,6 @@
 
 @property (strong) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UIView *aboutContent;
+
 @end
