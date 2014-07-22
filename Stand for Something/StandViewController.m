@@ -473,6 +473,9 @@
     self.standingState = StandingGraceTouch;
     [self setNeedsStatusBarAppearanceUpdate];
     
+    // Reset the counter on the grace countdown
+    self.countdownLabel.text = [NSString stringWithFormat:@"%d", 5];
+    
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
 
     self.graceStart = [[NSDate alloc] init];
@@ -489,6 +492,9 @@
     
     self.standingState = StandingGraceMovement;
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    // Reset the counter on the grace countdown
+    self.countdownLabel.text = [NSString stringWithFormat:@"%d", 5];
     
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
