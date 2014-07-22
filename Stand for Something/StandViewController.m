@@ -140,6 +140,9 @@
 - (void)enterStandingBeforeState {
     NSLog(@"Enter standing before state");
     
+    self.standingState = StandingBefore;
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     // The help should be hidden for when we stand again
     [self hideHelp];
     
