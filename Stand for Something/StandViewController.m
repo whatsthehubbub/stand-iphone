@@ -14,64 +14,6 @@
 
 @implementation StandViewController
 
-@synthesize locationManager;
-@synthesize currentLocation;
-
-@synthesize standManager;
-
-@synthesize urlSession;
-@synthesize requestOperation;
-
-@synthesize motionManager;
-
-@synthesize smoothX;
-@synthesize smoothY;
-@synthesize smoothZ;
-
-@synthesize currentTouches;
-
-@synthesize standingState;
-
-@synthesize startTime;
-@synthesize endTime;
-@synthesize secondTimer;
-@synthesize pauseSeconds;
-
-@synthesize graceTimer;
-@synthesize graceStart;
-
-@synthesize containerView;
-@synthesize startView;
-@synthesize standingView;
-@synthesize graceView;
-@synthesize doneView;
-
-@synthesize startButton;
-@synthesize helpButton;
-@synthesize textField;
-@synthesize helpView;
-@synthesize howToButton;
-@synthesize aboutButton;
-@synthesize closeHelpButton;
-
-@synthesize standingText;
-@synthesize standingHoursL;
-@synthesize standingHoursR;
-@synthesize standingMinutesL;
-@synthesize standingMinutesR;
-@synthesize standingSecondsL;
-@synthesize standingSecondsR;
-
-@synthesize graceButton;
-@synthesize countdownLabel;
-@synthesize doneButton;
-
-@synthesize mapView;
-@synthesize doneText;
-@synthesize tweetButton;
-@synthesize shareButton;
-@synthesize againButton;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -168,8 +110,8 @@
     CGFloat fontSize = self.textField.font.pointSize;
     [self.textField setFont:[UIFont fontWithName:@"JeanLuc-Bold" size:fontSize]];
     
-    if (![standManager.message isEqualToString:@""]) {
-        self.textField.text = standManager.message;
+    if (![self.standManager.message isEqualToString:@""]) {
+        self.textField.text = self.standManager.message;
     }
     
     [self enterStandingBeforeState];
@@ -220,10 +162,10 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     // Get location from StandManager
-    NSLog(@"Got location back from store %f", standManager.coordinate.latitude);
+    NSLog(@"Got location back from store %f", self.standManager.coordinate.latitude);
     
     // Post it to our webservice
-    NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:standManager.coordinate.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:standManager.coordinate.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"message": standManager.message};
+    NSDictionary *parameters = @{@"lat": [[NSNumber numberWithDouble:self.standManager.coordinate.latitude] stringValue], @"lon": [[NSNumber numberWithDouble:self.standManager.coordinate.longitude] stringValue], @"vendorid": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"message": self.standManager.message};
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSOperationQueue *delegateQueue = [[NSOperationQueue alloc] init];
@@ -257,11 +199,11 @@
                 
                 NSLog(@"Got data %@", json);
                 
-                standManager.secret = [json objectForKey:@"secret"];
-                standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
+                self.standManager.secret = [json objectForKey:@"secret"];
+                self.standManager.sessionid = [[json objectForKey:@"sessionid"] intValue];
                 
                 // Reset these to reasonable defaults
-                standManager.duration = 0;
+                self.standManager.duration = 0;
                 
                 NSLog(@"Finishing first request");
             }];
@@ -277,31 +219,31 @@
     [self.urlSession.delegateQueue addOperation:firstOperation];
     
     
-    if (nil == motionManager) {
-        motionManager = [[CMMotionManager alloc] init];
+    if (nil == self.motionManager) {
+        self.motionManager = [[CMMotionManager alloc] init];
     }
     
     self.startTime = [[NSDate alloc] init];
     
     self.secondTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(incrementTime) userInfo:nil repeats:YES];
     
-    motionManager.deviceMotionUpdateInterval = 1/15.0;
+    self.motionManager.deviceMotionUpdateInterval = 1/15.0;
     
-    if (motionManager.deviceMotionAvailable) {
-        [motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
+    if (self.motionManager.deviceMotionAvailable) {
+        [self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMDeviceMotion *motion, NSError *error) {
             
             CMAcceleration userAcceleration = motion.userAcceleration;
             
             double RC = 0.4;
             double alpha = 1/15.0 / (RC + 1/15.0);
             
-            smoothX = (alpha * ABS(userAcceleration.x)) + (1.0 - alpha) * smoothX;
-            smoothY = (alpha * ABS(userAcceleration.y)) + (1.0 - alpha) * smoothY;
-            smoothZ = (alpha * ABS(userAcceleration.z)) + (1.0 - alpha) * smoothZ;
+            self.smoothX = (alpha * ABS(userAcceleration.x)) + (1.0 - alpha) * self.smoothX;
+            self.smoothY = (alpha * ABS(userAcceleration.y)) + (1.0 - alpha) * self.smoothY;
+            self.smoothZ = (alpha * ABS(userAcceleration.z)) + (1.0 - alpha) * self.smoothZ;
 
 //            NSLog(@"Smooth motion: %.2f, %.2f, %.2f", smoothX, smoothY, smoothZ);
             
-            double smoothSum = smoothX + smoothY + smoothZ;
+            double smoothSum = self.smoothX + self.smoothY + self.smoothZ;
             
             if (smoothSum > 0.2) {
                 // Done standing, you did a step
@@ -346,11 +288,11 @@
             
             if (location.x > 0.0 && location.x < self.startButton.frame.size.width && location.y > 0.0 && location.y < self.startButton.frame.size.height) {
                 NSLog(@"Qualifies");
-                [currentTouches addObject:touch];
+                [self.currentTouches addObject:touch];
             }
         }
         
-        if ([currentTouches count] > 0) {
+        if ([self.currentTouches count] > 0) {
             if (self.standingState==StandingBefore) {
                 [self startStanding];
             } else if (self.standingState == StandingGraceTouch) {
@@ -368,10 +310,10 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
-        [currentTouches removeObject:touch];
+        [self.currentTouches removeObject:touch];
     }
     
-    if ([currentTouches count] == 0) {
+    if ([self.currentTouches count] == 0) {
         if (self.standingState == StandingDuring || self.standingState == StandingGraceMovement) {
             [self enterStandingGraceTouchState];
         }
@@ -384,16 +326,16 @@
     NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
     
     // Update duration in our shared object
-    standManager.duration = (int)(interval - pauseSeconds);
+    self.standManager.duration = (int)(interval - self.pauseSeconds);
     
-    [self setTimeOnViews:interval-pauseSeconds];
+    [self setTimeOnViews:interval-self.pauseSeconds];
     
     if (self.standingState == StandingDuring) {
         if ((int)interval % 60 /*240*/ == 0) {
             // Send a keep alive to the server every minute with data about the time
             NSLog(@"Sending keep alive");
             
-            NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid]};
+            NSDictionary *parameters = @{@"secret": self.standManager.secret, @"sessionid": [NSNumber numberWithInt:self.standManager.sessionid]};
             
             NSURL *url = [NSURL URLWithString:@"http://getstanding.com/live"];
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -427,7 +369,7 @@
     
     self.countdownLabel.text = [NSString stringWithFormat:@"%d", 5-(int)interval];
     
-    pauseSeconds += 1.0;
+    self.pauseSeconds += 1.0;
     
     NSLog(@"Increment grace time %d", (int)interval);
     
@@ -450,7 +392,7 @@
     self.standingSecondsL.text = [NSString stringWithFormat:@"%d", seconds / 10];
     self.standingSecondsR.text = [NSString stringWithFormat:@"%d", seconds % 10];
     
-    self.doneText.text = [NSString stringWithFormat:@"%@ for\n%@.", [standManager getDurationStringWithBreaks], standManager.message];
+    self.doneText.text = [NSString stringWithFormat:@"%@ for\n%@.", [self.standManager getDurationStringWithBreaks], self.standManager.message];
 }
 
 - (void)enterStandingDuringState {
@@ -459,7 +401,7 @@
     self.standingState = StandingDuring;
     [self setNeedsStatusBarAppearanceUpdate];
     
-    self.standingText.text = [NSString stringWithFormat:@"You are standing \nfor %@", standManager.message];
+    self.standingText.text = [NSString stringWithFormat:@"You are standing \nfor %@", self.standManager.message];
     
     if (self.graceTimer) {
         [self.graceTimer invalidate];
@@ -481,13 +423,13 @@
     
     [self showDoneView];
     
-    if (standManager.secret) {
+    if (self.standManager.secret) {
         // If we don't have this the first request failed and we should not be doing this
         
         NSOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
             NSLog(@"Starting second block");
             
-            NSDictionary *parameters = @{@"secret": standManager.secret, @"sessionid": [NSNumber numberWithInt:standManager.sessionid], @"duration": [NSNumber numberWithInt:standManager.duration]};
+            NSDictionary *parameters = @{@"secret": self.standManager.secret, @"sessionid": [NSNumber numberWithInt:self.standManager.sessionid], @"duration": [NSNumber numberWithInt:self.standManager.duration]};
             
             NSURL *url = [NSURL URLWithString:@"http://getstanding.com/done"];
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -588,8 +530,8 @@
 }
 
 - (void)openActivityViewController {
-    NSString *text = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [standManager getDurationString], textField.text];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", standManager.sessionid]];
+    NSString *text = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [self.standManager getDurationString], self.textField.text];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", self.standManager.sessionid]];
     
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[text, url] applicationActivities:nil];
     avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList];
@@ -652,9 +594,9 @@
     NSLog(@"Get location %f x %f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude);
     
     // Store the current location in our model
-    standManager.coordinate = self.currentLocation.coordinate;
+    self.standManager.coordinate = self.currentLocation.coordinate;
     
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(standManager.coordinate, 1000, 1000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.standManager.coordinate, 1000, 1000);
     [self.mapView setRegion:region];
 }
 
@@ -683,7 +625,7 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     if ([textField.text isEqualToString:@""]) {
-        textField.text = standManager.message;
+        textField.text = self.standManager.message;
     }
     
     return YES;
@@ -698,7 +640,7 @@
     
     self.standingState = StandingBefore;
     
-    standManager.message = self.textField.text;
+    self.standManager.message = self.textField.text;
     
     return YES;
 }
