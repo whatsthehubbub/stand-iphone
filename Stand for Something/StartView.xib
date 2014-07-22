@@ -20,7 +20,7 @@ standing for?</string>
                     <color key="textColor" red="1" green="0.29019607843137252" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" id="G3D-ZI-sKV">
+                <textField opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="something" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" id="G3D-ZI-sKV" customClass="RightViewMarginTextField">
                     <rect key="frame" x="0.0" y="163" width="320" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,7 +29,7 @@ standing for?</string>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
                 <imageView tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01-button-stand-start" id="wsc-w6-0Qe">
-                    <rect key="frame" x="40" y="265" width="240" height="240"/>
+                    <rect key="frame" x="40" y="265.0000009778887" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" tag="12" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WA2-KF-A78">

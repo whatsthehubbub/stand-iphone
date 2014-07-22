@@ -35,6 +35,7 @@
 		4E92042318AA64D00012A839 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E92042218AA64D00012A839 /* Social.framework */; };
 		4E92042618AA87A90012A839 /* StandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E92042518AA87A90012A839 /* StandManager.m */; };
 		4EBB222418EB6F59009154EB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB222318EB6F58009154EB /* IntroViewController.m */; };
+		4EDA5628197EAF9D00347096 /* RightViewMarginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA5627197EAF9D00347096 /* RightViewMarginTextField.m */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,8 @@
 		4E92042518AA87A90012A839 /* StandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandManager.m; sourceTree = "<group>"; };
 		4EBB222218EB6F58009154EB /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		4EBB222318EB6F58009154EB /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		4EDA5626197EAF9D00347096 /* RightViewMarginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewMarginTextField.h; sourceTree = "<group>"; };
+		4EDA5627197EAF9D00347096 /* RightViewMarginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewMarginTextField.m; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				4E30214C180863540076FACB /* CustomViews */,
 				4E80F02517CFDA3E00194023 /* FontLabel.h */,
 				4E80F02617CFDA3E00194023 /* FontLabel.m */,
+				4EDA5626197EAF9D00347096 /* RightViewMarginTextField.h */,
+				4EDA5627197EAF9D00347096 /* RightViewMarginTextField.m */,
 				4E058B0B195440B50047CF76 /* LightFontLabel.h */,
 				4E058B0C195440B50047CF76 /* LightFontLabel.m */,
 				4E0EF72F1799E6E300BA6C32 /* MainStoryboard.storyboard */,
@@ -332,6 +337,7 @@
 				4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */,
 				4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */,
 				4E398F8618AE678000F105A4 /* NSDictionary+URLEncoding.m in Sources */,
+				4EDA5628197EAF9D00347096 /* RightViewMarginTextField.m in Sources */,
 				4EBB222418EB6F59009154EB /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

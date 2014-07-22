@@ -58,18 +58,18 @@
     self.textField = (UITextField *)[self.startView viewWithTag:13];
     self.textField.delegate = self;
     
-    UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *clearImage = [UIImage imageNamed:@"edit-icon"];
-    [clearButton setImage:clearImage forState:UIControlStateNormal];
+    [editButton setImage:clearImage forState:UIControlStateNormal];
     // TODO create a subclass of UITextField to increase right padding
-    [clearButton setImageEdgeInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
-    [clearButton setFrame:CGRectMake(0.0, 0.0, clearImage.size.width, clearImage.size.height)];
-    [clearButton addTarget:self action:@selector(clearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [editButton setImageEdgeInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
+    [editButton setFrame:CGRectMake(0.0, 0.0, clearImage.size.width, clearImage.size.height)];
+    [editButton addTarget:self action:@selector(clearButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     self.textField.rightViewMode = UITextFieldViewModeUnlessEditing;
-    [self.textField setRightView:clearButton];
+    [self.textField setRightView:editButton];
     // We need a button of the same size left otherwise the text isn't centered (stupid apple)
     UIButton *spacerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [spacerButton setFrame:clearButton.frame];
+    [spacerButton setFrame:editButton.frame];
     self.textField.leftViewMode = UITextFieldViewModeUnlessEditing;
     self.textField.leftView = spacerButton;
     
