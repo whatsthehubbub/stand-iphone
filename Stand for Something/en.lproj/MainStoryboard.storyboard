@@ -153,7 +153,7 @@ and start standing!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="yhz-FS-0Tg">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="624"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="634"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hub-br-rTZ" customClass="FontLabel">
