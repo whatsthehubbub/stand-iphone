@@ -141,4 +141,26 @@
     return (NSString *)returnString;
 }
 
+#pragma mark UIActivityItemSource methods
+
+- (id)activityViewController:(UIActivityViewController *)activityViewController itemForActivityType:(NSString *)activityType {
+    if ([activityType isEqualToString:UIActivityTypePostToTwitter]) {
+        NSString *twitterText = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding.", [self getDurationString], self.message];
+        
+        return twitterText;
+    } else {
+        NSString *text = [NSString stringWithFormat:@"I stood %@ for %@ with the Standing app.", [self getDurationString], self.message];
+        
+        return text;
+    }
+}
+
+- (NSString *)activityViewController:(UIActivityViewController *)activityViewController subjectForActivityType:(NSString *)activityType {
+    return [NSString stringWithFormat:@"Standing for %@", self.message];
+}
+
+- (id)activityViewControllerPlaceholderItem:(UIActivityViewController *)activityViewController {
+    return @"";
+}
+
 @end

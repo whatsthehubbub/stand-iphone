@@ -37,6 +37,7 @@
 		4EBB222418EB6F59009154EB /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB222318EB6F58009154EB /* IntroViewController.m */; };
 		4EDA5628197EAF9D00347096 /* RightViewMarginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA5627197EAF9D00347096 /* RightViewMarginTextField.m */; };
 		4EDAE3DA17B4F17000484E79 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAE3D917B4F17000484E79 /* libz.dylib */; };
+		4EE4639F19B9F3B300470D58 /* OpenInBrowserActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4639E19B9F3B300470D58 /* OpenInBrowserActivity.m */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		4EDA5626197EAF9D00347096 /* RightViewMarginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewMarginTextField.h; sourceTree = "<group>"; };
 		4EDA5627197EAF9D00347096 /* RightViewMarginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewMarginTextField.m; sourceTree = "<group>"; };
 		4EDAE3D917B4F17000484E79 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4EE4639D19B9F3B300470D58 /* OpenInBrowserActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInBrowserActivity.h; sourceTree = "<group>"; };
+		4EE4639E19B9F3B300470D58 /* OpenInBrowserActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInBrowserActivity.m; sourceTree = "<group>"; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
 		9133A8A5D683447690C17793 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 		4E0EF71D1799E6E300BA6C32 /* Stand for Something */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4639919B9ED2100470D58 /* ActivityItems */,
 				4E80F01A17CFCCF100194023 /* ActionButton.h */,
 				4E80F01B17CFCCF100194023 /* ActionButton.m */,
 				4E0EF7261799E6E300BA6C32 /* AppDelegate.h */,
@@ -200,6 +204,15 @@
 				4E302153180864880076FACB /* DoneView.xib */,
 			);
 			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		4EE4639919B9ED2100470D58 /* ActivityItems */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4639D19B9F3B300470D58 /* OpenInBrowserActivity.h */,
+				4EE4639E19B9F3B300470D58 /* OpenInBrowserActivity.m */,
+			);
+			name = ActivityItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 				4E0EF7281799E6E300BA6C32 /* AppDelegate.m in Sources */,
 				4E92042618AA87A90012A839 /* StandManager.m in Sources */,
 				4E48B7B018BF6B1100969BC9 /* AboutViewController.m in Sources */,
+				4EE4639F19B9F3B300470D58 /* OpenInBrowserActivity.m in Sources */,
 				4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */,
 				4E80F01C17CFCCF100194023 /* ActionButton.m in Sources */,
 				4E80F02717CFDA3F00194023 /* FontLabel.m in Sources */,

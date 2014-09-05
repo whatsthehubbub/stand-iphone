@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface StandManager : NSObject
+@interface StandManager : NSObject <UIActivityItemSource>
 
 @property (readwrite) CLLocationCoordinate2D coordinate;
 @property (readwrite) int duration;

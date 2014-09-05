@@ -551,11 +551,12 @@
 }
 
 - (void)openActivityViewController {
-    NSString *text = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [self.standManager getDurationString], self.textField.text];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", self.standManager.sessionid]];
     
-    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[text, url] applicationActivities:nil];
-    avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList];
+    OpenInBrowserActivity *openInBrowserActivity = [[OpenInBrowserActivity alloc] init];
+    
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.standManager, url] applicationActivities:@[openInBrowserActivity]];
+    avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList, UIActivityTypeAirDrop];
     
     [[self navigationController] presentViewController:avc animated:YES completion:nil];
 }
