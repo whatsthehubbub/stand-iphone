@@ -1,25 +1,25 @@
 //
-//  OpenInBrowserActivity.m
+//  CopyLinkToPasteboard.m
 //  Stand for Something
 //
 //  Created by Alper Cugun on 5/9/14.
 //  Copyright (c) 2014 Alper Cugun. All rights reserved.
 //
 
-#import "OpenInBrowserActivity.h"
+#import "CopyLinkToPasteboardActivity.h"
 
-@implementation OpenInBrowserActivity
+@implementation CopyLinkToPasteboardActivity
 
 - (NSString *)activityType {
-    return @"eu.hubbub.standing.openInBrowserActivity";
+    return @"eu.hubbub.standing.copyLinkToPasteboardActivity";
 }
 
 - (NSString *)activityTitle {
-    return @"Open in browser";
+    return @"Copy link";
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"Safari-ios7"];
+    return nil;
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
@@ -41,7 +41,8 @@
 }
 
 - (void)performActivity {
-    [[UIApplication sharedApplication] openURL:self.url];
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+    [pb setString:[self.url absoluteString]];
     
     [self activityDidFinish:YES];
 }
@@ -49,4 +50,5 @@
 + (UIActivityCategory)activityCategory {
     return UIActivityCategoryAction;
 }
+
 @end

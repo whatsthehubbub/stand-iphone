@@ -15,8 +15,8 @@
 
 #import "StandManager.h"
 #import "NSDictionary+URLEncoding.h"
-#import "CustomActivityMessageSource.h"
 #import "OpenInBrowserActivity.h"
+#import "CopyLinkToPasteboardActivity.h"
 
 @interface StandViewController : UIViewController <CLLocationManagerDelegate, UITextFieldDelegate>
 

@@ -554,8 +554,9 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://getstanding.com/s/%d", self.standManager.sessionid]];
     
     OpenInBrowserActivity *openInBrowserActivity = [[OpenInBrowserActivity alloc] init];
+    CopyLinkToPasteboardActivity *copyLinkToPasteBoardActivity = [[CopyLinkToPasteboardActivity alloc] init];
     
-    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.standManager, url] applicationActivities:@[openInBrowserActivity]];
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.standManager, url] applicationActivities:@[openInBrowserActivity, copyLinkToPasteBoardActivity]];
     avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList, UIActivityTypeAirDrop];
     
     [[self navigationController] presentViewController:avc animated:YES completion:nil];
