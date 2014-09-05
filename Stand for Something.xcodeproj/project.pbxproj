@@ -41,6 +41,8 @@
 		4EE463A219B9FC9400470D58 /* CopyLinkToPasteboardActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE463A119B9FC9400470D58 /* CopyLinkToPasteboardActivity.m */; };
 		4EE463A519BA006500470D58 /* Safari-ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE463A319BA006500470D58 /* Safari-ios7@2x.png */; };
 		4EE463A619BA006500470D58 /* Safari-ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE463A419BA006500470D58 /* Safari-ios7.png */; };
+		4EE463A919BA029400470D58 /* Copy-ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE463A719BA029400470D58 /* Copy-ios7.png */; };
+		4EE463AA19BA029400470D58 /* Copy-ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE463A819BA029400470D58 /* Copy-ios7@2x.png */; };
 		4EE7A5FC17B92E8D00B2CF0A /* StandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		4EE463A119B9FC9400470D58 /* CopyLinkToPasteboardActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyLinkToPasteboardActivity.m; sourceTree = "<group>"; };
 		4EE463A319BA006500470D58 /* Safari-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari-ios7@2x.png"; sourceTree = "<group>"; };
 		4EE463A419BA006500470D58 /* Safari-ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari-ios7.png"; sourceTree = "<group>"; };
+		4EE463A719BA029400470D58 /* Copy-ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Copy-ios7.png"; sourceTree = "<group>"; };
+		4EE463A819BA029400470D58 /* Copy-ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Copy-ios7@2x.png"; sourceTree = "<group>"; };
 		4EE7A5FA17B92E8D00B2CF0A /* StandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandViewController.h; sourceTree = "<group>"; };
 		4EE7A5FB17B92E8D00B2CF0A /* StandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandViewController.m; sourceTree = "<group>"; };
 		9133A8A5D683447690C17793 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				4EE463A119B9FC9400470D58 /* CopyLinkToPasteboardActivity.m */,
 				4EE463A319BA006500470D58 /* Safari-ios7@2x.png */,
 				4EE463A419BA006500470D58 /* Safari-ios7.png */,
+				4EE463A719BA029400470D58 /* Copy-ios7.png */,
+				4EE463A819BA029400470D58 /* Copy-ios7@2x.png */,
 			);
 			name = ActivityItems;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 				4E302150180863950076FACB /* GraceView.xib in Resources */,
 				4E302152180864640076FACB /* StartView.xib in Resources */,
 				4E058B0A19530EF60047CF76 /* JeanLuc-Thin.otf in Resources */,
+				4EE463AA19BA029400470D58 /* Copy-ios7@2x.png in Resources */,
+				4EE463A919BA029400470D58 /* Copy-ios7.png in Resources */,
 				4EE463A519BA006500470D58 /* Safari-ios7@2x.png in Resources */,
 				4E30214E1808636C0076FACB /* StandingView.xib in Resources */,
 				4EE463A619BA006500470D58 /* Safari-ios7.png in Resources */,

@@ -557,7 +557,7 @@
     CopyLinkToPasteboardActivity *copyLinkToPasteBoardActivity = [[CopyLinkToPasteboardActivity alloc] init];
     
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[self.standManager, url] applicationActivities:@[openInBrowserActivity, copyLinkToPasteBoardActivity]];
-    avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList, UIActivityTypeAirDrop];
+    avc.excludedActivityTypes = @[UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeCopyToPasteboard];
     
     [[self navigationController] presentViewController:avc animated:YES completion:nil];
 }

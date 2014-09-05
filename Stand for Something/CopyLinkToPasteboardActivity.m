@@ -19,7 +19,7 @@
 }
 
 - (UIImage *)activityImage {
-    return nil;
+    return [UIImage imageNamed:@"Copy-ios7"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
