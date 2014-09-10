@@ -79,7 +79,7 @@
     
     NSString *imageString = [NSString stringWithFormat:@"07-dots-0%d", page];
     
-    NSLog(imageString);
+//    NSLog(imageString);
     
     self.progressImage.image = [UIImage imageNamed:imageString];
 }
