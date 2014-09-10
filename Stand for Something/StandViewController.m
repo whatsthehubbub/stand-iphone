@@ -433,11 +433,6 @@
     
     [self showDoneView];
     
-    // Move the legal link in the map
-    UILabel *legalLabel = [self.mapView.subviews objectAtIndex:1];
-    legalLabel.center = CGPointMake(self.mapView.frame.size.width - legalLabel.center.x, legalLabel.center.y);
-    
-    
     if (self.standManager.secret) {
         // If we don't have this the first request failed and we should not be doing this
         
@@ -474,6 +469,9 @@
         [message show];
     }
     
+    // Move the legal link in the map
+    UILabel *legalLabel = [self.mapView.subviews objectAtIndex:1];
+    legalLabel.center = CGPointMake(300.0, legalLabel.center.y);
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
