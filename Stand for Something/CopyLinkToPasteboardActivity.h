@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MBProgressHUD.h"
+
 @interface CopyLinkToPasteboardActivity : UIActivity
 
 @property (strong, nonatomic) NSURL *url;

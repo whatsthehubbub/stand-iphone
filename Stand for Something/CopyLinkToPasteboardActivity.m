@@ -45,6 +45,16 @@
     [pb setString:[[self.url absoluteString] stringByAppendingString:@"/"]];
     
     [self activityDidFinish:YES];
+    
+    UIWindow *window = [[[UIApplication sharedApplication] windows] lastObject];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.labelText = @"Copied";
+    
+    [hud show:YES];
+    [hud hide:YES afterDelay:0.8];
 }
 
 + (UIActivityCategory)activityCategory {
