@@ -42,7 +42,7 @@
 
 - (void)performActivity {
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    [pb setString:[self.url absoluteString]];
+    [pb setString:[[self.url absoluteString] stringByAppendingString:@"/"]];
     
     [self activityDidFinish:YES];
 }
