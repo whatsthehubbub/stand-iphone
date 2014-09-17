@@ -156,7 +156,7 @@
 }
 
 - (NSString *)activityViewController:(UIActivityViewController *)activityViewController subjectForActivityType:(NSString *)activityType {
-    return [NSString stringWithFormat:@"Standing for %@", self.message];
+    return [NSString stringWithFormat:@"I stood for %@", self.message];
 }
 
 - (id)activityViewControllerPlaceholderItem:(UIActivityViewController *)activityViewController {
