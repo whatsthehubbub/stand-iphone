@@ -145,7 +145,7 @@
 
 - (id)activityViewController:(UIActivityViewController *)activityViewController itemForActivityType:(NSString *)activityType {
     if ([activityType isEqualToString:UIActivityTypePostToTwitter]) {
-        NSString *twitterText = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding.", [self getDurationString], self.message];
+        NSString *twitterText = [NSString stringWithFormat:@"I stood %@ for %@ with @getstanding", [self getDurationString], self.message];
         
         return twitterText;
     } else {
