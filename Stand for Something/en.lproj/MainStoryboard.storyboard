@@ -46,16 +46,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-01" id="SpH-3S-dwv">
-                                                <rect key="frame" x="0.0" y="21" width="320" height="348"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 1" id="SpH-3S-dwv">
+                                                <rect key="frame" x="0.0" y="63" width="320" height="348"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NfC-Ic-1BJ">
-                                                <rect key="frame" x="30" y="395" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="464" width="260" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <string key="text">There are many
-things in the world
-we care about.</string>
+                                                <string key="text">There are many things in 
+the world we care about.</string>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
                                                 <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -66,16 +65,16 @@ we care about.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-02" id="Tej-Ph-LtL">
-                                                <rect key="frame" x="0.0" y="21" width="320" height="348"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 2" id="Tej-Ph-LtL">
+                                                <rect key="frame" x="0.0" y="132" width="320" height="348"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vU6-v1-t70">
-                                                <rect key="frame" x="30" y="395" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="447" width="260" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <string key="text">We invite you to
-spring into action for
-one of them. It's easy…</string>
+                                                <string key="text">We invite you to spring
+into action for one of 
+them. It's easy…</string>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
                                                 <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -86,16 +85,16 @@ one of them. It's easy…</string>
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="07-intro-guy-03" id="w6H-ur-LfB">
-                                                <rect key="frame" x="0.0" y="21" width="320" height="348"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 3" id="w6H-ur-LfB">
+                                                <rect key="frame" x="0.0" y="79" width="320" height="347"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLh-U9-8Br">
-                                                <rect key="frame" x="30" y="395" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="397" width="260" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <string key="text">Keep your cause
-in mind, find a spot,
-and start standing!</string>
+                                                <string key="text">Keep your cause in mind, 
+find a spot, and start 
+standing for it!</string>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
                                                 <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -257,9 +256,9 @@ The typefaces are Jean-Luc by Carvalho Bernau and Courier New.</string>
     <resources>
         <image name="06-button-close" width="30" height="30"/>
         <image name="07-dots-01" width="39" height="7"/>
-        <image name="07-intro-guy-01" width="320" height="348"/>
-        <image name="07-intro-guy-02" width="320" height="348"/>
-        <image name="07-intro-guy-03" width="320" height="348"/>
+        <image name="Illustration 1" width="640" height="679"/>
+        <image name="Illustration 2" width="640" height="478"/>
+        <image name="Illustration 3" width="640" height="648"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
