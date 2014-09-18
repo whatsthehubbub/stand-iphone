@@ -51,7 +51,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NfC-Ic-1BJ">
-                                                <rect key="frame" x="30" y="464" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="464" width="260" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <string key="text">There are many things in 
 the world we care about.</string>
@@ -70,7 +70,7 @@ the world we care about.</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vU6-v1-t70">
-                                                <rect key="frame" x="30" y="447" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="446" width="260" height="53"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <string key="text">We invite you to spring
 into action for one of 
@@ -90,7 +90,7 @@ them. It's easy…</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLh-U9-8Br">
-                                                <rect key="frame" x="30" y="397" width="260" height="70"/>
+                                                <rect key="frame" x="30" y="396" width="260" height="53"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <string key="text">Keep your cause in mind, 
 find a spot, and start 
