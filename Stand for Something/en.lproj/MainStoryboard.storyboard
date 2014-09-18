@@ -66,7 +66,7 @@ the world we care about.</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 2" id="Tej-Ph-LtL">
-                                                <rect key="frame" x="0.0" y="161" width="320" height="239"/>
+                                                <rect key="frame" x="0.0" y="60" width="320" height="340"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vU6-v1-t70">
@@ -86,7 +86,7 @@ them. It's easy…</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 3" id="w6H-ur-LfB">
-                                                <rect key="frame" x="0.0" y="76" width="320" height="324"/>
+                                                <rect key="frame" x="0.0" y="60" width="320" height="340"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLh-U9-8Br">
@@ -257,8 +257,8 @@ The typefaces are Jean-Luc by Carvalho Bernau and Courier New.</string>
         <image name="06-button-close" width="30" height="30"/>
         <image name="07-dots-01" width="39" height="7"/>
         <image name="Illustration 1" width="320" height="340"/>
-        <image name="Illustration 2" width="320" height="239"/>
-        <image name="Illustration 3" width="320" height="324"/>
+        <image name="Illustration 2" width="320" height="340"/>
+        <image name="Illustration 3" width="640" height="679"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
