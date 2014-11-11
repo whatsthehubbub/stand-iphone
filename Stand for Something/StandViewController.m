@@ -33,6 +33,10 @@
     // Setup the location stuff
     if (nil == self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
+        
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
+        }
     }
     
     self.locationManager.delegate = self;
@@ -469,6 +473,9 @@
         [message show];
     }
     
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.standManager.coordinate, 1000, 1000);
+    [self.mapView setRegion:region animated:NO];
+    
     // Move the legal link in the map
     UILabel *legalLabel = [self.mapView.subviews objectAtIndex:1];
     legalLabel.center = CGPointMake(300.0, legalLabel.center.y);
@@ -616,9 +623,6 @@
     
     // Store the current location in our model
     self.standManager.coordinate = self.currentLocation.coordinate;
-    
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.standManager.coordinate, 1000, 1000);
-    [self.mapView setRegion:region];
 }
 
 # pragma mark - UITextFieldDelegate methods
