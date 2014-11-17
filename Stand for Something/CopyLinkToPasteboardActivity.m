@@ -19,7 +19,7 @@
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"Copy-ios7"];
+    return [UIImage imageNamed:@"share-link-button"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {

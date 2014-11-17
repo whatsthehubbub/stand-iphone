@@ -19,7 +19,7 @@
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"Safari-ios7"];
+    return [UIImage imageNamed:@"share-browser-button"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
