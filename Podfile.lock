@@ -1,5 +1,5 @@
 PODS:
-  - HockeySDK (3.5.4)
+  - HockeySDK (3.5.7)
   - MBProgressHUD (0.9)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
-  HockeySDK: bf0e17f8d0c2b4778dff5ffd42248569a007ccbf
+  HockeySDK: f0e874d1c6833163ee0c4e423606faf33ad04071
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
 
 COCOAPODS: 0.33.1
