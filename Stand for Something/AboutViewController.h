@@ -14,5 +14,6 @@
 @property (strong) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *aboutContent;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end

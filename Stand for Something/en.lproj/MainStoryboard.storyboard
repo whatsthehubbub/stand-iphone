@@ -162,7 +162,7 @@ standing for it!</string>
                                                 <color key="textColor" red="1" green="0.2901960784" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="99" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45r-VX-Qah">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="45r-VX-Qah">
                                                 <rect key="frame" x="25" y="55" width="270" height="425"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -225,8 +225,9 @@ The typefaces are Jean-Luc by Carvalho Bernau and Courier New.</string>
                     </view>
                     <navigationItem key="navigationItem" id="4dK-aK-A3I"/>
                     <connections>
-                        <outlet property="AboutContent" destination="yhz-FS-0Tg" id="D7a-Gg-4OH"/>
+                        <outlet property="aboutContent" destination="yhz-FS-0Tg" id="ljN-X5-Q1G"/>
                         <outlet property="scrollView" destination="UTf-MG-kjf" id="h3e-Nx-uev"/>
+                        <outlet property="textLabel" destination="45r-VX-Qah" id="Xvs-uy-fmQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHb-FZ-K3M" userLabel="First Responder" sceneMemberID="firstResponder"/>

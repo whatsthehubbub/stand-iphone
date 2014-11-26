@@ -31,6 +31,9 @@
 	// Do any additional setup after loading the view.
     
     self.scrollView.contentSize = self.aboutContent.frame.size;
+    
+    self.textLabel.numberOfLines = 0;
+    [self.textLabel sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
