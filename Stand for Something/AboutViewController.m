@@ -34,6 +34,8 @@
     
     self.textLabel.numberOfLines = 0;
     [self.textLabel sizeToFit];
+    
+    self.aboutContent.frame = CGRectMake(self.textLabel.frame.origin.x, self.textLabel.frame.origin.y, self.textLabel.frame.size.width, self.textLabel.frame.size.height + 209);
 }
 
 - (void)didReceiveMemoryWarning
