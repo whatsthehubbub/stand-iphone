@@ -39,13 +39,13 @@
     
     CGRect contentRect = CGRectZero;
     
-    self.view1.frame = CGRectMake(0, 0, 320, self.scrollView.frame.size.height);
+    self.view1.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
     contentRect = CGRectUnion(contentRect, self.view1.frame);
     
-    self.view2.frame = CGRectMake(320, 0, 320, self.scrollView.frame.size.height);
+    self.view2.frame = CGRectMake(self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
     contentRect = CGRectUnion(contentRect, self.view2.frame);
     
-    self.view3.frame = CGRectMake(640, 0, 320, self.scrollView.frame.size.height);
+    self.view3.frame = CGRectMake(self.scrollView.frame.size.width*2, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
     contentRect = CGRectUnion(contentRect, self.view3.frame);
     
     scrollView.contentSize = contentRect.size;
