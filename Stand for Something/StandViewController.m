@@ -478,7 +478,7 @@
     
     // Move the legal link in the map
     UILabel *legalLabel = [self.mapView.subviews objectAtIndex:1];
-    legalLabel.center = CGPointMake(300.0, legalLabel.center.y);
+    legalLabel.center = CGPointMake(self.mapView.bounds.size.width-20, legalLabel.center.y);
     
     [self.motionManager stopDeviceMotionUpdates];
     [self.secondTimer invalidate];
