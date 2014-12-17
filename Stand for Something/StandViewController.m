@@ -400,7 +400,7 @@
     self.standingSecondsR.text = [NSString stringWithFormat:@"%d", seconds % 10];
     
     self.doneText.text = [NSString stringWithFormat:@"%@ for\n%@.", [self.standManager getDurationStringWithBreaks], self.standManager.message];
-    if (self.standManager.duration <= 60) {
+    if (self.standManager.duration <= 60 || self.standManager.duration == 60*60) {
         self.doneText.numberOfLines = 2;
         self.doneText.frame = CGRectMake(self.doneText.frame.origin.x, self.doneText.frame.origin.y, self.doneText.frame.size.width, 66.0);
     } else {
